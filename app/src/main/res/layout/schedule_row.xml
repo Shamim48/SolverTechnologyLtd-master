@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="5dp"
+    app:cardElevation="5dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:weightSum="10"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="9.5"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/scheduleDateId"
+
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="Date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/nameUSDId"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="Employee name"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/comNameSdId"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:textColor="#311853"
+            android:textStyle="bold"
+            android:text="Company Name"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="Job List:"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+            <TextView
+            android:id="@+id/jobSdId"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_weight=".5"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/row_menuSdId"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight=".4"
+        android:gravity="center_horizontal"
+        android:padding="2dp"
+        android:text="@string/menu_icon"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

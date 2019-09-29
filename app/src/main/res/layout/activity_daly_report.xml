@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Daily_Report">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkboxDateDRId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Chose Date" />
+
+                <EditText
+                    android:id="@+id/dateETDRId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:hint="Select Date"
+                    android:inputType="textPersonName"
+                     />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/factoryCBDRId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=" Factory" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/factoryATDRId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:hint="Chose factory"
+                    android:inputType="textPersonName"
+                     />
+            </LinearLayout>
+
+
+<!--
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/categoryCBDRId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Category" />
+
+              <Spinner
+                  android:id="@+id/categorySpDRId"
+                  android:layout_width="0dp"
+                  android:layout_weight="2"
+                  android:layout_height="wrap_content"/>
+            </LinearLayout>
+-->
+
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/employeeCbDRId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=" Individual" />
+
+               <androidx.appcompat.widget.SearchView
+                   android:layout_width="0dp"
+                   android:layout_weight="2"
+                   android:id="@+id/employeeSVDRID"
+                   android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/lltDrLVId"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="right"
+            android:layout_below="@id/employeeName_CtId"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/closeBtnDrId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@drawable/ic_close_black_24dp"
+                />
+            <ListView
+                android:id="@+id/userTagLVDRId"
+                android:layout_width="250dp"
+                android:layout_gravity="right"
+                android:layout_height="432dp"
+                android:layout_below="@id/employeeName_WSId"
+                android:layout_marginTop="10dp"
+                android:listSelector="#fafafa" />
+
+        </LinearLayout>
+            <Button
+                android:id="@+id/queryBtnId"
+                android:text="Query"
+                android:layout_margin="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/buttonbg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Work Report"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+             <TextView
+                 android:id="@+id/dateTvDRId"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                 android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/dailyReport_RecyclerId"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/emptyTvId"
+                android:textColor="@color/black"
+                android:text="Empty"
+                android:textSize="18sp"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

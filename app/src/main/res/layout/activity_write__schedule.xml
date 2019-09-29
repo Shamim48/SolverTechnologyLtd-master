@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    tools:context=".Write_Schedule">
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/employeeName_WSId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/layoutbg"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="36dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/lltWsLVId"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/employeeName_CtId"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/closeBtnWsId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@drawable/ic_close_black_24dp"
+                />
+            <ListView
+                android:id="@+id/userTagLVId"
+                android:layout_width="330dp"
+                android:layout_height="432dp"
+                android:layout_below="@id/employeeName_WSId"
+                android:layout_marginTop="10dp"
+                android:listSelector="#fafafa" />
+
+        </LinearLayout>
+
+
+
+            <!--    <ListView
+                    android:id="@+id/tagUserLVId"
+                    android:layout_width="match_parent"
+                    android:layout_height="404dp"
+                    android:visibility="gone"
+                    android:layout_margin="20dp"
+                    android:listSelector="#fafafa" />
+    -->
+            <EditText
+                android:id="@+id/date_WSId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/userTagLVId"
+                android:background="@drawable/layoutbg"
+                android:textSize="18sp"
+                android:hint=" Select Schedule Date"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="36dp" />
+
+
+              <AutoCompleteTextView
+                android:id="@+id/companyName_WSId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                  android:layout_below="@id/date_WSId"
+                android:background="@drawable/layoutbg"
+                android:textSize="18sp"
+                android:hint=" Write Company Name"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="36dp" />
+
+
+
+           <!-- <Spinner
+                android:id="@+id/categorySpId"
+                android:padding="20dp"
+                android:layout_below="@id/companyName_WSId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+-->
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="*Select Job...."
+                android:textColor="#673AB7"
+                android:layout_below="@id/companyName_WSId"
+                android:textSize="20sp"
+                android:id="@+id/textId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/checkbox1Id"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/textId"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/black"
+                android:text="Machine Installation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/jobDesId1"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@id/checkbox1Id"
+                android:visibility="gone"
+                android:hint="  Write Job description..."
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:background="@drawable/layoutbg"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"/>
+             <CheckBox
+                android:id="@+id/checkbox2Id"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                 android:layout_below="@id/jobDesId1"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/black"
+                android:text="Trouble Shooting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/jobDesId2"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/checkbox2Id"
+                android:layout_marginRight="20dp"
+                android:hint="  Write Job description..."
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:background="@drawable/layoutbg"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:visibility="gone"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_height="wrap_content"/>
+             <CheckBox
+                android:id="@+id/checkbox3Id"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                 android:layout_below="@id/jobDesId2"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/black"
+                android:text="Spare Sell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/jobDesId3"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/checkbox3Id"
+                android:layout_marginRight="20dp"
+                android:hint="  Write Job description..."
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:background="@drawable/layoutbg"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/spinner3"
+                android:visibility="gone"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_height="wrap_content"/>
+             <CheckBox
+                android:id="@+id/checkbox4Id"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/black"
+                 android:layout_below="@id/jobDesId3"
+                android:text="Commissioning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/jobDesId4"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="  Write Job description..."
+                android:textSize="16sp"
+                android:layout_below="@id/checkbox4Id"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:background="@drawable/layoutbg"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/spinner4"
+                android:visibility="gone"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_height="wrap_content"/>
+             <CheckBox
+                android:id="@+id/checkbox5Id"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/black"
+                 android:layout_below="@id/jobDesId4"
+                android:text="Display Damaged"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/jobDesId5"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="  Write Job description..."
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:layout_below="@id/checkbox5Id"
+                android:visibility="gone"
+                android:background="@drawable/layoutbg"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/spinner5"
+                android:visibility="gone"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_height="wrap_content"/>
+             <CheckBox
+                android:id="@+id/checkbox6Id"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                 android:layout_below="@id/jobDesId5"
+                android:textColor="@color/black"
+                android:text="Schedule Visit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/jobDesId6"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@id/checkbox6Id"
+                android:hint="  Write Job description..."
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:padding="5dp"
+                android:background="@drawable/layoutbg"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/spinner6"
+                android:visibility="gone"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_height="wrap_content"/>
+             <CheckBox
+                android:id="@+id/checkbox7Id"
+                android:textSize="18sp"
+                 android:layout_below="@id/jobDesId6"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/black"
+                android:text="New Customer Visit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/jobDesId7"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="  Write Job description..."
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:layout_below="@id/checkbox7Id"
+                android:visibility="gone"
+                android:background="@drawable/layoutbg"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/spinner7"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"/>
+             <CheckBox
+                android:id="@+id/checkbox8Id"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                 android:layout_below="@id/jobDesId7"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/black"
+                android:text="Inspection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/jobDesId8"
+                android:layout_width="match_parent"
+                android:layout_below="@id/checkbox8Id"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="  Write Job description..."
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:background="@drawable/layoutbg"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/spinner8"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"/>
+             <CheckBox
+                android:id="@+id/checkbox9Id"
+                android:textSize="18sp"
+                 android:layout_below="@id/jobDesId8"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/black"
+                android:text="Spare deliver and Installation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/jobDesId9"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@id/checkbox9Id"
+                android:hint="  Write Job description..."
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:background="@drawable/layoutbg"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/spinner9"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"/>
+             <CheckBox
+                android:id="@+id/checkbox10Id"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                 android:layout_below="@id/jobDesId9"
+                android:textColor="@color/black"
+                android:text="Inverter Damage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/jobDesId10"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="  Write Job description..."
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:layout_below="@id/checkbox10Id"
+                android:visibility="gone"
+                android:background="@drawable/layoutbg"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/spinner10"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"/>
+             <CheckBox
+                android:id="@+id/checkboxI11d"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                 android:layout_below="@id/jobDesId10"
+                android:textColor="@color/black"
+                android:text="Software Installation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/jobDesId11"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@id/checkboxI11d"
+                android:hint="  Write Job description..."
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:background="@drawable/layoutbg"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/spinner11"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"/>
+             <CheckBox
+                android:id="@+id/checkbox12Id"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                 android:layout_below="@id/jobDesId11"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/black"
+                android:text="New Job"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/jobDesId12"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="  Write Job description..."
+                android:textSize="16sp"
+                android:layout_below="@id/checkbox12Id"
+                android:visibility="gone"
+                android:padding="5dp"
+                android:background="@drawable/layoutbg"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/spinner12"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"/>
+             <CheckBox
+                android:id="@+id/checkbox13Id"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                 android:layout_below="@id/jobDesId12"
+                android:textColor="@color/black"
+                android:text="Others"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/jobDesId13"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/checkbox13Id"
+                android:layout_marginRight="20dp"
+                android:hint="  Write Job description..."
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:background="@drawable/layoutbg"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/spinner13"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:visibility="gone"
+
+                android:layout_height="wrap_content"/>
+
+
+            <Button
+                android:id="@+id/uploadBtnWsId"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="10dp"
+                android:text="Upload"
+                android:layout_below="@id/jobDesId13"
+                android:background="@drawable/buttonbg"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+           <!-- <TextView
+                android:id="@+id/showTxtId"
+                android:textSize="16sp"
+                android:text="text"
+                android:layout_below="@id/uploadBtnWsId"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+-->
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

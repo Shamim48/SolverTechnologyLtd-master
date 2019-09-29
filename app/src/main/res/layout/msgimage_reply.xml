@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:droid="http://schemas.android.com/tools"
+    droid:orientation="vertical"
+    android:layout_width="wrap_content"
+    app:cardElevation="3dp"
+    android:layout_margin="10dp"
+    android:padding="2dp"
+    android:layout_marginEnd="20dp"
+    app:cardCornerRadius="10dp"
+    android:elevation="3dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/replyImageParentLotId"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="#BCC2C2C2"
+            android:id="@+id/linearLayoutImageId"
+            android:layout_height="wrap_content">
+            <!--  <TextView
+                  android:id="@+id/nameTvMsgRowId"
+                  android:textStyle="bold"
+                  android:text="Name"
+                  android:paddingLeft="5dp"
+                  android:textColor="#8BC34A"
+                  android:textSize="18sp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content" />-->
+
+
+            <ImageView
+
+                android:id="@+id/imageViewMsgRowId"
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:layout_height="200dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/linearLayoutLeftId"
+            android:layout_height="wrap_content">
+            <!-- GMR=group message Id-->
+
+            <TextView
+                android:id="@+id/msgTv_GMRId"
+                android:textSize="16sp"
+                android:layout_marginLeft="15dp"
+                android:text="message"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="right"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/timeTvId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:layout_marginLeft="50dp"
+                    android:text="Time" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:text=" ," />
+
+                <TextView
+                    android:id="@+id/dateTvId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right"
+                    android:text="date" />
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

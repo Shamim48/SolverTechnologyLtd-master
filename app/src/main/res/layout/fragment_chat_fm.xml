@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#92ECECEC"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.ChatFm">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/employeeName_CtId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/layoutbg"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="36dp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/lltCtLVId"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/employeeName_CtId"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/closeBtnCtId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_close_black_24dp"
+            />
+        <ListView
+            android:id="@+id/userTagLVCtId"
+            android:layout_width="330dp"
+            android:layout_height="432dp"
+            android:layout_below="@id/employeeName_CtId"
+            android:layout_marginTop="10dp"
+            android:listSelector="#fafafa" />
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/lltCtLVId"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

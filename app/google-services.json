@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1047942201292",
+    "firebase_url": "https://solver-f9ab1.firebaseio.com",
+    "project_id": "solver-f9ab1",
+    "storage_bucket": "solver-f9ab1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1047942201292:android:234ec98e145138a8",
+        "android_client_info": {
+          "package_name": "com.Solver.Solver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1047942201292-5mg6ablukm9sorjbo86sfh8peb8d9rrr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.Solver.Solver",
+            "certificate_hash": "6bfeb0a75ab2bea15b016edfe0034f9046718cdf"
+          }
+        },
+        {
+          "client_id": "1047942201292-51fhvrempetjop5k7k0e6cua9bl5tq2v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsAtIcSDRWauYywIABsG6tVn9eiHp7XSE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1047942201292-51fhvrempetjop5k7k0e6cua9bl5tq2v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

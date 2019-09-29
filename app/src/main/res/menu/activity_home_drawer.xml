@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/editAccountId"
+            android:icon="@drawable/ic_mode_edit_black_24dp"
+            android:title="Edit Account" />
+        <item
+            android:id="@+id/displayScheduleId"
+            android:title="@string/schedule" />
+         <item
+            android:id="@+id/dailyReportId"
+            android:title="@string/daily_report" />
+
+    </group>
+
+    <item android:title="@string/admin_panel">
+        <menu>
+            <item
+                android:id="@+id/write_ScheduleId"
+                android:title="@string/write_schedule"/>
+            <item
+                android:id="@+id/createUserId"
+                android:title="@string/create_user"/>
+            <item
+                android:id="@+id/createClientId"
+                android:title="@string/create_client"/>
+             <item
+                android:id="@+id/addDataMenuItmId"
+                android:title="Add Data"/>
+
+            <item
+                android:id="@+id/createGroupId"
+                android:title="@string/create_group"/>
+            <item
+                android:id="@+id/trackLocationMenuItmId"
+                android:title="@string/track_location" />
+            <item
+                android:id="@+id/deleteMessageMenuItmId"
+                android:title="@string/menu_send" />
+            <item
+                android:id="@+id/editedMessageMenuItmId"
+                android:title="@string/edited_message" />
+
+
+        </menu>
+    </item>
+
+</menu>

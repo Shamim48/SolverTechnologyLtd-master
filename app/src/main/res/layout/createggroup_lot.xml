@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:text="Create New Group"
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content" />
+
+
+    <EditText
+        android:id="@+id/createGroupEtId"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="10dp"
+        android:hint="@string/enter_admin_password"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/createGroupCancelBtnId"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:text="Cancel"
+            android:background="@drawable/buttonbg"
+
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/createGroupBtnId"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/white"
+            android:text="Create"
+            android:textSize="18sp"
+            android:background="@drawable/buttonbg"
+
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

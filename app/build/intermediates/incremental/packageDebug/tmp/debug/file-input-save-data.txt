@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Sun Sep 29 15:01:36 BDT 2019
+1.base=C\:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=DEX
+0.path=classes.dex
+0.set=DEX
+0.base=C\:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+1.path=classes2.dex
