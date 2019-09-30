@@ -1517,6 +1517,7 @@ id percent
 id phoneCompanyId
 id phoneId
 id pin
+id productRvId
 id productTypeSpId
 id profile_image
 id profile_imageId
@@ -1534,6 +1535,7 @@ id replyImageParentLotId
 id replyLotId
 id replyMSGMIId
 id replyParentLotId
+id requestQuotationId
 id right
 id right_icon
 id right_side

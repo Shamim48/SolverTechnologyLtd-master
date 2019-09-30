@@ -355,6 +355,10 @@ tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.white));
 
             Intent intent=new Intent(Home.this,Write_Schedule.class);
             startActivity(intent);
+        }else if (id == R.id.requestQuotationId) {
+
+            Intent intent=new Intent(Home.this,Quotation_Request.class);
+            startActivity(intent);
         } else if (id == R.id.trackLocationMenuItmId) {
 
              Intent intent=new Intent(getApplicationContext(),ViewImage.class);
