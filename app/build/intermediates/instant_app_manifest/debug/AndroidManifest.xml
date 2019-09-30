@@ -31,6 +31,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.Solver.Solver.Quotation_Request" />
         <activity android:name="com.Solver.Solver.AddData" />
         <activity android:name="com.Solver.Solver.ViewImage" />
         <activity android:name="com.Solver.Solver.Daily_Report" />

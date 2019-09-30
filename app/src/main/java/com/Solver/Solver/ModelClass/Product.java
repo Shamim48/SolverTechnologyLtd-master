@@ -2,6 +2,7 @@ package com.Solver.Solver.ModelClass;
 
 public class Product {
 
+    private String product_key;
     private int id;
     private String product_id;
     private int company_id;
@@ -18,7 +19,8 @@ public class Product {
     private String created_at;
     private String updated_at;
 
-    public Product(int id, String product_id, int company_id, int barcode, String product_unit, int sell_percentage, int brand_id, int sub_category_id, int user_id, String product_name, String description, int reorder, int status, String created_at, String updated_at) {
+    public Product(String product_key,int id, String product_id, int company_id, int barcode, String product_unit, int sell_percentage, int brand_id, int sub_category_id, int user_id, String product_name, String description, int reorder, int status, String created_at, String updated_at) {
+        this.product_key = product_key;
         this.id = id;
         this.product_id = product_id;
         this.company_id = company_id;
@@ -37,6 +39,7 @@ public class Product {
     }
 
     public Product() {
+
     }
 
     public int getId() {
