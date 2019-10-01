@@ -15,7 +15,6 @@
          <item
             android:id="@+id/dailyReportId"
             android:title="@string/daily_report" />
-
     </group>
 
     <item android:title="@string/admin_panel">
@@ -25,9 +24,7 @@
                 android:title="@string/write_schedule"/>
             <item
                 android:id="@+id/requestQuotationId"
-                android:title="@string/write_schedule"/>
-
-
+                android:title="Request Quotation"/>
             <item
                 android:id="@+id/createUserId"
                 android:title="@string/create_user"/>
@@ -37,8 +34,6 @@
              <item
                 android:id="@+id/addDataMenuItmId"
                 android:title="Add Data"/>
-
-
             <item
                 android:id="@+id/createGroupId"
                 android:title="@string/create_group"/>
@@ -51,7 +46,6 @@
             <item
                 android:id="@+id/editedMessageMenuItmId"
                 android:title="@string/edited_message" />
-
 
         </menu>
     </item>

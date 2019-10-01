@@ -865,6 +865,7 @@ dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
+dimen app_bar_height
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -1004,6 +1005,7 @@ dimen subtitle_corner_radius
 dimen subtitle_outline_width
 dimen subtitle_shadow_offset
 dimen subtitle_shadow_radius
+dimen text_margin
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -1316,6 +1318,7 @@ id clientCancelBtnId
 id clientParentLn
 id clientRegisterBtnId
 id clientRvId
+id clientSvId
 id clientTv_GMRId
 id clientTv_RpId
 id clientTv_RprId
@@ -1375,6 +1378,7 @@ id default_activity_button
 id deleteMenuItmId
 id deleteMessageMenuItmId
 id deleteRowId
+id desTvId
 id desTv_GMRId
 id design_bottom_sheet
 id design_menu_item_action_area
@@ -1517,7 +1521,9 @@ id percent
 id phoneCompanyId
 id phoneId
 id pin
-id productRvId
+id productLvId
+id productNameTvId
+id productSvId
 id productTypeSpId
 id profile_image
 id profile_imageId
@@ -1525,6 +1531,7 @@ id profile_imageUiId
 id progressBarId
 id progress_circular
 id progress_horizontal
+id quantityEtId
 id queryBtnId
 id radio
 id rectangle
@@ -1568,6 +1575,7 @@ id selectLocationIBtnId
 id selectUserTypeId
 id select_dialog_listview
 id selected
+id sendQuotationBtnId
 id send_message_button
 id shortcut
 id showCustom
@@ -1757,6 +1765,7 @@ layout activity_main
 layout activity_message
 layout activity_quotation__request
 layout activity_schedule__display
+layout activity_send_quotation
 layout activity_show_user_details
 layout activity_sign__up
 layout activity_view_image
@@ -1819,6 +1828,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout productsample_row
 layout reply_row
 layout schedule_row
 layout select_dialog_item_material
@@ -1833,6 +1843,7 @@ menu crop_image_menu
 menu delete_row
 menu download_menu
 menu home
+menu menu_scrolling
 menu message_menu
 menu notification
 menu user_row_popup
@@ -1918,6 +1929,7 @@ string google_storage_bucket
 string group_chat_fragment
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
+string large_text
 string menu_gallery
 string menu_home
 string menu_icon
@@ -1946,6 +1958,7 @@ string sign_out
 string status_bar_notification_info_overflow
 string title_activity_fullscreen
 string title_activity_home
+string title_activity_scrolling
 string track_location
 string write_schedule
 style AlertDialog_AppCompat

@@ -10,13 +10,11 @@ import android.widget.Filterable;
 import android.widget.TextView;
 
 import com.Solver.Solver.ModelClass.SignUp;
-import com.Solver.Solver.ModelClass.UserNameAndID;
 import com.Solver.Solver.R;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;

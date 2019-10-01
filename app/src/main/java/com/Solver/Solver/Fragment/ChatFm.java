@@ -3,13 +3,11 @@ package com.Solver.Solver.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.text.Editable;
-import android.text.TextWatcher;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,11 +22,8 @@ import com.Solver.Solver.Adepter.UserAdapter;
 import com.Solver.Solver.MessageActivity;
 import com.Solver.Solver.ModelClass.Chatlist;
 import com.Solver.Solver.ModelClass.SignUp;
-import com.Solver.Solver.ModelClass.User;
 import com.Solver.Solver.Notifications.Token;
 import com.Solver.Solver.R;
-import com.Solver.Solver.Sign_Up;
-import com.Solver.Solver.Write_Schedule;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -41,7 +36,6 @@ import com.google.firebase.iid.FirebaseInstanceId;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.StreamHandler;
 
 /**
  * A simple {@link Fragment} subclass.

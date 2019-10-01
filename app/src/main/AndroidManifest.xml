@@ -18,7 +18,8 @@
         android:roundIcon="@drawable/layoutbg"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Quotation_Request"></activity>
+        <activity android:name=".SendQuotation"></activity>
+        <activity android:name=".Quotation_Request" />
         <activity android:name=".AddData" />
         <activity android:name=".ViewImage" />
         <activity android:name=".Daily_Report" />

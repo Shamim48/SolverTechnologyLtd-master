@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.Solver.Solver.MessageActivity;
 import com.Solver.Solver.ModelClass.Chat;
 import com.Solver.Solver.ModelClass.SignUp;
-import com.Solver.Solver.ModelClass.User;
 import com.Solver.Solver.R;
 import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;

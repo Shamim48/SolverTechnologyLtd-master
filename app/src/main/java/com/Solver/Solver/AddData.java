@@ -7,14 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.Solver.Solver.ModelClass.Brands;
-import com.Solver.Solver.ModelClass.Categories;
-import com.Solver.Solver.ModelClass.Factories;
 import com.Solver.Solver.ModelClass.Product;
-import com.Solver.Solver.ModelClass.Product_types;
-import com.Solver.Solver.ModelClass.Quotation_details;
-import com.Solver.Solver.ModelClass.Quotation_masters;
-import com.Solver.Solver.ModelClass.Sub_categories;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;

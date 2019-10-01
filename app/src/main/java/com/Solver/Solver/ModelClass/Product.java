@@ -42,6 +42,14 @@ public class Product {
 
     }
 
+    public String getProduct_key() {
+        return product_key;
+    }
+
+    public void setProduct_key(String product_key) {
+        this.product_key = product_key;
+    }
+
     public int getId() {
         return id;
     }

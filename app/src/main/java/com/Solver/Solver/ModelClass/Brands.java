@@ -20,6 +20,10 @@ public class Brands {
         this.updated_at = updated_at;
     }
 
+    public Brands() {
+
+    }
+
     public int getBrand_id() {
         return brand_id;
     }

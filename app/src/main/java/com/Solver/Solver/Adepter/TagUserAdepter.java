@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.Solver.Solver.ModelClass.SignUp;
-import com.Solver.Solver.ModelClass.UserNameAndID;
 import com.Solver.Solver.R;
 import com.bumptech.glide.Glide;
 

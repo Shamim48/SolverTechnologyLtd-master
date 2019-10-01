@@ -2,6 +2,7 @@ package com.Solver.Solver.ModelClass;
 
 public class Quotation_details {
 
+    private String qut_key;
     private String qut_no;
     private int company_id;
     private int customer_id;
@@ -14,7 +15,8 @@ public class Quotation_details {
     private String updated_at;
 
 
-    public Quotation_details(String qut_no, int company_id, int customer_id, String product_id, Double unit_price, int qty, String warranty, Double total_price, String created_at, String updated_at) {
+    public Quotation_details(String qut_key,String qut_no, int company_id, int customer_id, String product_id, Double unit_price, int qty, String warranty, Double total_price, String created_at, String updated_at) {
+        this.qut_key = qut_key;
         this.qut_no = qut_no;
         this.company_id = company_id;
         this.customer_id = customer_id;
@@ -29,6 +31,14 @@ public class Quotation_details {
 
     public Quotation_details() {
 
+    }
+
+    public String getQut_key() {
+        return qut_key;
+    }
+
+    public void setQut_key(String qut_key) {
+        this.qut_key = qut_key;
     }
 
     public String getQut_no() {

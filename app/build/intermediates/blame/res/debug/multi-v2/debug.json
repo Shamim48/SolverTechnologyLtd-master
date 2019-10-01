@@ -1,96 +1,6 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\values-lo_values-lo.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\950aa3c00a435ca361159ca5921dafce\\res\\values-lo\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "190",
-                        "endOffsets": "437"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "3946",
-                        "endColumns": "190",
-                        "endOffsets": "4132"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f19b873fc2e44666dd8de6830fabeb88\\res\\values-lo\\values-lo.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,208,311,424,509,613,724,802,880,971,1063,1155,1249,1350,1443,1538,1634,1725,1816,1896,2003,2107,2205,2308,2412,2516,2673,2772",
-                        "endColumns": "102,102,112,84,103,110,77,77,90,91,91,93,100,92,94,95,90,90,79,106,103,97,102,103,103,156,98,80",
-                        "endOffsets": "203,306,419,504,608,719,797,875,966,1058,1150,1244,1345,1438,1533,1629,1720,1811,1891,1998,2102,2200,2303,2407,2511,2668,2767,2848"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,48",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,208,311,424,509,613,724,802,880,971,1063,1155,1249,1350,1443,1538,1634,1725,1816,1896,2003,2107,2205,2308,2412,2516,2673,5619",
-                        "endColumns": "102,102,112,84,103,110,77,77,90,91,91,93,100,92,94,95,90,90,79,106,103,97,102,103,103,156,98,80",
-                        "endOffsets": "203,306,419,504,608,719,797,875,966,1058,1150,1244,1345,1438,1533,1629,1720,1811,1891,1998,2102,2200,2303,2407,2511,2668,2767,5695"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f4a70c60580cf920c94c3b49b0fc5ce2\\res\\values-lo\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "245,351,553,681,786,997,1120,1254,1395,1606,1709,1906,2033,2263,2450,2544,2639",
-                        "endColumns": "105,201,127,104,210,122,133,140,210,102,196,126,229,186,93,94,109",
-                        "endOffsets": "350,552,680,785,996,1119,1253,1394,1605,1708,1905,2032,2262,2449,2543,2638,2748"
-                    },
-                    "to": {
-                        "startLines": "29,30,31,32,33,34,35,36,38,39,40,41,42,43,44,45,46",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2772,2882,3084,3216,3325,3536,3663,3801,4137,4348,4455,4652,4783,5013,5204,5302,5401",
-                        "endColumns": "109,201,131,108,210,126,137,144,210,106,196,130,229,190,97,98,113",
-                        "endOffsets": "2877,3079,3211,3320,3531,3658,3796,3941,4343,4450,4647,4778,5008,5199,5297,5396,5510"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\b23a538805321379c9b591cd2981e628\\res\\values-lo\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "205",
-                        "endColumns": "99",
-                        "endOffsets": "304"
-                    },
-                    "to": {
-                        "startLines": "47",
-                        "startColumns": "4",
-                        "startOffsets": "5515",
-                        "endColumns": "103",
-                        "endOffsets": "5614"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\dc06104fc24aa0b521963d361d65d865\\res\\values-lo\\values-lo.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "49",
-                        "startColumns": "4",
-                        "startOffsets": "5700",
-                        "endColumns": "100",
-                        "endOffsets": "5796"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\values-th_values-th.arsc.flat",
             "map": [
                 {
@@ -176,6 +86,96 @@
                         "startOffsets": "5536",
                         "endColumns": "100",
                         "endOffsets": "5632"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\values-lo_values-lo.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\950aa3c00a435ca361159ca5921dafce\\res\\values-lo\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "190",
+                        "endOffsets": "437"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3946",
+                        "endColumns": "190",
+                        "endOffsets": "4132"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f19b873fc2e44666dd8de6830fabeb88\\res\\values-lo\\values-lo.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,208,311,424,509,613,724,802,880,971,1063,1155,1249,1350,1443,1538,1634,1725,1816,1896,2003,2107,2205,2308,2412,2516,2673,2772",
+                        "endColumns": "102,102,112,84,103,110,77,77,90,91,91,93,100,92,94,95,90,90,79,106,103,97,102,103,103,156,98,80",
+                        "endOffsets": "203,306,419,504,608,719,797,875,966,1058,1150,1244,1345,1438,1533,1629,1720,1811,1891,1998,2102,2200,2303,2407,2511,2668,2767,2848"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,48",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,208,311,424,509,613,724,802,880,971,1063,1155,1249,1350,1443,1538,1634,1725,1816,1896,2003,2107,2205,2308,2412,2516,2673,5619",
+                        "endColumns": "102,102,112,84,103,110,77,77,90,91,91,93,100,92,94,95,90,90,79,106,103,97,102,103,103,156,98,80",
+                        "endOffsets": "203,306,419,504,608,719,797,875,966,1058,1150,1244,1345,1438,1533,1629,1720,1811,1891,1998,2102,2200,2303,2407,2511,2668,2767,5695"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f4a70c60580cf920c94c3b49b0fc5ce2\\res\\values-lo\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "245,351,553,681,786,997,1120,1254,1395,1606,1709,1906,2033,2263,2450,2544,2639",
+                        "endColumns": "105,201,127,104,210,122,133,140,210,102,196,126,229,186,93,94,109",
+                        "endOffsets": "350,552,680,785,996,1119,1253,1394,1605,1708,1905,2032,2262,2449,2543,2638,2748"
+                    },
+                    "to": {
+                        "startLines": "29,30,31,32,33,34,35,36,38,39,40,41,42,43,44,45,46",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2772,2882,3084,3216,3325,3536,3663,3801,4137,4348,4455,4652,4783,5013,5204,5302,5401",
+                        "endColumns": "109,201,131,108,210,126,137,144,210,106,196,130,229,190,97,98,113",
+                        "endOffsets": "2877,3079,3211,3320,3531,3658,3796,3941,4343,4450,4647,4778,5008,5199,5297,5396,5510"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\b23a538805321379c9b591cd2981e628\\res\\values-lo\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "205",
+                        "endColumns": "99",
+                        "endOffsets": "304"
+                    },
+                    "to": {
+                        "startLines": "47",
+                        "startColumns": "4",
+                        "startOffsets": "5515",
+                        "endColumns": "103",
+                        "endOffsets": "5614"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\dc06104fc24aa0b521963d361d65d865\\res\\values-lo\\values-lo.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "49",
+                        "startColumns": "4",
+                        "startOffsets": "5700",
+                        "endColumns": "100",
+                        "endOffsets": "5796"
                     }
                 }
             ]
@@ -287,61 +287,61 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\values-ru_values-ru.arsc.flat",
+            "outputFile": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\values-ja_values-ja.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f4a70c60580cf920c94c3b49b0fc5ce2\\res\\values-ru\\values.xml",
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f4a70c60580cf920c94c3b49b0fc5ce2\\res\\values-ja\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "245,350,548,672,780,981,1108,1249,1378,1618,1723,1917,2041,2267,2451,2546,2632",
-                        "endColumns": "104,197,123,107,200,126,140,128,239,104,193,123,225,183,94,85,110",
-                        "endOffsets": "349,547,671,779,980,1107,1248,1377,1617,1722,1916,2040,2266,2450,2545,2631,2742"
+                        "startOffsets": "245,347,513,631,735,926,1044,1175,1299,1492,1591,1755,1872,2051,2197,2283,2368",
+                        "endColumns": "101,165,117,103,190,117,130,123,192,98,163,116,178,145,85,84,95",
+                        "endOffsets": "346,512,630,734,925,1043,1174,1298,1491,1590,1754,1871,2050,2196,2282,2367,2463"
                     },
                     "to": {
                         "startLines": "29,30,31,32,33,34,35,36,38,39,40,41,42,43,44,45,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2822,2931,3129,3257,3369,3570,3701,3846,4195,4435,4544,4738,4866,5092,5280,5379,5469",
-                        "endColumns": "108,197,127,111,200,130,144,132,239,108,193,127,225,187,98,89,114",
-                        "endOffsets": "2926,3124,3252,3364,3565,3696,3841,3974,4430,4539,4733,4861,5087,5275,5374,5464,5579"
+                        "startOffsets": "2691,2797,2963,3085,3193,3384,3506,3641,3950,4143,4246,4410,4531,4710,4860,4950,5039",
+                        "endColumns": "105,165,121,107,190,121,134,127,192,102,163,120,178,149,89,88,99",
+                        "endOffsets": "2792,2958,3080,3188,3379,3501,3636,3764,4138,4241,4405,4526,4705,4855,4945,5034,5134"
                     }
                 },
                 {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\950aa3c00a435ca361159ca5921dafce\\res\\values-ru\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "215",
-                        "endOffsets": "462"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "3979",
-                        "endColumns": "215",
-                        "endOffsets": "4190"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f19b873fc2e44666dd8de6830fabeb88\\res\\values-ru\\values-ru.xml",
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f19b873fc2e44666dd8de6830fabeb88\\res\\values-ja\\values-ja.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,220,322,421,507,612,733,812,889,981,1074,1169,1262,1358,1452,1548,1643,1735,1827,1915,2021,2128,2226,2335,2442,2556,2722,2822",
-                        "endColumns": "114,101,98,85,104,120,78,76,91,92,94,92,95,93,95,94,91,91,87,105,106,97,108,106,113,165,99,80",
-                        "endOffsets": "215,317,416,502,607,728,807,884,976,1069,1164,1257,1353,1447,1543,1638,1730,1822,1910,2016,2123,2221,2330,2437,2551,2717,2817,2898"
+                        "startOffsets": "105,202,295,400,482,580,688,766,842,933,1025,1120,1214,1315,1408,1503,1597,1688,1779,1856,1958,2056,2151,2254,2350,2446,2594,2691",
+                        "endColumns": "96,92,104,81,97,107,77,75,90,91,94,93,100,92,94,93,90,90,76,101,97,94,102,95,95,147,96,77",
+                        "endOffsets": "197,290,395,477,575,683,761,837,928,1020,1115,1209,1310,1403,1498,1592,1683,1774,1851,1953,2051,2146,2249,2345,2441,2589,2686,2764"
                     },
                     "to": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,48",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,220,322,421,507,612,733,812,889,981,1074,1169,1262,1358,1452,1548,1643,1735,1827,1915,2021,2128,2226,2335,2442,2556,2722,5689",
-                        "endColumns": "114,101,98,85,104,120,78,76,91,92,94,92,95,93,95,94,91,91,87,105,106,97,108,106,113,165,99,80",
-                        "endOffsets": "215,317,416,502,607,728,807,884,976,1069,1164,1257,1353,1447,1543,1638,1730,1822,1910,2016,2123,2221,2330,2437,2551,2717,2817,5765"
+                        "startOffsets": "105,202,295,400,482,580,688,766,842,933,1025,1120,1214,1315,1408,1503,1597,1688,1779,1856,1958,2056,2151,2254,2350,2446,2594,5241",
+                        "endColumns": "96,92,104,81,97,107,77,75,90,91,94,93,100,92,94,93,90,90,76,101,97,94,102,95,95,147,96,77",
+                        "endOffsets": "197,290,395,477,575,683,761,837,928,1020,1115,1209,1310,1403,1498,1592,1683,1774,1851,1953,2051,2146,2249,2345,2441,2589,2686,5314"
                     }
                 },
                 {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\dc06104fc24aa0b521963d361d65d865\\res\\values-ru\\values-ru.xml",
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\950aa3c00a435ca361159ca5921dafce\\res\\values-ja\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "180",
+                        "endOffsets": "427"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3769",
+                        "endColumns": "180",
+                        "endOffsets": "3945"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\dc06104fc24aa0b521963d361d65d865\\res\\values-ja\\values-ja.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -352,26 +352,26 @@
                     "to": {
                         "startLines": "49",
                         "startColumns": "4",
-                        "startOffsets": "5770",
+                        "startOffsets": "5319",
                         "endColumns": "100",
-                        "endOffsets": "5866"
+                        "endOffsets": "5415"
                     }
                 },
                 {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\b23a538805321379c9b591cd2981e628\\res\\values-ru\\values.xml",
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\b23a538805321379c9b591cd2981e628\\res\\values-ja\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
                         "startOffsets": "205",
-                        "endColumns": "100",
-                        "endOffsets": "305"
+                        "endColumns": "97",
+                        "endOffsets": "302"
                     },
                     "to": {
                         "startLines": "47",
                         "startColumns": "4",
-                        "startOffsets": "5584",
-                        "endColumns": "104",
-                        "endOffsets": "5684"
+                        "startOffsets": "5139",
+                        "endColumns": "101",
+                        "endOffsets": "5236"
                     }
                 }
             ]
@@ -467,61 +467,61 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\values-ja_values-ja.arsc.flat",
+            "outputFile": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\values-ru_values-ru.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f4a70c60580cf920c94c3b49b0fc5ce2\\res\\values-ja\\values.xml",
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f4a70c60580cf920c94c3b49b0fc5ce2\\res\\values-ru\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "245,347,513,631,735,926,1044,1175,1299,1492,1591,1755,1872,2051,2197,2283,2368",
-                        "endColumns": "101,165,117,103,190,117,130,123,192,98,163,116,178,145,85,84,95",
-                        "endOffsets": "346,512,630,734,925,1043,1174,1298,1491,1590,1754,1871,2050,2196,2282,2367,2463"
+                        "startOffsets": "245,350,548,672,780,981,1108,1249,1378,1618,1723,1917,2041,2267,2451,2546,2632",
+                        "endColumns": "104,197,123,107,200,126,140,128,239,104,193,123,225,183,94,85,110",
+                        "endOffsets": "349,547,671,779,980,1107,1248,1377,1617,1722,1916,2040,2266,2450,2545,2631,2742"
                     },
                     "to": {
                         "startLines": "29,30,31,32,33,34,35,36,38,39,40,41,42,43,44,45,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2691,2797,2963,3085,3193,3384,3506,3641,3950,4143,4246,4410,4531,4710,4860,4950,5039",
-                        "endColumns": "105,165,121,107,190,121,134,127,192,102,163,120,178,149,89,88,99",
-                        "endOffsets": "2792,2958,3080,3188,3379,3501,3636,3764,4138,4241,4405,4526,4705,4855,4945,5034,5134"
+                        "startOffsets": "2822,2931,3129,3257,3369,3570,3701,3846,4195,4435,4544,4738,4866,5092,5280,5379,5469",
+                        "endColumns": "108,197,127,111,200,130,144,132,239,108,193,127,225,187,98,89,114",
+                        "endOffsets": "2926,3124,3252,3364,3565,3696,3841,3974,4430,4539,4733,4861,5087,5275,5374,5464,5579"
                     }
                 },
                 {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f19b873fc2e44666dd8de6830fabeb88\\res\\values-ja\\values-ja.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,202,295,400,482,580,688,766,842,933,1025,1120,1214,1315,1408,1503,1597,1688,1779,1856,1958,2056,2151,2254,2350,2446,2594,2691",
-                        "endColumns": "96,92,104,81,97,107,77,75,90,91,94,93,100,92,94,93,90,90,76,101,97,94,102,95,95,147,96,77",
-                        "endOffsets": "197,290,395,477,575,683,761,837,928,1020,1115,1209,1310,1403,1498,1592,1683,1774,1851,1953,2051,2146,2249,2345,2441,2589,2686,2764"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,48",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,202,295,400,482,580,688,766,842,933,1025,1120,1214,1315,1408,1503,1597,1688,1779,1856,1958,2056,2151,2254,2350,2446,2594,5241",
-                        "endColumns": "96,92,104,81,97,107,77,75,90,91,94,93,100,92,94,93,90,90,76,101,97,94,102,95,95,147,96,77",
-                        "endOffsets": "197,290,395,477,575,683,761,837,928,1020,1115,1209,1310,1403,1498,1592,1683,1774,1851,1953,2051,2146,2249,2345,2441,2589,2686,5314"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\950aa3c00a435ca361159ca5921dafce\\res\\values-ja\\values.xml",
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\950aa3c00a435ca361159ca5921dafce\\res\\values-ru\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
                         "startOffsets": "247",
-                        "endColumns": "180",
-                        "endOffsets": "427"
+                        "endColumns": "215",
+                        "endOffsets": "462"
                     },
                     "to": {
                         "startLines": "37",
                         "startColumns": "4",
-                        "startOffsets": "3769",
-                        "endColumns": "180",
-                        "endOffsets": "3945"
+                        "startOffsets": "3979",
+                        "endColumns": "215",
+                        "endOffsets": "4190"
                     }
                 },
                 {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\dc06104fc24aa0b521963d361d65d865\\res\\values-ja\\values-ja.xml",
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f19b873fc2e44666dd8de6830fabeb88\\res\\values-ru\\values-ru.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,220,322,421,507,612,733,812,889,981,1074,1169,1262,1358,1452,1548,1643,1735,1827,1915,2021,2128,2226,2335,2442,2556,2722,2822",
+                        "endColumns": "114,101,98,85,104,120,78,76,91,92,94,92,95,93,95,94,91,91,87,105,106,97,108,106,113,165,99,80",
+                        "endOffsets": "215,317,416,502,607,728,807,884,976,1069,1164,1257,1353,1447,1543,1638,1730,1822,1910,2016,2123,2221,2330,2437,2551,2717,2817,2898"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,48",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,220,322,421,507,612,733,812,889,981,1074,1169,1262,1358,1452,1548,1643,1735,1827,1915,2021,2128,2226,2335,2442,2556,2722,5689",
+                        "endColumns": "114,101,98,85,104,120,78,76,91,92,94,92,95,93,95,94,91,91,87,105,106,97,108,106,113,165,99,80",
+                        "endOffsets": "215,317,416,502,607,728,807,884,976,1069,1164,1257,1353,1447,1543,1638,1730,1822,1910,2016,2123,2221,2330,2437,2551,2717,2817,5765"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\dc06104fc24aa0b521963d361d65d865\\res\\values-ru\\values-ru.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -532,26 +532,26 @@
                     "to": {
                         "startLines": "49",
                         "startColumns": "4",
-                        "startOffsets": "5319",
+                        "startOffsets": "5770",
                         "endColumns": "100",
-                        "endOffsets": "5415"
+                        "endOffsets": "5866"
                     }
                 },
                 {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\b23a538805321379c9b591cd2981e628\\res\\values-ja\\values.xml",
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\b23a538805321379c9b591cd2981e628\\res\\values-ru\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
                         "startOffsets": "205",
-                        "endColumns": "97",
-                        "endOffsets": "302"
+                        "endColumns": "100",
+                        "endOffsets": "305"
                     },
                     "to": {
                         "startLines": "47",
                         "startColumns": "4",
-                        "startOffsets": "5139",
-                        "endColumns": "101",
-                        "endOffsets": "5236"
+                        "startOffsets": "5584",
+                        "endColumns": "104",
+                        "endOffsets": "5684"
                     }
                 }
             ]
@@ -3225,96 +3225,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\values-vi_values-vi.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f4a70c60580cf920c94c3b49b0fc5ce2\\res\\values-vi\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "245,345,539,662,767,991,1119,1272,1401,1641,1746,1938,2066,2284,2459,2553,2643",
-                        "endColumns": "99,193,122,104,223,127,152,128,239,104,191,127,217,174,93,89,105",
-                        "endOffsets": "344,538,661,766,990,1118,1271,1400,1640,1745,1937,2065,2283,2458,2552,2642,2748"
-                    },
-                    "to": {
-                        "startLines": "29,30,31,32,33,34,35,36,38,39,40,41,42,43,44,45,46",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2798,2902,3096,3223,3332,3556,3688,3845,4173,4413,4522,4714,4846,5064,5243,5341,5435",
-                        "endColumns": "103,193,126,108,223,131,156,132,239,108,191,131,217,178,97,93,109",
-                        "endOffsets": "2897,3091,3218,3327,3551,3683,3840,3973,4408,4517,4709,4841,5059,5238,5336,5430,5540"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f19b873fc2e44666dd8de6830fabeb88\\res\\values-vi\\values-vi.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,212,314,423,507,610,729,807,884,975,1067,1162,1256,1357,1450,1545,1639,1730,1821,1904,2008,2116,2217,2322,2437,2542,2699,2798",
-                        "endColumns": "106,101,108,83,102,118,77,76,90,91,94,93,100,92,94,93,90,90,82,103,107,100,104,114,104,156,98,83",
-                        "endOffsets": "207,309,418,502,605,724,802,879,970,1062,1157,1251,1352,1445,1540,1634,1725,1816,1899,2003,2111,2212,2317,2432,2537,2694,2793,2877"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,48",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,212,314,423,507,610,729,807,884,975,1067,1162,1256,1357,1450,1545,1639,1730,1821,1904,2008,2116,2217,2322,2437,2542,2699,5648",
-                        "endColumns": "106,101,108,83,102,118,77,76,90,91,94,93,100,92,94,93,90,90,82,103,107,100,104,114,104,156,98,83",
-                        "endOffsets": "207,309,418,502,605,724,802,879,970,1062,1157,1251,1352,1445,1540,1634,1725,1816,1899,2003,2111,2212,2317,2432,2537,2694,2793,5727"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\b23a538805321379c9b591cd2981e628\\res\\values-vi\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "205",
-                        "endColumns": "98",
-                        "endOffsets": "303"
-                    },
-                    "to": {
-                        "startLines": "47",
-                        "startColumns": "4",
-                        "startOffsets": "5545",
-                        "endColumns": "102",
-                        "endOffsets": "5643"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\dc06104fc24aa0b521963d361d65d865\\res\\values-vi\\values-vi.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "49",
-                        "startColumns": "4",
-                        "startOffsets": "5732",
-                        "endColumns": "100",
-                        "endOffsets": "5828"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\950aa3c00a435ca361159ca5921dafce\\res\\values-vi\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "194",
-                        "endOffsets": "441"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "3978",
-                        "endColumns": "194",
-                        "endOffsets": "4168"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\values-uk_values-uk.arsc.flat",
             "map": [
                 {
@@ -3400,6 +3310,96 @@
                         "startOffsets": "5728",
                         "endColumns": "100",
                         "endOffsets": "5824"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\values-vi_values-vi.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f4a70c60580cf920c94c3b49b0fc5ce2\\res\\values-vi\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "245,345,539,662,767,991,1119,1272,1401,1641,1746,1938,2066,2284,2459,2553,2643",
+                        "endColumns": "99,193,122,104,223,127,152,128,239,104,191,127,217,174,93,89,105",
+                        "endOffsets": "344,538,661,766,990,1118,1271,1400,1640,1745,1937,2065,2283,2458,2552,2642,2748"
+                    },
+                    "to": {
+                        "startLines": "29,30,31,32,33,34,35,36,38,39,40,41,42,43,44,45,46",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2798,2902,3096,3223,3332,3556,3688,3845,4173,4413,4522,4714,4846,5064,5243,5341,5435",
+                        "endColumns": "103,193,126,108,223,131,156,132,239,108,191,131,217,178,97,93,109",
+                        "endOffsets": "2897,3091,3218,3327,3551,3683,3840,3973,4408,4517,4709,4841,5059,5238,5336,5430,5540"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f19b873fc2e44666dd8de6830fabeb88\\res\\values-vi\\values-vi.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,212,314,423,507,610,729,807,884,975,1067,1162,1256,1357,1450,1545,1639,1730,1821,1904,2008,2116,2217,2322,2437,2542,2699,2798",
+                        "endColumns": "106,101,108,83,102,118,77,76,90,91,94,93,100,92,94,93,90,90,82,103,107,100,104,114,104,156,98,83",
+                        "endOffsets": "207,309,418,502,605,724,802,879,970,1062,1157,1251,1352,1445,1540,1634,1725,1816,1899,2003,2111,2212,2317,2432,2537,2694,2793,2877"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,48",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,212,314,423,507,610,729,807,884,975,1067,1162,1256,1357,1450,1545,1639,1730,1821,1904,2008,2116,2217,2322,2437,2542,2699,5648",
+                        "endColumns": "106,101,108,83,102,118,77,76,90,91,94,93,100,92,94,93,90,90,82,103,107,100,104,114,104,156,98,83",
+                        "endOffsets": "207,309,418,502,605,724,802,879,970,1062,1157,1251,1352,1445,1540,1634,1725,1816,1899,2003,2111,2212,2317,2432,2537,2694,2793,5727"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\b23a538805321379c9b591cd2981e628\\res\\values-vi\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "205",
+                        "endColumns": "98",
+                        "endOffsets": "303"
+                    },
+                    "to": {
+                        "startLines": "47",
+                        "startColumns": "4",
+                        "startOffsets": "5545",
+                        "endColumns": "102",
+                        "endOffsets": "5643"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\dc06104fc24aa0b521963d361d65d865\\res\\values-vi\\values-vi.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "49",
+                        "startColumns": "4",
+                        "startOffsets": "5732",
+                        "endColumns": "100",
+                        "endOffsets": "5828"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\950aa3c00a435ca361159ca5921dafce\\res\\values-vi\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "194",
+                        "endOffsets": "441"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3978",
+                        "endColumns": "194",
+                        "endOffsets": "4168"
                     }
                 }
             ]
@@ -6000,420 +6000,314 @@
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\dc06104fc24aa0b521963d361d65d865\\res\\values\\values.xml",
                     "from": {
-                        "startLines": "2,3,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,83,84,88,89,90,91,98,141,173,210",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,124,319,389,457,529,599,660,734,807,868,929,991,1055,1117,1178,1246,1346,1406,1472,1545,1614,1671,1723,1785,1857,1933,1998,2057,2116,2176,2236,2296,2356,2416,2476,2536,2596,2656,2716,2775,2835,2895,2955,3015,3075,3135,3195,3255,3315,3375,3434,3494,3554,3613,3672,3731,3790,3849,3908,3943,3978,4033,4096,4151,4209,4266,4316,4377,4434,4468,4503,4538,4608,4679,4796,4997,5107,5308,5437,5509,5576,5874,8780,10845,12605",
-                        "endLines": "2,3,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,82,83,87,88,89,90,97,140,172,209,216",
-                        "endColumns": "68,62,69,67,71,69,60,73,72,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,64,58,58,59,59,59,59,59,59,59,59,59,59,58,59,59,59,59,59,59,59,59,59,59,58,59,59,58,58,58,58,58,58,34,34,54,62,54,57,56,49,60,56,33,34,34,69,70,116,12,109,12,128,71,66,24,24,24,24,24",
-                        "endOffsets": "119,182,384,452,524,594,655,729,802,863,924,986,1050,1112,1173,1241,1341,1401,1467,1540,1609,1666,1718,1780,1852,1928,1993,2052,2111,2171,2231,2291,2351,2411,2471,2531,2591,2651,2711,2770,2830,2890,2950,3010,3070,3130,3190,3250,3310,3370,3429,3489,3549,3608,3667,3726,3785,3844,3903,3938,3973,4028,4091,4146,4204,4261,4311,4372,4429,4463,4498,4533,4603,4674,4791,4992,5102,5303,5432,5504,5571,5869,8775,10840,12600,12977"
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
-                        "startLines": "514,515,623,624,625,626,627,628,629,740,741,742,743,744,745,746,747,748,749,750,751,752,753,754,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,802,803,804,805,806,807,808,817,818,830,831,832,833,834,835,836,837,838,839,843,866,980,2724,2725,2730,2733,2738,3107,3108,4233,4412,4455,4488,4525",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "22112,22181,29472,29542,29610,29682,29752,29813,29887,36934,36995,37056,37118,37182,37244,37305,37373,37473,37533,37599,37672,37741,37798,37850,39204,39276,39352,39417,39476,39535,39595,39655,39715,39775,39835,39895,39955,40015,40075,40135,40194,40254,40314,40374,40434,40494,40554,40614,40674,40734,40794,40853,40913,40973,41032,41091,41150,41209,41268,41730,41765,42340,42395,42458,42513,42571,42628,42678,42739,42796,42830,43008,44322,53637,171029,171146,171413,171706,171973,196792,196864,261532,279417,282323,284590,286350",
-                        "endLines": "514,515,623,624,625,626,627,628,629,740,741,742,743,744,745,746,747,748,749,750,751,752,753,754,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,802,803,804,805,806,807,808,817,818,830,831,832,833,834,835,836,837,838,839,843,866,980,2724,2728,2730,2736,2738,3107,3108,4239,4454,4486,4524,4531",
-                        "endColumns": "68,62,69,67,71,69,60,73,72,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,64,58,58,59,59,59,59,59,59,59,59,59,59,58,59,59,59,59,59,59,59,59,59,59,58,59,59,58,58,58,58,58,58,34,34,54,62,54,57,56,49,60,56,33,34,34,69,70,116,12,109,12,128,71,66,24,24,24,24,24",
-                        "endOffsets": "22176,22239,29537,29605,29677,29747,29808,29882,29955,36990,37051,37113,37177,37239,37300,37368,37468,37528,37594,37667,37736,37793,37845,37907,39271,39347,39412,39471,39530,39590,39650,39710,39770,39830,39890,39950,40010,40070,40130,40189,40249,40309,40369,40429,40489,40549,40609,40669,40729,40789,40848,40908,40968,41027,41086,41145,41204,41263,41322,41760,41795,42390,42453,42508,42566,42623,42673,42734,42791,42825,42860,43038,44387,53703,171141,171342,171518,171902,172097,196859,196926,261825,282318,284383,286345,286722"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\src\\main\\res\\values\\attrs.xml",
-                    "from": {
-                        "startLines": "6",
-                        "startColumns": "4",
-                        "startOffsets": "283",
-                        "endLines": "9",
-                        "endColumns": "24",
-                        "endOffsets": "491"
-                    },
-                    "to": {
-                        "startLines": "4137",
-                        "startColumns": "4",
-                        "startOffsets": "254824",
-                        "endLines": "4140",
-                        "endColumns": "24",
-                        "endOffsets": "255027"
+                        "startLines": "514,515,624,625,626,627,628,629,630,741,742,743,744,745,746,747,748,749,750,751,752,753,754,755,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,802,803,804,805,806,807,808,809,810,819,820,832,833,834,835,836,837,838,839,840,841,845,868,1071,2814,2815,2820,2823,2828,3197,3198",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "22079,22148,29486,29556,29624,29696,29766,29827,29901,36948,37009,37070,37132,37196,37258,37319,37387,37487,37547,37613,37686,37755,37812,37864,39261,39333,39409,39474,39533,39592,39652,39712,39772,39832,39892,39952,40012,40072,40132,40192,40251,40311,40371,40431,40491,40551,40611,40671,40731,40791,40851,40910,40970,41030,41089,41148,41207,41266,41325,41787,41822,42397,42452,42515,42570,42628,42685,42735,42796,42853,42887,43065,44379,59499,174893,175010,175277,175570,175837,200544,200616",
+                        "endLines": "514,515,624,625,626,627,628,629,630,741,742,743,744,745,746,747,748,749,750,751,752,753,754,755,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,802,803,804,805,806,807,808,809,810,819,820,832,833,834,835,836,837,838,839,840,841,845,868,1071,2814,2818,2820,2826,2828,3197,3198",
+                        "endColumns": "68,62,69,67,71,69,60,73,72,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,64,58,58,59,59,59,59,59,59,59,59,59,59,58,59,59,59,59,59,59,59,59,59,59,58,59,59,58,58,58,58,58,58,34,34,54,62,54,57,56,49,60,56,33,34,34,69,70,116,12,109,12,128,71,66",
+                        "endOffsets": "22143,22206,29551,29619,29691,29761,29822,29896,29969,37004,37065,37127,37191,37253,37314,37382,37482,37542,37608,37681,37750,37807,37859,37921,39328,39404,39469,39528,39587,39647,39707,39767,39827,39887,39947,40007,40067,40127,40187,40246,40306,40366,40426,40486,40546,40606,40666,40726,40786,40846,40905,40965,41025,41084,41143,41202,41261,41320,41379,41817,41852,42447,42510,42565,42623,42680,42730,42791,42848,42882,42917,43095,44444,59565,175005,175206,175382,175766,175961,200611,200678"
                     }
                 },
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\06c4646971adc0002358453dcb1cb85e\\res\\values\\values.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "57",
-                        "endOffsets": "108"
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
                     },
                     "to": {
-                        "startLines": "814",
+                        "startLines": "816",
                         "startColumns": "4",
-                        "startOffsets": "41572",
+                        "startOffsets": "41629",
                         "endColumns": "57",
-                        "endOffsets": "41625"
+                        "endOffsets": "41682"
                     }
                 },
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\47c854572811de3eb8bfd8349a5d7b38\\res\\values\\values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,111,170,218,274,349,425,497,563",
-                        "endLines": "2,3,4,5,6,7,8,9,38",
-                        "endColumns": "55,58,47,55,74,75,71,65,24",
-                        "endOffsets": "106,165,213,269,344,420,492,558,2084"
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
-                        "startLines": "411,677,678,679,687,688,689,816,4803",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "15355,32979,33038,33086,33753,33828,33904,41664,301912",
-                        "endLines": "411,677,678,679,687,688,689,816,4831",
-                        "endColumns": "55,58,47,55,74,75,71,65,24",
-                        "endOffsets": "15406,33033,33081,33137,33823,33899,33971,41725,303433"
+                        "startLines": "411,678,679,680,688,689,690,818",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "15322,32993,33052,33100,33767,33842,33918,41721",
+                        "endColumns": "55,58,47,55,74,75,71,65",
+                        "endOffsets": "15373,33047,33095,33151,33837,33913,33985,41782"
                     }
                 },
                 {
                     "source": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\src\\main\\res\\values\\drawables.xml",
                     "from": {
-                        "startLines": "1,2,4,6,5,3",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "75,163,347,521,435,253",
-                        "endColumns": "87,89,87,83,85,93",
-                        "endOffsets": "158,248,430,600,516,342"
+                        "startLines": "-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
-                        "startLines": "768,769,770,771,772,773",
+                        "startLines": "770,771,772,773,774,775",
                         "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "38674,38762,38852,38940,39024,39110",
+                        "startOffsets": "38731,38819,38909,38997,39081,39167",
                         "endColumns": "87,89,87,83,85,93",
-                        "endOffsets": "38757,38847,38935,39019,39105,39199"
+                        "endOffsets": "38814,38904,38992,39076,39162,39256"
                     }
                 },
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f4a70c60580cf920c94c3b49b0fc5ce2\\res\\values\\values.xml",
                     "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,33,46",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "215,301,377,463,549,625,702,778,951,1052,1233,1354,1457,1637,1756,1868,1967,2155,2256,2437,2558,2733,2877,2936,2994,3164,3475",
-                        "endLines": "4,5,6,7,8,9,10,11,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,45,64",
-                        "endColumns": "85,75,85,85,75,76,75,75,100,180,120,102,179,118,111,98,187,100,180,120,174,143,58,57,74,20,20",
-                        "endOffsets": "300,376,462,548,624,701,777,853,1051,1232,1353,1456,1636,1755,1867,1966,2154,2255,2436,2557,2732,2876,2935,2993,3068,3474,3887"
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
-                        "startLines": "465,466,467,468,469,470,471,472,901,902,903,904,905,906,907,908,910,911,912,913,914,915,916,917,918,4581,4871",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "18773,18863,18943,19033,19123,19203,19284,19364,46879,46984,47165,47290,47397,47577,47700,47816,48086,48274,48379,48560,48685,48860,49008,49071,49133,289466,305750",
-                        "endLines": "465,466,467,468,469,470,471,472,901,902,903,904,905,906,907,908,910,911,912,913,914,915,916,917,918,4593,4889",
-                        "endColumns": "89,79,89,89,79,80,79,79,104,180,124,106,179,122,115,102,187,104,180,124,174,147,62,61,78,20,20",
-                        "endOffsets": "18858,18938,19028,19118,19198,19279,19359,19439,46979,47160,47285,47392,47572,47695,47811,47914,48269,48374,48555,48680,48855,49003,49066,49128,49207,289776,306162"
+                        "startLines": "465,466,467,468,469,470,471,472,903,904,905,906,907,908,909,910,912,913,914,915,916,917,918,919,920",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "18740,18830,18910,19000,19090,19170,19251,19331,46936,47041,47222,47347,47454,47634,47757,47873,48143,48331,48436,48617,48742,48917,49065,49128,49190",
+                        "endColumns": "89,79,89,89,79,80,79,79,104,180,124,106,179,122,115,102,187,104,180,124,174,147,62,61,78",
+                        "endOffsets": "18825,18905,18995,19085,19165,19246,19326,19406,47036,47217,47342,47449,47629,47752,47868,47971,48326,48431,48612,48737,48912,49060,49123,49185,49264"
                     }
                 },
                 {
                     "source": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
-                        "startLines": "3,15,10,17,29,21,19",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "54,525,374,617,1199,762,699",
-                        "endLines": "8,15,13,17,31,27,19",
-                        "endColumns": "12,90,12,80,12,12,61",
-                        "endOffsets": "368,611,519,693,1355,1193,756"
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
-                        "startLines": "994,1000,1001,1005,2438,2441,2448",
+                        "startLines": "1086,1092,1093,1097,2528,2531,2538",
                         "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "54669,54988,55078,55228,148700,148861,149297",
-                        "endLines": "999,1000,1004,1005,2440,2447,2448",
+                        "startOffsets": "60602,60886,60976,61126,152972,153133,153569",
+                        "endLines": "1091,1092,1096,1097,2530,2537,2538",
                         "endColumns": "12,89,12,79,12,12,60",
-                        "endOffsets": "54983,55073,55223,55303,148856,149292,149353"
+                        "endOffsets": "60881,60971,61121,61201,153128,153564,153625"
                     }
                 },
                 {
                     "source": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
-                        "startLines": "5,8,10,4,2,3,11,6,7",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "199,324,370,153,55,102,420,239,279",
-                        "endColumns": "39,44,49,45,46,50,51,39,44",
-                        "endOffsets": "234,364,415,194,97,148,467,274,319"
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
                         "startLines": "447,448,449,462,463,464,525,538,539",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "17604,17644,17689,18629,18675,18722,22921,23791,23831",
+                        "startOffsets": "17571,17611,17656,18596,18642,18689,22888,23758,23798",
                         "endColumns": "39,44,49,45,46,50,51,39,44",
-                        "endOffsets": "17639,17684,17734,18670,18717,18768,22968,23826,23871"
+                        "endOffsets": "17606,17651,17701,18637,18684,18735,22935,23793,23838"
                     }
                 },
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f19b873fc2e44666dd8de6830fabeb88\\res\\values\\values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,218,219,223,227,231,236,242,249,253,257,262,266,270,274,278,282,286,292,296,302,306,312,316,321,325,328,332,338,342,348,352,358,361,365,369,373,377,381,382,383,384,387,390,393,396,400,401,402,403,404,407,409,411,413,418,419,423,429,433,434,436,447,448,452,458,462,463,464,468,495,499,500,504,532,703,729,901,927,958,966,972,986,1008,1013,1018,1028,1037,1046,1050,1057,1065,1072,1073,1082,1085,1088,1092,1096,1100,1103,1104,1109,1114,1124,1129,1136,1142,1143,1146,1150,1155,1157,1159,1162,1165,1167,1171,1174,1181,1184,1187,1191,1193,1197,1199,1201,1203,1207,1215,1223,1235,1241,1250,1253,1264,1267,1268,1273,1274,1279,1348,1418,1419,1429,1438,1439,1441,1445,1448,1451,1454,1457,1460,1463,1466,1470,1473,1476,1479,1483,1486,1490,1494,1495,1496,1497,1498,1499,1500,1501,1502,1503,1504,1505,1506,1507,1508,1509,1510,1511,1512,1513,1514,1516,1518,1519,1520,1521,1522,1523,1524,1525,1527,1528,1530,1531,1533,1535,1536,1538,1539,1540,1541,1542,1543,1545,1546,1547,1548,1549,1550,1552,1554,1556,1557,1558,1559,1560,1561,1562,1563,1564,1565,1566,1567,1568,1570,1571,1572,1573,1574,1575,1577,1581,1585,1586,1587,1588,1589,1590,1594,1595,1596,1597,1599,1601,1603,1605,1607,1608,1609,1610,1612,1614,1616,1617,1618,1619,1620,1621,1622,1623,1624,1625,1626,1627,1630,1631,1632,1633,1635,1637,1638,1640,1641,1643,1645,1647,1648,1649,1650,1651,1652,1653,1654,1655,1656,1657,1658,1660,1661,1662,1663,1665,1666,1667,1668,1669,1671,1673,1675,1677,1678,1679,1680,1681,1682,1683,1684,1685,1686,1687,1688,1689,1690,1691,1692,1775,1778,1781,1784,1798,1809,1819,1849,1876,1885,1960,2357,2362,2390,2408,2444,2450,2456,2479,2620,2640,2646,2650,2656,2693,2705,2771,2795,2864,2883,2909",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,160,205,254,295,350,409,471,552,613,688,764,841,919,1004,1086,1162,1238,1315,1393,1499,1605,1684,1764,1821,1879,1953,2028,2093,2159,2219,2280,2352,2425,2492,2560,2619,2678,2737,2796,2855,2909,2963,3016,3070,3124,3178,3232,3306,3385,3458,3532,3603,3675,3747,3820,3877,3935,4008,4082,4156,4231,4303,4376,4446,4517,4577,4638,4707,4776,4846,4920,4996,5060,5137,5213,5290,5355,5424,5501,5576,5645,5713,5790,5856,5917,6014,6079,6148,6247,6318,6377,6435,6492,6551,6615,6686,6758,6830,6902,6974,7041,7109,7177,7236,7299,7363,7453,7544,7604,7670,7737,7803,7873,7937,7990,8057,8118,8185,8298,8356,8419,8484,8549,8624,8697,8769,8818,8879,8940,9001,9063,9127,9191,9255,9320,9383,9443,9504,9570,9629,9689,9751,9822,9882,9950,10036,10123,10213,10300,10388,10470,10553,10643,10734,10786,10844,10889,10955,11019,11076,11133,11187,11244,11292,11341,11392,11426,11473,11522,11568,11600,11664,11726,11786,11843,11917,11987,12065,12119,12189,12274,12322,12368,12429,12492,12558,12622,12693,12756,12821,12885,12946,13007,13059,13132,13206,13275,13350,13424,13498,13639,13709,13762,13840,13930,14018,14114,14204,14786,14875,15122,15403,15655,15940,16333,16810,17032,17254,17530,17757,17987,18217,18447,18677,18904,19323,19549,19974,20204,20632,20851,21134,21342,21473,21700,22126,22351,22778,22999,23424,23544,23820,24121,24445,24736,25050,25187,25318,25423,25665,25832,26036,26244,26515,26627,26739,26844,26961,27175,27321,27461,27547,27895,27983,28229,28647,28896,28978,29076,29693,29793,30045,30469,30724,30818,30907,31144,33196,33438,33540,33793,35977,47101,48617,59840,61368,63125,63751,64171,65232,66497,66753,66989,67536,68030,68635,68833,69413,69977,70352,70470,71008,71165,71361,71634,71890,72060,72201,72265,72630,72997,73673,73937,74275,74628,74722,74908,75214,75476,75601,75728,75967,76178,76297,76490,76667,77122,77303,77425,77684,77797,77984,78086,78193,78322,78597,79105,79601,80478,80772,81342,81491,82223,82395,82479,82815,82907,83185,88594,94146,94208,94838,95452,95543,95656,95885,96045,96197,96368,96534,96703,96870,97033,97276,97446,97619,97790,98064,98263,98468,98798,98882,98978,99074,99172,99272,99374,99476,99578,99680,99782,99882,99978,100090,100219,100342,100473,100604,100702,100816,100910,101050,101184,101280,101392,101492,101608,101704,101816,101916,102056,102192,102356,102486,102644,102794,102935,103079,103214,103326,103476,103604,103732,103868,104000,104130,104260,104372,104512,104658,104802,104940,105006,105096,105172,105276,105366,105468,105576,105684,105784,105864,105956,106054,106164,106242,106348,106440,106544,106654,106776,106939,107096,107176,107276,107366,107476,107566,107807,107901,108007,108099,108199,108311,108425,108541,108657,108751,108865,108977,109079,109199,109321,109403,109507,109627,109753,109851,109945,110033,110145,110261,110383,110495,110670,110786,110872,110964,111076,111200,111267,111393,111461,111589,111733,111861,111930,112025,112140,112253,112352,112461,112572,112683,112784,112889,112989,113119,113210,113333,113427,113539,113625,113729,113825,113913,114031,114135,114239,114365,114453,114561,114661,114751,114861,114945,115047,115131,115185,115249,115355,115441,115551,115635,115755,120899,121017,121132,121264,121979,122671,123188,124787,126320,126708,131443,151705,151965,153475,154508,156521,156783,157139,157969,164751,165885,166179,166402,166729,168779,169427,173278,174480,178559,179774,181183",
-                        "endLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,217,218,222,226,230,235,241,248,252,256,261,265,269,273,277,281,285,291,295,301,305,311,315,320,324,327,331,337,341,347,351,357,360,364,368,372,376,380,381,382,383,386,389,392,395,399,400,401,402,403,406,408,410,412,417,418,422,428,432,433,435,446,447,451,457,461,462,463,467,494,498,499,503,531,702,728,900,926,957,965,971,985,1007,1012,1017,1027,1036,1045,1049,1056,1064,1071,1072,1081,1084,1087,1091,1095,1099,1102,1103,1108,1113,1123,1128,1135,1141,1142,1145,1149,1154,1156,1158,1161,1164,1166,1170,1173,1180,1183,1186,1190,1192,1196,1198,1200,1202,1206,1214,1222,1234,1240,1249,1252,1263,1266,1267,1272,1273,1278,1347,1417,1418,1428,1437,1438,1440,1444,1447,1450,1453,1456,1459,1462,1465,1469,1472,1475,1478,1482,1485,1489,1493,1494,1495,1496,1497,1498,1499,1500,1501,1502,1503,1504,1505,1506,1507,1508,1509,1510,1511,1512,1513,1515,1517,1518,1519,1520,1521,1522,1523,1524,1526,1527,1529,1530,1532,1534,1535,1537,1538,1539,1540,1541,1542,1544,1545,1546,1547,1548,1549,1551,1553,1555,1556,1557,1558,1559,1560,1561,1562,1563,1564,1565,1566,1567,1569,1570,1571,1572,1573,1574,1576,1580,1584,1585,1586,1587,1588,1589,1593,1594,1595,1596,1598,1600,1602,1604,1606,1607,1608,1609,1611,1613,1615,1616,1617,1618,1619,1620,1621,1622,1623,1624,1625,1626,1629,1630,1631,1632,1634,1636,1637,1639,1640,1642,1644,1646,1647,1648,1649,1650,1651,1652,1653,1654,1655,1656,1657,1659,1660,1661,1662,1664,1665,1666,1667,1668,1670,1672,1674,1676,1677,1678,1679,1680,1681,1682,1683,1684,1685,1686,1687,1688,1689,1690,1691,1774,1777,1780,1783,1797,1808,1818,1848,1875,1884,1959,2356,2361,2389,2407,2443,2449,2455,2478,2619,2639,2645,2649,2655,2692,2704,2770,2794,2863,2882,2908,2917",
-                        "endColumns": "54,44,48,40,54,58,61,80,60,74,75,76,77,84,81,75,75,76,77,105,105,78,79,56,57,73,74,64,65,59,60,71,72,66,67,58,58,58,58,58,53,53,52,53,53,53,53,73,78,72,73,70,71,71,72,56,57,72,73,73,74,71,72,69,70,59,60,68,68,69,73,75,63,76,75,76,64,68,76,74,68,67,76,65,60,96,64,68,98,70,58,57,56,58,63,70,71,71,71,71,66,67,67,58,62,63,89,90,59,65,66,65,69,63,52,66,60,66,112,57,62,64,64,74,72,71,48,60,60,60,61,63,63,63,64,62,59,60,65,58,59,61,70,59,67,85,86,89,86,87,81,82,89,90,51,57,44,65,63,56,56,53,56,47,48,50,33,46,48,45,31,63,61,59,56,73,69,77,53,69,84,47,45,60,62,65,63,70,62,64,63,60,60,51,72,73,68,74,73,73,140,69,52,77,89,87,95,89,12,88,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,136,130,104,12,12,12,12,12,111,111,104,116,12,12,12,12,12,87,12,12,12,81,12,12,99,12,12,12,93,88,12,12,12,101,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,117,12,12,12,12,12,12,12,63,12,12,12,12,12,12,93,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,83,12,91,12,12,12,61,12,12,90,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,83,95,95,97,99,101,101,101,101,101,99,95,111,128,122,130,130,97,113,93,12,12,95,111,99,115,95,111,99,12,135,12,129,12,12,140,12,134,111,149,127,127,12,131,129,129,111,139,12,12,12,65,89,75,103,89,101,107,107,99,79,91,97,12,77,105,91,103,109,12,12,12,79,99,89,109,89,12,93,105,91,12,12,12,12,12,93,113,111,12,12,12,81,103,119,125,97,93,87,111,115,121,111,12,115,85,91,12,12,66,12,67,12,12,12,68,94,114,112,98,108,110,110,100,104,99,12,90,122,93,12,85,103,95,87,12,12,12,12,87,107,99,89,109,83,101,83,53,63,105,85,109,83,119,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24",
-                        "endOffsets": "155,200,249,290,345,404,466,547,608,683,759,836,914,999,1081,1157,1233,1310,1388,1494,1600,1679,1759,1816,1874,1948,2023,2088,2154,2214,2275,2347,2420,2487,2555,2614,2673,2732,2791,2850,2904,2958,3011,3065,3119,3173,3227,3301,3380,3453,3527,3598,3670,3742,3815,3872,3930,4003,4077,4151,4226,4298,4371,4441,4512,4572,4633,4702,4771,4841,4915,4991,5055,5132,5208,5285,5350,5419,5496,5571,5640,5708,5785,5851,5912,6009,6074,6143,6242,6313,6372,6430,6487,6546,6610,6681,6753,6825,6897,6969,7036,7104,7172,7231,7294,7358,7448,7539,7599,7665,7732,7798,7868,7932,7985,8052,8113,8180,8293,8351,8414,8479,8544,8619,8692,8764,8813,8874,8935,8996,9058,9122,9186,9250,9315,9378,9438,9499,9565,9624,9684,9746,9817,9877,9945,10031,10118,10208,10295,10383,10465,10548,10638,10729,10781,10839,10884,10950,11014,11071,11128,11182,11239,11287,11336,11387,11421,11468,11517,11563,11595,11659,11721,11781,11838,11912,11982,12060,12114,12184,12269,12317,12363,12424,12487,12553,12617,12688,12751,12816,12880,12941,13002,13054,13127,13201,13270,13345,13419,13493,13634,13704,13757,13835,13925,14013,14109,14199,14781,14870,15117,15398,15650,15935,16328,16805,17027,17249,17525,17752,17982,18212,18442,18672,18899,19318,19544,19969,20199,20627,20846,21129,21337,21468,21695,22121,22346,22773,22994,23419,23539,23815,24116,24440,24731,25045,25182,25313,25418,25660,25827,26031,26239,26510,26622,26734,26839,26956,27170,27316,27456,27542,27890,27978,28224,28642,28891,28973,29071,29688,29788,30040,30464,30719,30813,30902,31139,33191,33433,33535,33788,35972,47096,48612,59835,61363,63120,63746,64166,65227,66492,66748,66984,67531,68025,68630,68828,69408,69972,70347,70465,71003,71160,71356,71629,71885,72055,72196,72260,72625,72992,73668,73932,74270,74623,74717,74903,75209,75471,75596,75723,75962,76173,76292,76485,76662,77117,77298,77420,77679,77792,77979,78081,78188,78317,78592,79100,79596,80473,80767,81337,81486,82218,82390,82474,82810,82902,83180,88589,94141,94203,94833,95447,95538,95651,95880,96040,96192,96363,96529,96698,96865,97028,97271,97441,97614,97785,98059,98258,98463,98793,98877,98973,99069,99167,99267,99369,99471,99573,99675,99777,99877,99973,100085,100214,100337,100468,100599,100697,100811,100905,101045,101179,101275,101387,101487,101603,101699,101811,101911,102051,102187,102351,102481,102639,102789,102930,103074,103209,103321,103471,103599,103727,103863,103995,104125,104255,104367,104507,104653,104797,104935,105001,105091,105167,105271,105361,105463,105571,105679,105779,105859,105951,106049,106159,106237,106343,106435,106539,106649,106771,106934,107091,107171,107271,107361,107471,107561,107802,107896,108002,108094,108194,108306,108420,108536,108652,108746,108860,108972,109074,109194,109316,109398,109502,109622,109748,109846,109940,110028,110140,110256,110378,110490,110665,110781,110867,110959,111071,111195,111262,111388,111456,111584,111728,111856,111925,112020,112135,112248,112347,112456,112567,112678,112779,112884,112984,113114,113205,113328,113422,113534,113620,113724,113820,113908,114026,114130,114234,114360,114448,114556,114656,114746,114856,114940,115042,115126,115180,115244,115350,115436,115546,115630,115750,120894,121012,121127,121259,121974,122666,123183,124782,126315,126703,131438,151700,151960,153470,154503,156516,156778,157134,157964,164746,165880,166174,166397,166724,168774,169422,173273,174475,178554,179769,181178,181652"
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
-                        "startLines": "291,297,299,432,433,434,435,437,438,439,440,441,442,443,444,445,446,450,451,452,453,454,455,456,457,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,517,518,519,520,521,522,523,524,526,527,528,529,530,531,532,533,534,535,536,537,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617,674,675,680,681,682,683,684,685,686,759,760,761,762,763,764,765,766,809,810,811,812,815,822,823,829,849,851,852,855,856,867,868,869,870,871,872,873,874,875,876,877,878,879,880,881,882,883,884,885,886,887,888,889,890,891,892,893,978,985,986,987,988,989,1006,1014,1015,1019,1023,1034,1039,1045,1052,1056,1060,1065,1069,1073,1077,1081,1085,1089,1095,1099,1105,1109,1115,1119,1124,1128,1131,1135,1141,1145,1151,1155,1161,1164,1168,1172,1176,1180,1184,1185,1186,1187,1190,1193,1196,1199,1203,1204,1205,1206,1207,1210,1212,1214,1216,1221,1222,1226,1232,1236,1237,1239,1250,1251,1255,1261,1265,1319,1320,1324,1351,1355,1356,1360,1610,1781,1807,1979,2005,2036,2044,2050,2064,2086,2091,2096,2106,2115,2124,2128,2135,2143,2150,2151,2160,2163,2166,2170,2174,2178,2181,2182,2187,2192,2202,2207,2214,2220,2221,2224,2228,2233,2235,2237,2240,2243,2245,2249,2252,2259,2262,2265,2269,2271,2275,2277,2279,2281,2285,2293,2301,2313,2319,2328,2331,2342,2345,2346,2351,2352,2449,2518,2592,2593,2603,2612,2613,2615,2619,2622,2625,2628,2631,2634,2637,2640,2644,2647,2650,2653,2657,2660,2664,2668,2669,2670,2671,2672,2673,2674,2675,2676,2677,2678,2679,2680,2681,2682,2683,2684,2685,2686,2687,2688,2690,2692,2693,2694,2695,2696,2697,2698,2699,2701,2702,2704,2705,2707,2709,2710,2712,2713,2714,2715,2716,2717,2719,2720,2721,2722,2723,2878,2880,2882,2884,2885,2886,2887,2888,2889,2890,2891,2892,2893,2894,2895,2896,2898,2899,2900,2901,2902,2903,2905,2909,2978,2979,2980,2981,2982,2983,2987,2988,2989,3012,3014,3016,3018,3020,3022,3023,3024,3025,3027,3029,3031,3032,3033,3034,3035,3036,3037,3038,3039,3040,3041,3042,3045,3046,3047,3048,3050,3052,3053,3055,3056,3058,3060,3062,3063,3064,3065,3066,3067,3068,3069,3070,3071,3072,3073,3075,3076,3077,3078,3080,3081,3082,3083,3084,3086,3088,3090,3092,3093,3094,3095,3096,3097,3098,3099,3100,3101,3102,3103,3104,3105,3106,3386,3469,3472,3475,3478,3492,3503,3579,3609,3636,3645,3720,4141,4240,4384,4533,4569,4575,4602,4625,4766,4787,4793,4797,4834,4892,4936,5026,5070,5139,5158,5184",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "9727,9954,10052,16558,16599,16654,16713,16837,16918,16979,17054,17130,17207,17285,17370,17452,17528,17739,17816,17894,18000,18106,18185,18265,18322,20207,20281,20356,20421,20487,20547,20608,20680,20753,20820,20888,20947,21006,21065,21124,21183,21237,21291,21344,21398,21452,21506,22333,22407,22486,22559,22633,22704,22776,22848,22973,23030,23088,23161,23235,23309,23384,23456,23529,23599,23670,23730,23876,23945,24014,24084,24158,24234,24298,24375,24451,24528,24593,24662,24739,24814,24883,24951,25028,25094,25155,25252,25317,25386,25485,25556,25615,25673,25730,25789,25853,25924,25996,26068,26140,26212,26279,26347,26415,26474,26537,26601,26691,26782,26842,26908,26975,27041,27111,27175,27228,27295,27356,27423,27536,27594,27657,27722,27787,27862,27935,28007,28056,28117,28178,28239,28301,28365,28429,28493,28558,28621,28681,28742,28808,28867,28927,28989,29060,29120,32764,32850,33142,33232,33319,33407,33489,33572,33662,38124,38176,38234,38279,38345,38409,38466,38523,41327,41384,41432,41481,41630,41963,42010,42294,43309,43389,43453,43643,43703,44392,44466,44536,44614,44668,44738,44823,44871,44917,44978,45041,45107,45171,45242,45305,45370,45434,45495,45556,45608,45681,45755,45824,45899,45973,46047,46188,53538,53950,54028,54118,54206,54302,55308,55890,55979,56226,56507,57173,57458,57851,58328,58550,58772,59048,59275,59505,59735,59965,60195,60422,60841,61067,61492,61722,62150,62369,62652,62860,62991,63218,63644,63869,64296,64517,64942,65062,65338,65639,65963,66254,66568,66705,66836,66941,67183,67350,67554,67762,68033,68145,68257,68362,68479,68693,68839,68979,69065,69413,69501,69747,70165,70414,70496,70594,71211,71311,71563,71987,72242,76069,76158,76395,78447,78689,78791,79044,97445,108569,110085,121308,122836,124593,125219,125639,126700,127965,128221,128457,129004,129498,130103,130301,130881,131445,131820,131938,132476,132633,132829,133102,133358,133528,133669,133733,134098,134465,135141,135405,135743,136096,136190,136376,136682,136944,137069,137196,137435,137646,137765,137958,138135,138590,138771,138893,139152,139265,139452,139554,139661,139790,140065,140573,141069,141946,142240,142810,142959,143691,143863,143947,144283,144375,149358,154767,160663,160725,161355,161969,162060,162173,162402,162562,162714,162885,163051,163220,163387,163550,163793,163963,164136,164307,164581,164780,164985,165315,165399,165495,165591,165689,165789,165891,165993,166095,166197,166299,166399,166495,166607,166736,166859,166990,167121,167219,167333,167427,167567,167701,167797,167909,168009,168125,168221,168333,168433,168573,168709,168873,169003,169161,169311,169452,169596,169731,169843,169993,170121,170249,170385,170517,170647,170777,170889,179615,179761,179905,180043,180109,180199,180275,180379,180469,180571,180679,180787,180887,180967,181059,181157,181267,181345,181451,181543,181647,181757,181879,182042,186527,186607,186707,186797,186907,186997,187238,187332,187438,189136,189236,189348,189462,189578,189694,189788,189902,190014,190116,190236,190358,190440,190544,190664,190790,190888,190982,191070,191182,191298,191420,191532,191707,191823,191909,192001,192113,192237,192304,192430,192498,192626,192770,192898,192967,193062,193177,193290,193389,193498,193609,193720,193821,193926,194026,194156,194247,194370,194464,194576,194662,194766,194862,194950,195068,195172,195276,195402,195490,195598,195698,195788,195898,195982,196084,196168,196222,196286,196392,196478,196588,196672,213760,218904,219022,219137,219269,219984,220676,224873,226472,228005,228393,233128,255032,261830,277389,286835,288848,289110,291755,292585,299367,301068,301362,301585,303700,306502,309053,314833,318083,322162,323377,324786",
-                        "endLines": "291,297,299,432,433,434,435,437,438,439,440,441,442,443,444,445,446,450,451,452,453,454,455,456,457,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,517,518,519,520,521,522,523,524,526,527,528,529,530,531,532,533,534,535,536,537,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617,674,675,680,681,682,683,684,685,686,759,760,761,762,763,764,765,766,809,810,811,812,815,822,823,829,849,851,852,855,856,867,868,869,870,871,872,873,874,875,876,877,878,879,880,881,882,883,884,885,886,887,888,889,890,891,892,893,978,985,986,987,988,989,1013,1014,1018,1022,1026,1038,1044,1051,1055,1059,1064,1068,1072,1076,1080,1084,1088,1094,1098,1104,1108,1114,1118,1123,1127,1130,1134,1140,1144,1150,1154,1160,1163,1167,1171,1175,1179,1183,1184,1185,1186,1189,1192,1195,1198,1202,1203,1204,1205,1206,1209,1211,1213,1215,1220,1221,1225,1231,1235,1236,1238,1249,1250,1254,1260,1264,1265,1319,1323,1350,1354,1355,1359,1387,1780,1806,1978,2004,2035,2043,2049,2063,2085,2090,2095,2105,2114,2123,2127,2134,2142,2149,2150,2159,2162,2165,2169,2173,2177,2180,2181,2186,2191,2201,2206,2213,2219,2220,2223,2227,2232,2234,2236,2239,2242,2244,2248,2251,2258,2261,2264,2268,2270,2274,2276,2278,2280,2284,2292,2300,2312,2318,2327,2330,2341,2344,2345,2350,2351,2356,2517,2587,2592,2602,2611,2612,2614,2618,2621,2624,2627,2630,2633,2636,2639,2643,2646,2649,2652,2656,2659,2663,2667,2668,2669,2670,2671,2672,2673,2674,2675,2676,2677,2678,2679,2680,2681,2682,2683,2684,2685,2686,2687,2689,2691,2692,2693,2694,2695,2696,2697,2698,2700,2701,2703,2704,2706,2708,2709,2711,2712,2713,2714,2715,2716,2718,2719,2720,2721,2722,2723,2879,2881,2883,2884,2885,2886,2887,2888,2889,2890,2891,2892,2893,2894,2895,2897,2898,2899,2900,2901,2902,2904,2908,2912,2978,2979,2980,2981,2982,2986,2987,2988,2989,3013,3015,3017,3019,3021,3022,3023,3024,3026,3028,3030,3031,3032,3033,3034,3035,3036,3037,3038,3039,3040,3041,3044,3045,3046,3047,3049,3051,3052,3054,3055,3057,3059,3061,3062,3063,3064,3065,3066,3067,3068,3069,3070,3071,3072,3074,3075,3076,3077,3079,3080,3081,3082,3083,3085,3087,3089,3091,3092,3093,3094,3095,3096,3097,3098,3099,3100,3101,3102,3103,3104,3105,3106,3468,3471,3474,3477,3491,3502,3512,3608,3635,3644,3719,4116,4145,4267,4401,4568,4574,4580,4624,4765,4785,4792,4796,4802,4870,4903,5001,5049,5138,5157,5183,5192",
-                        "endColumns": "54,44,48,40,54,58,61,80,60,74,75,76,77,84,81,75,75,76,77,105,105,78,79,56,57,73,74,64,65,59,60,71,72,66,67,58,58,58,58,58,53,53,52,53,53,53,53,73,78,72,73,70,71,71,72,56,57,72,73,73,74,71,72,69,70,59,60,68,68,69,73,75,63,76,75,76,64,68,76,74,68,67,76,65,60,96,64,68,98,70,58,57,56,58,63,70,71,71,71,71,66,67,67,58,62,63,89,90,59,65,66,65,69,63,52,66,60,66,112,57,62,64,64,74,72,71,48,60,60,60,61,63,63,63,64,62,59,60,65,58,59,61,70,59,67,85,86,89,86,87,81,82,89,90,51,57,44,65,63,56,56,53,56,47,48,50,33,46,48,45,31,63,61,59,56,73,69,77,53,69,84,47,45,60,62,65,63,70,62,64,63,60,60,51,72,73,68,74,73,73,140,69,52,77,89,87,95,89,12,88,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,136,130,104,12,12,12,12,12,111,111,104,116,12,12,12,12,12,87,12,12,12,81,12,12,99,12,12,12,93,88,12,12,12,101,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,117,12,12,12,12,12,12,12,63,12,12,12,12,12,12,93,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,83,12,91,12,12,12,61,12,12,90,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,83,95,95,97,99,101,101,101,101,101,99,95,111,128,122,130,130,97,113,93,12,12,95,111,99,115,95,111,99,12,135,12,129,12,12,140,12,134,111,149,127,127,12,131,129,129,111,139,12,12,12,65,89,75,103,89,101,107,107,99,79,91,97,12,77,105,91,103,109,12,12,12,79,99,89,109,89,12,93,105,91,12,12,12,12,12,93,113,111,12,12,12,81,103,119,125,97,93,87,111,115,121,111,12,115,85,91,12,12,66,12,67,12,12,12,68,94,114,112,98,108,110,110,100,104,99,12,90,122,93,12,85,103,95,87,12,12,12,12,87,107,99,89,109,83,101,83,53,63,105,85,109,83,119,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24",
-                        "endOffsets": "9777,9994,10096,16594,16649,16708,16770,16913,16974,17049,17125,17202,17280,17365,17447,17523,17599,17811,17889,17995,18101,18180,18260,18317,18375,20276,20351,20416,20482,20542,20603,20675,20748,20815,20883,20942,21001,21060,21119,21178,21232,21286,21339,21393,21447,21501,21555,22402,22481,22554,22628,22699,22771,22843,22916,23025,23083,23156,23230,23304,23379,23451,23524,23594,23665,23725,23786,23940,24009,24079,24153,24229,24293,24370,24446,24523,24588,24657,24734,24809,24878,24946,25023,25089,25150,25247,25312,25381,25480,25551,25610,25668,25725,25784,25848,25919,25991,26063,26135,26207,26274,26342,26410,26469,26532,26596,26686,26777,26837,26903,26970,27036,27106,27170,27223,27290,27351,27418,27531,27589,27652,27717,27782,27857,27930,28002,28051,28112,28173,28234,28296,28360,28424,28488,28553,28616,28676,28737,28803,28862,28922,28984,29055,29115,29183,32845,32932,33227,33314,33402,33484,33567,33657,33748,38171,38229,38274,38340,38404,38461,38518,38572,41379,41427,41476,41527,41659,42005,42054,42335,43336,43448,43510,43698,43755,44461,44531,44609,44663,44733,44818,44866,44912,44973,45036,45102,45166,45237,45300,45365,45429,45490,45551,45603,45676,45750,45819,45894,45968,46042,46183,46253,53586,54023,54113,54201,54297,54387,55885,55974,56221,56502,56754,57453,57846,58323,58545,58767,59043,59270,59500,59730,59960,60190,60417,60836,61062,61487,61717,62145,62364,62647,62855,62986,63213,63639,63864,64291,64512,64937,65057,65333,65634,65958,66249,66563,66700,66831,66936,67178,67345,67549,67757,68028,68140,68252,68357,68474,68688,68834,68974,69060,69408,69496,69742,70160,70409,70491,70589,71206,71306,71558,71982,72237,72331,76153,76390,78442,78684,78786,79039,81223,108564,110080,121303,122831,124588,125214,125634,126695,127960,128216,128452,128999,129493,130098,130296,130876,131440,131815,131933,132471,132628,132824,133097,133353,133523,133664,133728,134093,134460,135136,135400,135738,136091,136185,136371,136677,136939,137064,137191,137430,137641,137760,137953,138130,138585,138766,138888,139147,139260,139447,139549,139656,139785,140060,140568,141064,141941,142235,142805,142954,143686,143858,143942,144278,144370,144648,154762,160314,160720,161350,161964,162055,162168,162397,162557,162709,162880,163046,163215,163382,163545,163788,163958,164131,164302,164576,164775,164980,165310,165394,165490,165586,165684,165784,165886,165988,166090,166192,166294,166394,166490,166602,166731,166854,166985,167116,167214,167328,167422,167562,167696,167792,167904,168004,168120,168216,168328,168428,168568,168704,168868,168998,169156,169306,169447,169591,169726,169838,169988,170116,170244,170380,170512,170642,170772,170884,171024,179756,179900,180038,180104,180194,180270,180374,180464,180566,180674,180782,180882,180962,181054,181152,181262,181340,181446,181538,181642,181752,181874,182037,182194,186602,186702,186792,186902,186992,187233,187327,187433,187525,189231,189343,189457,189573,189689,189783,189897,190009,190111,190231,190353,190435,190539,190659,190785,190883,190977,191065,191177,191293,191415,191527,191702,191818,191904,191996,192108,192232,192299,192425,192493,192621,192765,192893,192962,193057,193172,193285,193384,193493,193604,193715,193816,193921,194021,194151,194242,194365,194459,194571,194657,194761,194857,194945,195063,195167,195271,195397,195485,195593,195693,195783,195893,195977,196079,196163,196217,196281,196387,196473,196583,196667,196787,218899,219017,219132,219264,219979,220671,221188,226467,228000,228388,233123,253385,255287,263335,278417,288843,289105,289461,292580,299362,300496,301357,301580,301907,305745,307145,312899,316030,322157,323372,324781,325255"
+                        "startLines": "291,297,299,432,433,434,435,437,438,439,440,441,442,443,444,445,446,450,451,452,453,454,455,456,457,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,517,518,519,520,521,522,523,524,526,527,528,529,530,531,532,533,534,535,536,537,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617,675,676,681,682,683,684,685,686,687,761,762,763,764,765,766,767,768,811,812,813,814,817,824,825,831,851,853,854,857,858,869,870,871,872,873,874,875,876,877,878,879,880,881,882,883,884,885,886,887,888,889,890,891,892,893,894,895,1069,1077,1078,1079,1080,1081,1098,1106,1107,1111,1115,1126,1131,1137,1144,1148,1152,1157,1161,1165,1169,1173,1177,1181,1187,1191,1197,1201,1207,1211,1216,1220,1223,1227,1233,1237,1243,1247,1253,1256,1260,1264,1268,1272,1276,1277,1278,1279,1282,1285,1288,1291,1295,1296,1297,1298,1299,1302,1304,1306,1308,1313,1314,1318,1324,1328,1329,1331,1342,1343,1347,1353,1357,1411,1412,1416,1443,1447,1448,1452,1702,1872,1898,2069,2095,2126,2134,2140,2154,2176,2181,2186,2196,2205,2214,2218,2225,2233,2240,2241,2250,2253,2256,2260,2264,2268,2271,2272,2277,2282,2292,2297,2304,2310,2311,2314,2318,2323,2325,2327,2330,2333,2335,2339,2342,2349,2352,2355,2359,2361,2365,2367,2369,2371,2375,2383,2391,2403,2409,2418,2421,2432,2435,2436,2441,2442,2539,2608,2682,2683,2693,2702,2703,2705,2709,2712,2715,2718,2721,2724,2727,2730,2734,2737,2740,2743,2747,2750,2754,2758,2759,2760,2761,2762,2763,2764,2765,2766,2767,2768,2769,2770,2771,2772,2773,2774,2775,2776,2777,2778,2780,2782,2783,2784,2785,2786,2787,2788,2789,2791,2792,2794,2795,2797,2799,2800,2802,2803,2804,2805,2806,2807,2809,2810,2811,2812,2813,2968,2970,2972,2974,2975,2976,2977,2978,2979,2980,2981,2982,2983,2984,2985,2986,2988,2989,2990,2991,2992,2993,2995,2999,3068,3069,3070,3071,3072,3073,3077,3078,3079,3102,3104,3106,3108,3110,3112,3113,3114,3115,3117,3119,3121,3122,3123,3124,3125,3126,3127,3128,3129,3130,3131,3132,3135,3136,3137,3138,3140,3142,3143,3145,3146,3148,3150,3152,3153,3154,3155,3156,3157,3158,3159,3160,3161,3162,3163,3165,3166,3167,3168,3170,3171,3172,3173,3174,3176,3178,3180,3182,3183,3184,3185,3186,3187,3188,3189,3190,3191,3192,3193,3194,3195,3196",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "9727,9954,10052,16525,16566,16621,16680,16804,16885,16946,17021,17097,17174,17252,17337,17419,17495,17706,17783,17861,17967,18073,18152,18232,18289,20174,20248,20323,20388,20454,20514,20575,20647,20720,20787,20855,20914,20973,21032,21091,21150,21204,21258,21311,21365,21419,21473,22300,22374,22453,22526,22600,22671,22743,22815,22940,22997,23055,23128,23202,23276,23351,23423,23496,23566,23637,23697,23843,23912,23981,24051,24125,24201,24265,24342,24418,24495,24560,24629,24706,24781,24850,24918,24995,25061,25122,25219,25284,25353,25452,25523,25582,25640,25697,25756,25820,25891,25963,26035,26107,26179,26246,26314,26382,26441,26504,26568,26658,26749,26809,26875,26942,27008,27078,27142,27195,27262,27323,27390,27503,27561,27624,27689,27754,27829,27902,27974,28023,28084,28145,28206,28268,28332,28396,28460,28525,28588,28648,28709,28775,28834,28894,28956,29027,29087,32778,32864,33156,33246,33333,33421,33503,33586,33676,38181,38233,38291,38336,38402,38466,38523,38580,41384,41441,41489,41538,41687,42020,42067,42351,43366,43446,43510,43700,43760,44449,44523,44593,44671,44725,44795,44880,44928,44974,45035,45098,45164,45228,45299,45362,45427,45491,45552,45613,45665,45738,45812,45881,45956,46030,46104,46245,59400,59883,59961,60051,60139,60235,61206,61788,61877,62124,62405,63071,63356,63749,64226,64448,64670,64946,65173,65403,65633,65863,66093,66320,66739,66965,67390,67620,68048,68267,68550,68758,68889,69116,69542,69767,70194,70415,70840,70960,71236,71537,71861,72152,72466,72603,72734,72839,73081,73248,73452,73660,73931,74043,74155,74260,74377,74591,74737,74877,74963,75311,75399,75645,76063,76312,76394,76492,77084,77184,77436,77860,78115,81917,82006,82243,84267,84509,84611,84864,102901,113433,114949,125580,127108,128865,129491,129911,130972,132237,132493,132729,133276,133770,134375,134573,135153,135717,136092,136210,136748,136905,137101,137374,137630,137800,137941,138005,138370,138737,139413,139677,140015,140368,140462,140648,140954,141216,141341,141468,141707,141918,142037,142230,142407,142862,143043,143165,143424,143537,143724,143826,143933,144062,144337,144845,145341,146218,146512,147082,147231,147963,148135,148219,148555,148647,153630,158876,164609,164671,165249,165833,165924,166037,166266,166426,166578,166749,166915,167084,167251,167414,167657,167827,168000,168171,168445,168644,168849,169179,169263,169359,169455,169553,169653,169755,169857,169959,170061,170163,170263,170359,170471,170600,170723,170854,170985,171083,171197,171291,171431,171565,171661,171773,171873,171989,172085,172197,172297,172437,172573,172737,172867,173025,173175,173316,173460,173595,173707,173857,173985,174113,174249,174381,174511,174641,174753,183367,183513,183657,183795,183861,183951,184027,184131,184221,184323,184431,184539,184639,184719,184811,184909,185019,185097,185203,185295,185399,185509,185631,185794,190279,190359,190459,190549,190659,190749,190990,191084,191190,192888,192988,193100,193214,193330,193446,193540,193654,193766,193868,193988,194110,194192,194296,194416,194542,194640,194734,194822,194934,195050,195172,195284,195459,195575,195661,195753,195865,195989,196056,196182,196250,196378,196522,196650,196719,196814,196929,197042,197141,197250,197361,197472,197573,197678,197778,197908,197999,198122,198216,198328,198414,198518,198614,198702,198820,198924,199028,199154,199242,199350,199450,199540,199650,199734,199836,199920,199974,200038,200144,200230,200340,200424",
+                        "endLines": "291,297,299,432,433,434,435,437,438,439,440,441,442,443,444,445,446,450,451,452,453,454,455,456,457,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,517,518,519,520,521,522,523,524,526,527,528,529,530,531,532,533,534,535,536,537,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617,675,676,681,682,683,684,685,686,687,761,762,763,764,765,766,767,768,811,812,813,814,817,824,825,831,851,853,854,857,858,869,870,871,872,873,874,875,876,877,878,879,880,881,882,883,884,885,886,887,888,889,890,891,892,893,894,895,1069,1077,1078,1079,1080,1081,1105,1106,1110,1114,1118,1130,1136,1143,1147,1151,1156,1160,1164,1168,1172,1176,1180,1186,1190,1196,1200,1206,1210,1215,1219,1222,1226,1232,1236,1242,1246,1252,1255,1259,1263,1267,1271,1275,1276,1277,1278,1281,1284,1287,1290,1294,1295,1296,1297,1298,1301,1303,1305,1307,1312,1313,1317,1323,1327,1328,1330,1341,1342,1346,1352,1356,1357,1411,1415,1442,1446,1447,1451,1479,1871,1897,2068,2094,2125,2133,2139,2153,2175,2180,2185,2195,2204,2213,2217,2224,2232,2239,2240,2249,2252,2255,2259,2263,2267,2270,2271,2276,2281,2291,2296,2303,2309,2310,2313,2317,2322,2324,2326,2329,2332,2334,2338,2341,2348,2351,2354,2358,2360,2364,2366,2368,2370,2374,2382,2390,2402,2408,2417,2420,2431,2434,2435,2440,2441,2446,2607,2677,2682,2692,2701,2702,2704,2708,2711,2714,2717,2720,2723,2726,2729,2733,2736,2739,2742,2746,2749,2753,2757,2758,2759,2760,2761,2762,2763,2764,2765,2766,2767,2768,2769,2770,2771,2772,2773,2774,2775,2776,2777,2779,2781,2782,2783,2784,2785,2786,2787,2788,2790,2791,2793,2794,2796,2798,2799,2801,2802,2803,2804,2805,2806,2808,2809,2810,2811,2812,2813,2969,2971,2973,2974,2975,2976,2977,2978,2979,2980,2981,2982,2983,2984,2985,2987,2988,2989,2990,2991,2992,2994,2998,3002,3068,3069,3070,3071,3072,3076,3077,3078,3079,3103,3105,3107,3109,3111,3112,3113,3114,3116,3118,3120,3121,3122,3123,3124,3125,3126,3127,3128,3129,3130,3131,3134,3135,3136,3137,3139,3141,3142,3144,3145,3147,3149,3151,3152,3153,3154,3155,3156,3157,3158,3159,3160,3161,3162,3164,3165,3166,3167,3169,3170,3171,3172,3173,3175,3177,3179,3181,3182,3183,3184,3185,3186,3187,3188,3189,3190,3191,3192,3193,3194,3195,3196",
+                        "endColumns": "54,44,48,40,54,58,61,80,60,74,75,76,77,84,81,75,75,76,77,105,105,78,79,56,57,73,74,64,65,59,60,71,72,66,67,58,58,58,58,58,53,53,52,53,53,53,53,73,78,72,73,70,71,71,72,56,57,72,73,73,74,71,72,69,70,59,60,68,68,69,73,75,63,76,75,76,64,68,76,74,68,67,76,65,60,96,64,68,98,70,58,57,56,58,63,70,71,71,71,71,66,67,67,58,62,63,89,90,59,65,66,65,69,63,52,66,60,66,112,57,62,64,64,74,72,71,48,60,60,60,61,63,63,63,64,62,59,60,65,58,59,61,70,59,67,85,86,89,86,87,81,82,89,90,51,57,44,65,63,56,56,53,56,47,48,50,33,46,48,45,31,63,61,59,56,73,69,77,53,69,84,47,45,60,62,65,63,70,62,64,63,60,60,51,72,73,68,74,73,73,140,69,52,77,89,87,95,89,12,88,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,136,130,104,12,12,12,12,12,111,111,104,116,12,12,12,12,12,87,12,12,12,81,12,12,99,12,12,12,93,88,12,12,12,101,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,117,12,12,12,12,12,12,12,63,12,12,12,12,12,12,93,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,83,12,91,12,12,12,61,12,12,90,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,83,95,95,97,99,101,101,101,101,101,99,95,111,128,122,130,130,97,113,93,12,12,95,111,99,115,95,111,99,12,135,12,129,12,12,140,12,134,111,149,127,127,12,131,129,129,111,139,12,12,12,65,89,75,103,89,101,107,107,99,79,91,97,12,77,105,91,103,109,12,12,12,79,99,89,109,89,12,93,105,91,12,12,12,12,12,93,113,111,12,12,12,81,103,119,125,97,93,87,111,115,121,111,12,115,85,91,12,12,66,12,67,12,12,12,68,94,114,112,98,108,110,110,100,104,99,12,90,122,93,12,85,103,95,87,12,12,12,12,87,107,99,89,109,83,101,83,53,63,105,85,109,83,119",
+                        "endOffsets": "9777,9994,10096,16561,16616,16675,16737,16880,16941,17016,17092,17169,17247,17332,17414,17490,17566,17778,17856,17962,18068,18147,18227,18284,18342,20243,20318,20383,20449,20509,20570,20642,20715,20782,20850,20909,20968,21027,21086,21145,21199,21253,21306,21360,21414,21468,21522,22369,22448,22521,22595,22666,22738,22810,22883,22992,23050,23123,23197,23271,23346,23418,23491,23561,23632,23692,23753,23907,23976,24046,24120,24196,24260,24337,24413,24490,24555,24624,24701,24776,24845,24913,24990,25056,25117,25214,25279,25348,25447,25518,25577,25635,25692,25751,25815,25886,25958,26030,26102,26174,26241,26309,26377,26436,26499,26563,26653,26744,26804,26870,26937,27003,27073,27137,27190,27257,27318,27385,27498,27556,27619,27684,27749,27824,27897,27969,28018,28079,28140,28201,28263,28327,28391,28455,28520,28583,28643,28704,28770,28829,28889,28951,29022,29082,29150,32859,32946,33241,33328,33416,33498,33581,33671,33762,38228,38286,38331,38397,38461,38518,38575,38629,41436,41484,41533,41584,41716,42062,42111,42392,43393,43505,43567,43755,43812,44518,44588,44666,44720,44790,44875,44923,44969,45030,45093,45159,45223,45294,45357,45422,45486,45547,45608,45660,45733,45807,45876,45951,46025,46099,46240,46310,59448,59956,60046,60134,60230,60320,61783,61872,62119,62400,62652,63351,63744,64221,64443,64665,64941,65168,65398,65628,65858,66088,66315,66734,66960,67385,67615,68043,68262,68545,68753,68884,69111,69537,69762,70189,70410,70835,70955,71231,71532,71856,72147,72461,72598,72729,72834,73076,73243,73447,73655,73926,74038,74150,74255,74372,74586,74732,74872,74958,75306,75394,75640,76058,76307,76389,76487,77079,77179,77431,77855,78110,78204,82001,82238,84262,84504,84606,84859,87015,113428,114944,125575,127103,128860,129486,129906,130967,132232,132488,132724,133271,133765,134370,134568,135148,135712,136087,136205,136743,136900,137096,137369,137625,137795,137936,138000,138365,138732,139408,139672,140010,140363,140457,140643,140949,141211,141336,141463,141702,141913,142032,142225,142402,142857,143038,143160,143419,143532,143719,143821,143928,144057,144332,144840,145336,146213,146507,147077,147226,147958,148130,148214,148550,148642,148920,158871,164260,164666,165244,165828,165919,166032,166261,166421,166573,166744,166910,167079,167246,167409,167652,167822,167995,168166,168440,168639,168844,169174,169258,169354,169450,169548,169648,169750,169852,169954,170056,170158,170258,170354,170466,170595,170718,170849,170980,171078,171192,171286,171426,171560,171656,171768,171868,171984,172080,172192,172292,172432,172568,172732,172862,173020,173170,173311,173455,173590,173702,173852,173980,174108,174244,174376,174506,174636,174748,174888,183508,183652,183790,183856,183946,184022,184126,184216,184318,184426,184534,184634,184714,184806,184904,185014,185092,185198,185290,185394,185504,185626,185789,185946,190354,190454,190544,190654,190744,190985,191079,191185,191277,192983,193095,193209,193325,193441,193535,193649,193761,193863,193983,194105,194187,194291,194411,194537,194635,194729,194817,194929,195045,195167,195279,195454,195570,195656,195748,195860,195984,196051,196177,196245,196373,196517,196645,196714,196809,196924,197037,197136,197245,197356,197467,197568,197673,197773,197903,197994,198117,198211,198323,198409,198513,198609,198697,198815,198919,199023,199149,199237,199345,199445,199535,199645,199729,199831,199915,199969,200033,200139,200225,200335,200419,200539"
                     }
                 },
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\bd57c4eae84c23596e87e6bc172ce46a\\res\\values\\values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,345,346,347,352,353,357,363,367,368,369,370,381,382,383,387,393,397,398,399,400,430,450,496,526,546,566,612,616,620,634,675,683,693,694,695,696,697,700,701,704,707,708,711,715,720,728,736,745,753,757,765,773,781,789,797,806,815,823,832,835,837,842,844,849,853,857,858,863,864,865,866,867,868,870,871,876,877,878,879,880,881,882,884,888,892,896,900,901,902,903,904,905,906,907,908,911,915,918,922,930,937,946,950,965,973,976,985,990,1001,1009,1012,1021,1028,1029,1048,1051,1057,1060,1069,1072,1075,1078,1081,1084,1088,1091,1100,1103,1111,1116,1124,1129,1133,1134,1145,1152,1156,1160,1161,1165,1173,1177,1182,1187,55,56,57,76,82,92,96,97,98,141,149,150,158,159,160,161,167,168,169,170,171,172,173,174,175,198,217",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "100,156,216,277,332,385,443,491,540,585,638,696,756,814,860,920,973,1019,1069,1116,1174,1232,1291,1351,1413,1475,1537,1599,1661,1723,1784,1846,1908,1961,2023,2097,2160,2228,2309,2373,2439,2509,2579,2649,2719,2786,2849,2914,2980,3033,3109,3175,3262,18372,18426,18505,18583,18656,18721,18784,18850,18921,18992,19054,19123,19189,19256,19323,19379,19430,19483,19535,19589,19660,19723,19782,19844,19903,19976,20043,20103,20166,20241,20313,20384,20440,20511,20568,20625,20691,20755,20826,20883,20936,20999,21051,21109,21176,21242,21308,21389,21464,21520,21573,21634,21692,21742,21791,21840,21889,21951,22003,22048,22129,22183,22236,22290,22341,22390,22441,22502,22563,22625,22675,22716,22766,22814,22876,22927,22976,23045,23106,23162,23233,23298,23367,23418,23481,23551,23620,23690,23752,23822,23892,23967,24026,24084,24146,24191,24234,24281,24326,24377,24425,24491,24553,24616,24688,24745,24802,24862,24920,24990,25047,25197,25328,25432,25519,25676,25833,25986,26067,26145,26446,26612,26767,26869,27146,27239,27346,27689,27796,28025,28434,28666,28766,28871,28990,29613,29760,29879,30114,30529,30767,30879,31000,31133,33276,34792,38088,40227,41755,43299,46591,46837,47096,47900,49660,50110,50825,50898,50985,51070,51169,51364,51456,51629,51791,51886,52055,52298,52591,53000,53414,53874,54292,54533,54963,55398,55808,56230,56640,57097,57551,57967,58433,58615,58683,59027,59107,59463,59613,59757,59841,60206,60304,60412,60510,60620,60736,60862,60958,61335,61445,61569,61707,61817,61939,62067,62205,62367,62583,62739,62943,63027,63131,63225,63339,63451,63575,63671,63751,63940,64146,64339,64549,64981,65402,65827,66024,66972,67493,67616,68253,68474,69289,69758,69941,70537,70997,71102,72363,72513,72930,73095,73775,73934,74096,74251,74447,74614,74836,74996,75373,75532,75860,76077,76652,77002,77251,77348,78054,78492,78733,78922,79056,79247,79884,80134,80437,80652,3338,3636,3892,4389,4823,5480,5823,7362,7710,9607,9929,10060,10766,10903,11055,11257,11962,12082,13231,13798,13927,14060,14220,14395,14537,16324,18162",
-                        "endLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,344,345,346,351,352,356,362,366,367,368,369,380,381,382,386,392,396,397,398,399,429,449,495,525,545,565,611,615,619,633,674,682,692,693,694,695,696,699,700,703,706,707,710,714,719,727,735,744,752,756,764,772,780,788,796,805,814,822,831,834,836,841,843,848,852,856,857,862,863,864,865,866,867,869,870,875,876,877,878,879,880,881,883,887,891,895,899,900,901,902,903,904,905,906,907,910,914,917,921,929,936,945,949,964,972,975,984,989,1000,1008,1011,1020,1027,1028,1047,1050,1056,1059,1068,1071,1074,1077,1080,1083,1087,1090,1099,1102,1110,1115,1123,1128,1132,1133,1144,1151,1155,1159,1160,1164,1172,1176,1181,1186,1195,55,56,75,81,91,95,96,97,140,148,149,157,158,159,160,166,167,168,169,170,171,172,173,174,197,216,217",
-                        "endColumns": "55,59,60,54,52,57,47,48,44,52,57,59,57,45,59,52,45,49,46,57,57,58,59,61,61,61,61,61,61,60,61,61,52,61,73,62,67,80,63,65,69,69,69,69,66,62,64,65,52,75,65,86,75,53,78,77,72,64,62,65,70,70,61,68,65,66,66,55,50,52,51,53,70,62,58,61,58,72,66,59,62,74,71,70,55,70,56,56,65,63,70,56,52,62,51,57,66,65,65,80,74,55,52,60,57,49,48,48,48,61,51,44,80,53,52,53,50,48,50,60,60,61,49,40,49,47,61,50,48,68,60,55,70,64,68,50,62,69,68,69,61,69,69,74,58,57,61,44,42,46,44,50,47,65,61,62,71,56,56,59,57,69,56,149,130,103,86,156,156,152,80,77,300,165,154,101,10,92,106,10,106,10,10,10,99,104,118,10,146,118,10,10,10,111,120,132,10,10,10,10,10,10,10,10,10,10,10,10,10,72,86,84,98,10,91,10,10,94,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,83,10,97,107,97,109,115,10,95,10,109,123,137,109,121,127,10,10,10,10,10,83,103,93,113,111,123,95,79,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,104,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,96,10,10,10,10,133,10,10,10,10,10,10,297,255,90,243,367,188,1538,347,95,94,130,412,136,151,201,220,119,1148,566,128,132,159,174,141,125,457,209",
-                        "endOffsets": "151,211,272,327,380,438,486,535,580,633,691,751,809,855,915,968,1014,1064,1111,1169,1227,1286,1346,1408,1470,1532,1594,1656,1718,1779,1841,1903,1956,2018,2092,2155,2223,2304,2368,2434,2504,2574,2644,2714,2781,2844,2909,2975,3028,3104,3170,3257,3333,18421,18500,18578,18651,18716,18779,18845,18916,18987,19049,19118,19184,19251,19318,19374,19425,19478,19530,19584,19655,19718,19777,19839,19898,19971,20038,20098,20161,20236,20308,20379,20435,20506,20563,20620,20686,20750,20821,20878,20931,20994,21046,21104,21171,21237,21303,21384,21459,21515,21568,21629,21687,21737,21786,21835,21884,21946,21998,22043,22124,22178,22231,22285,22336,22385,22436,22497,22558,22620,22670,22711,22761,22809,22871,22922,22971,23040,23101,23157,23228,23293,23362,23413,23476,23546,23615,23685,23747,23817,23887,23962,24021,24079,24141,24186,24229,24276,24321,24372,24420,24486,24548,24611,24683,24740,24797,24857,24915,24985,25042,25192,25323,25427,25514,25671,25828,25981,26062,26140,26441,26607,26762,26864,27141,27234,27341,27684,27791,28020,28429,28661,28761,28866,28985,29608,29755,29874,30109,30524,30762,30874,30995,31128,33271,34787,38083,40222,41750,43294,46586,46832,47091,47895,49655,50105,50820,50893,50980,51065,51164,51359,51451,51624,51786,51881,52050,52293,52586,52995,53409,53869,54287,54528,54958,55393,55803,56225,56635,57092,57546,57962,58428,58610,58678,59022,59102,59458,59608,59752,59836,60201,60299,60407,60505,60615,60731,60857,60953,61330,61440,61564,61702,61812,61934,62062,62200,62362,62578,62734,62938,63022,63126,63220,63334,63446,63570,63666,63746,63935,64141,64334,64544,64976,65397,65822,66019,66967,67488,67611,68248,68469,69284,69753,69936,70532,70992,71097,72358,72508,72925,73090,73770,73929,74091,74246,74442,74609,74831,74991,75368,75527,75855,76072,76647,76997,77246,77343,78049,78487,78728,78917,79051,79242,79879,80129,80432,80647,81228,3631,3887,4384,4818,5475,5818,7357,7705,9602,9924,10055,10761,10898,11050,11252,11957,12077,13226,13793,13922,14055,14215,14390,14532,16319,18157,18367"
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
-                        "startLines": "277,278,279,280,283,284,285,286,296,298,408,409,410,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,436,473,474,475,476,477,478,479,480,481,482,483,506,507,508,509,510,511,512,513,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,819,820,827,828,840,841,842,850,853,854,857,858,860,861,862,863,864,865,897,898,899,900,935,936,946,954,969,970,971,972,973,990,1266,1267,1268,1273,1274,1278,1284,1288,1289,1290,1291,1302,1303,1304,1308,1314,1318,1388,1389,1390,1420,1440,1486,1516,1536,1556,1602,1606,2357,2371,2412,2420,2588,2589,2590,2591,2740,2743,2744,2747,2750,2751,2754,2758,2763,2771,2779,2788,2796,2800,2808,2816,2824,2832,2840,2849,2858,2866,2875,2913,2915,2920,2922,2927,2931,2935,2936,2941,2942,2943,2944,2945,2946,2948,2949,2954,2955,2956,2957,2958,2959,2960,2962,2966,2970,2974,2990,2991,2992,2993,2994,2995,2996,2997,2998,3001,3005,3008,3109,3117,3124,3133,3137,3152,3160,3163,3172,3177,3188,3196,3199,3208,3215,3216,3235,3238,3244,3247,3256,3259,3262,3265,3268,3271,3275,3278,3287,3290,3298,3303,3311,3316,3320,3321,3332,3339,3343,3347,3348,3352,3360,3364,3369,3374,3558,3559,3560,4117,4123,4133,4174,4175,4182,4225,4383,4402,4410,4411,4487,4594,4600,4601,4786,4832,4833,4890,4891,5002,5003,5050,5069",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "8967,9023,9083,9144,9299,9352,9410,9458,9909,9999,15179,15237,15297,15411,15457,15517,15570,15616,15666,15713,15771,15829,15888,15948,16010,16072,16134,16196,16258,16320,16381,16443,16505,16775,19444,19518,19581,19649,19730,19794,19860,19930,20000,20070,20140,21560,21623,21688,21754,21807,21883,21949,22036,29960,30014,30093,30171,30244,30309,30372,30438,30509,30580,30642,30711,30777,30844,30911,30967,31018,31071,31123,31177,31248,31311,31370,31432,31491,31564,31631,31691,31754,31829,31901,31972,32028,32099,32156,32213,32279,32343,32414,32471,32524,32587,32639,32697,33976,34042,34108,34189,34264,34320,34373,34434,34492,34542,34591,34640,34689,34751,34803,34848,34929,34983,35036,35090,35141,35190,35241,35302,35363,35425,35475,35516,35566,35614,35676,35727,35776,35845,35906,35962,36033,36098,36167,36218,36281,36351,36420,36490,36552,36622,36692,36767,41800,41858,42206,42251,42865,42912,42957,43341,43515,43581,43760,43823,43963,44020,44077,44137,44195,44265,46407,46557,46688,46792,50264,50421,51415,51906,52485,52563,52864,53030,53185,54392,72336,72429,72536,72879,72986,73215,73624,73856,73956,74061,74180,74803,74950,75069,75304,75719,75957,81228,81349,81482,83625,85141,88437,90576,92104,93648,96940,97186,144653,145457,147217,147667,160319,160392,160479,160564,172169,172364,172456,172629,172791,172886,173055,173298,173591,174000,174414,174874,175292,175533,175963,176398,176808,177230,177640,178097,178551,178967,179433,182199,182267,182611,182691,183047,183197,183341,183425,183790,183888,183996,184094,184204,184320,184446,184542,184919,185029,185153,185291,185401,185523,185651,185789,185951,186167,186323,187530,187614,187718,187812,187926,188038,188162,188258,188338,188527,188733,188926,196931,197363,197784,198209,198406,199354,199875,199998,200635,200856,201671,202140,202323,202919,203379,203484,204745,204895,205312,205477,206157,206316,206478,206633,206829,206996,207218,207378,207755,207914,208242,208459,209034,209384,209633,209730,210436,210874,211115,211304,211438,211629,212266,212516,212819,213034,223822,224120,224376,253390,253824,254481,257115,258654,259313,261210,277258,278422,279128,279265,284388,289781,290486,290606,300501,303438,303567,306167,306327,312904,313046,316035,317873",
-                        "endLines": "277,278,279,280,283,284,285,286,296,298,408,409,410,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,436,473,474,475,476,477,478,479,480,481,482,483,506,507,508,509,510,511,512,513,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,819,820,827,828,840,841,842,850,853,854,857,858,860,861,862,863,864,865,897,898,899,900,935,936,946,954,969,970,971,972,973,993,1266,1267,1272,1273,1277,1283,1287,1288,1289,1290,1301,1302,1303,1307,1313,1317,1318,1388,1389,1419,1439,1485,1515,1535,1555,1601,1605,1609,2370,2411,2419,2429,2588,2589,2590,2591,2742,2743,2746,2749,2750,2753,2757,2762,2770,2778,2787,2795,2799,2807,2815,2823,2831,2839,2848,2857,2865,2874,2877,2914,2919,2921,2926,2930,2934,2935,2940,2941,2942,2943,2944,2945,2947,2948,2953,2954,2955,2956,2957,2958,2959,2961,2965,2969,2973,2977,2990,2991,2992,2993,2994,2995,2996,2997,3000,3004,3007,3011,3116,3123,3132,3136,3151,3159,3162,3171,3176,3187,3195,3198,3207,3214,3215,3234,3237,3243,3246,3255,3258,3261,3264,3267,3270,3274,3277,3286,3289,3297,3302,3310,3315,3319,3320,3331,3338,3342,3346,3347,3351,3359,3363,3368,3373,3382,3558,3559,3578,4122,4132,4136,4174,4175,4224,4232,4383,4409,4410,4411,4487,4599,4600,4601,4786,4832,4833,4890,4891,5002,5025,5068,5069",
-                        "endColumns": "55,59,60,54,52,57,47,48,44,52,57,59,57,45,59,52,45,49,46,57,57,58,59,61,61,61,61,61,61,60,61,61,52,61,73,62,67,80,63,65,69,69,69,69,66,62,64,65,52,75,65,86,75,53,78,77,72,64,62,65,70,70,61,68,65,66,66,55,50,52,51,53,70,62,58,61,58,72,66,59,62,74,71,70,55,70,56,56,65,63,70,56,52,62,51,57,66,65,65,80,74,55,52,60,57,49,48,48,48,61,51,44,80,53,52,53,50,48,50,60,60,61,49,40,49,47,61,50,48,68,60,55,70,64,68,50,62,69,68,69,61,69,69,74,58,57,61,44,42,46,44,50,47,65,61,62,71,56,56,59,57,69,56,149,130,103,86,156,156,152,80,77,300,165,154,101,10,92,106,10,106,10,10,10,99,104,118,10,146,118,10,10,10,111,120,132,10,10,10,10,10,10,10,10,10,10,10,10,10,72,86,84,98,10,91,10,10,94,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,83,10,97,107,97,109,115,10,95,10,109,123,137,109,121,127,10,10,10,10,10,83,103,93,113,111,123,95,79,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,104,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,96,10,10,10,10,133,10,10,10,10,10,10,297,255,90,243,367,188,1538,347,95,94,130,412,136,151,201,220,119,1148,566,128,132,159,174,141,125,457,209",
-                        "endOffsets": "9018,9078,9139,9194,9347,9405,9453,9502,9949,10047,15232,15292,15350,15452,15512,15565,15611,15661,15708,15766,15824,15883,15943,16005,16067,16129,16191,16253,16315,16376,16438,16500,16553,16832,19513,19576,19644,19725,19789,19855,19925,19995,20065,20135,20202,21618,21683,21749,21802,21878,21944,22031,22107,30009,30088,30166,30239,30304,30367,30433,30504,30575,30637,30706,30772,30839,30906,30962,31013,31066,31118,31172,31243,31306,31365,31427,31486,31559,31626,31686,31749,31824,31896,31967,32023,32094,32151,32208,32274,32338,32409,32466,32519,32582,32634,32692,32759,34037,34103,34184,34259,34315,34368,34429,34487,34537,34586,34635,34684,34746,34798,34843,34924,34978,35031,35085,35136,35185,35236,35297,35358,35420,35470,35511,35561,35609,35671,35722,35771,35840,35901,35957,36028,36093,36162,36213,36276,36346,36415,36485,36547,36617,36687,36762,36821,41853,41915,42246,42289,42907,42952,43003,43384,43576,43638,43818,43890,44015,44072,44132,44190,44260,44317,46552,46683,46787,46874,50416,50573,51563,51982,52558,52859,53025,53180,53282,54664,72424,72531,72874,72981,73210,73619,73851,73951,74056,74175,74798,74945,75064,75299,75714,75952,76064,81344,81477,83620,85136,88432,90571,92099,93643,96935,97181,97440,145452,147212,147662,148377,160387,160474,160559,160658,172359,172451,172624,172786,172881,173050,173293,173586,173995,174409,174869,175287,175528,175958,176393,176803,177225,177635,178092,178546,178962,179428,179610,182262,182606,182686,183042,183192,183336,183420,183785,183883,183991,184089,184199,184315,184441,184537,184914,185024,185148,185286,185396,185518,185646,185784,185946,186162,186318,186522,187609,187713,187807,187921,188033,188157,188253,188333,188522,188728,188921,189131,197358,197779,198204,198401,199349,199870,199993,200630,200851,201666,202135,202318,202914,203374,203479,204740,204890,205307,205472,206152,206311,206473,206628,206824,206991,207213,207373,207750,207909,208237,208454,209029,209379,209628,209725,210431,210869,211110,211299,211433,211624,212261,212511,212814,213029,213610,224115,224371,224868,253819,254476,254819,258649,258997,261205,261527,277384,279123,279260,279412,284585,290481,290601,291750,301063,303562,303695,306322,306497,313041,314828,317868,318078"
+                        "startLines": "277,278,279,280,283,284,285,286,296,298,408,409,410,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,436,473,474,475,476,477,478,479,480,481,482,483,506,507,508,509,510,511,512,513,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,674,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,738,821,822,829,830,842,843,844,852,855,856,859,860,862,863,864,865,866,867,899,900,901,902,937,938,948,1045,1060,1061,1062,1063,1064,1082,1358,1359,1360,1365,1366,1370,1376,1380,1381,1382,1383,1394,1395,1396,1400,1406,1410,1480,1481,1482,1512,1532,1578,1608,1628,1648,1694,1698,2447,2461,2502,2510,2678,2679,2680,2681,2830,2833,2834,2837,2840,2841,2844,2848,2853,2861,2869,2878,2886,2890,2898,2906,2914,2922,2930,2939,2948,2956,2965,3003,3005,3010,3012,3017,3021,3025,3026,3031,3032,3033,3034,3035,3036,3038,3039,3044,3045,3046,3047,3048,3049,3050,3052,3056,3060,3064,3080,3081,3082,3083,3084,3085,3086,3087,3088,3091,3095,3098,3199,3207,3214,3223,3227,3242,3250,3253,3262,3267,3278,3286,3289,3298,3305,3306,3325,3328,3334,3337,3346,3349,3352,3355,3358,3361,3365,3368,3377,3380,3388,3393,3401,3406,3410,3411,3422,3429,3433,3437,3438,3442,3450,3454,3459,3464",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "8967,9023,9083,9144,9299,9352,9410,9458,9909,9999,15146,15204,15264,15378,15424,15484,15537,15583,15633,15680,15738,15796,15855,15915,15977,16039,16101,16163,16225,16287,16348,16410,16472,16742,19411,19485,19548,19616,19697,19761,19827,19897,19967,20037,20107,21527,21590,21655,21721,21774,21850,21916,22003,29974,30028,30107,30185,30258,30323,30386,30452,30523,30594,30656,30725,30791,30858,30925,30981,31032,31085,31137,31191,31262,31325,31384,31446,31505,31578,31645,31705,31768,31843,31915,31986,32042,32113,32170,32227,32293,32357,32428,32485,32538,32601,32653,32711,33990,34056,34122,34203,34278,34334,34387,34448,34506,34556,34605,34654,34703,34765,34817,34862,34943,34997,35050,35104,35155,35204,35255,35316,35377,35439,35489,35530,35580,35628,35690,35741,35790,35859,35920,35976,36047,36112,36181,36232,36295,36365,36434,36504,36566,36636,36706,36781,41857,41915,42263,42308,42922,42969,43014,43398,43572,43638,43817,43880,44020,44077,44134,44194,44252,44322,46464,46614,46745,46849,50321,50478,51472,57768,58347,58425,58726,58892,59047,60325,78209,78302,78409,78752,78859,79088,79497,79729,79829,79934,80053,80651,80798,80917,81152,81567,81805,87020,87141,87274,89358,90854,94093,96173,97681,99205,102440,102664,148925,149729,151489,151939,164265,164338,164425,164510,176033,176228,176320,176493,176655,176750,176919,177162,177455,177864,178278,178710,179128,179369,179799,180234,180644,181066,181476,181905,182331,182747,183185,185951,186019,186363,186443,186799,186949,187093,187177,187542,187640,187748,187846,187956,188072,188198,188294,188671,188781,188905,189043,189153,189275,189403,189541,189703,189919,190075,191282,191366,191470,191564,191678,191790,191914,192010,192090,192279,192485,192678,200683,201115,201536,201961,202158,203106,203627,203750,204387,204608,205423,205892,206075,206671,207131,207236,208497,208647,209064,209229,209909,210068,210159,210243,210439,210606,210828,210988,211365,211524,211852,212069,212644,212994,213243,213340,214046,214484,214725,214914,215048,215239,215876,216126,216429,216644",
+                        "endLines": "277,278,279,280,283,284,285,286,296,298,408,409,410,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,436,473,474,475,476,477,478,479,480,481,482,483,506,507,508,509,510,511,512,513,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,674,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,738,821,822,829,830,842,843,844,852,855,856,859,860,862,863,864,865,866,867,899,900,901,902,937,938,948,1045,1060,1061,1062,1063,1064,1085,1358,1359,1364,1365,1369,1375,1379,1380,1381,1382,1393,1394,1395,1399,1405,1409,1410,1480,1481,1511,1531,1577,1607,1627,1647,1693,1697,1701,2460,2501,2509,2519,2678,2679,2680,2681,2832,2833,2836,2839,2840,2843,2847,2852,2860,2868,2877,2885,2889,2897,2905,2913,2921,2929,2938,2947,2955,2964,2967,3004,3009,3011,3016,3020,3024,3025,3030,3031,3032,3033,3034,3035,3037,3038,3043,3044,3045,3046,3047,3048,3049,3051,3055,3059,3063,3067,3080,3081,3082,3083,3084,3085,3086,3087,3090,3094,3097,3101,3206,3213,3222,3226,3241,3249,3252,3261,3266,3277,3285,3288,3297,3304,3305,3324,3327,3333,3336,3345,3348,3351,3354,3357,3360,3364,3367,3376,3379,3387,3392,3400,3405,3409,3410,3421,3428,3432,3436,3437,3441,3449,3453,3458,3463,3471",
+                        "endColumns": "55,59,60,54,52,57,47,48,44,52,57,59,57,45,59,52,45,49,46,57,57,58,59,61,61,61,61,61,61,60,61,61,52,61,73,62,67,80,63,65,69,69,69,69,66,62,64,65,52,75,65,86,75,53,78,77,72,64,62,65,70,70,61,68,65,66,66,55,50,52,51,53,70,62,58,61,58,72,66,59,62,74,71,70,55,70,56,56,65,63,70,56,52,62,51,57,66,65,65,80,74,55,52,60,57,49,48,48,48,61,51,44,80,53,52,53,50,48,50,60,60,61,49,40,49,47,61,50,48,68,60,55,70,64,68,50,62,69,68,69,61,69,69,74,58,57,61,44,42,46,44,50,47,65,61,62,71,56,56,59,57,69,56,149,130,103,86,156,156,152,80,77,300,165,154,101,10,92,106,10,106,10,10,10,99,104,118,10,146,118,10,10,10,111,120,132,10,10,10,10,10,10,10,10,10,10,10,10,10,72,86,84,98,10,91,10,10,94,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,83,10,97,107,97,109,115,10,95,10,109,123,137,109,121,127,10,10,10,10,10,83,103,93,113,111,123,95,79,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,104,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,96,10,10,10,10,133,10,10,10,10,10,10",
+                        "endOffsets": "9018,9078,9139,9194,9347,9405,9453,9502,9949,10047,15199,15259,15317,15419,15479,15532,15578,15628,15675,15733,15791,15850,15910,15972,16034,16096,16158,16220,16282,16343,16405,16467,16520,16799,19480,19543,19611,19692,19756,19822,19892,19962,20032,20102,20169,21585,21650,21716,21769,21845,21911,21998,22074,30023,30102,30180,30253,30318,30381,30447,30518,30589,30651,30720,30786,30853,30920,30976,31027,31080,31132,31186,31257,31320,31379,31441,31500,31573,31640,31700,31763,31838,31910,31981,32037,32108,32165,32222,32288,32352,32423,32480,32533,32596,32648,32706,32773,34051,34117,34198,34273,34329,34382,34443,34501,34551,34600,34649,34698,34760,34812,34857,34938,34992,35045,35099,35150,35199,35250,35311,35372,35434,35484,35525,35575,35623,35685,35736,35785,35854,35915,35971,36042,36107,36176,36227,36290,36360,36429,36499,36561,36631,36701,36776,36835,41910,41972,42303,42346,42964,43009,43060,43441,43633,43695,43875,43947,44072,44129,44189,44247,44317,44374,46609,46740,46844,46931,50473,50630,51620,57844,58420,58721,58887,59042,59144,60597,78297,78404,78747,78854,79083,79492,79724,79824,79929,80048,80646,80793,80912,81147,81562,81800,81912,87136,87269,89353,90849,94088,96168,97676,99200,102435,102659,102896,149724,151484,151934,152649,164333,164420,164505,164604,176223,176315,176488,176650,176745,176914,177157,177450,177859,178273,178705,179123,179364,179794,180229,180639,181061,181471,181900,182326,182742,183180,183362,186014,186358,186438,186794,186944,187088,187172,187537,187635,187743,187841,187951,188067,188193,188289,188666,188776,188900,189038,189148,189270,189398,189536,189698,189914,190070,190274,191361,191465,191559,191673,191785,191909,192005,192085,192274,192480,192673,192883,201110,201531,201956,202153,203101,203622,203745,204382,204603,205418,205887,206070,206666,207126,207231,208492,208642,209059,209224,209904,210063,210154,210238,210434,210601,210823,210983,211360,211519,211847,212064,212639,212989,213238,213335,214041,214479,214720,214909,215043,215234,215871,216121,216424,216639,217115"
                     }
                 },
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\a15eb6363f540b91013d1dde2b589330\\res\\values\\values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,35,36,37,38,45,47,50,7",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,107,168,230,292,2179,2238,2295,2349,2763,2827,2953,356",
-                        "endLines": "2,3,4,5,6,35,36,37,44,46,49,52,34",
-                        "endColumns": "51,60,61,61,63,58,56,53,12,12,12,12,24",
-                        "endOffsets": "102,163,225,287,351,2233,2290,2344,2758,2822,2948,3076,2174"
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
-                        "startLines": "281,458,459,460,461,620,621,622,1027,2430,2432,2435,4146",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "9199,18380,18441,18503,18565,29302,29361,29418,56759,148382,148446,148572,255292",
-                        "endLines": "281,458,459,460,461,620,621,622,1033,2431,2434,2437,4173",
-                        "endColumns": "51,60,61,61,63,58,56,53,12,12,12,12,24",
-                        "endOffsets": "9246,18436,18498,18560,18624,29356,29413,29467,57168,148441,148567,148695,257110"
+                        "startLines": "281,458,459,460,461,621,622,623,1119,2520,2522,2525",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "9199,18347,18408,18470,18532,29316,29375,29432,62657,152654,152718,152844",
+                        "endLines": "281,458,459,460,461,621,622,623,1125,2521,2524,2527",
+                        "endColumns": "51,60,61,61,63,58,56,53,12,12,12,12",
+                        "endOffsets": "9246,18403,18465,18527,18591,29370,29427,29481,63066,152713,152839,152967"
                     }
                 },
                 {
                     "source": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
-                        "startLines": "4,303,247,266,275,1,279,277,276,300,315,316,278,296,295,282,269,268,2,273,272,270,271,285,265,264,263,262,261,298,299,294,314,260,274,297",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "101,10005,7845,8640,9050,16,9266,9154,9102,9949,10405,10459,9208,9721,9653,9381,8737,8694,60,8938,8884,8786,8839,9456,8578,8503,8443,8367,8293,9845,9891,9607,10332,8240,8992,9787",
-                        "endLines": "246,312,259,266,275,1,279,277,276,300,315,316,278,296,295,282,269,268,2,273,272,270,271,293,265,264,263,262,261,298,299,294,314,260,274,297",
-                        "endColumns": "19,19,19,52,51,43,55,53,51,53,53,56,57,65,67,72,48,42,39,53,53,52,44,13,61,74,59,75,73,45,57,45,72,52,57,57",
-                        "endOffsets": "7840,10326,8235,8688,9097,55,9317,9203,9149,9998,10454,10511,9261,9782,9716,9449,8781,8732,95,8987,8933,8834,8879,9602,8635,8573,8498,8438,8362,9886,9944,9648,10400,8288,9045,9840"
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,318,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,317,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,10587,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,10516,-1,-1",
+                        "endLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,406,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,317,-1,-1",
+                        "endColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,13,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,70,-1,-1",
+                        "endOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,16387,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,10582,-1,-1"
                     },
                     "to": {
-                        "startLines": "2,245,255,894,895,896,919,920,921,929,931,932,933,934,944,945,947,948,949,950,951,952,953,955,964,965,966,967,968,976,977,979,981,982,983,984",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "150,7894,8220,46258,46311,46363,49212,49268,49322,49830,50029,50083,50140,50198,51274,51342,51568,51617,51660,51700,51754,51808,51861,51987,52138,52200,52275,52335,52411,53434,53480,53591,53708,53781,53834,53892",
-                        "endLines": "244,254,267,894,895,896,919,920,921,929,931,932,933,934,944,945,947,948,949,950,951,952,953,963,964,965,966,967,968,976,977,979,981,982,983,984",
-                        "endColumns": "19,19,19,52,51,43,55,53,51,53,53,56,57,65,67,72,48,42,39,53,53,52,44,13,61,74,59,75,73,45,57,45,72,52,57,57",
-                        "endOffsets": "7889,8215,8610,46306,46358,46402,49263,49317,49369,49879,50078,50135,50193,50259,51337,51410,51612,51655,51695,51749,51803,51856,51901,52133,52195,52270,52330,52406,52480,53475,53533,53632,53776,53829,53887,53945"
+                        "startLines": "2,245,255,896,897,898,921,922,923,931,933,934,935,936,946,947,949,1038,1039,1040,1041,1042,1043,1044,1046,1055,1056,1057,1058,1059,1067,1068,1070,1072,1073,1074,1075,1076",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "150,7894,8220,46315,46368,46420,49269,49325,49379,49887,50086,50140,50197,50255,51331,51399,51625,57430,57479,57522,57562,57616,57670,57723,57849,58000,58062,58137,58197,58273,59296,59342,59453,59570,59643,59696,59767,59825",
+                        "endLines": "244,254,267,896,897,898,921,922,923,931,933,934,935,936,946,947,1037,1038,1039,1040,1041,1042,1043,1044,1054,1055,1056,1057,1058,1059,1067,1068,1070,1072,1073,1074,1075,1076",
+                        "endColumns": "19,19,19,52,51,43,55,53,51,53,53,56,57,65,67,72,13,48,42,39,53,53,52,44,13,61,74,59,75,73,45,57,45,72,52,70,57,57",
+                        "endOffsets": "7889,8215,8610,46363,46415,46459,49320,49374,49426,49936,50135,50192,50250,50316,51394,51467,57425,57474,57517,57557,57611,57665,57718,57763,57995,58057,58132,58192,58268,58342,59337,59395,59494,59638,59691,59762,59820,59878"
                     }
                 },
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\950aa3c00a435ca361159ca5921dafce\\res\\values\\values.xml",
                     "from": {
-                        "startLines": "4,7",
-                        "startColumns": "0,0",
-                        "startOffsets": "238,401",
-                        "endColumns": "63,166",
-                        "endOffsets": "301,567"
+                        "startLines": "-1,-1",
+                        "startColumns": "-1,-1",
+                        "startOffsets": "-1,-1"
                     },
                     "to": {
-                        "startLines": "859,909",
+                        "startLines": "861,911",
                         "startColumns": "4,4",
-                        "startOffsets": "43895,47919",
+                        "startOffsets": "43952,47976",
                         "endColumns": "67,166",
-                        "endOffsets": "43958,48081"
+                        "endOffsets": "44015,48138"
                     }
                 },
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\b23a538805321379c9b591cd2981e628\\res\\values\\values.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "176",
-                        "endColumns": "77",
-                        "endOffsets": "253"
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
                     },
                     "to": {
-                        "startLines": "937",
+                        "startLines": "939",
                         "startColumns": "4",
-                        "startOffsets": "50578",
+                        "startOffsets": "50635",
                         "endColumns": "81",
-                        "endOffsets": "50655"
+                        "endOffsets": "50712"
                     }
                 },
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\79bf7cd6c0feea98bfe837cdb1029540\\res\\values\\values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,95,138,185,240,285,339,391,440,501",
-                        "endColumns": "39,42,46,54,44,53,51,48,60,49",
-                        "endOffsets": "90,133,180,235,280,334,386,435,496,546"
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
-                        "startLines": "813,821,824,825,826,844,845,846,847,848",
+                        "startLines": "815,823,826,827,828,846,847,848,849,850",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "41532,41920,42059,42106,42161,43043,43097,43149,43198,43259",
+                        "startOffsets": "41589,41977,42116,42163,42218,43100,43154,43206,43255,43316",
                         "endColumns": "39,42,46,54,44,53,51,48,60,49",
-                        "endOffsets": "41567,41958,42101,42156,42201,43092,43144,43193,43254,43304"
+                        "endOffsets": "41624,42015,42158,42213,42258,43149,43201,43250,43311,43361"
                     }
                 },
                 {
                     "source": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\generated\\res\\google-services\\debug\\values\\values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,200,307,390,494,598,718,814",
-                        "endColumns": "144,106,82,103,103,119,95,72",
-                        "endOffsets": "195,302,385,489,593,713,809,882"
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
-                        "startLines": "930,938,939,940,941,942,943,975",
+                        "startLines": "932,940,941,942,943,944,945,1066",
                         "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "49884,50660,50767,50850,50954,51058,51178,53361",
+                        "startOffsets": "49941,50717,50824,50907,51011,51115,51235,59223",
                         "endColumns": "144,106,82,103,103,119,95,72",
-                        "endOffsets": "50024,50762,50845,50949,51053,51173,51269,53429"
+                        "endOffsets": "50081,50819,50902,51006,51110,51230,51326,59291"
                     }
                 },
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\d5f764a0c2b8ec8115a32f2d737ac943\\res\\values\\values.xml",
                     "from": {
-                        "startLines": "2,3,11,12,13,14,15,19,20,21,22,25,26,29,32,33,34,35,36,39,42,43,44,45,50,53,56,57,58,63,64,65,68,71,72,75,78,81,84,85,88,91,92,97,98,103,106,109,110,111,112,113,114,115,116,117,118,127,128,129,130",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,116,407,455,507,568,614,741,802,862,932,1065,1133,1262,1388,1450,1515,1583,1650,1773,1898,1965,2030,2095,2276,2397,2518,2584,2651,2861,2930,2996,3121,3247,3314,3440,3567,3692,3819,3884,4010,4133,4198,4406,4473,4653,4773,4893,4958,5020,5082,5144,5203,5263,5324,5385,5444,5819,8395,8527,11791",
-                        "endLines": "2,10,11,12,13,14,18,19,20,21,24,25,28,31,32,33,34,35,38,41,42,43,44,49,52,55,56,57,62,63,64,67,70,71,74,77,80,83,84,87,90,91,96,97,102,105,108,109,110,111,112,113,114,115,116,117,126,127,128,129,130",
-                        "endColumns": "60,11,47,51,60,45,11,60,59,69,11,67,11,11,61,64,67,66,11,11,66,64,64,11,11,11,65,66,11,68,65,11,11,66,11,11,11,11,64,11,11,64,11,66,11,11,11,64,61,61,61,58,59,60,60,58,11,2575,131,3263,107",
-                        "endOffsets": "111,402,450,502,563,609,736,797,857,927,1060,1128,1257,1383,1445,1510,1578,1645,1768,1893,1960,2025,2090,2271,2392,2513,2579,2646,2856,2925,2991,3116,3242,3309,3435,3562,3687,3814,3879,4005,4128,4193,4401,4468,4648,4768,4888,4953,5015,5077,5139,5198,5258,5319,5380,5439,5814,8390,8522,11786,11894"
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
-                        "startLines": "268,269,282,287,288,289,292,300,301,302,303,306,307,310,313,314,315,316,317,320,323,324,325,326,331,334,337,338,339,344,345,346,349,352,353,356,359,362,365,366,369,372,373,378,379,384,387,390,391,392,393,394,395,396,397,398,399,4268,4269,4270,4532",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "8615,8676,9251,9507,9559,9620,9782,10101,10162,10222,10292,10425,10493,10622,10748,10810,10875,10943,11010,11133,11258,11325,11390,11455,11636,11757,11878,11944,12011,12221,12290,12356,12481,12607,12674,12800,12927,13052,13179,13244,13370,13493,13558,13766,13833,14013,14133,14253,14318,14380,14442,14504,14563,14623,14684,14745,14804,263340,265916,266048,286727",
-                        "endLines": "268,276,282,287,288,289,295,300,301,302,305,306,309,312,313,314,315,316,319,322,323,324,325,330,333,336,337,338,343,344,345,348,351,352,355,358,361,364,365,368,371,372,377,378,383,386,389,390,391,392,393,394,395,396,397,398,407,4268,4269,4270,4532",
-                        "endColumns": "60,11,47,51,60,45,11,60,59,69,11,67,11,11,61,64,67,66,11,11,66,64,64,11,11,11,65,66,11,68,65,11,11,66,11,11,11,11,64,11,11,64,11,66,11,11,11,64,61,61,61,58,59,60,60,58,11,2575,131,3263,107",
-                        "endOffsets": "8671,8962,9294,9554,9615,9661,9904,10157,10217,10287,10420,10488,10617,10743,10805,10870,10938,11005,11128,11253,11320,11385,11450,11631,11752,11873,11939,12006,12216,12285,12351,12476,12602,12669,12795,12922,13047,13174,13239,13365,13488,13553,13761,13828,14008,14128,14248,14313,14375,14437,14499,14558,14618,14679,14740,14799,15174,265911,266043,269307,286830"
+                        "startLines": "268,269,282,287,288,289,292,300,301,302,303,306,307,310,313,314,315,316,317,320,323,324,325,326,331,334,337,338,339,344,345,346,349,352,353,356,359,362,365,366,369,372,373,378,379,384,387,390,391,392,393,394,395,396,397,398,399",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "8615,8676,9251,9507,9559,9620,9782,10101,10162,10222,10292,10425,10493,10622,10748,10810,10875,10943,11010,11133,11258,11325,11390,11455,11636,11757,11878,11944,12011,12221,12290,12356,12481,12607,12674,12800,12927,13052,13179,13244,13370,13493,13558,13766,13833,14013,14133,14253,14318,14380,14442,14504,14563,14623,14684,14745,14804",
+                        "endLines": "268,276,282,287,288,289,295,300,301,302,305,306,309,312,313,314,315,316,319,322,323,324,325,330,333,336,337,338,343,344,345,348,351,352,355,358,361,364,365,368,371,372,377,378,383,386,389,390,391,392,393,394,395,396,397,398,407",
+                        "endColumns": "60,11,47,51,60,45,11,60,59,69,11,67,11,11,61,64,67,66,11,11,66,64,64,11,11,11,65,66,11,68,65,11,11,66,11,11,11,11,64,11,11,64,11,66,11,11,11,64,61,61,61,58,59,60,60,58,11",
+                        "endOffsets": "8671,8962,9294,9554,9615,9661,9904,10157,10217,10287,10420,10488,10617,10743,10805,10870,10938,11005,11128,11253,11320,11385,11450,11631,11752,11873,11939,12006,12216,12285,12351,12476,12602,12669,12795,12922,13047,13174,13239,13365,13488,13553,13761,13828,14008,14128,14248,14313,14375,14437,14499,14558,14618,14679,14740,14799,15141"
                     }
                 },
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\9a4991f4bb09230a6610e4581989689a\\res\\values\\values.xml",
                     "from": {
-                        "startLines": "15,16,17,18,19,20,21,22,23,2",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2182,2279,2326,2380,2434,2514,2590,2671,2735,55",
-                        "endLines": "15,16,17,18,19,20,21,22,23,14",
-                        "endColumns": "96,46,53,53,79,75,80,63,73,1567",
-                        "endOffsets": "2274,2321,2375,2429,2509,2585,2666,2730,2804,2177"
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
-                        "startLines": "767,922,923,924,925,926,927,928,974,4370",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "38577,49374,49421,49475,49529,49609,49685,49766,53287,275131",
-                        "endLines": "767,922,923,924,925,926,927,928,974,4382",
-                        "endColumns": "96,46,53,53,79,75,80,63,73,1567",
-                        "endOffsets": "38669,49416,49470,49524,49604,49680,49761,49825,53356,277253"
+                        "startLines": "769,924,925,926,927,928,929,930,1065",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "38634,49431,49478,49532,49586,49666,49742,49823,59149",
+                        "endColumns": "96,46,53,53,79,75,80,63,73",
+                        "endOffsets": "38726,49473,49527,49581,49661,49737,49818,49882,59218"
                     }
                 },
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\8f3bc4e9afcd6e86dd1cd5b0dd27dccf\\res\\values\\values.xml",
                     "from": {
-                        "startLines": "2,102,3,13",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,5935,116,724",
-                        "endLines": "2,104,12,101",
-                        "endColumns": "60,12,24,24",
-                        "endOffsets": "111,6075,719,5930"
+                        "startLines": "-1,-1",
+                        "startColumns": "-1,-1",
+                        "startOffsets": "-1,-1"
                     },
                     "to": {
-                        "startLines": "290,3383,4271,4281",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "9666,213615,269312,269920",
-                        "endLines": "290,3385,4280,4369",
-                        "endColumns": "60,12,24,24",
-                        "endOffsets": "9722,213755,269915,275126"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\4b451569b83a7ec53a023b4248a88406\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,29,36,47,74",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "55,1702,2087,2684,4317",
-                        "endLines": "28,35,46,73,78",
-                        "endColumns": "24,24,24,24,24",
-                        "endOffsets": "1697,2082,2679,4312,4582"
-                    },
-                    "to": {
-                        "startLines": "3513,3540,3547,4904,4931",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "221193,222840,223225,307150,308783",
-                        "endLines": "3539,3546,3557,4930,4935",
-                        "endColumns": "24,24,24,24,24",
-                        "endOffsets": "222835,223220,223817,308778,309048"
+                        "startLines": "290,3472",
+                        "startColumns": "4,4",
+                        "startOffsets": "9666,217120",
+                        "endLines": "290,3474",
+                        "endColumns": "60,12",
+                        "endOffsets": "9722,217260"
                     }
                 },
                 {
                     "source": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\src\\main\\res\\values\\dimens.xml",
                     "from": {
-                        "startLines": "2,3,6,5,4",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "88,146,310,260,202",
-                        "endColumns": "57,55,41,49,57",
-                        "endOffsets": "141,197,347,305,255"
+                        "startLines": "-1,-1,7,-1,-1,-1,8",
+                        "startColumns": "-1,-1,4,-1,-1,-1,4",
+                        "startOffsets": "-1,-1,352,-1,-1,-1,399",
+                        "endColumns": "-1,-1,46,-1,-1,-1,42",
+                        "endOffsets": "-1,-1,394,-1,-1,-1,437"
                     },
                     "to": {
-                        "startLines": "618,619,676,738,739",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "29188,29246,32937,36826,36876",
-                        "endColumns": "57,55,41,49,57",
-                        "endOffsets": "29241,29297,32974,36871,36929"
+                        "startLines": "618,619,620,677,739,740,760",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "29155,29213,29269,32951,36840,36890,38138",
+                        "endColumns": "57,55,46,41,49,57,42",
+                        "endOffsets": "29208,29264,29311,32988,36885,36943,38176"
                     }
                 },
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\cb01e1ad311dae53995b72c5aa6ee81c\\res\\values\\values.xml",
                     "from": {
-                        "startLines": "2,5,6,7,8,10,11,12,13,14",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,288,341,394,447,560,626,748,809,875",
-                        "endColumns": "88,52,52,52,52,65,121,60,65,66",
-                        "endOffsets": "139,336,389,442,495,621,743,804,870,937"
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
-                        "startLines": "516,755,756,757,758,2729,2731,2732,2737,2739",
+                        "startLines": "516,756,757,758,759,2819,2821,2822,2827,2829",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "22244,37912,37965,38018,38071,171347,171523,171645,171907,172102",
+                        "startOffsets": "22211,37926,37979,38032,38085,175211,175387,175509,175771,175966",
                         "endColumns": "88,52,52,52,52,65,121,60,65,66",
-                        "endOffsets": "22328,37960,38013,38066,38119,171408,171640,171701,171968,172164"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\3fd6e690ecad5df3e7caa32501617f3d\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "7",
-                        "endColumns": "24",
-                        "endOffsets": "361"
-                    },
-                    "to": {
-                        "startLines": "4176",
-                        "startColumns": "4",
-                        "startOffsets": "259002",
-                        "endLines": "4181",
-                        "endColumns": "24",
-                        "endOffsets": "259308"
+                        "endOffsets": "22295,37974,38027,38080,38133,175272,175504,175565,175832,176028"
                     }
                 }
             ]

@@ -99,8 +99,8 @@ public class Daily_Report extends AppCompatActivity {
 
         clientShow();
 
-       // categoryAdapter=new ArrayAdapter<>(this,R.layout.spennersamplelayout,R.id.showTestSpinnerId,categoryList);
-       // categorySp.setAdapter(categoryAdapter);
+       // CategoryAdapter=new ArrayAdapter<>(this,R.layout.spennersamplelayout,R.id.showTestSpinnerId,categoryList);
+       // categorySp.setAdapter(CategoryAdapter);
         dateEt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
