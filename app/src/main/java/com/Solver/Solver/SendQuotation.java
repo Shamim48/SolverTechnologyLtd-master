@@ -70,7 +70,6 @@ public class SendQuotation extends AppCompatActivity {
 
                 Quotation_details quotation_details=new Quotation_details(qur_details_key,"Q-2019080502", 101, 3, productId, 550.00, quantity, "", 2200.00, "2019-08-05 09:17:44", "2019-08-05 09:17:44");
 
-
               quotationMasterRef.child(qut_key).setValue(quotation_masters).addOnCompleteListener(new OnCompleteListener<Void>() {
                   @Override
                   public void onComplete(@NonNull Task<Void> task) {
@@ -86,6 +85,8 @@ public class SendQuotation extends AppCompatActivity {
                       if(task.isSuccessful()){
                           Toast.makeText(getApplicationContext(),"Quotation Details upload Success",Toast.LENGTH_SHORT).show();
 
+                          quantityEt.setText("");
+                          clientSv.setQuery("",true);
                       }
                   }
               });

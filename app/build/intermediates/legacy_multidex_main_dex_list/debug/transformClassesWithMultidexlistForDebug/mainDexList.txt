@@ -187,6 +187,8 @@ com/google/android/gms/internal/firebase_auth/zzbg.class
 com/google/android/gms/internal/firebase_auth/zzbi.class
 com/google/android/gms/internal/firebase_auth/zzbj.class
 com/google/android/gms/internal/firebase_auth/zzbl.class
+com/google/android/gms/internal/firebase_messaging/zzg.class
+com/google/android/gms/internal/firebase_messaging/zzk.class
 com/google/android/gms/stats/CodePackage.class
 com/google/android/material/appbar/AppBarLayout$LayoutParams$ScrollFlags.class
 com/google/android/material/bottomappbar/BottomAppBar$FabAlignmentMode.class
@@ -213,7 +215,7 @@ com/google/firebase/annotations/PublicApi.class
 com/google/firebase/auth/ActionCodeResult$ActionDataKey.class
 com/google/firebase/auth/ActionCodeResult$Operation.class
 com/google/firebase/auth/AdditionalUserInfo.class
-com/google/firebase/auth/internal/zzf.class
+com/google/firebase/auth/internal/zzh.class
 com/google/firebase/auth/zzae.class
 com/google/firebase/auth/zzy.class
 com/google/firebase/database/Exclude.class
@@ -223,7 +225,7 @@ com/google/firebase/database/ThrowOnExtraProperties.class
 com/google/firebase/database/annotations/NotNull.class
 com/google/firebase/database/annotations/Nullable.class
 com/google/firebase/iid/MessagingChannel.class
-com/google/firebase/iid/zzaz.class
+com/google/firebase/iid/zzau.class
 com/google/firebase/messaging/RemoteMessage$MessagePriority.class
 com/google/firebase/platforminfo/AutoValue_LibraryVersion.class
 com/google/firebase/platforminfo/LibraryVersion.class
