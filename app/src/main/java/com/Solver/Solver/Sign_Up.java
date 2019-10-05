@@ -165,7 +165,9 @@ try {
         profileIV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 selectImage();
+
             }
         });
 
@@ -179,6 +181,7 @@ try {
 
             }
         });*/
+
         bloodGroupList.add("Chose Department ..");
         bloodGroupList.add("Sales and Marketing");
         bloodGroupList.add("Technical Support");
@@ -189,7 +192,6 @@ try {
         userTypeList.add("Admin");
         userTypeList.add("Employee");
         userTypeList.add("Client");
-
 
         ArrayAdapter<String> bloodAdapter=new ArrayAdapter<>(this,R.layout.spennersamplelayout,R.id.showTestSpinnerId,bloodGroupList);
         selectDepSp.setAdapter(bloodAdapter);
