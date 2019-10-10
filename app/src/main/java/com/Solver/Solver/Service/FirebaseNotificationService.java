@@ -15,28 +15,107 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import com.Solver.Solver.GroupChatAtv;
 import com.Solver.Solver.MessageActivity;
+import com.Solver.Solver.ModelClass.GroupMessage;
 import com.Solver.Solver.Notifications.OreoNotification;
 import com.Solver.Solver.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-
 import java.util.Map;
 import java.util.Random;
 
 public class FirebaseNotificationService extends FirebaseMessagingService {
     private String Channel_Id="Notification channel";
+    DatabaseReference groupMsgREf;
+    Query lastQuery;
+    String gName;
+    String msg;
+
+    @Override
+    public void onStart(Intent intent, int startId) {
+        super.onStart(intent, startId);
+
+        groupMsgREf= FirebaseDatabase.getInstance().getReference().child("Group").child("Sales");
+        lastQuery = groupMsgREf.orderByKey().limitToLast(1);
+
+        lastQuery.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                GroupMessage groupMessage =dataSnapshot.getValue(GroupMessage.class);
+                gName=groupMessage.getGroupName();
+                msg=groupMessage.getMessage();
+
+
+            }//0716399301
+
+            Intent intent = new Intent(FirebaseNotificationService.this, GroupChatAtv.class);
+          // intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            PendingIntent pendingIntent = PendingIntent.getActivity(FirebaseNotificationService.this, 0, intent, 0);
+
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(FirebaseNotificationService.this,Channel_Id)
+                    .setSmallIcon(R.drawable.solverlogo)
+                    .setContentTitle(gName)
+                    .setContentText(msg)
+                    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                    // Set the intent that will fire when the user taps the notification
+                    .setContentIntent(pendingIntent)
+                    .setAutoCancel(true);
+
+            NotificationManagerCompat notificationManager = NotificationManagerCompat.from(FirebaseNotificationService.this);
+
+// notificationId is a unique int for each notification that you must define
+
+       // notificationManager.notify(notificationId, builder.build());
+
+
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+    }
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
         //String sented = remoteMessage.getData().get("sented");
        // String user = remoteMessage.getData().get("user");
+
+
+/*
+        groupMsgREf.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                for (DataSnapshot data:dataSnapshot.getChildren()){
+                    GroupMessage groupMessage =dataSnapshot.getValue(GroupMessage.class);
+                    String groupName=groupMessage.getGroupName();
+                    String msg=groupMessage.getMessage();
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+*/
 
             if (remoteMessage != null) {
                 Map<String, String> root = remoteMessage.getData();
@@ -76,9 +155,10 @@ public class FirebaseNotificationService extends FirebaseMessagingService {
                     NotificationChannel channel = new NotificationChannel(Channel_Id, "Notification", NotificationManager.IMPORTANCE_HIGH);
                     channel.setDescription("Description");
                     notificationManager.createNotificationChannel(channel);
-                }
+                }else {
 
-                notificationManager.notify(101, builder.build());
+                    notificationManager.notify(101, builder.build());
+                }
             }
 
           //  Toast.makeText(getApplicationContext(),"notify",Toast.LENGTH_SHORT).show();
@@ -126,8 +206,7 @@ public class FirebaseNotificationService extends FirebaseMessagingService {
         int i = 0;
         if (j > 0){
             i = j;
-        }
-
+}
         oreoNotification.getManager().notify(i, builder.build());
     }
 

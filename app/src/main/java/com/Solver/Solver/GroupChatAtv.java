@@ -405,6 +405,7 @@ public class GroupChatAtv extends AppCompatActivity {
                 // uploadImage();
             }
         });
+
         SendMessageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -785,6 +786,7 @@ public class GroupChatAtv extends AppCompatActivity {
         notification.setContentIntent(pendingIntent);
         NotificationManager notificationManager=(NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.notify(uid,notification.build());
+
     }
 
     @Override

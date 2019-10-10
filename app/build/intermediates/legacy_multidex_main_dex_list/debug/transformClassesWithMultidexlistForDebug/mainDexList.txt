@@ -225,7 +225,7 @@ com/google/firebase/database/ThrowOnExtraProperties.class
 com/google/firebase/database/annotations/NotNull.class
 com/google/firebase/database/annotations/Nullable.class
 com/google/firebase/iid/MessagingChannel.class
-com/google/firebase/iid/zzau.class
+com/google/firebase/iid/zzba.class
 com/google/firebase/messaging/RemoteMessage$MessagePriority.class
 com/google/firebase/platforminfo/AutoValue_LibraryVersion.class
 com/google/firebase/platforminfo/LibraryVersion.class

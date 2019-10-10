@@ -112,7 +112,6 @@ public class Sign_Up extends AppCompatActivity {
     String password;
     String confirmPassword;
 
-
     //Fire Base
 
     FirebaseDatabase firebaseDatabase;

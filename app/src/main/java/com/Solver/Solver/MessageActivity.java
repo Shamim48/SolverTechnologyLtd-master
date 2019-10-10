@@ -119,10 +119,12 @@ public class MessageActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message);
         Toolbar toolbar = findViewById(R.id.tool_bar);
-        reference=FirebaseDatabase.getInstance().getReference();
+      /*  reference=FirebaseDatabase.getInstance().getReference();
         imageKeyRef = reference.child("Chats");
         userRef = FirebaseDatabase.getInstance().getReference().child("User");
 
@@ -327,6 +329,8 @@ public class MessageActivity extends AppCompatActivity {
         }catch (Exception e){
 
         }
+   */
+
     }
 
     private void sentReplyWithImage(final String sender, final String receiver, final String message){
@@ -582,7 +586,6 @@ public class MessageActivity extends AppCompatActivity {
                     }
                 });
 
-
                 imageUri=null;
                 imageLot.setVisibility(View.GONE);
                 sendNotifiaction(fuser.getUid(),userid,username+": sent a new Photo.");
@@ -778,6 +781,8 @@ public class MessageActivity extends AppCompatActivity {
     }
 
     private void sendNotifiaction(String receiver, final String username, final String message){
+
+/*
         DatabaseReference tokens = FirebaseDatabase.getInstance().getReference("Tokens");
         Query query = tokens.orderByKey().equalTo(receiver);
         query.addValueEventListener(new ValueEventListener() {
@@ -814,7 +819,7 @@ public class MessageActivity extends AppCompatActivity {
 
 
             }
-        });
+        });*/
     }
 
 
