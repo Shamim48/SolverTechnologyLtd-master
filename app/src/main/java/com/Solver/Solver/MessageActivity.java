@@ -124,7 +124,7 @@ public class MessageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message);
         Toolbar toolbar = findViewById(R.id.tool_bar);
-      /*  reference=FirebaseDatabase.getInstance().getReference();
+      reference=FirebaseDatabase.getInstance().getReference();
         imageKeyRef = reference.child("Chats");
         userRef = FirebaseDatabase.getInstance().getReference().child("User");
 
@@ -329,7 +329,7 @@ public class MessageActivity extends AppCompatActivity {
         }catch (Exception e){
 
         }
-   */
+
 
     }
 
@@ -782,7 +782,7 @@ public class MessageActivity extends AppCompatActivity {
 
     private void sendNotifiaction(String receiver, final String username, final String message){
 
-/*
+
         DatabaseReference tokens = FirebaseDatabase.getInstance().getReference("Tokens");
         Query query = tokens.orderByKey().equalTo(receiver);
         query.addValueEventListener(new ValueEventListener() {
@@ -819,7 +819,7 @@ public class MessageActivity extends AppCompatActivity {
 
 
             }
-        });*/
+        });
     }
 
 
