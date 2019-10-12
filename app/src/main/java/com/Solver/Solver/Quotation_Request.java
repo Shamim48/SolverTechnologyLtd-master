@@ -85,6 +85,7 @@ public class Quotation_Request extends AppCompatActivity {
                     Product product=data.getValue(Product.class);
                     productList.add(product);
                 }
+
                 productArrayAdapter=new ProductArrayAdapter(Quotation_Request.this,productList);
                // LinearLayoutManager linearLayoutManager=new LinearLayoutManager(Quotation_Request.this);
                // productRv.setLayoutManager(linearLayoutManager);
@@ -217,6 +218,7 @@ public class Quotation_Request extends AppCompatActivity {
         categoriesList=new ArrayList<>();
         sub_categoriesList=new ArrayList<>();
         brandsArrayList=new ArrayList<>();
+
 
 
     }

@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText userNameEt;
     private EditText emailEt;
     private EditText passwordEt;
+    private TextView forgotPasswordTv;
     private CheckBox showPassCbSi;
     FirebaseAuth auth;
     FirebaseUser user;
@@ -83,6 +84,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        forgotPasswordTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),ForgotPasswordAtv.class);
+                startActivity(intent);
+            }
+        });
        loginBtn.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
@@ -165,6 +173,8 @@ public class MainActivity extends AppCompatActivity {
         emailEt=findViewById(R.id.EmailSignInId);
         passwordEt=findViewById(R.id.PasswordSignInId);
         showPassCbSi=findViewById(R.id.showPassCbSiId);
+        forgotPasswordTv=findViewById(R.id.forgotPasswordTvId);
+
 
 
     }

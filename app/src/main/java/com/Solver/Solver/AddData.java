@@ -62,7 +62,7 @@ public class AddData extends AppCompatActivity {
 
 
           //  list.add(new Quotation_masters(qut_key,"Q-2019080501", 2, 101, "Munsur Ali", "munsur@kktextile.com", "Prema Khan", "prema@kktextile.com", "2019-08", 30500.00, 500.00, 10.00, 10.00, 3000.00, 3000.00, 36000.00, 10012, "100% payment", "Delivery after 100% payment", "Sajol karmakar", "authorized", "Shamim","Pending",3, "2019-08-05 09:16:53", "2019-09-21 04:02:43"));
-            list.add(new Product(qut_key,3, "E00003", 101, 10003, "Piece", 5, 100, 101, 20170208, "CDE501-2S0R4", "COUNTRY : CHINA",  3, 1, "2019-08-20 06:52:14", ""));
+         //   list.add(new Product(qut_key,3, "E00003", 101, 10003, "Piece", 5, 100, 101, 20170208, "CDE501-2S0R4", "COUNTRY : CHINA",  3, 1, "2019-08-20 06:52:14", ""));
 
 
         }catch (Exception e){

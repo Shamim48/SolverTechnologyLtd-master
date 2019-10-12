@@ -8,20 +8,19 @@ public class Product {
     private int company_id;
     private int barcode;
     private String product_unit;
-    private int sell_percentage;
-    private int brand_id;
+    private String sell_percentage;
+    private String brand_id;
     private int sub_category_id;
     private int user_id;
     private String product_name;
     private String description;
-    private int reorder;
+    private String reorder;
     private int status;
     private String created_at;
     private String updated_at;
 
-    public Product(String product_key,int id, String product_id, int company_id, int barcode, String product_unit, int sell_percentage, int brand_id, int sub_category_id, int user_id, String product_name, String description, int reorder, int status, String created_at, String updated_at) {
-        this.product_key = product_key;
-        this.id = id;
+
+    public Product(String product_id, int company_id, int barcode, String product_unit, String sell_percentage, String brand_id, int sub_category_id, int user_id, String product_name, String description, String reorder, int status, String created_at, String updated_at) {
         this.product_id = product_id;
         this.company_id = company_id;
         this.barcode = barcode;
@@ -90,19 +89,19 @@ public class Product {
         this.product_unit = product_unit;
     }
 
-    public int getSell_percentage() {
+    public String getSell_percentage() {
         return sell_percentage;
     }
 
-    public void setSell_percentage(int sell_percentage) {
+    public void setSell_percentage(String sell_percentage) {
         this.sell_percentage = sell_percentage;
     }
 
-    public int getBrand_id() {
+    public String getBrand_id() {
         return brand_id;
     }
 
-    public void setBrand_id(int brand_id) {
+    public void setBrand_id(String brand_id) {
         this.brand_id = brand_id;
     }
 
@@ -138,11 +137,11 @@ public class Product {
         this.description = description;
     }
 
-    public int getReorder() {
+    public String getReorder() {
         return reorder;
     }
 
-    public void setReorder(int reorder) {
+    public void setReorder(String reorder) {
         this.reorder = reorder;
     }
 

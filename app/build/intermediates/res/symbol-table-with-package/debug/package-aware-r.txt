@@ -1319,6 +1319,7 @@ id clientParentLn
 id clientRegisterBtnId
 id clientRvId
 id clientSvId
+id clientTagLVId
 id clientTv_GMRId
 id clientTv_RpId
 id clientTv_RprId
@@ -1327,6 +1328,7 @@ id clip_vertical
 id closeBtnCtId
 id closeBtnDrId
 id closeBtnId
+id closeBtnSQId
 id closeBtnWsId
 id closeImgBtnId
 id collapseActionView
@@ -1335,9 +1337,11 @@ id comEmailBtnId
 id comNameSdId
 id comSmsBtnId
 id companyAddressId
+id companyAddressTSRTvId
 id companyAddressTvId
 id companyEmail
 id companyNameEtId
+id companyNameTSRTvId
 id companyNameTvId
 id companyName_WSId
 id companyPhoneId
@@ -1420,6 +1424,8 @@ id filled
 id fitCenter
 id fixed
 id forever
+id forgetEmailEtId
+id forgotPasswordTvId
 id ghost_view
 id glide_custom_view_target_tag
 id gone
@@ -1471,6 +1477,7 @@ id linearLayoutLeftId
 id linearLayoutRightId
 id listMode
 id list_item
+id lltASqLVId
 id lltCtLVId
 id lltDrLVId
 id lltWsLVId
@@ -1543,6 +1550,7 @@ id replyLotId
 id replyMSGMIId
 id replyParentLotId
 id requestQuotationId
+id resetPasswordBtnId
 id right
 id right_icon
 id right_side
@@ -1759,6 +1767,7 @@ layout activity_add_data
 layout activity_client_reg
 layout activity_client_show_details
 layout activity_daly_report
+layout activity_forgot_password_atv
 layout activity_group_chat_atv
 layout activity_home
 layout activity_main
@@ -1836,6 +1845,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout spennersamplelayout
 layout support_simple_spinner_dropdown_item
+layout tagclientsample_row
 layout user_item
 layout usersample_layout
 menu activity_home_drawer

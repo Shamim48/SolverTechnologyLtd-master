@@ -30,6 +30,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.Solver.Solver.ForgotPasswordAtv" />
         <activity android:name="com.Solver.Solver.SendQuotation" />
         <activity android:name="com.Solver.Solver.Quotation_Request" />
         <activity android:name="com.Solver.Solver.AddData" />
@@ -69,16 +70,6 @@
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
             </intent-filter>
         </service>
-        <!--
-        <service
-            android:name=".Notifications.MyFirebaseIdService"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
-        -->
         <!--
              FirebaseMessagingService performs security checks at runtime,
              but set to not exported to explicitly avoid allowing another app to call it.

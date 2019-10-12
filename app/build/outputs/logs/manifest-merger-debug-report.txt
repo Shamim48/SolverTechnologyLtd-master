@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-70:12
-INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-70:12
-INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-70:12
-INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-70:12
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-63:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a4cb975f0b9fff57e8499f3ab62282db\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\bd57c4eae84c23596e87e6bc172ce46a\AndroidManifest.xml:17:1-24:12
 MERGED from [com.theartofdev.edmodo:android-image-cropper:2.4.7] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\9a4991f4bb09230a6610e4581989689a\AndroidManifest.xml:2:1-12:12
@@ -11,13 +11,13 @@ MERGED from [com.github.amanjeetsingh150:ImageZipper:1.3] C:\Users\USER\.gradle\
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\f19b873fc2e44666dd8de6830fabeb88\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a80fbe24d0e3fede74e64a6712408192\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0-beta04] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\47c854572811de3eb8bfd8349a5d7b38\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-messaging:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\2dbde2a25d3811c78ab62d5ca61d9cb9\AndroidManifest.xml:17:1-37:12
+MERGED from [com.google.firebase:firebase-messaging:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\6ee604012d03ed0242144e9f2a697899\AndroidManifest.xml:17:1-37:12
 MERGED from [com.google.firebase:firebase-auth:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\b0e80b565978210460ae363288cab18d\AndroidManifest.xml:17:1-42:12
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\06c4646971adc0002358453dcb1cb85e\AndroidManifest.xml:2:1-12:12
 MERGED from [com.google.firebase:firebase-database:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\910c765520a7cfa9f63ae9e0251da2e3\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\e7e3cf3e98d9f973e23c8039ae8797ec\AndroidManifest.xml:15:1-39:12
 MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\58e0c0c1dbfa2e2bff2514496691a350\AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:17:1-47:12
+MERGED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:17:1-47:12
 MERGED from [com.google.firebase:firebase-common:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\2ddcea83f7f3e68ba6f07bc811709bf3\AndroidManifest.xml:2:1-24:12
 MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\12f62bdf6f665e761460e8f87806fac5\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\f4a70c60580cf920c94c3b49b0fc5ce2\AndroidManifest.xml:17:1-29:12
@@ -63,22 +63,22 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\USER\.gradle\
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\dff3dfc5d2a2a5559b7cdd07be53f36b\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\378829579b2be7a59589cea86197351b\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\ddb8cde81fff7848fd607806bcc8aa84\AndroidManifest.xml:2:1-7:12
-INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-70:12
-INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-70:12
-INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-70:12
+INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-63:12
+INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-63:12
 	package
 		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:4:5-32
 		INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-70:12
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-63:12
 		INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
 	xmlns:dist
 		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:3:5-61
 	android:versionCode
 		INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-70:12
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-63:12
 		INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:11-69
@@ -92,8 +92,8 @@ MERGED from [com.google.firebase:firebase-database:19.1.0] C:\Users\USER\.gradle
 MERGED from [com.google.firebase:firebase-database:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\910c765520a7cfa9f63ae9e0251da2e3\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\e7e3cf3e98d9f973e23c8039ae8797ec\AndroidManifest.xml:27:5-67
 MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\e7e3cf3e98d9f973e23c8039ae8797ec\AndroidManifest.xml:27:5-67
-MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:23:5-67
 	android:name
 		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:8:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
@@ -102,8 +102,8 @@ MERGED from [com.google.firebase:firebase-database:19.1.0] C:\Users\USER\.gradle
 MERGED from [com.google.firebase:firebase-database:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\910c765520a7cfa9f63ae9e0251da2e3\AndroidManifest.xml:25:5-79
 MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\e7e3cf3e98d9f973e23c8039ae8797ec\AndroidManifest.xml:26:5-79
 MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\e7e3cf3e98d9f973e23c8039ae8797ec\AndroidManifest.xml:26:5-79
-MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:22:5-79
 	android:name
 		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:9:22-76
 uses-permission#android.permission.READ_CONTACTS
@@ -119,13 +119,13 @@ ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLt
 	android:name
 		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:12:22-66
 application
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:14:5-68:19
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:14:5-61:19
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\bd57c4eae84c23596e87e6bc172ce46a\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\bd57c4eae84c23596e87e6bc172ce46a\AndroidManifest.xml:22:5-20
 MERGED from [com.github.amanjeetsingh150:ImageZipper:1.3] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\cd367a0e74bec5b7c2542e5334257e71\AndroidManifest.xml:11:5-15:19
 MERGED from [com.github.amanjeetsingh150:ImageZipper:1.3] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\cd367a0e74bec5b7c2542e5334257e71\AndroidManifest.xml:11:5-15:19
-MERGED from [com.google.firebase:firebase-messaging:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\2dbde2a25d3811c78ab62d5ca61d9cb9\AndroidManifest.xml:22:5-35:19
-MERGED from [com.google.firebase:firebase-messaging:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\2dbde2a25d3811c78ab62d5ca61d9cb9\AndroidManifest.xml:22:5-35:19
+MERGED from [com.google.firebase:firebase-messaging:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\6ee604012d03ed0242144e9f2a697899\AndroidManifest.xml:22:5-35:19
+MERGED from [com.google.firebase:firebase-messaging:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\6ee604012d03ed0242144e9f2a697899\AndroidManifest.xml:22:5-35:19
 MERGED from [com.google.firebase:firebase-auth:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\b0e80b565978210460ae363288cab18d\AndroidManifest.xml:23:5-40:19
 MERGED from [com.google.firebase:firebase-auth:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\b0e80b565978210460ae363288cab18d\AndroidManifest.xml:23:5-40:19
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\06c4646971adc0002358453dcb1cb85e\AndroidManifest.xml:10:5-20
@@ -136,8 +136,8 @@ MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\USER\.gradle\
 MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\e7e3cf3e98d9f973e23c8039ae8797ec\AndroidManifest.xml:29:5-37:19
 MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\58e0c0c1dbfa2e2bff2514496691a350\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\58e0c0c1dbfa2e2bff2514496691a350\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:28:5-45:19
-MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:28:5-45:19
+MERGED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:28:5-45:19
+MERGED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:28:5-45:19
 MERGED from [com.google.firebase:firebase-common:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\2ddcea83f7f3e68ba6f07bc811709bf3\AndroidManifest.xml:11:5-22:19
 MERGED from [com.google.firebase:firebase-common:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\2ddcea83f7f3e68ba6f07bc811709bf3\AndroidManifest.xml:11:5-22:19
 MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\12f62bdf6f665e761460e8f87806fac5\AndroidManifest.xml:7:5-8:19
@@ -178,104 +178,108 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\US
 		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:15:9-35
 	android:theme
 		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:20:9-40
+activity#com.Solver.Solver.ForgotPasswordAtv
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:21:9-64
+	android:name
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:21:19-52
 activity#com.Solver.Solver.SendQuotation
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:21:9-60
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:22:9-51
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:21:19-48
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:22:19-48
 activity#com.Solver.Solver.Quotation_Request
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:22:9-55
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:23:9-55
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:22:19-52
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:23:19-52
 activity#com.Solver.Solver.AddData
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:23:9-45
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:24:9-45
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:23:19-42
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:24:19-42
 activity#com.Solver.Solver.ViewImage
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:24:9-47
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:25:9-47
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:24:19-44
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:25:19-44
 activity#com.Solver.Solver.Daily_Report
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:25:9-50
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:26:9-50
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:25:19-47
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:26:19-47
 activity#com.Solver.Solver.Schedule_Display
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:26:9-54
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:27:9-54
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:26:19-51
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:27:19-51
 activity#com.Solver.Solver.Write_Schedule
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:27:9-52
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:28:9-52
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:27:19-49
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:28:19-49
 activity#com.Solver.Solver.MessageActivity
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:28:9-53
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:29:9-53
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:28:19-50
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:29:19-50
 activity#com.Solver.Solver.GroupChatAtv
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:29:9-50
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:30:9-50
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:29:19-47
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:30:19-47
 activity#com.Solver.Solver.ClientShowDetails
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:30:9-55
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:31:9-55
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:30:19-52
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:31:19-52
 activity#com.Solver.Solver.ShowUserDetails
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:31:9-53
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:32:9-53
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:31:19-50
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:32:19-50
 activity#com.Solver.Solver.Home
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:32:9-35:59
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:33:9-36:59
 	android:label
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:34:13-56
-	android:theme
 		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:35:13-56
+	android:theme
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:36:13-56
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:33:13-33
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:34:13-33
 activity#com.Solver.Solver.Client_reg
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:36:9-38:56
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:37:9-39:56
 	android:label
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:38:13-53
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:39:13-53
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:37:13-39
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:38:13-39
 activity#com.Solver.Solver.Sign_Up
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:39:9-41:54
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:40:9-42:54
 	android:label
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:41:13-51
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:42:13-51
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:40:13-36
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:41:13-36
 activity#com.Solver.Solver.MainActivity
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:42:9-48:20
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:43:9-49:20
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:42:19-47
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:43:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:43:13-47:29
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:44:13-48:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:44:17-69
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:45:17-69
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:44:25-66
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:45:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:46:17-77
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:47:17-77
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:46:27-74
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:47:27-74
 activity#com.theartofdev.edmodo.cropper.CropImageActivity
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:49:9-85
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:50:9-85
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:49:19-82
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:50:19-82
 service#com.Solver.Solver.Service.FirebaseNotificationService
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:51:9-59:19
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:52:9-60:19
 	android:permission
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:53:13-73
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:54:13-73
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:52:13-64
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:53:13-64
 intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:55:13-58:29
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:56:13-59:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:56:17-78
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:57:17-78
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:56:25-75
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:57:25-75
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:57:17-81
+ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:58:17-81
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:57:25-78
+		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:58:25-78
 uses-sdk
 INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
@@ -294,8 +298,8 @@ MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\USER\.gradle\cach
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a80fbe24d0e3fede74e64a6712408192\AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.1.0-beta04] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\47c854572811de3eb8bfd8349a5d7b38\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0-beta04] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\47c854572811de3eb8bfd8349a5d7b38\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.firebase:firebase-messaging:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\2dbde2a25d3811c78ab62d5ca61d9cb9\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-messaging:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\2dbde2a25d3811c78ab62d5ca61d9cb9\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\6ee604012d03ed0242144e9f2a697899\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\6ee604012d03ed0242144e9f2a697899\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-auth:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\b0e80b565978210460ae363288cab18d\AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-auth:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\b0e80b565978210460ae363288cab18d\AndroidManifest.xml:21:5-44
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\06c4646971adc0002358453dcb1cb85e\AndroidManifest.xml:6:5-8:41
@@ -306,8 +310,8 @@ MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\USER\.gradle\
 MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\e7e3cf3e98d9f973e23c8039ae8797ec\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\58e0c0c1dbfa2e2bff2514496691a350\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\58e0c0c1dbfa2e2bff2514496691a350\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-common:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\2ddcea83f7f3e68ba6f07bc811709bf3\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-common:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\2ddcea83f7f3e68ba6f07bc811709bf3\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\12f62bdf6f665e761460e8f87806fac5\AndroidManifest.xml:5:5-44
@@ -409,15 +413,15 @@ INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnolog
 		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
 service#com.google.firebase.messaging.FirebaseMessagingService
-ADDED from [com.google.firebase:firebase-messaging:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\2dbde2a25d3811c78ab62d5ca61d9cb9\AndroidManifest.xml:28:9-34:19
+ADDED from [com.google.firebase:firebase-messaging:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\6ee604012d03ed0242144e9f2a697899\AndroidManifest.xml:28:9-34:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-messaging:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\2dbde2a25d3811c78ab62d5ca61d9cb9\AndroidManifest.xml:30:13-37
+		ADDED from [com.google.firebase:firebase-messaging:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\6ee604012d03ed0242144e9f2a697899\AndroidManifest.xml:30:13-37
 	android:name
-		ADDED from [com.google.firebase:firebase-messaging:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\2dbde2a25d3811c78ab62d5ca61d9cb9\AndroidManifest.xml:29:13-82
+		ADDED from [com.google.firebase:firebase-messaging:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\6ee604012d03ed0242144e9f2a697899\AndroidManifest.xml:29:13-82
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from [com.google.firebase:firebase-messaging:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\2dbde2a25d3811c78ab62d5ca61d9cb9\AndroidManifest.xml:31:13-33:29
+ADDED from [com.google.firebase:firebase-messaging:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\6ee604012d03ed0242144e9f2a697899\AndroidManifest.xml:31:13-33:29
 	android:priority
-		ADDED from [com.google.firebase:firebase-messaging:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\2dbde2a25d3811c78ab62d5ca61d9cb9\AndroidManifest.xml:31:28-51
+		ADDED from [com.google.firebase:firebase-messaging:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\6ee604012d03ed0242144e9f2a697899\AndroidManifest.xml:31:28-51
 activity#com.google.firebase.auth.internal.FederatedSignInActivity
 ADDED from [com.google.firebase:firebase-auth:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\b0e80b565978210460ae363288cab18d\AndroidManifest.xml:24:9-31:50
 	android:excludeFromRecents
@@ -440,8 +444,8 @@ MERGED from [com.google.firebase:firebase-database:19.1.0] C:\Users\USER\.gradle
 MERGED from [com.google.firebase:firebase-database:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\910c765520a7cfa9f63ae9e0251da2e3\AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\e7e3cf3e98d9f973e23c8039ae8797ec\AndroidManifest.xml:30:9-36:19
 MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\e7e3cf3e98d9f973e23c8039ae8797ec\AndroidManifest.xml:30:9-36:19
-MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:29:9-35:19
-MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.firebase:firebase-common:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\2ddcea83f7f3e68ba6f07bc811709bf3\AndroidManifest.xml:12:9-15:40
 MERGED from [com.google.firebase:firebase-common:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\2ddcea83f7f3e68ba6f07bc811709bf3\AndroidManifest.xml:12:9-15:40
 	android:exported
@@ -469,29 +473,29 @@ ADDED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\USER\.gradle\c
 	android:name
 		ADDED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\e7e3cf3e98d9f973e23c8039ae8797ec\AndroidManifest.xml:34:17-107
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:24:5-68
+ADDED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:24:5-68
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:24:22-65
+		ADDED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:24:22-65
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:26:5-82
+ADDED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:26:5-82
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:26:22-79
+		ADDED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:26:22-79
 meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
-ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:32:13-34:85
+ADDED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:32:13-34:85
 	android:value
-		ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:34:17-82
+		ADDED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:34:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:33:17-96
+		ADDED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:33:17-96
 receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:37:9-44:20
+ADDED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:37:9-44:20
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:39:13-36
+		ADDED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:39:13-36
 	android:permission
-		ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:40:13-73
+		ADDED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:40:13-73
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:38:13-78
+		ADDED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:38:13-78
 intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a2ceef5f46e85edd5d9a54c94feec8db\AndroidManifest.xml:41:13-43:29
+ADDED from [com.google.firebase:firebase-iid:19.0.1] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\889d2872468b506070118da1a00f9015\AndroidManifest.xml:41:13-43:29
 provider#com.google.firebase.provider.FirebaseInitProvider
 ADDED from [com.google.firebase:firebase-common:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\2ddcea83f7f3e68ba6f07bc811709bf3\AndroidManifest.xml:17:9-21:39
 	android:authorities
