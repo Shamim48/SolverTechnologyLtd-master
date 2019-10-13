@@ -24,6 +24,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:text="Company Name"
+                android:layout_marginTop="5dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="18sp" />

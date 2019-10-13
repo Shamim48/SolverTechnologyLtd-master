@@ -9,6 +9,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/productNameTvId"
@@ -16,10 +20,23 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
+                android:layout_gravity="left"
+                android:gravity="left"
                 android:text="Company Name"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/productNameTvId"
+                android:layout_gravity="right"
+                android:layout_marginTop="-3dp"
+                android:gravity="right"
+                android:text="" />
+
+        </RelativeLayout>
 
             <TextView
                 android:id="@+id/desTvId"

@@ -23,6 +23,7 @@ public class GroupMessage {
     private String msg_reply;
     private String spearPart_reply;
     private String image_reply;
+    private String imageType;
 
 
     public GroupMessage() {
@@ -38,6 +39,18 @@ public class GroupMessage {
         this.msgType = msgType;
         this.groupName=groupName;
         this.message=msg;
+    }
+
+ public GroupMessage(String name,String msg, String sender, String time, String date, String imageUri, String msgType,String groupName,String imageType) {
+        this.name = name;
+        this.sender = sender;
+        this.time = time;
+        this.date = date;
+        this.imageUri = imageUri;
+        this.msgType = msgType;
+        this.groupName=groupName;
+        this.message=msg;
+        this.imageType=imageType;
     }
 
     public GroupMessage(String name, String sender, String sub, String message, String time, String date, String tagClientName, String sparePart,String msgKey,String groupName,String msgType) {
@@ -87,6 +100,14 @@ public class GroupMessage {
         this.groupName = groupName;
         this.name_reply = name_reply;
         this.image_reply=image_reply;
+    }
+
+    public String getImageType() {
+        return imageType;
+    }
+
+    public void setImageType(String imageType) {
+        this.imageType = imageType;
     }
 
     public String getImage_reply() {

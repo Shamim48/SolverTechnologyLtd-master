@@ -21,7 +21,7 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class ProductArrayAdapter extends ArrayAdapter<Product> {
+public class  ProductArrayAdapter extends ArrayAdapter<Product> {
 
     private List<Product> productList;
     Context context;

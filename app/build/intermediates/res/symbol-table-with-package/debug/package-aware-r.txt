@@ -1442,6 +1442,7 @@ id ifRoom
 id image
 id imageGCId
 id imageLotId
+id imageTypeSpId
 id imageViewMsgRowId
 id imageViewNHId
 id image_send

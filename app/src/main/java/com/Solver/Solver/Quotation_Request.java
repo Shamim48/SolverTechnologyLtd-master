@@ -77,6 +77,8 @@ public class Quotation_Request extends AppCompatActivity {
         brandRef=FirebaseDatabase.getInstance().getReference().child("brands");
         productList=new ArrayList<>();
 
+
+
         productRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -117,7 +119,22 @@ public class Quotation_Request extends AppCompatActivity {
 
             }
         });
+
+        productSv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+
+                productArrayAdapter.getFilter().filter(s);
+                return false;
+            }
+        });
     }
+
 
     @Override
     protected void onStart() {

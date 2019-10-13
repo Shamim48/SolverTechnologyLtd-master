@@ -8,19 +8,19 @@ public class Product {
     private int company_id;
     private int barcode;
     private String product_unit;
-    private String sell_percentage;
-    private String brand_id;
+    private int sell_percentage;
+    private int brand_id;
     private int sub_category_id;
     private int user_id;
     private String product_name;
     private String description;
-    private String reorder;
+    private int reorder;
     private int status;
     private String created_at;
     private String updated_at;
+    private String name_type;
 
-
-    public Product(String product_id, int company_id, int barcode, String product_unit, String sell_percentage, String brand_id, int sub_category_id, int user_id, String product_name, String description, String reorder, int status, String created_at, String updated_at) {
+    public Product(String product_id, int company_id, int barcode, String product_unit, int sell_percentage, int brand_id, int sub_category_id, int user_id, String product_name, String description, int reorder, int status, String created_at, String updated_at, String name_type) {
         this.product_id = product_id;
         this.company_id = company_id;
         this.barcode = barcode;
@@ -35,11 +35,13 @@ public class Product {
         this.status = status;
         this.created_at = created_at;
         this.updated_at = updated_at;
+        this.name_type = name_type;
     }
+
 
     public Product() {
-
     }
+
 
     public String getProduct_key() {
         return product_key;
@@ -47,6 +49,14 @@ public class Product {
 
     public void setProduct_key(String product_key) {
         this.product_key = product_key;
+    }
+
+    public String getName_type() {
+        return name_type;
+    }
+
+    public void setName_type(String name_type) {
+        this.name_type = name_type;
     }
 
     public int getId() {
@@ -89,19 +99,19 @@ public class Product {
         this.product_unit = product_unit;
     }
 
-    public String getSell_percentage() {
+    public int getSell_percentage() {
         return sell_percentage;
     }
 
-    public void setSell_percentage(String sell_percentage) {
+    public void setSell_percentage(int sell_percentage) {
         this.sell_percentage = sell_percentage;
     }
 
-    public String getBrand_id() {
+    public int getBrand_id() {
         return brand_id;
     }
 
-    public void setBrand_id(String brand_id) {
+    public void setBrand_id(int brand_id) {
         this.brand_id = brand_id;
     }
 
@@ -137,11 +147,11 @@ public class Product {
         this.description = description;
     }
 
-    public String getReorder() {
+    public int getReorder() {
         return reorder;
     }
 
-    public void setReorder(String reorder) {
+    public void setReorder(int reorder) {
         this.reorder = reorder;
     }
 

@@ -75,11 +75,13 @@ public class GroupChatAtv extends AppCompatActivity {
     Uri downloadUri;
     String imagePathDL;
 
+
     public static final int REQUEST_CODE = 1;
     private ImageButton SendMessageButton;
     private ImageButton selectImageIBnt;
     private ImageView imageGC;
     private ImageButton selectLocationIBtn;
+    private Spinner imageTypeSp;
     private EditText userMessageInput;
     private EditText spare_PartEt;
     private AutoCompleteTextView subEt;
@@ -105,6 +107,8 @@ public class GroupChatAtv extends AppCompatActivity {
     Common_Resouces common_resouces;
     String[] clientNameArray;
     List<Schedule> yourStringArray;
+    ArrayList<String> imageTypeAL;
+    ArrayAdapter<String> imageTypeApter;
     UploadTask imageUploadTask;
     StorageReference groupImageRef;
 
@@ -155,12 +159,51 @@ public class GroupChatAtv extends AppCompatActivity {
         groupImageRef = FirebaseStorage.getInstance().getReference().child("Group").child(currentGroupName);
 
         notification=new NotificationCompat.Builder(GroupChatAtv.this);
-
         InitializeFields();
-             dateTime();
+        dateTime();
 
         imageLot.setVisibility(View.GONE);
         replyLot.setVisibility(View.GONE);
+
+        imageTypeAL=new ArrayList<>();
+      /*  imageTypeAL.add("Chose Image Type");
+        imageTypeAL.add("Log_Book");
+        imageTypeAL.add("Machine Image");
+        imageTypeAL.add("Spear parts Image");
+        imageTypeAL.add("Bill challan");
+        imageTypeAL.add("Money receipt");
+        imageTypeAL.add("screen shot");
+        imageTypeAL.add("Others");
+*/
+        DatabaseReference imageTypeRef=FirebaseDatabase.getInstance().getReference("Others").child("ImageType");
+
+        //imageTypeRef.setValue(imageTypeAL);
+        imageTypeAL.clear();
+        imageTypeRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot data:dataSnapshot.getChildren()){
+                    String imageType=data.getValue(String.class);
+                    imageTypeAL.add(imageType);
+                }
+                imageTypeApter=new ArrayAdapter<>(GroupChatAtv.this,R.layout.spennersamplelayout,R.id.showTestSpinnerId,imageTypeAL);
+                imageTypeSp.setAdapter(imageTypeApter);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
+
+
+
+
+
+
+
         closeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -559,6 +602,7 @@ public class GroupChatAtv extends AppCompatActivity {
         progressDialog.show();
         DatabaseReference imageKeyRef = GroupNameRef.push();
         String imagePushId = imageKeyRef.getKey();
+        final String imageSub=imageTypeSp.getSelectedItem().toString();
         msg = userMessageInput.getText().toString();
          messageIMGkEY = GroupNameRef.push().getKey();
         StorageReference imagePath = groupImageRef.child(imagePushId + ".jpg");
@@ -570,13 +614,13 @@ public class GroupChatAtv extends AppCompatActivity {
                 while (!uriTask.isSuccessful());
                 downloadUri = uriTask.getResult();
 
-                GroupMessage groupImage=new GroupMessage(currentUserName,msg,currentUserID,currentTime,currentDate,downloadUri.toString(),imageType,currentGroupName);
+                GroupMessage groupImage=new GroupMessage(currentUserName,msg,currentUserID,currentTime,currentDate,downloadUri.toString(),imageType,currentGroupName,imageSub);
                 GroupNameRef.child(messageIMGkEY).setValue(groupImage);
 
                 imageUri=null;
                 userMessageInput.setText("");
                 imageLot.setVisibility(View.GONE);
-                sendNotification(currentGroupName,imageType);
+                sendNotification(currentGroupName,msg);
                 progressDialog.dismiss();
             }
         });
@@ -647,6 +691,7 @@ public class GroupChatAtv extends AppCompatActivity {
         replyLot=findViewById(R.id.replyLotId);
         imageLot=findViewById(R.id.imageLotId);
         closeBtn=findViewById(R.id.closeBtnId);
+        imageTypeSp=findViewById(R.id.imageTypeSpId);
         closeImgBtn=findViewById(R.id.closeImgBtnId);
         nameTv_Rp=findViewById(R.id.nameTv_RpId);
         clientTv_Rp=findViewById(R.id.clientTv_RpId);

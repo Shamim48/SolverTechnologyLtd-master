@@ -69,7 +69,7 @@ public class SendQuotation extends AppCompatActivity {
         quotationMasterRef= FirebaseDatabase.getInstance().getReference().child("quotation_req_masters");
         quotationDetailsRef= FirebaseDatabase.getInstance().getReference().child("quotation_req_details");
 
-        clientRef=FirebaseDatabase.getInstance().getReference().child("Client");
+        clientRef=FirebaseDatabase.getInstance().getReference().child("factories");
 
         lnlt.setVisibility(View.GONE);
         currentUserName=user.getDisplayName();
@@ -118,7 +118,22 @@ public class SendQuotation extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 clientName=clientArrayList.get(i).getCompany_name();
                 customerId=clientArrayList.get(i).getCustomer_id();
+                clientSv.setQuery(clientName,true);
                 lnlt.setVisibility(View.GONE);
+            }
+        });
+
+        clientSv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+
+                clientArrayAdapter.getFilter().filter(s);
+                return false;
             }
         });
 
@@ -137,7 +152,7 @@ public class SendQuotation extends AppCompatActivity {
 */
                     Quotation_masters quotation_masters=new Quotation_masters(qut_key,"Q-2019080501", customerId, 101, "Munsur Ali", "munsur@kktextile.com", "Prema Khan", "prema@kktextile.com", "2019-08", 30500.00, 500.00, 10.00, 10.00, 3000.00, 3000.00, 36000.00, 10012, "100% payment", "Delivery after 100% payment", "Sajol karmakar", "authorized", "Shamim","Pending",3, "2019-08-05 09:16:53", "2019-09-21 04:02:43");
 
-                Quotation_details quotation_details=new Quotation_details(qur_details_key,"Q-2019080502", 101, 3, productId, 550.00, quantity, "", 2200.00, "2019-08-05 09:17:44", "2019-08-05 09:17:44");
+                Quotation_details quotation_details=new Quotation_details(qur_details_key,"Q-2019080502", 101, customerId, productId, 550.00, quantity, "", 2200.00, "2019-08-05 09:17:44", "2019-08-05 09:17:44");
 
               quotationMasterRef.child(qut_key).setValue(quotation_masters).addOnCompleteListener(new OnCompleteListener<Void>() {
                   @Override

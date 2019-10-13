@@ -111,6 +111,7 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
                  });
                  holder.timeTv.setText(groupMsg.getTime());
                  holder.dateTv.setText(groupMsg.getDate());
+                 holder.desTv.setText(groupMsg.getImageType());
 
                  holder.linearLayoutImage.setOnLongClickListener(new View.OnLongClickListener() {
                      @Override
@@ -139,6 +140,7 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
                  });
                  holder.timeTv.setText(groupMsg.getTime());
                  holder.dateTv.setText(groupMsg.getDate());
+                 holder.desTv.setText(groupMsg.getImageType());
 
                  holder.linearLayoutImage.setOnLongClickListener(new View.OnLongClickListener() {
                      @Override
