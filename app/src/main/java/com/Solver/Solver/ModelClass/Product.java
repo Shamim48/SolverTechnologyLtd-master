@@ -19,6 +19,7 @@ public class Product {
     private String created_at;
     private String updated_at;
     private String name_type;
+   private boolean checked=false;
 
     public Product(String product_id, int company_id, int barcode, String product_unit, int sell_percentage, int brand_id, int sub_category_id, int user_id, String product_name, String description, int reorder, int status, String created_at, String updated_at, String name_type) {
         this.product_id = product_id;
@@ -42,6 +43,14 @@ public class Product {
     public Product() {
     }
 
+
+    public boolean isChecked() {
+        return checked;
+    }
+
+    public void setChecked(boolean checked) {
+        this.checked = checked;
+    }
 
     public String getProduct_key() {
         return product_key;

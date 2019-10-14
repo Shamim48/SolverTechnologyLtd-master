@@ -19,6 +19,7 @@ import com.Solver.Solver.Adepter.BrandAdapter;
 import com.Solver.Solver.Adepter.CategoryAdapter;
 import com.Solver.Solver.Adepter.ProductAdapter;
 import com.Solver.Solver.Adepter.ProductArrayAdapter;
+import com.Solver.Solver.Adepter.ProductArrayAdapter.CheckedListener;
 import com.Solver.Solver.Adepter.ProductTypeAdapter;
 import com.Solver.Solver.Adepter.SubCategoryAdapter;
 import com.Solver.Solver.ModelClass.Brands;
@@ -35,7 +36,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Quotation_Request extends AppCompatActivity {
+public class Quotation_Request extends AppCompatActivity implements ProductArrayAdapter.CheckedListener {
 
     DatabaseReference productRef;
     List<Product> productList;
@@ -43,6 +44,8 @@ public class Quotation_Request extends AppCompatActivity {
     ArrayList<Categories> categoriesList;
     ArrayList<Sub_categories> sub_categoriesList;
     ArrayList<Brands> brandsArrayList;
+
+    ArrayList<Product> selectedProduct=new ArrayList<>();
 
     CategoryAdapter categoryAdapter;
     ProductAdapter adepter;
@@ -97,6 +100,8 @@ public class Quotation_Request extends AppCompatActivity {
 
                productLv.setAdapter(productArrayAdapter);
                 productArrayAdapter.notifyDataSetChanged();
+               productArrayAdapter.setCheckedListener((ProductArrayAdapter.CheckedListener) Quotation_Request.this);
+
             }
 
             @Override
@@ -230,6 +235,7 @@ public class Quotation_Request extends AppCompatActivity {
         subCategorySp=findViewById(R.id.subCategorySpId);
         brandSp=findViewById(R.id.brandSpId);
         productLv=findViewById(R.id.productLvId);
+        productLv.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
         product_typesList=new ArrayList<>();
         categoriesList=new ArrayList<>();
@@ -239,5 +245,24 @@ public class Quotation_Request extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public void getCheckListener(int position) {
+
+      selectedProduct.add(productList.get(position));
+        Toast.makeText(getApplicationContext(),"You Chose "+productList.get(position).getProduct_name(),Toast.LENGTH_SHORT).show();
+
+        Toast.makeText(getApplicationContext(),"Selected Product "+selectedProduct.size(),Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public void removeProduct(int position) {
+        selectedProduct.remove(productList.get(position));
+        Toast.makeText(getApplicationContext(),"You remove "+productList.get(position).getProduct_name(),Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Selected Product "+selectedProduct.size(),Toast.LENGTH_SHORT).show();
+
+    }
+
 
 }

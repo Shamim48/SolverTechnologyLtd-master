@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.Filter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -14,6 +16,7 @@ import androidx.annotation.Nullable;
 
 import com.Solver.Solver.ModelClass.Product;
 import com.Solver.Solver.R;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -21,10 +24,13 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+
+
 public class  ProductArrayAdapter extends ArrayAdapter<Product> {
 
     private List<Product> productList;
     Context context;
+    private CheckedListener checkedListener;
 
     public ProductArrayAdapter(Context context,  List<Product> productList) {
         super(context, 0, productList);
@@ -41,6 +47,8 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> {
 
         TextView textViewName = convertView.findViewById(R.id.productNameTvId);
         TextView desTv = convertView.findViewById(R.id.desTvId);
+        final CheckBox productCb=convertView.findViewById(R.id.productCBId);
+
 
        // CircleImageView imageViewFlag = convertView.findViewById(R.id.profile_imageUiId);
      //   RelativeLayout parentLayout=convertView.findViewById(R.id.user_ItmRowId);
@@ -53,11 +61,51 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> {
             desTv.setText(product.getDescription());
 
 
+           // product.setChecked(false);
+            productCb.setChecked(product.isChecked());
+
+           /* productCb.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if( productCb.isChecked()) {
+                        productList.get(position).setChecked(true);
+                        productCb.setChecked(productList.get(position).isChecked());
+                    }
+                }
+            });*/
+
+
+           /* if( productCb.isChecked()){
+                productList.get(position).setIsCheck(true);
+                productCb.setChecked(productList.get(position).isIsCheck());
+            }*/
+
            // Glide.with(imageViewFlag).load(userinfo.getImageUrl()).placeholder(R.drawable.ic_insert_photo_black_24dp).into(imageViewFlag);
 
 
             // userNameAndID.setUserID(productList.get(position).getUserId());
             //  userNameAndID.setUserName(productList.get(position).getName());
+
+            productCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    if(checkedListener!=null){
+
+                        if (productCb.isChecked()) {
+                            if( productCb.isChecked()) {
+                                productList.get(position).setChecked(true);
+                                productCb.setChecked(productList.get(position).isChecked());
+                            }
+
+                            checkedListener.getCheckListener(position);
+                        }
+                        if(!productCb.isChecked()){
+                            checkedListener.removeProduct(position);
+                        }
+
+                    }
+                }
+            });
 
 
         }
@@ -173,4 +221,17 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> {
 
         }
     };
+
+
+
+
+    public interface CheckedListener{
+
+        void getCheckListener(int position);
+        void removeProduct(int position);
+    }
+
+    public void setCheckedListener(CheckedListener checkedListener) {
+        this.checkedListener = checkedListener;
+    }
 }

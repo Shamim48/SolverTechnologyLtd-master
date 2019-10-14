@@ -2260,6 +2260,10 @@
         "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f19b873fc2e44666dd8de6830fabeb88\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
+        "merged": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp_productsample_row.xml.flat",
+        "source": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\src\\main\\res\\layout-sw600dp\\productsample_row.xml"
+    },
+    {
         "merged": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_add_notification2.png.flat",
         "source": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_add_notification2.png"
     },

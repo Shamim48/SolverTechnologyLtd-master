@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <LinearLayout
+      <LinearLayout
         android:orientation="vertical"
         android:padding="5dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
+            android:weightSum="10"
             android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/productNameTvId"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="9"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
@@ -26,17 +32,25 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/productNameTvId"
-                android:layout_gravity="right"
-                android:layout_marginTop="-3dp"
-                android:gravity="right"
-                android:text="" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_margin="2dp"
+                    android:id="@+id/productCBId"
+                    android:layout_marginTop="-11dp"
+                    android:gravity="right"
+                    android:text="" />
 
-        </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
 
             <TextView
                 android:id="@+id/desTvId"
@@ -48,7 +62,6 @@
                 android:text="address"
                 android:textColor="@color/black_gray"
                 android:textSize="16sp" />
-
         </LinearLayout>
 
 
@@ -56,5 +69,31 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/black_gray"/>
+ <!--   <TextView
+        android:id="@+id/textView"
+        android:layout_width="338dp"
+        android:layout_height="35dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="360dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="408dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="40dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+-->
 </LinearLayout>
