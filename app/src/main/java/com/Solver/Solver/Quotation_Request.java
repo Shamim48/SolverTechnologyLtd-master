@@ -258,11 +258,10 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
 
     @Override
     public void removeProduct(int position) {
+
         selectedProduct.remove(productList.get(position));
         Toast.makeText(getApplicationContext(),"You remove "+productList.get(position).getProduct_name(),Toast.LENGTH_SHORT).show();
         Toast.makeText(getApplicationContext(),"Selected Product "+selectedProduct.size(),Toast.LENGTH_SHORT).show();
 
     }
-
-
 }

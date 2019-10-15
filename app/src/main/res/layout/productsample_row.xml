@@ -62,6 +62,16 @@
                 android:text="address"
                 android:textColor="@color/black_gray"
                 android:textSize="16sp" />
+
+          <EditText
+              android:layout_width="match_parent"
+              android:padding="5dp"
+              android:layout_marginTop="5dp"
+              android:hint=" Quantity"
+              android:inputType="numberDecimal"
+              android:id="@+id/quantityEtPsId"
+              android:background="@drawable/edittextbg"
+              android:layout_height="wrap_content" />
         </LinearLayout>
 
 

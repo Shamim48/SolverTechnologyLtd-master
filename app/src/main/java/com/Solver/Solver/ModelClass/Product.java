@@ -20,6 +20,7 @@ public class Product {
     private String updated_at;
     private String name_type;
    private boolean checked=false;
+   private int quantity;
 
     public Product(String product_id, int company_id, int barcode, String product_unit, int sell_percentage, int brand_id, int sub_category_id, int user_id, String product_name, String description, int reorder, int status, String created_at, String updated_at, String name_type) {
         this.product_id = product_id;
@@ -38,11 +39,37 @@ public class Product {
         this.updated_at = updated_at;
         this.name_type = name_type;
     }
+public Product(String product_id, int company_id, int barcode, String product_unit, int sell_percentage, int brand_id, int sub_category_id, int user_id, String product_name, String description, int reorder, int status, String created_at, String updated_at, String name_type,int quantity) {
+        this.product_id = product_id;
+        this.company_id = company_id;
+        this.barcode = barcode;
+        this.product_unit = product_unit;
+        this.sell_percentage = sell_percentage;
+        this.brand_id = brand_id;
+        this.sub_category_id = sub_category_id;
+        this.user_id = user_id;
+        this.product_name = product_name;
+        this.description = description;
+        this.reorder = reorder;
+        this.status = status;
+        this.created_at = created_at;
+        this.updated_at = updated_at;
+        this.name_type = name_type;
+        this.quantity=quantity;
+    }
 
 
     public Product() {
     }
 
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
 
     public boolean isChecked() {
         return checked;
@@ -50,6 +77,9 @@ public class Product {
 
     public void setChecked(boolean checked) {
         this.checked = checked;
+    }
+    public void toggleChecked() {
+        checked = !checked;
     }
 
     public String getProduct_key() {

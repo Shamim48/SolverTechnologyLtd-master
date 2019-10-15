@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Filter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -14,7 +15,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+
 import com.Solver.Solver.ModelClass.Product;
+import com.Solver.Solver.ModelClass.productHolder;
 import com.Solver.Solver.R;
 import com.google.firebase.database.ValueEventListener;
 
@@ -32,47 +35,108 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> {
     Context context;
     private CheckedListener checkedListener;
 
+    private boolean checked = false;
+
+
+
     public ProductArrayAdapter(Context context,  List<Product> productList) {
         super(context, 0, productList);
         this.productList = productList;
     }
 
+
+
     @NonNull
     @Override
     public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        final Product product = (Product) this.getItem(position);
+        TextView textViewName;
+        TextView desTv;
+        final CheckBox productCb;
+        final EditText quantityEd;
+
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(
                     R.layout.productsample_row, parent, false);
+
+            textViewName = convertView.findViewById(R.id.productNameTvId);
+            desTv = convertView.findViewById(R.id.desTvId);
+            productCb=convertView.findViewById(R.id.productCBId);
+            quantityEd=convertView.findViewById(R.id.quantityEtPsId);
+
+            quantityEd.setVisibility(View.GONE);
+
+            convertView.setTag(new productHolder(textViewName,desTv,productCb));
+
+            productCb.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    CheckBox cb= (CheckBox) view;
+                    Product product1=(Product) cb.getTag();
+                    product1.setChecked(cb.isChecked());
+
+                    if(productCb.isChecked()) {
+                        checkedListener.getCheckListener(position);
+                        quantityEd.setVisibility(View.VISIBLE);
+                        String quantity=quantityEd.getText().toString();
+                        int qut=Integer.parseInt(quantity);
+                        productList.get(position).setQuantity(qut);
+
+                    }
+                     if(!productCb.isChecked()){
+                        checkedListener.removeProduct(position);
+                        quantityEd.setVisibility(View.GONE);
+                    }
+                }
+            });
+           /* productCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    if(checkedListener!=null){
+                        if(productCb.isChecked()) {
+                            checkedListener.getCheckListener(position);
+                        }
+                       if(!productCb.isChecked()){
+                            checkedListener.removeProduct(position);
+                        }
+                    }
+
+
+                }
+
+            });
+*/
+
+
+        }else {
+
+            productHolder viewHolder = (productHolder) convertView
+                    .getTag();
+            productCb = viewHolder.getCheckBox();
+            textViewName = viewHolder.getProductNameTv();
+            desTv = viewHolder.getDesTv();
+
+
         }
 
-        TextView textViewName = convertView.findViewById(R.id.productNameTvId);
-        TextView desTv = convertView.findViewById(R.id.desTvId);
-        final CheckBox productCb=convertView.findViewById(R.id.productCBId);
-
+        productCb.setTag(product);
 
        // CircleImageView imageViewFlag = convertView.findViewById(R.id.profile_imageUiId);
      //   RelativeLayout parentLayout=convertView.findViewById(R.id.user_ItmRowId);
 
-        final Product product = productList.get(position);
 
 
-        if (product != null) {
+
+
             textViewName.setText(product.getProduct_name());
             desTv.setText(product.getDescription());
 
+           // productCb.setChecked(product.isChecked());
+          //  productCb.setTag(product);
 
-           // product.setChecked(false);
+            // Display planet data
             productCb.setChecked(product.isChecked());
 
-           /* productCb.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if( productCb.isChecked()) {
-                        productList.get(position).setChecked(true);
-                        productCb.setChecked(productList.get(position).isChecked());
-                    }
-                }
-            });*/
 
 
            /* if( productCb.isChecked()){
@@ -86,29 +150,10 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> {
             // userNameAndID.setUserID(productList.get(position).getUserId());
             //  userNameAndID.setUserName(productList.get(position).getName());
 
-            productCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                    if(checkedListener!=null){
-
-                        if (productCb.isChecked()) {
-                            if( productCb.isChecked()) {
-                                productList.get(position).setChecked(true);
-                                productCb.setChecked(productList.get(position).isChecked());
-                            }
-
-                            checkedListener.getCheckListener(position);
-                        }
-                        if(!productCb.isChecked()){
-                            checkedListener.removeProduct(position);
-                        }
-
-                    }
-                }
-            });
 
 
-        }
+
+
 
        /* textViewName.setOnClickListener(new View.OnClickListener() {
             @Override

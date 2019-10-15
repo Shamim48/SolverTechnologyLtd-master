@@ -1542,6 +1542,7 @@ id progressBarId
 id progress_circular
 id progress_horizontal
 id quantityEtId
+id quantityEtPsId
 id queryBtnId
 id radio
 id rectangle
