@@ -10,9 +10,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.Solver.Solver.Adepter.BrandAdapter;
@@ -21,6 +23,7 @@ import com.Solver.Solver.Adepter.ProductAdapter;
 import com.Solver.Solver.Adepter.ProductArrayAdapter;
 import com.Solver.Solver.Adepter.ProductArrayAdapter.CheckedListener;
 import com.Solver.Solver.Adepter.ProductTypeAdapter;
+import com.Solver.Solver.Adepter.SelectedProductArrayAdapter;
 import com.Solver.Solver.Adepter.SubCategoryAdapter;
 import com.Solver.Solver.ModelClass.Brands;
 import com.Solver.Solver.ModelClass.Categories;
@@ -36,7 +39,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Quotation_Request extends AppCompatActivity implements ProductArrayAdapter.CheckedListener {
+public class Quotation_Request extends AppCompatActivity implements ProductArrayAdapter.CheckedListener,SelectedProductArrayAdapter.RemoveProductListener {
 
     DatabaseReference productRef;
     List<Product> productList;
@@ -56,11 +59,13 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
 
     RecyclerView productRv;
     ProductTypeAdapter productTypeAdapter;
-
+    SelectedProductArrayAdapter selectedProductArrayAdapter;
     private SearchView productSv;
     private AutoCompleteTextView clientAt;
     private Spinner productTypeSp,categorySp,subCategorySp,brandSp;
     private ListView productLv;
+    private TextView showProductTv;
+    private GridView selectedProductGridView;
 // DataBase Ref
     DatabaseReference productTypeRef,categoryRef,subCategoryRef ,brandRef;
 
@@ -81,6 +86,21 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
         productList=new ArrayList<>();
 
 
+        showProductTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                try {
+                    for (Product product:selectedProduct){
+                        showProductTv.append(product.getProduct_name()+"\n"+product.getQuantity()+"\n\n");
+
+                    }
+                }catch (Exception e){
+                    Toast.makeText(getApplicationContext(),"Please Chose product",Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
 
         productRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -111,6 +131,18 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
             }
         });
 
+        try {
+
+             selectedProductArrayAdapter=new SelectedProductArrayAdapter(Quotation_Request.this,selectedProduct);
+
+            selectedProductGridView.setAdapter(selectedProductArrayAdapter);
+            selectedProductArrayAdapter.notifyDataSetChanged();
+            selectedProductArrayAdapter.setRemoveProduct(Quotation_Request.this);
+
+        }catch (Exception e){
+
+        }
+
         productLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -135,6 +167,8 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
             public boolean onQueryTextChange(String s) {
 
                 productArrayAdapter.getFilter().filter(s);
+                productArrayAdapter.notifyDataSetChanged();
+
                 return false;
             }
         });
@@ -223,6 +257,9 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
             }
         });
 
+
+
+
     }
 
     private void findId() {
@@ -241,10 +278,12 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
         categoriesList=new ArrayList<>();
         sub_categoriesList=new ArrayList<>();
         brandsArrayList=new ArrayList<>();
+        showProductTv=findViewById(R.id.showProductTvId);
 
-
+        selectedProductGridView=findViewById(R.id.selectedProductGridViewId);
 
     }
+
 
     @Override
     public void getCheckListener(int position) {
@@ -263,5 +302,13 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
         Toast.makeText(getApplicationContext(),"You remove "+productList.get(position).getProduct_name(),Toast.LENGTH_SHORT).show();
         Toast.makeText(getApplicationContext(),"Selected Product "+selectedProduct.size(),Toast.LENGTH_SHORT).show();
 
+    }
+
+    @Override
+    public void removeGridProduct(int position) {
+        selectedProduct.remove(productList.get(position));
+        Toast.makeText(getApplicationContext(),"You remove "+productList.get(position).getProduct_name(),Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Selected Product "+selectedProduct.size(),Toast.LENGTH_SHORT).show();
+         selectedProductArrayAdapter.notifyDataSetChanged();
     }
 }

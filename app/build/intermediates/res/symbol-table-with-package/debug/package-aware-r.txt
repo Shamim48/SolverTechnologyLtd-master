@@ -1267,6 +1267,7 @@ id actions
 id activity_chooser_view_content
 id add
 id addDataMenuItmId
+id addQuantityBtnId
 id addressCompanyId
 id adjust_height
 id adjust_width
@@ -1297,7 +1298,6 @@ id center_horizontal
 id center_vertical
 id chains
 id chatLoyId
-id checkBox
 id checkbox
 id checkbox10Id
 id checkbox12Id
@@ -1330,6 +1330,7 @@ id closeBtnCtId
 id closeBtnDrId
 id closeBtnId
 id closeBtnSQId
+id closeBtnSrId
 id closeBtnWsId
 id closeImgBtnId
 id collapseActionView
@@ -1532,7 +1533,9 @@ id phoneId
 id pin
 id productCBId
 id productLvId
+id productNameSRId
 id productNameTvId
+id productQuantitySRId
 id productSvId
 id productTypeSpId
 id profile_image
@@ -1543,6 +1546,7 @@ id progress_circular
 id progress_horizontal
 id quantityEtId
 id quantityEtPsId
+id quantityLLtId
 id queryBtnId
 id radio
 id rectangle
@@ -1588,6 +1592,7 @@ id selectLocationIBtnId
 id selectUserTypeId
 id select_dialog_listview
 id selected
+id selectedProductGridViewId
 id sendQuotationBtnId
 id send_message_button
 id shortcut
@@ -1595,6 +1600,7 @@ id showCustom
 id showHome
 id showPassCbSiId
 id showPasswordCBId
+id showProductTvId
 id showTestSpinnerId
 id showTitle
 id show_message
@@ -1657,8 +1663,6 @@ id textId
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id textView
-id textView2
 id text_input_password_toggle
 id text_send
 id textinput_counter
@@ -1850,6 +1854,7 @@ layout schedule_row
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout selected_product_row
 layout spennersamplelayout
 layout support_simple_spinner_dropdown_item
 layout tagclientsample_row

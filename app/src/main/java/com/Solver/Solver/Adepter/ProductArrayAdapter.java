@@ -1,16 +1,21 @@
 package com.Solver.Solver.Adepter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.LinearInterpolator;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Filter;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,6 +32,7 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+import static com.Solver.Solver.R.color.black_gray;
 
 
 public class  ProductArrayAdapter extends ArrayAdapter<Product> {
@@ -54,6 +60,8 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> {
         TextView desTv;
         final CheckBox productCb;
         final EditText quantityEd;
+        final LinearLayout quantityLLt;
+        final Button addQuantityBtn;
 
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(
@@ -63,10 +71,12 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> {
             desTv = convertView.findViewById(R.id.desTvId);
             productCb=convertView.findViewById(R.id.productCBId);
             quantityEd=convertView.findViewById(R.id.quantityEtPsId);
+            quantityLLt=convertView.findViewById(R.id.quantityLLtId);
+            addQuantityBtn=convertView.findViewById(R.id.addQuantityBtnId);
 
-            quantityEd.setVisibility(View.GONE);
+            quantityLLt.setVisibility(View.GONE);
 
-            convertView.setTag(new productHolder(textViewName,desTv,productCb));
+            convertView.setTag(new productHolder(textViewName,desTv,productCb,quantityLLt));
 
             productCb.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -76,19 +86,40 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> {
                     product1.setChecked(cb.isChecked());
 
                     if(productCb.isChecked()) {
-                        checkedListener.getCheckListener(position);
-                        quantityEd.setVisibility(View.VISIBLE);
-                        String quantity=quantityEd.getText().toString();
-                        int qut=Integer.parseInt(quantity);
-                        productList.get(position).setQuantity(qut);
+                        quantityLLt.setVisibility(View.VISIBLE);
 
                     }
                      if(!productCb.isChecked()){
                         checkedListener.removeProduct(position);
-                        quantityEd.setVisibility(View.GONE);
+                        quantityLLt.setVisibility(View.GONE);
+                        addQuantityBtn.setEnabled(true);
+                        addQuantityBtn.setBackgroundResource(R.drawable.buttonbg);
+                        quantityEd.setText("");
                     }
                 }
             });
+
+
+            addQuantityBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    String quantity=quantityEd.getText().toString();
+                    if (quantity.isEmpty()){
+                        Toast.makeText(getContext(),"Please Enter Quantity",Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
+                    checkedListener.getCheckListener(position);
+                    int qut=Integer.parseInt(quantity);
+                    productList.get(position).setQuantity(qut);
+                    addQuantityBtn.setEnabled(false);
+                    addQuantityBtn.setBackgroundResource(R.drawable.edittextbg);
+                    addQuantityBtn.setTextColor(Color.GRAY);
+
+                }
+            });
+
+
            /* productCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton compoundButton, boolean b) {

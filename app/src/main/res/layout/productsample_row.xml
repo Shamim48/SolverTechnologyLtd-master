@@ -63,8 +63,19 @@
                 android:textColor="@color/black_gray"
                 android:textSize="16sp" />
 
-          <EditText
+          <LinearLayout
               android:layout_width="match_parent"
+              android:orientation="horizontal"
+              android:weightSum="10"
+              android:visibility="gone"
+              android:id="@+id/quantityLLtId"
+              android:layout_height="wrap_content">
+
+
+
+          <EditText
+              android:layout_width="0dp"
+              android:layout_weight="8.8"
               android:padding="5dp"
               android:layout_marginTop="5dp"
               android:hint=" Quantity"
@@ -72,6 +83,21 @@
               android:id="@+id/quantityEtPsId"
               android:background="@drawable/edittextbg"
               android:layout_height="wrap_content" />
+
+              <Button
+                  android:layout_width="0dp"
+                  android:layout_height="36dp"
+                  android:layout_marginBottom="5dp"
+                  android:layout_weight="1.2"
+                  android:layout_marginLeft="5dp"
+                  android:id="@+id/addQuantityBtnId"
+                  android:textColor="@color/white"
+                  android:background="@drawable/buttonbg"
+                  android:paddingBottom="5dp"
+                  android:text=" Add " />
+
+          </LinearLayout>
+
         </LinearLayout>
 
 
