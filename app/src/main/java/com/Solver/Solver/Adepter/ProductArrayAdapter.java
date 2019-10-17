@@ -2,6 +2,8 @@ package com.Solver.Solver.Adepter;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Build;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +21,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
 
 import com.Solver.Solver.ModelClass.Product;
@@ -43,15 +46,12 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> {
 
     private boolean checked = false;
 
-
-
     public ProductArrayAdapter(Context context,  List<Product> productList) {
         super(context, 0, productList);
         this.productList = productList;
     }
 
-
-
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @NonNull
     @Override
     public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -86,11 +86,12 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> {
                     product1.setChecked(cb.isChecked());
 
                     if(productCb.isChecked()) {
-                        quantityLLt.setVisibility(View.VISIBLE);
+                       // quantityLLt.setVisibility(View.VISIBLE);
+                     //  checkedListener.getCheckListener(position);
 
                     }
                      if(!productCb.isChecked()){
-                        checkedListener.removeProduct(position);
+                       //76yd   ` checkedListener.removeProduct(position);
                         quantityLLt.setVisibility(View.GONE);
                         addQuantityBtn.setEnabled(true);
                         addQuantityBtn.setBackgroundResource(R.drawable.buttonbg);
@@ -99,6 +100,7 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> {
                 }
             });
 
+/*
 
             addQuantityBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -118,6 +120,7 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> {
 
                 }
             });
+*/
 
 
            /* productCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -128,15 +131,16 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> {
                             checkedListener.getCheckListener(position);
                         }
                        if(!productCb.isChecked()){
-                            checkedListener.removeProduct(position);
+
+                            //checkedListener.removeProduct(position);
+
                         }
                     }
 
 
                 }
 
-            });
-*/
+            });*/
 
 
         }else {
@@ -158,9 +162,13 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> {
 
 
 
+try {
+    textViewName.setText(product.getProduct_name());
+    desTv.setText(Html.fromHtml(product.getDescription(),Html.FROM_HTML_MODE_LEGACY));
 
-            textViewName.setText(product.getProduct_name());
-            desTv.setText(product.getDescription());
+}catch (Exception e){
+
+}
 
            // productCb.setChecked(product.isChecked());
           //  productCb.setTag(product);
@@ -214,6 +222,16 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> {
         });
 
 */
+
+      convertView.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
+              checkedListener.getCheckListener(position);
+          }
+      });
+
+
+
         return convertView;
     }
 /*

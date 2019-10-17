@@ -49,8 +49,8 @@ public class SelectedProductArrayAdapter extends ArrayAdapter<Product> {
             closeBtn=convertView.findViewById(R.id.closeBtnSrId);
 
             try {
-                productNameTv.setText(productList.get(position).getProduct_name());
-                quantity.setText(productList.get(position).getQuantity());
+                productNameTv.setText(product.getProduct_name());
+                quantity.setText(product.getQuantity());
 
             }catch (Exception e){
 

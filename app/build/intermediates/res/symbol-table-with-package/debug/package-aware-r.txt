@@ -1266,6 +1266,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addBtnQDId
 id addDataMenuItmId
 id addQuantityBtnId
 id addressCompanyId
@@ -1289,6 +1290,7 @@ id btnId
 id btn_send
 id buttonPanel
 id callBtnTbId
+id cancelBtnQDId
 id cancel_action
 id categorySpId
 id center
@@ -1385,6 +1387,7 @@ id deleteMenuItmId
 id deleteMessageMenuItmId
 id deleteRowId
 id desTvId
+id desTvQDId
 id desTv_GMRId
 id design_bottom_sheet
 id design_menu_item_action_area
@@ -1535,6 +1538,7 @@ id productCBId
 id productLvId
 id productNameSRId
 id productNameTvId
+id productNameTvQDId
 id productQuantitySRId
 id productSvId
 id productTypeSpId
@@ -1546,6 +1550,7 @@ id progress_circular
 id progress_horizontal
 id quantityEtId
 id quantityEtPsId
+id quantityEtQDId
 id quantityLLtId
 id queryBtnId
 id radio
@@ -1576,6 +1581,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id searchViewLltId
 id search_badge
 id search_bar
 id search_button
@@ -1594,6 +1600,7 @@ id select_dialog_listview
 id selected
 id selectedProductGridViewId
 id sendQuotationBtnId
+id sendQuotationId
 id send_message_button
 id shortcut
 id showCustom
@@ -1657,6 +1664,8 @@ id tag_screen_reader_focusable
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
+id testListId
+id tetLit
 id text
 id text2
 id textId
@@ -1711,6 +1720,7 @@ id useremailBtnId
 id username
 id usernameUiId
 id usersmsBtnId
+id viewId
 id viewPagerHmId
 id view_offset_helper
 id visible
@@ -1849,6 +1859,7 @@ layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout productsample_row
+layout quantity_lot
 layout reply_row
 layout schedule_row
 layout select_dialog_item_material
