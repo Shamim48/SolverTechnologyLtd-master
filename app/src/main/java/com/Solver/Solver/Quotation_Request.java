@@ -292,7 +292,7 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
         subCategorySp=findViewById(R.id.subCategorySpId);
         brandSp=findViewById(R.id.brandSpId);
         productLv=findViewById(R.id.productLvId);
-        testList=findViewById(R.id.testListId);
+     //   testList=findViewById(R.id.testListId);
        // productLv.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
         product_typesList=new ArrayList<>();
@@ -319,44 +319,51 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
         final AlertDialog alertDialogByQuantity=alert.create();
         alertDialogByQuantity.setCanceledOnTouchOutside(false);
         alertDialogByQuantity.show();
-        productNameQDTv.setText(productList.get(position).getProduct_name());
-       desQDTv.setText(Html.fromHtml(productList.get(position).getDescription(),Html.FROM_HTML_MODE_LEGACY));
+        try {
 
-        addBtnQD.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String quantity = quantityEdQD.getText().toString().trim();
-                int qut=Integer.parseInt(quantity);
-                //companyNameEt.setText(bloodGroups);
+            productNameQDTv.setText(productList.get(position).getProduct_name());
+            desQDTv.setText(Html.fromHtml(productList.get(position).getDescription(),Html.FROM_HTML_MODE_LEGACY));
+        }catch (Exception e){
 
+        }
 
-                if (quantity.isEmpty()) {
-                    quantityEdQD.setError("Please Enter Client/Company Name..!");
-                    return;
-                }
-
-
-                productList.get(position).setQuantity(qut);
-                selectedProduct.add(productList.get(position));
-                Toast.makeText(getApplicationContext(),"You Chose "+productList.get(position).getProduct_name(),Toast.LENGTH_SHORT).show();
-                Toast.makeText(getApplicationContext(),"Selected Product "+selectedProduct.size(),Toast.LENGTH_SHORT).show();
+      addBtnQD.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
+              try {
+              String quantity = quantityEdQD.getText().toString().trim();
+              int qut=Integer.parseInt(quantity);
+              //companyNameEt.setText(bloodGroups);
 
 
-                try {
+              if (quantity.isEmpty()) {
+                  quantityEdQD.setError("Please Enter Client/Company Name..!");
+                  return;
+              }
 
-                    selectedProductArrayAdapter=new SelectedProductArrayAdapter(Quotation_Request.this,selectedProduct);
-                    testList.setAdapter(selectedProductArrayAdapter);
-                    selectedProductArrayAdapter.setRemoveProduct(Quotation_Request.this);
-                    selectedProductArrayAdapter.notifyDataSetChanged();
 
-                }catch (Exception e){
+              productList.get(position).setQuantity(qut);
+              selectedProduct.add(productList.get(position));
+              Toast.makeText(getApplicationContext(),"You Chose "+productList.get(position).getProduct_name(),Toast.LENGTH_SHORT).show();
+              Toast.makeText(getApplicationContext(),"Selected Product "+selectedProduct.size(),Toast.LENGTH_SHORT).show();
 
-                }
 
-                alertDialogByQuantity.cancel();
 
-            }
-        });
+
+                  selectedProductArrayAdapter=new SelectedProductArrayAdapter(Quotation_Request.this,selectedProduct);
+                  selectedProductGridView.setAdapter(selectedProductArrayAdapter);
+                  selectedProductArrayAdapter.setRemoveProduct(Quotation_Request.this);
+                  selectedProductArrayAdapter.notifyDataSetChanged();
+
+              }catch (Exception e){
+
+              }
+
+              alertDialogByQuantity.cancel();
+
+          }
+      });
+
 
         cancelBtnQD.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -374,8 +381,6 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
 
     @Override
     public void removeProduct(final int position) {
-
-
 
        selectedProduct.remove(productList.get(position));
         Toast.makeText(getApplicationContext(),"You remove "+productList.get(position).getProduct_name(),Toast.LENGTH_SHORT).show();

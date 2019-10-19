@@ -9,8 +9,217 @@
 
 
 
-
     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:background="#FCFCFC"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/searchViewLltId"
+            android:background="@drawable/edittextbg">
+
+            <SearchView
+                android:layout_width="match_parent"
+                android:queryHint="Search Product"
+                android:id="@+id/productSvId"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <!-- <AutoCompleteTextView
+             android:id="@+id/clientATId"
+             android:layout_width="match_parent"
+             android:background="@drawable/edittextbg"
+             android:hint=" Customer/Client"
+             android:layout_marginTop="5dp"
+             android:paddingLeft="5dp"
+             android:textSize="16sp"
+             android:layout_height="40dp" />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_below="@+id/searchViewLltId"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/edittextbg">
+
+                <Spinner
+                    android:id="@+id/productTypeSpId"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/edittextbg">
+
+                <Spinner
+                    android:id="@+id/categorySpId"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/edittextbg">
+
+                <Spinner
+                    android:id="@+id/subCategorySpId"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/edittextbg">
+
+                <Spinner
+                    android:id="@+id/brandSpId"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- <GridView
+             android:id="@+id/selectedProductGridViewId"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:columnWidth="170dp"
+             android:numColumns="2"
+             android:horizontalSpacing="5dp"
+             android:verticalSpacing="5dp"
+             android:stretchMode="spacingWidthUniform"
+             />
+     -->
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/searchViewLltId"
+            android:id="@+id/tetLit"
+            android:layout_height="wrap_content">
+
+            <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/selectedProductGridViewId"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:columnWidth="90dp"
+                android:numColumns="2"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="10dp"
+                android:stretchMode="columnWidth"
+                android:gravity="center"
+                />
+
+           <!-- <ListView
+                android:layout_width="match_parent"
+                android:id="@+id/testListId"
+                android:layout_height="wrap_content"/>
+            -->
+        </LinearLayout>
+
+        <TextView
+            android:padding="10dp"
+            android:id="@+id/showProductTvId"
+            android:layout_width="match_parent"
+            android:layout_below="@id/tetLit"
+            android:visibility="gone"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/buttonbg"
+            android:textColor="@color/white"
+            android:text=" Send Quotation "
+            android:layout_below="@id/showProductTvId"
+            android:padding="5dp"
+            android:id="@+id/sendQuotationId"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/black"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/sendQuotationId"
+            android:id="@+id/viewId"
+            android:layout_height="1dp"/>
+        <!--
+                   <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/productRvId"
+                        android:layout_height="wrap_content"/>-->
+
+        <ListView
+            android:id="@+id/productLvId"
+            android:layout_width="401dp"
+            android:layout_height="414dp"
+            android:layout_below="@+id/viewId"
+            android:layout_marginTop="10dp"
+            android:listSelector="#F0F0F0" />
+
+
+
+
+
+
+  <!--  <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="10dp"
@@ -33,7 +242,7 @@
                 android:layout_height="wrap_content"/>
 
             </LinearLayout>
-           <!-- <AutoCompleteTextView
+           &lt;!&ndash; <AutoCompleteTextView
                 android:id="@+id/clientATId"
                 android:layout_width="match_parent"
                 android:background="@drawable/edittextbg"
@@ -41,7 +250,7 @@
                 android:layout_marginTop="5dp"
                 android:paddingLeft="5dp"
                 android:textSize="16sp"
-                android:layout_height="40dp" />-->
+                android:layout_height="40dp" />&ndash;&gt;
        <LinearLayout
          android:layout_width="match_parent"
          android:orientation="horizontal"
@@ -130,7 +339,7 @@
         </LinearLayout>
 
 
-   <!-- <GridView
+   &lt;!&ndash; <GridView
         android:id="@+id/selectedProductGridViewId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -141,41 +350,57 @@
         android:verticalSpacing="5dp"
         android:stretchMode="spacingWidthUniform"
         />
--->
+&ndash;&gt;
 
 
 
                 <GridView xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/selectedProductGridViewId"
                     android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
+                    android:layout_height="wrap_content"
                     android:columnWidth="90dp"
                     android:numColumns="2"
                     android:verticalSpacing="10dp"
-                    android:visibility="gone"
+                    android:layout_below="@id/searchViewLltId"
                     android:horizontalSpacing="10dp"
                     android:stretchMode="columnWidth"
                     android:gravity="center"
                     />
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_below="@+id/searchViewLltId"
-            android:id="@+id/tetLit"
-            android:layout_height="wrap_content">
-            <ListView
-                android:layout_width="match_parent"
-                android:id="@+id/testListId"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <TextView
-            android:padding="10dp"
-            android:id="@+id/showProductTvId"
-            android:layout_width="match_parent"
-            android:layout_below="@id/tetLit"
+            android:id="@+id/testRlt"
             android:visibility="gone"
-            android:layout_height="wrap_content" />
+            android:layout_below="@id/searchViewLltId"
+            android:layout_height="wrap_content">
+
+            <ListView
+                android:id="@+id/testListId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:divider="@color/white"
+                android:dividerHeight="2dp" />
+
+        </RelativeLayout>
+
+
+
+<RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/showTvRltId"
+    android:visibility="gone"
+            android:layout_below="@id/searchViewLltId"
+            android:layout_height="wrap_content">
+
+    <TextView
+        android:padding="10dp"
+        android:id="@+id/showProductTvId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
 
         <Button
             android:layout_width="wrap_content"
@@ -185,10 +410,11 @@
             android:background="@drawable/buttonbg"
             android:textColor="@color/white"
             android:text=" Send Quotation "
-            android:layout_below="@id/showProductTvId"
+            android:layout_below="@id/selectedProductGridViewId"
            android:padding="5dp"
             android:id="@+id/sendQuotationId"
             android:layout_height="wrap_content" />
+
 
             <View
                 android:layout_width="match_parent"
@@ -197,25 +423,27 @@
                 android:layout_below="@+id/sendQuotationId"
                 android:id="@+id/viewId"
                 android:layout_height="1dp"/>
-<!--
+&lt;!&ndash;
            <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_marginTop="10dp"
                 android:id="@+id/productRvId"
-                android:layout_height="wrap_content"/>-->
+                android:layout_height="wrap_content"/>&ndash;&gt;
 
-        <ListView
-            android:id="@+id/productLvId"
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="364dp"
-            android:layout_below="@+id/viewId"
-            android:layout_marginTop="10dp"
-            android:listSelector="#F0F0F0" />
+            android:layout_height="439dp"
+            android:layout_below="@+id/viewId">
 
+            <ListView
+                android:id="@+id/productLvId"
+                android:layout_width="match_parent"
+                android:layout_height="429dp"
+                android:layout_marginTop="10dp"
+                android:listSelector="#F0F0F0" />
+        </RelativeLayout>
 
+       </RelativeLayout>-->
 
-
-       </RelativeLayout>
-
-
+    </RelativeLayout>
 </ScrollView>
