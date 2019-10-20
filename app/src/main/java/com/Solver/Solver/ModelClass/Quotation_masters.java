@@ -1,5 +1,7 @@
 package com.Solver.Solver.ModelClass;
 
+import java.util.List;
+
 public class Quotation_masters {
 
     private String qut_key;
@@ -28,6 +30,7 @@ public class Quotation_masters {
     private int print;
     private String created_at;
     private String updated_at;
+    private List<Product> productList;
 
 
     public  Quotation_masters(String qut_key,String qut_no, int customer_id, int company_id, String attn_person, String attn_email, String cc_person, String cc_email, String date,
@@ -63,9 +66,51 @@ public class Quotation_masters {
         
     }
 
+public  Quotation_masters(String qut_key,String qut_no, int customer_id, int company_id, String attn_person, String attn_email, String cc_person, String cc_email, String date,
+                             Double total_amount, Double discount, Double vat, Double tax, Double vat_amount, Double tax_amount, Double grand_amount, int user_id,
+                             String payment_option, String delivery_option, String checked_by, String authorized, String request_user, String request_status, int print, String created_at, String updated_at,List<Product> productList) {
+
+        this.qut_key = qut_key;
+        this.qut_no = qut_no;
+        this.customer_id = customer_id;
+        this.company_id = company_id;
+        this.attn_person = attn_person;
+        this.attn_email = attn_email;
+        this.cc_person = cc_person;
+        this.cc_email = cc_email;
+        this.date = date;
+        this.total_amount = total_amount;
+        this.discount = discount;
+        this.vat = vat;
+        this.tax = tax;
+        this.vat_amount = vat_amount;
+        this.tax_amount = tax_amount;
+        this.grand_amount = grand_amount;
+        this.user_id = user_id;
+        this.payment_option = payment_option;
+        this.delivery_option = delivery_option;
+        this.checked_by = checked_by;
+        this.authorized = authorized;
+        this.request_user = request_user;
+        this.request_status = request_status;
+        this.print = print;
+        this.created_at = created_at;
+        this.updated_at = updated_at;
+        this.productList=productList;
+
+    }
+
     public Quotation_masters() {
     }
 
+
+    public List<Product> getProductList() {
+        return productList;
+    }
+
+    public void setProductList(List<Product> productList) {
+        this.productList = productList;
+    }
 
     public String getQut_key() {
         return qut_key;

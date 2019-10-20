@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
                    }
                });
 
-              /* Intent i=new Intent(getApplicationContext(),Home.class);
+              /*Intent i=new Intent(getApplicationContext(),Home.class);
                i.putExtra("userType",selectedUT);
                startActivity(i);*/
            }
@@ -174,8 +174,6 @@ public class MainActivity extends AppCompatActivity {
         passwordEt=findViewById(R.id.PasswordSignInId);
         showPassCbSi=findViewById(R.id.showPassCbSiId);
         forgotPasswordTv=findViewById(R.id.forgotPasswordTvId);
-
-
 
     }
 }

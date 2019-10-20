@@ -43,6 +43,7 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> {
     private List<Product> productList;
     Context context;
     private CheckedListener checkedListener;
+     Product product;
 
     private boolean checked = false;
 
@@ -55,7 +56,15 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> {
     @NonNull
     @Override
     public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        final Product product = (Product) this.getItem(position);
+
+        try {
+
+
+         product = (Product) this.getItem(position);
+
+        }catch (Exception e){
+
+        }
         TextView textViewName;
         TextView desTv;
         final CheckBox productCb;

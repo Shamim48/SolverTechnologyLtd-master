@@ -1321,6 +1321,7 @@ id clientCancelBtnId
 id clientParentLn
 id clientRegisterBtnId
 id clientRvId
+id clientSearchLLtId
 id clientSvId
 id clientTagLVId
 id clientTv_GMRId
@@ -1581,6 +1582,8 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id searchClientTvId
+id searchProductTvId
 id searchViewLltId
 id search_badge
 id search_bar

@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".Quotation_Request">
-
-
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,12 +15,21 @@
         android:layout_marginBottom="10dp"
         android:orientation="vertical">
 
+        <TextView
+            android:text=" Search Product"
+            android:textColor="@color/black"
+            android:id="@+id/searchProductTvId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:layout_below="@+id/searchProductTvId"
             android:layout_marginBottom="5dp"
+            android:orientation="vertical"
             android:id="@+id/searchViewLltId"
             android:background="@drawable/edittextbg">
 
@@ -31,8 +38,61 @@
                 android:queryHint="Search Product"
                 android:id="@+id/productSvId"
                 android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:text="Search Client"
+            android:layout_marginTop="5dp"
+            android:id="@+id/searchClientTvId"
+            android:layout_below="@id/searchViewLltId"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/searchClientTvId"
+            android:id="@+id/clientSearchLLtId"
+            android:orientation="vertical"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/edittextbg">
+
+            <SearchView
+                android:layout_width="match_parent"
+                android:queryHint="Search Product"
+                android:id="@+id/clientSvId"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:id="@+id/lltASqLVId"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/employeeName_CtId"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/closeBtnSQId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:src="@drawable/ic_close_black_24dp"
+                    />
+
+                <ListView
+                    android:id="@+id/clientTagLVId"
+                    android:layout_width="330dp"
+                    android:layout_height="432dp"
+                    android:layout_below="@id/employeeName_WSId"
+                    android:layout_marginTop="10dp"
+                    android:listSelector="#fafafa" />
+
+            </LinearLayout>
 
         </LinearLayout>
+
         <!-- <AutoCompleteTextView
              android:id="@+id/clientATId"
              android:layout_width="match_parent"
@@ -46,10 +106,9 @@
             android:layout_width="match_parent"
             android:orientation="horizontal"
             android:weightSum="2"
-            android:layout_below="@+id/searchViewLltId"
+            android:layout_below="@+id/searchClientTvId"
             android:visibility="gone"
             android:layout_height="wrap_content">
-
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -65,6 +124,7 @@
                     android:layout_height="40dp"
                     android:paddingLeft="5dp"
                     android:textSize="16sp" />
+
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -83,7 +143,6 @@
                     android:textSize="16sp" />
             </LinearLayout>
 
-
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -91,7 +150,6 @@
             android:weightSum="2"
             android:visibility="gone"
             android:layout_height="wrap_content">
-
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -129,7 +187,6 @@
 
         </LinearLayout>
 
-
         <!-- <GridView
              android:id="@+id/selectedProductGridViewId"
              android:layout_width="match_parent"
@@ -143,12 +200,9 @@
              />
      -->
 
-
-
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_below="@+id/searchViewLltId"
+            android:layout_below="@+id/clientSearchLLtId"
             android:id="@+id/tetLit"
             android:layout_height="wrap_content">
 
@@ -199,6 +253,7 @@
             android:layout_below="@+id/sendQuotationId"
             android:id="@+id/viewId"
             android:layout_height="1dp"/>
+
         <!--
                    <androidx.recyclerview.widget.RecyclerView
                         android:layout_width="match_parent"
@@ -208,15 +263,11 @@
 
         <ListView
             android:id="@+id/productLvId"
-            android:layout_width="401dp"
+            android:layout_width="match_parent"
             android:layout_height="414dp"
             android:layout_below="@+id/viewId"
             android:layout_marginTop="10dp"
             android:listSelector="#F0F0F0" />
-
-
-
-
 
 
   <!--  <RelativeLayout
@@ -446,4 +497,4 @@
        </RelativeLayout>-->
 
     </RelativeLayout>
-</ScrollView>
+</RelativeLayout>
