@@ -18,7 +18,8 @@
         android:roundIcon="@drawable/layoutbg"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ForgotPasswordAtv"></activity>
+        <activity android:name=".Quotation_Show"></activity>
+        <activity android:name=".ForgotPasswordAtv" />
         <activity android:name=".SendQuotation" />
         <activity android:name=".Quotation_Request" />
         <activity android:name=".AddData" />

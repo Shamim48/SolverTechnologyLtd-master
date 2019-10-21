@@ -37,7 +37,6 @@ import com.Solver.Solver.ModelClass.Categories;
 import com.Solver.Solver.ModelClass.Factories;
 import com.Solver.Solver.ModelClass.Product;
 import com.Solver.Solver.ModelClass.Product_types;
-import com.Solver.Solver.ModelClass.Quotation_details;
 import com.Solver.Solver.ModelClass.Quotation_masters;
 import com.Solver.Solver.ModelClass.Sub_categories;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -50,7 +49,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class Quotation_Request extends AppCompatActivity implements ProductArrayAdapter.CheckedListener,SelectedProductArrayAdapter.RemoveProductListener {
@@ -91,15 +92,13 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
 
 // DataBase Ref
     DatabaseReference productTypeRef,categoryRef,subCategoryRef ,brandRef;
-
     String productKey,productId;
-
 
     String pKey,pId,currentUserName,clientName;
     int quantity;
     SearchView clientSv;
     EditText quantityEt;
-    Button sendQuantityBtn;
+    Button sendQuotationBtn;
     ImageButton closeBtn;
     LinearLayout lnlt;
     ListView clientListView;
@@ -111,8 +110,11 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
     DatabaseReference clientRef;
     ArrayList<Factories> clientArrayList=new ArrayList<>();
     ClientArrayAdapter clientArrayAdapter;
-
+//Customer Data
     int customerId;
+    String attn_person;
+    String cc_person;
+    String currentDateTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,6 +122,7 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
         setContentView(R.layout.activity_quotation__request);
 
         findId();
+        dateTime();
 
         productTypeRef=FirebaseDatabase.getInstance().getReference().child("product_types");
         categoryRef=FirebaseDatabase.getInstance().getReference().child("categories");
@@ -183,6 +186,8 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 clientName=clientArrayList.get(i).getCompany_name();
                 customerId=clientArrayList.get(i).getCustomer_id();
+                attn_person=clientArrayList.get(i).getAttn_name();
+                cc_person=clientArrayList.get(i).getCc_name();
                 clientSv.setQuery(clientName,false);
                 lnlt.setVisibility(View.GONE);
                 clientArrayAdapter.notifyDataSetChanged();
@@ -203,7 +208,7 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
             }
         });
 
-        sendQuantityBtn.setOnClickListener(new View.OnClickListener() {
+        sendQuotationBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -221,7 +226,7 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
                 String payment_option, String delivery_option, String checked_by, String authorized, String request_user, String request_status, int print, String created_at, String updated_at) {
 
 */
-                Quotation_masters quotation_masters=new Quotation_masters(qut_key,"Q-2019080501", customerId, 101, "Munsur Ali", "munsur@kktextile.com", "Prema Khan", "prema@kktextile.com", "2019-08", 30500.00, 500.00, 10.00, 10.00, 3000.00, 3000.00, 36000.00, 10012, "100% payment", "Delivery after 100% payment", "Sajol karmakar", "authorized", "Shamim","Pending",3, "2019-08-05 09:16:53", "2019-09-21 04:02:43",selectedProduct);
+                Quotation_masters quotation_masters=new Quotation_masters(qut_key,"Q-2019080501", customerId, 101, attn_person, "", cc_person, "", "", 0.00, 0.00, 0.00, 0.00, 0.00, 3000.00, 0.00, 10012, "", "", "", "", currentUserName,"Pending",0, currentDateTime, "",selectedProduct);
 
                // Quotation_details quotation_details=new Quotation_details(qur_details_key,"Q-2019080502", 101, customerId, productId, 550.00, 4, "", 2200.00, "2019-08-05 09:17:44", "2019-08-05 09:17:44");
 
@@ -236,7 +241,8 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
                             productSv.setQuery(null,false);
                             selectedProductArrayAdapter.notifyDataSetChanged();
                             productArrayAdapter.notifyDataSetChanged();
-                            productArrayAdapter.notifyDataSetChanged();
+                           Intent i=new Intent(getApplicationContext(),Quotation_Show.class);
+                           startActivity(i);
                         }
                     }
                 });
@@ -245,7 +251,7 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
                     @Override
                     public boolean onClose() {
                         productArrayAdapter.notifyDataSetChanged();
-                        productList.notifyAll();
+
                         return true;
                     }
                 });
@@ -256,6 +262,8 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
                         return false;
                     }
                 });
+
+
 
                /* quotationDetailsRef.child(qur_details_key).setValue(quotation_details).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -319,8 +327,6 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
             }
         });
 
-
-
        /* productLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -328,8 +334,6 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
                 productKey=productList.get(i).getProduct_key();
 
                 addSelectedProduct(i);
-
-
 
                *//* Intent intent=new Intent(getApplicationContext(),SendQuotation.class);
                 intent.putExtra("productKey",productKey);
@@ -366,7 +370,15 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
             }
         });
     }
+    public void dateTime(){
+        Calendar calForDate = Calendar.getInstance(); //2019-08-05 09:16:53
+        SimpleDateFormat currentDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+         currentDateTime = currentDateFormat.format(calForDate.getTime());
 
+       // Calendar calForTime = Calendar.getInstance();
+       // SimpleDateFormat currentTimeFormat = new SimpleDateFormat("hh:mm a");
+        //currentTime = currentTimeFormat.format(calForTime.getTime());
+    }
 
     @Override
     protected void onStart() {
@@ -400,6 +412,7 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
                 for (DataSnapshot data:dataSnapshot.getChildren()){
                     Categories categories=data.getValue(Categories.class);
                     categoriesList.add(categories);
+
                 }
                 categoryAdapter=new CategoryAdapter(Quotation_Request.this,categoriesList);
                 categorySp.setAdapter(categoryAdapter);
@@ -451,8 +464,6 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
         });
 
 
-
-
     }
 
     private void findId() {
@@ -469,11 +480,10 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
        // productLv.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
         clientSv=findViewById(R.id.clientSvId);
-        sendQuantityBtn=findViewById(R.id.sendQuotationId);
+        sendQuotationBtn =findViewById(R.id.sendQuotationId);
         closeBtn=findViewById(R.id.closeBtnSQId);
         lnlt=findViewById(R.id.lltASqLVId);
         clientListView=findViewById(R.id.clientTagLVId);
-
 
         product_typesList=new ArrayList<>();
         categoriesList=new ArrayList<>();
@@ -499,10 +509,12 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
         final AlertDialog alertDialogByQuantity=alert.create();
         alertDialogByQuantity.setCanceledOnTouchOutside(false);
         alertDialogByQuantity.show();
+
         try {
 
             productNameQDTv.setText(productList.get(position).getProduct_name());
             desQDTv.setText(Html.fromHtml(productList.get(position).getDescription(),Html.FROM_HTML_MODE_LEGACY));
+
         }catch (Exception e){
 
         }
@@ -515,19 +527,15 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
               int qut=Integer.parseInt(quantity);
               //companyNameEt.setText(bloodGroups);
 
-
               if (quantity.isEmpty()) {
                   quantityEdQD.setError("Please Enter Client/Company Name..!");
                   return;
               }
 
-
               productList.get(position).setQuantity(qut);
               selectedProduct.add(productList.get(position));
               Toast.makeText(getApplicationContext(),"You Chose "+productList.get(position).getProduct_name(),Toast.LENGTH_SHORT).show();
               Toast.makeText(getApplicationContext(),"Selected Product "+selectedProduct.size(),Toast.LENGTH_SHORT).show();
-
-
 
 
                   selectedProductArrayAdapter=new SelectedProductArrayAdapter(Quotation_Request.this,selectedProduct);
@@ -543,7 +551,6 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
 
           }
       });
-
 
         cancelBtnQD.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -587,12 +594,12 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
         alertDialogByQuantity.setCanceledOnTouchOutside(false);
         alertDialogByQuantity.show();
         addBtnQD.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 String quantity = quantityEdQD.getText().toString().trim();
                 //companyNameEt.setText(bloodGroups);
                 int qut=Integer.parseInt(quantity);
-
 
                 if (quantity.isEmpty()) {
                     quantityEdQD.setError("Please Enter Client/Company Name..!");
@@ -606,15 +613,16 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
 
 
 
-
-                cancelBtnQD.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        alertDialogByQuantity.dismiss();
-                    }
-                });
             }
         });
+        cancelBtnQD.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                alertDialogByQuantity.dismiss();
+            }
+        });
+
     }
 
     private void toast(String msg) {

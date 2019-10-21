@@ -1279,6 +1279,7 @@ id alertTitle
 id all
 id always
 id async
+id attnPersonQsTvId
 id auto
 id bar_layout
 id barrier
@@ -1293,6 +1294,7 @@ id callBtnTbId
 id cancelBtnQDId
 id cancel_action
 id categorySpId
+id ccPersonQsTvId
 id center
 id centerCrop
 id centerInside
@@ -1379,6 +1381,7 @@ id dailyReportId
 id dailyReport_RecyclerId
 id dark
 id dateETDRId
+id dateQsTvId
 id dateTvDRId
 id dateTvId
 id date_WSId
@@ -1400,6 +1403,7 @@ id designationTvId
 id dimensions
 id direct
 id disableHome
+id discountQsTvId
 id displayScheduleId
 id downloadMenuId
 id drawer_layout
@@ -1422,7 +1426,9 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id factoryATDRId
+id factoryAddressQsTvId
 id factoryCBDRId
+id factoryNameQsTvId
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1435,6 +1441,7 @@ id forgotPasswordTvId
 id ghost_view
 id glide_custom_view_target_tag
 id gone
+id grandAmountQsTvId
 id groupListId
 id groupNameSampleTextId
 id group_divider
@@ -1536,6 +1543,7 @@ id phoneCompanyId
 id phoneId
 id pin
 id productCBId
+id productListQsTvId
 id productLvId
 id productNameSRId
 id productNameTvId
@@ -1549,11 +1557,14 @@ id profile_imageUiId
 id progressBarId
 id progress_circular
 id progress_horizontal
+id qtyQsTvId
 id quantityEtId
 id quantityEtPsId
 id quantityEtQDId
 id quantityLLtId
 id queryBtnId
+id quotationQsTvId
+id quotationRvId
 id radio
 id rectangle
 id recycler_view
@@ -1684,10 +1695,12 @@ id timeTvId
 id title
 id titleDividerNoCustom
 id title_template
+id toQsId
 id tool_bar
 id toolbar
 id top
 id topPanel
+id totalPriceQsTvId
 id touch_outside
 id trackLocationMenuItmId
 id transition_current_scene
@@ -1722,6 +1735,7 @@ id useremailBtnId
 id username
 id usernameUiId
 id usersmsBtnId
+id vatQsTvId
 id viewId
 id viewPagerHmId
 id view_offset_helper
@@ -1796,6 +1810,7 @@ layout activity_home
 layout activity_main
 layout activity_message
 layout activity_quotation__request
+layout activity_quotation__show
 layout activity_schedule__display
 layout activity_send_quotation
 layout activity_show_user_details
@@ -1862,6 +1877,7 @@ layout notification_template_part_chronometer
 layout notification_template_part_time
 layout productsample_row
 layout quantity_lot
+layout quotation_sample_row
 layout reply_row
 layout schedule_row
 layout select_dialog_item_material
