@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:padding="5dp"
+        android:background="#BEF5F5F5"
         android:layout_height="wrap_content">
 
 
@@ -56,6 +57,7 @@
         android:gravity="left"
         android:layout_marginTop="5dp"
         android:text="To,"
+        android:textStyle="bold"
         android:id="@+id/toQsId"
         android:layout_marginRight="5dp"
         android:layout_height="wrap_content" />
@@ -67,7 +69,6 @@
     android:id="@+id/factoryNameQsTvId"
         android:layout_gravity="right"
         android:gravity="left"
-        android:layout_marginTop="5dp"
         android:text="Factory Name"
     android:textStyle="bold"
         android:layout_marginRight="5dp"
@@ -81,7 +82,6 @@
         android:textSize="16sp"
         android:layout_gravity="right"
         android:gravity="left"
-        android:layout_marginTop="5dp"
         android:text="Factory address"
         android:layout_marginRight="5dp"
         android:layout_height="wrap_content" />
@@ -99,7 +99,6 @@
         android:layout_marginRight="5dp"
         android:layout_height="wrap_content" />
 
-
 <TextView
     android:id="@+id/ccPersonQsTvId"
         android:layout_width="match_parent"
@@ -107,12 +106,9 @@
         android:textSize="16sp"
         android:layout_gravity="right"
         android:gravity="left"
-        android:layout_marginTop="5dp"
         android:text="CC"
         android:layout_marginRight="5dp"
         android:layout_height="wrap_content" />
-
-
 
 <TextView
     android:id="@+id/quotationQsTvId"
@@ -127,6 +123,13 @@
         android:layout_marginRight="5dp"
         android:layout_height="wrap_content" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/edittextbg"
+            android:layout_height="wrap_content">
 
    <TextView
        android:id="@+id/productListQsTvId"
@@ -135,13 +138,10 @@
         android:textSize="16sp"
         android:layout_gravity="left"
         android:gravity="left"
-        android:layout_marginTop="10dp"
-        android:text="ProductList"
-       android:layout_marginBottom="5dp"
-        android:layout_marginRight="5dp"
+       android:padding="5dp"
         android:layout_height="wrap_content" />
 
-
+        </LinearLayout>
  <TextView
      android:id="@+id/totalPriceQsTvId"
         android:layout_width="match_parent"
@@ -149,7 +149,7 @@
         android:textSize="16sp"
         android:layout_gravity="left"
         android:gravity="left"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="2dp"
         android:text="Total Price"
         android:layout_marginRight="5dp"
         android:layout_height="wrap_content" />
@@ -161,7 +161,7 @@
         android:textSize="16sp"
         android:layout_gravity="left"
         android:gravity="left"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="2dp"
         android:text="Discount"
         android:layout_marginRight="5dp"
         android:layout_height="wrap_content" />
@@ -173,7 +173,7 @@
         android:textSize="16sp"
         android:layout_gravity="left"
         android:gravity="left"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="2dp"
         android:text="Vat0%"
         android:layout_marginRight="5dp"
         android:layout_height="wrap_content" />
@@ -185,7 +185,7 @@
         android:textSize="15sp"
         android:layout_gravity="left"
         android:gravity="left"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="2dp"
         android:text="Grand Amount"
         android:textStyle="bold"
         android:layout_marginBottom="5dp"

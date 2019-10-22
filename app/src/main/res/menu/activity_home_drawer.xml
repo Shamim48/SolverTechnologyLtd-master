@@ -26,6 +26,10 @@
                 android:id="@+id/requestQuotationId"
                 android:title="Request Quotation"/>
             <item
+                android:id="@+id/showQuotationId"
+                android:title="Show Quotation"/>
+
+            <item
                 android:id="@+id/createUserId"
                 android:title="@string/create_user"/>
             <item

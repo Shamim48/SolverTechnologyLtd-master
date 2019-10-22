@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.Solver.Solver.ModelClass.Common_Resouces;
 import com.Solver.Solver.ModelClass.Quotation_masters;
 import com.Solver.Solver.R;
 
@@ -31,11 +32,16 @@ public class QuotationAdapter extends RecyclerView.Adapter<QuotationAdapter.Quot
     @Override
     public QuotationHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.quotation_sample_row, parent, false);
+       // View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.quotation_sample_row, parent, false);
 
-        QuotationHolder quotationHolder=new QuotationHolder(view);
+      //  QuotationHolder quotationHolder=new QuotationHolder(view);
 
-        return quotationHolder;
+      //  return quotationHolder;
+
+        View view= LayoutInflater.from(context).inflate(R.layout.quotation_sample_row,parent,false);
+        QuotationAdapter.QuotationHolder quotationHolder=new QuotationAdapter.QuotationHolder(view);
+
+        return quotationHolder ;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -45,38 +51,25 @@ public class QuotationAdapter extends RecyclerView.Adapter<QuotationAdapter.Quot
         Quotation_masters quotation_masters=quotation_mastersList.get(position);
         double totalPrice=0.00;
 
-        try {
             holder.date.setText(quotation_masters.getCreated_at());
             holder.qty.setText(quotation_masters.getQut_no());
             holder.factoryName.setText(quotation_masters.getCustomer_id());
             holder.factoryAddress.setText(quotation_masters.getCustomer_id());
             holder.attnPerson.setText(quotation_masters.getAttn_person());
             holder.ccPerson.setText(quotation_masters.getCc_person());
-            holder.quotation.setText(Html.fromHtml("<u>QUOTATION</u>",Html.FROM_HTML_MODE_LEGACY));
 
-        }catch (Exception e){
+         //   holder.quotation.setText(Html.fromHtml("<u>QUOTATION</u>",Html.FROM_HTML_MODE_LEGACY));
 
-        }
-             try {
-          for (int i=0;i<=quotation_masters.getProductList().size();i++){
+         /* for (int i=0;i<=quotation_masters.getProductList().size();i++){
               holder.productList.append("Product Name"+quotation_masters.getProductList().get(i).getProduct_name()+"\n"+quotation_masters.getProductList().get(i).getQuantity()+"\n\n");
 
-          }
-      }catch (Exception e){
-
-      }
-
-      try {
+          }*/
 
           // totalPrice=String.format("%f",quotation_masters.getTotal_amount());
           holder.totalPrice.setText("Total Price :");
           holder.discount.setText("Discount :");
           holder.vat.setText("Vat0% :");
           holder.grandAmount.setText("Grand Amount :");
-
-      }catch (Exception e){
-
-      }
 
     }
 

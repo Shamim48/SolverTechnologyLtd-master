@@ -28,7 +28,6 @@ import com.google.firebase.storage.StorageReference;
 import java.util.List;
 public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ScheduleHolder> {
 
-
     Context context;
     List<Schedule> schedulesList;
 
@@ -47,7 +46,6 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
     @Override
     public ScheduleHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-
         View view =LayoutInflater.from(context).inflate(R.layout.schedule_row, parent, false);
         ScheduleHolder scheduleHolder=new ScheduleHolder(view);
         return scheduleHolder;
@@ -62,7 +60,6 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
         holder.companyNameTV.setText("Com. Name: "+schedule.getCompanyName());
         /*for (int i=0;i<=schedule.getList().size();i++){
 
-
         holder.jobInfoTv.append(schedule.getList().get(i).getJobTitle()+"\nCategory:"+schedule.getList().get(i).getCategory()+"\nDes: "+schedule.getList().get(i).getJobDes()+"\n\n");
 
         }*/
@@ -75,7 +72,6 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
         }catch (NullPointerException e){
 
         }
-
 
         if(!(userEmail.equals("solver.apps.bd@gmail.com"))){
             holder.row_menuTv.setText(null);
@@ -116,7 +112,6 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
 
     public class ScheduleHolder extends RecyclerView.ViewHolder{
 
-
         TextView dateTv;
         TextView userNameTV;
         TextView companyNameTV;
@@ -144,4 +139,3 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
         }
     }
 }
-

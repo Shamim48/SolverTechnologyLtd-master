@@ -1563,6 +1563,7 @@ id quantityEtPsId
 id quantityEtQDId
 id quantityLLtId
 id queryBtnId
+id quotationListId
 id quotationQsTvId
 id quotationRvId
 id radio
@@ -1622,6 +1623,7 @@ id showHome
 id showPassCbSiId
 id showPasswordCBId
 id showProductTvId
+id showQuotationId
 id showTestSpinnerId
 id showTitle
 id show_message

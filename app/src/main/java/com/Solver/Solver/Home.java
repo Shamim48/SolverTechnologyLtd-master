@@ -433,6 +433,9 @@ tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.white));
         }else if (id == R.id.createUserId) {
             Intent i=new Intent(getApplicationContext(),Sign_Up.class);
             startActivity(i);
+        }else if (id == R.id.showQuotationId) {
+            Intent i=new Intent(getApplicationContext(),Quotation_Show.class);
+            startActivity(i);
         }else if(id==R.id.createGroupId){
 
             requestNewGroup();
