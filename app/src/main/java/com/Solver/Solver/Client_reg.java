@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class Client_reg extends AppCompatActivity {
-
+//View Variable
     private EditText companyNameEt;
     private EditText consultantPEt;
     private EditText addressCp;

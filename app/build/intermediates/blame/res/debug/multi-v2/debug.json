@@ -6129,11 +6129,11 @@
                 {
                     "source": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
-                        "startLines": "5,8,10,4,2,3,11,6,7",
+                        "startLines": "6,9,10,5,3,4,11,7,8",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "199,324,370,153,55,102,420,239,279",
+                        "startOffsets": "200,325,370,154,56,103,420,240,280",
                         "endColumns": "39,44,49,45,46,50,51,39,44",
-                        "endOffsets": "234,364,415,194,97,148,467,274,319"
+                        "endOffsets": "235,365,415,195,98,149,467,275,320"
                     },
                     "to": {
                         "startLines": "447,448,449,462,463,464,525,538,539",
