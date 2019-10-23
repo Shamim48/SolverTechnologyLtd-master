@@ -43,7 +43,7 @@ public class FirebaseNotificationService extends FirebaseMessagingService {
     Query lastQuery;
     String gName;
     String msg;
-
+/*
     @Override
     public void onStart(Intent intent, int startId) {
         super.onStart(intent, startId);
@@ -87,8 +87,8 @@ public class FirebaseNotificationService extends FirebaseMessagingService {
 
             }
         });
+ }*/
 
-    }
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
