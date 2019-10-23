@@ -72,7 +72,6 @@ public class QuotationArrayAdapter extends ArrayAdapter<Quotation_masters> {
             convertView = LayoutInflater.from(getContext()).inflate(
                     R.layout.quotation_sample_row, parent, false);
 
-
                 }
 
         date=convertView.findViewById(R.id.dateQsTvId);

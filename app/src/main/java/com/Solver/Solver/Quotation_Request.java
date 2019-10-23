@@ -52,6 +52,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.List;
 
 public class Quotation_Request extends AppCompatActivity implements ProductArrayAdapter.CheckedListener,SelectedProductArrayAdapter.RemoveProductListener {
@@ -169,7 +170,6 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
                 }
 
                 clientArrayAdapter=new ClientArrayAdapter(Quotation_Request.this,clientArrayList);
-
                 clientListView.setAdapter(clientArrayAdapter);
                 clientArrayAdapter.notifyDataSetChanged();
 
@@ -308,6 +308,7 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
                     productList.add(product);
                 }
 
+                Collections.reverse(productList);
                 productArrayAdapter=new ProductArrayAdapter(Quotation_Request.this,productList);
                // LinearLayoutManager linearLayoutManager=new LinearLayoutManager(Quotation_Request.this);
                // productRv.setLayoutManager(linearLayoutManager);

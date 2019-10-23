@@ -2,8 +2,10 @@ package com.Solver.Solver;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.widget.ListView;
 
@@ -49,12 +51,17 @@ public class Quotation_Show extends AppCompatActivity {
                     quotation_mastersList.add(quotation_masters);
                     Common_Resouces.toastS(getApplicationContext(),"Data retrieving");
                 }
-
-               // quotationAdapter=new QuotationAdapter(Quotation_Show.this,quotation_mastersList);
                 Collections.reverse(quotation_mastersList);
+                quotationAdapter=new QuotationAdapter(Quotation_Show.this,quotation_mastersList);
+                LinearLayoutManager llm=new LinearLayoutManager(Quotation_Show.this);
+                quotationRv.setLayoutManager(llm);
+                quotationRv.setAdapter(quotationAdapter);
+                quotationAdapter.notifyDataSetChanged();
+
+              /*
                 quotationArrayAdapter=new QuotationArrayAdapter(Quotation_Show.this,quotation_mastersList);
                 quotationLV.setAdapter(quotationArrayAdapter);
-                quotationArrayAdapter.notifyDataSetChanged();
+                quotationArrayAdapter.notifyDataSetChanged();*/
             }
 
             @Override
