@@ -20,6 +20,7 @@ public class Client_reg extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client_reg);
         findId();
+        //Register Client
         clientRegistrationBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
