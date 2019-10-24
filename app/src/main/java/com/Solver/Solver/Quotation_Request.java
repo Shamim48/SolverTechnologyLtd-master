@@ -351,7 +351,9 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
                 productKey=productList.get(i).getProduct_key();
 
             //    addSelectedProduct(i);
+               // productList.notify();
                 productArrayAdapter.notifyDataSetChanged();
+
             }
         });
 

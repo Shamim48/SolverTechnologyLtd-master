@@ -208,10 +208,10 @@ public class FirebaseNotificationService extends FirebaseMessagingService {
             i = j;
 }
         oreoNotification.getManager().notify(i, builder.build());
+
     }
 
     private void sendNotification(RemoteMessage remoteMessage) {
-
         String user = remoteMessage.getData().get("user");
         String icon = remoteMessage.getData().get("icon");
         String title = remoteMessage.getData().get("title");

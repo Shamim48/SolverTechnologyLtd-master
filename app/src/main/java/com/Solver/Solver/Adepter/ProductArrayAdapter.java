@@ -14,6 +14,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -38,7 +39,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import static com.Solver.Solver.R.color.black_gray;
 
 
-public class  ProductArrayAdapter extends ArrayAdapter<Product> {
+public class  ProductArrayAdapter extends ArrayAdapter<Product> implements Filterable {
 
     private List<Product> productList;
     Context context;
