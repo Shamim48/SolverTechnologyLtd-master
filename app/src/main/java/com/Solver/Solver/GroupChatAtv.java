@@ -244,7 +244,7 @@ public class GroupChatAtv extends AppCompatActivity {
 
         }catch (Exception e){
 
-            Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show();
+           // Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show();
         }
         DatabaseReference clientRef = FirebaseDatabase.getInstance().getReference().child("Client");
         clientList.clear();
@@ -428,7 +428,7 @@ public class GroupChatAtv extends AppCompatActivity {
 
         } catch (Exception e) {
 
-            Toast.makeText(getApplicationContext(), "Exception: " + e.getMessage().trim(), Toast.LENGTH_LONG).show();
+           // Toast.makeText(getApplicationContext(), "Exception: " + e.getMessage().trim(), Toast.LENGTH_LONG).show();
 
         }
 

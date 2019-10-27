@@ -55,6 +55,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\aa3fcc96dc3b332b38db2e56daf73cf1\\res\\values-km\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "205",
+                        "endColumns": "100",
+                        "endOffsets": "305"
+                    },
+                    "to": {
+                        "startLines": "47",
+                        "startColumns": "4",
+                        "startOffsets": "5492",
+                        "endColumns": "104",
+                        "endOffsets": "5592"
+                    }
+                },
+                {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\950aa3c00a435ca361159ca5921dafce\\res\\values-km\\values.xml",
                     "from": {
                         "startLines": "4",
@@ -69,23 +86,6 @@
                         "startOffsets": "3950",
                         "endColumns": "207",
                         "endOffsets": "4153"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\6ee604012d03ed0242144e9f2a697899\\res\\values-km\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "205",
-                        "endColumns": "100",
-                        "endOffsets": "305"
-                    },
-                    "to": {
-                        "startLines": "47",
-                        "startColumns": "4",
-                        "startOffsets": "5492",
-                        "endColumns": "104",
-                        "endOffsets": "5592"
                     }
                 }
             ]

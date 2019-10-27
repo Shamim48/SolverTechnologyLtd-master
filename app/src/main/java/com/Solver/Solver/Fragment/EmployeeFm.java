@@ -31,6 +31,7 @@ import java.util.List;
 public class EmployeeFm extends Fragment  {
 
     DatabaseReference rootRef;
+    DatabaseReference userRef;
     List<SignUp> userInfo;
     RecyclerView employeeRv;
     EmployeeAdepter adepter;
@@ -56,6 +57,9 @@ public class EmployeeFm extends Fragment  {
 
         userInfo=new ArrayList<>();
         rootRef= FirebaseDatabase.getInstance().getReference();
+        userRef=rootRef.child("User");
+        // FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+        userRef.keepSynced(true);
         rootRef.child("User").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -81,6 +85,8 @@ public class EmployeeFm extends Fragment  {
                 // Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
+
+
 
     }
 

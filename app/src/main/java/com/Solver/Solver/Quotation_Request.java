@@ -106,6 +106,7 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
     FirebaseAuth auth;
     FirebaseUser user;
     String userId;
+
     DatabaseReference quotationMasterRef;
     DatabaseReference quotationDetailsRef;
     DatabaseReference clientRef;
@@ -216,6 +217,7 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
                     toast("Please Select Product..");
                     return;
                 }
+
                 clientName=clientSv.getQuery().toString();
                // String  qut=quantityEt.getText().toString();
                 //quantity=Integer.parseInt(qut);
@@ -262,8 +264,6 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
                         return false;
                     }
                 });
-
-
 
                /* quotationDetailsRef.child(qur_details_key).setValue(quotation_details).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -373,6 +373,7 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
             }
         });
     }
+
     public void dateTime(){
         Calendar calForDate = Calendar.getInstance(); //2019-08-05 09:16:53
         SimpleDateFormat currentDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
@@ -380,7 +381,7 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
 
        // Calendar calForTime = Calendar.getInstance();
        // SimpleDateFormat currentTimeFormat = new SimpleDateFormat("hh:mm a");
-        //currentTime = currentTimeFormat.format(calForTime.getTime());
+       // currentTime = currentTimeFormat.format(calForTime.getTime());
     }
 
     @Override

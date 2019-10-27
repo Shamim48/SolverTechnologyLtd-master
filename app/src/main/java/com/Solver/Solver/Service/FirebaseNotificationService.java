@@ -66,7 +66,7 @@ public class FirebaseNotificationService extends FirebaseMessagingService {
             PendingIntent pendingIntent = PendingIntent.getActivity(FirebaseNotificationService.this, 0, intent, 0);
 
             NotificationCompat.Builder builder = new NotificationCompat.Builder(FirebaseNotificationService.this,Channel_Id)
-                    .setSmallIcon(R.drawable.solverlogo)
+                    .setSmallIcon(R.drawable.solver logo)
                     .setContentTitle(gName)
                     .setContentText(msg)
                     .setPriority(NotificationCompat.PRIORITY_DEFAULT)
@@ -115,9 +115,51 @@ public class FirebaseNotificationService extends FirebaseMessagingService {
 
             }
         });
+
+
 */
 
-            if (remoteMessage != null) {
+        String sented = remoteMessage.getData().get("sented");
+        String user = remoteMessage.getData().get("user");
+        // if (remoteMessage != null) {
+        Map<String, String> root = remoteMessage.getData();
+        Log.e("data", root.toString());
+        String groupName = root.get("groupName");
+        String date = root.get("date");
+        String message = root.get("message");
+        String name = root.get("name");
+        String tagClientName = root.get("tagClientName");
+        String sub = root.get("sub");
+        String time = root.get("time");
+        // Random random=new Random(100);
+     //   if (!groupName.equals("")) {
+
+            Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+            Intent intent = new Intent(FirebaseNotificationService.this, GroupChatAtv.class);
+            intent.putExtra("GroupName",groupName);
+            intent.setAction("showMessage");
+            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(this, Channel_Id);
+            NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+            builder.setSmallIcon(R.drawable.solverlogo)
+                    .setContentTitle(groupName)
+                    .setContentText(message)
+                    .setAutoCancel(true)
+                    .setPriority(NotificationCompat.PRIORITY_HIGH)
+                    .setContentIntent(pendingIntent)
+                    .setVibrate(new long[]{1000, 1000, 1000, 1000, 1000})
+                    .setLights(Color.BLUE, 3000, 3000)
+                    .setSound(uri);
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                NotificationChannel channel = new NotificationChannel(Channel_Id, "Notification", NotificationManager.IMPORTANCE_HIGH);
+                channel.setDescription("Description");
+                notificationManager.createNotificationChannel(channel);
+            }
+        notificationManager.notify(101, builder.build());
+
+           /* if (remoteMessage.getNotification() != null) {
                 Map<String, String> root = remoteMessage.getData();
                 Log.e("data", root.toString());
                 String groupName = root.get("groupName");
@@ -155,11 +197,11 @@ public class FirebaseNotificationService extends FirebaseMessagingService {
                     NotificationChannel channel = new NotificationChannel(Channel_Id, "Notification", NotificationManager.IMPORTANCE_HIGH);
                     channel.setDescription("Description");
                     notificationManager.createNotificationChannel(channel);
-                }else {
+                }
 
                     notificationManager.notify(101, builder.build());
-                }
-            }
+
+            }*/
 
           //  Toast.makeText(getApplicationContext(),"notify",Toast.LENGTH_SHORT).show();
 /*

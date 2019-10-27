@@ -91,6 +91,8 @@ public class ChatFm extends Fragment {
         lltCtLV.setVisibility(View.GONE);
 
         reference = FirebaseDatabase.getInstance().getReference("Chatlist").child(fuser.getUid());
+       // FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+        reference.keepSynced(true);
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

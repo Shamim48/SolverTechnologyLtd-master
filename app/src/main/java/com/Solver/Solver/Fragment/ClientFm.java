@@ -63,6 +63,8 @@ public class ClientFm extends Fragment {
         auth=FirebaseAuth.getInstance();
         currentUserId=auth.getCurrentUser().getUid();
         clientDatabaseRef=FirebaseDatabase.getInstance().getReference().child("Client");
+      //  FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+        clientDatabaseRef.keepSynced(true);
 
         clientDatabaseRef.addValueEventListener(new ValueEventListener() {
             @Override

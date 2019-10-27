@@ -244,7 +244,7 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
 
          }
      }catch (Exception e){
-         Toast.makeText(mContext,"Exception: "+e.getMessage().trim(),Toast.LENGTH_LONG).show();
+       //  Toast.makeText(mContext,"Exception: "+e.getMessage().trim(),Toast.LENGTH_LONG).show();
      }
 
     }

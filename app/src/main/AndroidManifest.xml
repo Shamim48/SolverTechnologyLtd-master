@@ -17,7 +17,8 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/layoutbg"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name=".ModelClass.Solver">
         <activity android:name=".Quotation_Show"></activity>
         <activity android:name=".ForgotPasswordAtv" />
         <activity android:name=".SendQuotation" />
@@ -31,9 +32,9 @@
         <activity android:name=".GroupChatAtv" />
         <activity android:name=".ClientShowDetails" />
         <activity android:name=".ShowUserDetails" />
+
         <activity
             android:name=".Home"
-            android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Client_reg"
@@ -52,13 +53,22 @@
 
         <service
             android:name=".Service.FirebaseNotificationService"
-            android:permission="com.google.android.c2dm.permission.SEND">
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
             </intent-filter>
         </service>
+
+
+        <!--   <service
+               android:name=".Service.FirebaseNotificationService"
+               android:permission="com.google.android.c2dm.permission.SEND">
+               android:exported="false">
+               <intent-filter>
+                   <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                   <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+               </intent-filter>
+           </service>-->
     </application>
 
 </manifest>

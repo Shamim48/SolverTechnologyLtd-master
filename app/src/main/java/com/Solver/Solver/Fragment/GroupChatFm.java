@@ -56,6 +56,8 @@ public class GroupChatFm extends Fragment {
         groupList=view.findViewById(R.id.groupListId);
         // initialize Database Reference
         groupREf= FirebaseDatabase.getInstance().getReference().child("Group");
+       // FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+        groupREf.keepSynced(true);
         //initialize array adapter
         groupAdapter=new ArrayAdapter<String>(getContext(),R.layout.groupname_row,R.id.groupNameSampleTextId,groupArrayList);
        //Set adapter

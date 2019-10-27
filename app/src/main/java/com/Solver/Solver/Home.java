@@ -1,6 +1,10 @@
 package com.Solver.Solver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -14,6 +18,7 @@ import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -104,6 +109,7 @@ public class Home extends AppCompatActivity
     // Button by Create new Group Custom Alert Dialog
     private Button createGroupBtn;
     private Button cancelBtn;
+    Toolbar toolbar;
 
     String userId;
     String imageUrl;
@@ -124,11 +130,13 @@ public class Home extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+
+         toolbar = findViewById(R.id.toolbar);
         createUserMenuItem=findViewById(R.id.createUserId);
         tabLayout=findViewById(R.id.tabLayoutHmId);
         viewPager=findViewById(R.id.viewPagerHmId);
         setSupportActionBar(toolbar);
+        toolbar.setTitle("Home");
 
 
  tabLayout.addTab(tabLayout.newTab().setText("Employee"));
@@ -259,13 +267,57 @@ tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.white));
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+
+    }
+
+    @Override
+    public boolean isActivityTransitionRunning() {
+
+
+        return super.isActivityTransitionRunning();
+    }
+
+
+
+    public boolean isOnline() {
+        ConnectivityManager conMgr = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = conMgr.getActiveNetworkInfo();
+
+        if(netInfo == null || !netInfo.isConnected() || !netInfo.isAvailable()){
+            toolbar.setTitle("No Internet connection!");
+            Toast.makeText(getApplicationContext(), "No Internet connection!", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        return true;
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        nav_use.setText(currentUsername);
-        Glide.with(Home.this).load(currentUserImageUrl).placeholder(R.drawable.ic_account_circle_black_24dp).into(userImage);
+        try {
+
+            nav_use.setText(currentUsername);
+            Glide.with(Home.this).load(currentUserImageUrl).placeholder(R.drawable.ic_account_circle_black_24dp).into(userImage);
+        }catch (Exception e){
+
+        }
+
+        if (isOnline())
+        {
+            toolbar.setTitle("Home");
+        }
+        else
+        {
+            // Home.this.startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
+            try {
+                toolbar.setTitle("No Internet Connection.!");
+            }
+            catch(Exception e)
+            {
+                //Log.d(Constants.TAG, "Show Dialog: "+e.getMessage());
+            }
+        }
 
     }
 

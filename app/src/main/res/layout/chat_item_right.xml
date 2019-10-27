@@ -27,6 +27,7 @@
             android:id="@+id/show_messageRight"
             android:textSize="18sp"
             android:textColor="#fff"
+            android:textIsSelectable="true"
             android:padding="8dp"
             android:layout_alignParentRight="true" />
 
