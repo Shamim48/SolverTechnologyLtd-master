@@ -15,8 +15,8 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.Solver.Solver.Adepter.ClientAdepter;
-import com.Solver.Solver.ModelClass.Client;
 import com.Solver.Solver.ModelClass.Common_Resouces;
+import com.Solver.Solver.ModelClass.Factories;
 import com.Solver.Solver.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -35,16 +35,18 @@ public class ClientFm extends Fragment {
 
     RecyclerView clientRV;
     ClientAdepter adepter;
-    List<Client> clientList;
+    List<Factories> clientList;
     DatabaseReference clientDatabaseRef;
+    List<Factories> factoriesList;
+
     FirebaseAuth auth;
     String currentUserId;
     Common_Resouces common;
+    DatabaseReference factoryRef;
 
     public ClientFm() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -63,19 +65,17 @@ public class ClientFm extends Fragment {
         auth=FirebaseAuth.getInstance();
         currentUserId=auth.getCurrentUser().getUid();
         clientDatabaseRef=FirebaseDatabase.getInstance().getReference().child("Client");
+        factoryRef=FirebaseDatabase.getInstance().getReference().child("factories");
       //  FirebaseDatabase.getInstance().setPersistenceEnabled(true);
-        clientDatabaseRef.keepSynced(true);
+        factoryRef.keepSynced(true);
 
-        clientDatabaseRef.addValueEventListener(new ValueEventListener() {
+        factoryRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 clientList.clear();
                 for(DataSnapshot data:dataSnapshot.getChildren()){
-                    Client client=data.getValue(Client.class);
+                    Factories client=data.getValue(Factories.class);
                     clientList.add(client);
-
-
-
 
                 }
                 adepter=new ClientAdepter(getContext(),clientList);

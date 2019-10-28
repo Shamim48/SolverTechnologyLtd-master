@@ -27,6 +27,7 @@ import com.Solver.Solver.Adepter.TagUserArrayAdapter;
 import com.Solver.Solver.Adepter.TagUserBaseAdapter;
 import com.Solver.Solver.ModelClass.Client;
 
+import com.Solver.Solver.ModelClass.Factories;
 import com.Solver.Solver.ModelClass.JobC;
 import com.Solver.Solver.ModelClass.Schedule;
 import com.Solver.Solver.ModelClass.SignUp;
@@ -73,6 +74,7 @@ public class Write_Schedule extends AppCompatActivity{
     DatabaseReference allScheduleREf;
     DatabaseReference jobRef;
     DatabaseReference userRef;
+    DatabaseReference factoryRef;
 
     ArrayList<String> categoryList;
     ArrayAdapter<String> categorySpAdapter;
@@ -126,6 +128,7 @@ public class Write_Schedule extends AppCompatActivity{
         jList=new ArrayList<>();
         schedule=new Schedule();
         clientRef= FirebaseDatabase.getInstance().getReference().child("Client");
+        factoryRef= FirebaseDatabase.getInstance().getReference().child("factories");
         scheduleREf=FirebaseDatabase.getInstance().getReference().child("Schedule").child("ScheduleTbl");
         allScheduleREf=FirebaseDatabase.getInstance().getReference().child("Schedule").child("All_ScheduleTbl");
         jobRef=FirebaseDatabase.getInstance().getReference().child("Schedule").child("Job");
@@ -942,7 +945,6 @@ public class Write_Schedule extends AppCompatActivity{
             @Override
             public void onClick(View view) {
 
-
         if (checkBox12.isChecked()){
             jodDesEt12.setVisibility(View.VISIBLE);
             spinner12.setVisibility(View.VISIBLE);
@@ -951,7 +953,6 @@ public class Write_Schedule extends AppCompatActivity{
            // jobList.add(checkBosText,jobDesText);
           //  jList.add(new JobC(checkBosText,jobDesText));
 */
-
         }else if(!checkBox12.isChecked()){
             jodDesEt12.setText(null);
             jodDesEt12.setVisibility(View.GONE);
@@ -964,7 +965,6 @@ public class Write_Schedule extends AppCompatActivity{
          checkBox13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
 
         if (checkBox13.isChecked()){
             jodDesEt13.setVisibility(View.VISIBLE);
@@ -989,8 +989,6 @@ public class Write_Schedule extends AppCompatActivity{
          jobBuilder.append("Job Name: "+jobName1+".\nDes: "+jobDes1+".\n");
          jobBuilder.append("Job Name: "+jobName1+".\nDes: "+jobDes1+".\n");
 */
-
-
         /*
 
         if (checkBox2.isChecked()){
@@ -1000,76 +998,65 @@ public class Write_Schedule extends AppCompatActivity{
             jobList.add(checkBox2.getText().toString());
         }
 
-
         if (checkBox3.isChecked()){
             jobList.add(checkBox3.getText().toString());
         }
-
 
         if (checkBox4.isChecked()){
             jobList.add(checkBox4.getText().toString());
         }
 
-
         if (checkBox5.isChecked()){
             jobList.add(checkBox5.getText().toString());
         }
-
 
         if (checkBox6.isChecked()){
             jobList.add(checkBox6.getText().toString());
         }
 
-
         if (checkBox7.isChecked()){
             jobList.add(checkBox7.getText().toString());
         }
-
 
         if (checkBox8.isChecked()){
             jobList.add(checkBox8.getText().toString());
         }
 
-
         if (checkBox9.isChecked()){
             jobList.add(checkBox9.getText().toString());
         }
-
 
         if (checkBox10.isChecked()){
             jobList.add(checkBox10.getText().toString());
         }
 
-
         if (checkBox11.isChecked()){
             jobList.add(checkBox11.getText().toString());
         }
-
 
         if (checkBox12.isChecked()){
             jobList.add(checkBox12.getText().toString());
         }
 
-
         if (checkBox13.isChecked()){
             jobList.add(checkBox13.getText().toString());
         }*/
     }
+
     private void clientShow() {
         clientList.clear();
-        clientRef.addValueEventListener(new ValueEventListener() {
+        factoryRef.addValueEventListener(new ValueEventListener() {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 for (DataSnapshot data: dataSnapshot.getChildren()){
-                    Client client=data.getValue(Client.class);
-                    String clientNam=client.getCompanyName();
+                    Factories client=data.getValue(Factories.class);
+                    String clientNam=client.getCompany_name();
                     clientList.add(clientNam);
                 }
                 clientAdapter=new ArrayAdapter<String>(Write_Schedule.this,R.layout.spennersamplelayout,R.id.showTestSpinnerId,clientList);
                 companyWsAt.setAdapter(clientAdapter);
-
             }
 
             @Override
@@ -1131,13 +1118,7 @@ public class Write_Schedule extends AppCompatActivity{
          spinner12=findViewById(R.id.spinner12);
          spinner13=findViewById(R.id.spinner13);
 
-
-
-
      //   userSV.setThreshold(1);
-
-
-
     }
 // current date method
     public void date( ) {
@@ -1178,7 +1159,6 @@ public class Write_Schedule extends AppCompatActivity{
                 tagUserId=userId;
             }
             // tagUserL.notifyAll();
-
         }
 
         @Override
@@ -1186,9 +1166,6 @@ public class Write_Schedule extends AppCompatActivity{
 
         }
     });
-
-
-
 
     //get tag User name and UId
     // and Store this variable

@@ -407,7 +407,8 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
             }
         });
 
-        categoriesList.clear();
+/*        categoriesList.clear();
+
         categoryRef.addValueEventListener(new ValueEventListener() {
 
             @Override
@@ -427,6 +428,7 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
 
             }
         });
+*/
  sub_categoriesList.clear();
         subCategoryRef.addValueEventListener(new ValueEventListener() {
 

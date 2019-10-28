@@ -11,14 +11,14 @@ public class Common_Resouces {
     public Common_Resouces() {
     }
 
-     public  static List<Client> common_clientList=new ArrayList<>();
+     public  static List<Factories> common_clientList=new ArrayList<>();
       List<String> common_jobList=new ArrayList<>();
 
-    public List<Client> getCommon_clientList() {
+    public List<Factories> getCommon_clientList() {
         return common_clientList;
     }
 
-    public void setCommon_clientList(List<Client> common_clientList) {
+    public void setCommon_clientList(List<Factories> common_clientList) {
         this.common_clientList = common_clientList;
     }
 

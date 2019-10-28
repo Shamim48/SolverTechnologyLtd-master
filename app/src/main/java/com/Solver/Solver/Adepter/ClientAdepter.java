@@ -9,12 +9,10 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.Solver.Solver.ClientShowDetails;
-import com.Solver.Solver.ModelClass.Client;
+import com.Solver.Solver.ModelClass.Factories;
 import com.Solver.Solver.R;
 
 import java.util.List;
@@ -22,9 +20,9 @@ import java.util.List;
 public class ClientAdepter  extends RecyclerView.Adapter<ClientAdepter.ClientHolder> {
 
     Context context;
-    List<Client> clientList;
+    List<Factories> clientList;
 
-    public ClientAdepter(Context context, List<Client> clientList) {
+    public ClientAdepter(Context context, List<Factories> clientList) {
         this.context = context;
         this.clientList = clientList;
     }
@@ -41,13 +39,13 @@ public class ClientAdepter  extends RecyclerView.Adapter<ClientAdepter.ClientHol
     @Override
     public void onBindViewHolder(@NonNull ClientHolder holder, final int position) {
 
-        final Client client=clientList.get(position);
-        holder.cpName.setText(clientList.get(position).getCompanyName());
+        final Factories client=clientList.get(position);
+        holder.cpName.setText(clientList.get(position).getCompany_name());
         holder.cpAddress.setText(clientList.get(position).getAddress());
         holder.cpCallBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String uri="tel:"+client.getPhone();
+                String uri="tel:"+client.getCc_phone();
                 Intent callIntent=new Intent(Intent.ACTION_DIAL);
                 callIntent.setData(Uri.parse(uri));
                 context.startActivity(callIntent);
@@ -59,11 +57,11 @@ public class ClientAdepter  extends RecyclerView.Adapter<ClientAdepter.ClientHol
             @Override
             public void onClick(View view) {
                 Intent clientIntent=new Intent(context, ClientShowDetails.class);
-                clientIntent.putExtra("comName",clientList.get(position).getCompanyName());
+                clientIntent.putExtra("comName",clientList.get(position).getCompany_name());
                 clientIntent.putExtra("comAddress",clientList.get(position).getAddress());
-                clientIntent.putExtra("consultant",clientList.get(position).getConsultPerson());
-                clientIntent.putExtra("comEmail",clientList.get(position).getEmail());
-                clientIntent.putExtra("comPhone",clientList.get(position).getPhone());
+                clientIntent.putExtra("consultant",clientList.get(position).getCc_name());
+                clientIntent.putExtra("comEmail",clientList.get(position).getCc_email());
+                clientIntent.putExtra("comPhone",clientList.get(position).getCc_phone());
                 context.startActivity(clientIntent);
 
             }

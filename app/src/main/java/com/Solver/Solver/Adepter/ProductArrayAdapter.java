@@ -45,6 +45,7 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> implements Filte
     Context context;
     private CheckedListener checkedListener;
      Product product;
+     public static String productDes;
 
     private boolean checked = false;
 
@@ -174,6 +175,7 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> implements Filte
 
 try {
     textViewName.setText(product.getProduct_name());
+    productDes=product.getDescription();
     desTv.setText(Html.fromHtml(product.getDescription(),Html.FROM_HTML_MODE_LEGACY));
 
 }catch (Exception e){

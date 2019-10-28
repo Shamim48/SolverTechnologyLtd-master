@@ -158,12 +158,10 @@ public class EmployeeAdepter extends RecyclerView.Adapter<EmployeeAdepter.Employ
         holder.callBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String uri="tel:"+signUp.getPhone();
+                String uri="tel:"+employeeList.get(position).getPhone();
                 Intent callIntent=new Intent(Intent.ACTION_DIAL);
                 callIntent.setData(Uri.parse(uri));
                 context.startActivity(callIntent);
-
-
             }
         });
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {

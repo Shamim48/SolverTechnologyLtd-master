@@ -119,6 +119,8 @@ public class QuotationAdapter extends RecyclerView.Adapter<QuotationAdapter.Quot
         holder.ccPerson.setText("CC :"+quotation_masters.getCc_person());
 
         holder.quotation.setText(Html.fromHtml("<u>QUOTATION</u>",Html.FROM_HTML_MODE_LEGACY));
+try {
+
 
         for (Product product:quotation_masters.getProductList()){
 
@@ -169,7 +171,9 @@ public class QuotationAdapter extends RecyclerView.Adapter<QuotationAdapter.Quot
             }catch (Exception e){
             }
         }
+}catch (NullPointerException e){
 
+}
         // totalPrice=String.format("%f",quotation_masters.getTotal_amount());
         try {
 

@@ -207,7 +207,8 @@ public class FirebaseNotificationService extends FirebaseMessagingService {
 /*
                }
             else {
-*//*
+*/
+/*
                     SharedPreferences preferences = getSharedPreferences("PREFS", MODE_PRIVATE);
                     String currentUser = preferences.getString("currentuser", "none");
 
