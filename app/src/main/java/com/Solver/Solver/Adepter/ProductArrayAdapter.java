@@ -46,7 +46,6 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> implements Filte
     private CheckedListener checkedListener;
      Product product;
      public static String productDes;
-
     private boolean checked = false;
 
     public ProductArrayAdapter(Context context,  List<Product> productList) {
@@ -60,7 +59,6 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> implements Filte
     public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         try {
-
 
          product = (Product) this.getItem(position);
 

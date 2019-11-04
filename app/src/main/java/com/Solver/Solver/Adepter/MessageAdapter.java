@@ -160,21 +160,22 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
 
                     if (position == mChat.size()-1){
                         if (chat.isIsseen()){
-                            holder.txt_seen.setText("Seen");
+                            holder.text_seenRight.setText("Seen");
                         } else {
-                            holder.txt_seen.setText("Delivered");
+                            holder.text_seenRight.setText("Delivered");
                         }
+
                     } else {
-                        holder.txt_seen.setVisibility(View.GONE);
+                        holder.text_seenRight.setVisibility(View.GONE);
                     }
 
-                    holder.msgLot.setOnLongClickListener(new View.OnLongClickListener() {
-                        @Override
-                        public boolean onLongClick(View view) {
 
+
+                    holder.menuText.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
                             poUpMenu(view,chat,position);
 
-                            return false;
                         }
                     });
 
@@ -260,6 +261,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
         public TextView replyMsgtv;
         public  ImageView imageViewMsgRow;
         public TextView imageReplyText;
+        public TextView menuText;
 
         RelativeLayout msgLot;
         LinearLayout replyLinearLayout;
@@ -271,7 +273,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
             super(itemView);
             show_message = itemView.findViewById(R.id.show_message);
             profile_image = itemView.findViewById(R.id.profile_image);
-            txt_seen = itemView.findViewById(R.id.txt_seen);
+            //txt_seen = itemView.findViewById(R.id.txt_seenRight);
             nameTv = itemView.findViewById(R.id.nameTv_GMRId);
             desTv = itemView.findViewById(R.id.desTv_GMRId);
             image=itemView.findViewById(R.id.imageViewMsgRowId);
@@ -283,9 +285,10 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
             replyMsgtv=itemView.findViewById(R.id.msgTv_replyLId);
             //imageViewMsgRow=itemView.findViewById(R.id.imageViewMsgRowId);
             imageReplyText=itemView.findViewById(R.id.msgTv_GMRId);
+            menuText=itemView.findViewById(R.id.menuIconId);
 
             //Layout
-            msgLot =itemView.findViewById(R.id.chatLoyId);
+           // msgLot =itemView.findViewById(R.id.chatLoyId);
             replyLinearLayout =itemView.findViewById(R.id.linearLayoutImageRLId);
            // linearLayoutImage=itemView.findViewById(R.id.linearLayoutImageId);
            // replyParentLot=itemView.findViewById(R.id.replyParentLotId);

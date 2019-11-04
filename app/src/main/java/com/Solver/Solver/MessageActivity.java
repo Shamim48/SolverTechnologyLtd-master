@@ -8,6 +8,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ActionBar;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -16,6 +17,8 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -124,6 +127,7 @@ public class MessageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message);
         Toolbar toolbar = findViewById(R.id.tool_bar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
       reference=FirebaseDatabase.getInstance().getReference();
         imageKeyRef = reference.child("Chats");
         userRef = FirebaseDatabase.getInstance().getReference().child("User");
@@ -332,6 +336,7 @@ public class MessageActivity extends AppCompatActivity {
 
 
     }
+
 
     private void sentReplyWithImage(final String sender, final String receiver, final String message){
         //String message =text_send.getText().toString();
@@ -604,7 +609,6 @@ public class MessageActivity extends AppCompatActivity {
        // String sender, String receiver, String msg_Type, String imageUri, boolean isseen
 
 
-
         // add user to chat fragment
         final DatabaseReference chatRef = FirebaseDatabase.getInstance().getReference("Chatlist")
                 .child(fuser.getUid())
@@ -817,11 +821,9 @@ public class MessageActivity extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
-
             }
         });
     }
-
 
     private void readMesagges(final String myid, final String userid, final String imageurl){
         mchat = new ArrayList<>();
@@ -914,6 +916,20 @@ public class MessageActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return true;
+    }
     private void currentUser(String userid){
         SharedPreferences.Editor editor = getSharedPreferences("PREFS", MODE_PRIVATE).edit();
         editor.putString("currentuser", userid);

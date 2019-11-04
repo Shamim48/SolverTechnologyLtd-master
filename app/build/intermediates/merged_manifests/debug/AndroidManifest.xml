@@ -29,19 +29,35 @@
         android:roundIcon="@drawable/layoutbg"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.Solver.Solver.Quotation_Show" />
+        <activity
+            android:name="com.Solver.Solver.Quotation_Show"
+            android:parentActivityName="com.Solver.Solver.Home" />
         <activity android:name="com.Solver.Solver.ForgotPasswordAtv" />
         <activity android:name="com.Solver.Solver.SendQuotation" />
-        <activity android:name="com.Solver.Solver.Quotation_Request" />
+        <activity
+            android:name="com.Solver.Solver.Quotation_Request"
+            android:parentActivityName="com.Solver.Solver.Home" />
         <activity android:name="com.Solver.Solver.AddData" />
         <activity android:name="com.Solver.Solver.ViewImage" />
         <activity android:name="com.Solver.Solver.Daily_Report" />
-        <activity android:name="com.Solver.Solver.Schedule_Display" />
-        <activity android:name="com.Solver.Solver.Write_Schedule" />
-        <activity android:name="com.Solver.Solver.MessageActivity" />
-        <activity android:name="com.Solver.Solver.GroupChatAtv" />
-        <activity android:name="com.Solver.Solver.ClientShowDetails" />
-        <activity android:name="com.Solver.Solver.ShowUserDetails" />
+        <activity
+            android:name="com.Solver.Solver.Schedule_Display"
+            android:parentActivityName="com.Solver.Solver.Home" />
+        <activity
+            android:name="com.Solver.Solver.Write_Schedule"
+            android:parentActivityName="com.Solver.Solver.Home" />
+        <activity
+            android:name="com.Solver.Solver.MessageActivity"
+            android:parentActivityName="com.Solver.Solver.Home" />
+        <activity
+            android:name="com.Solver.Solver.GroupChatAtv"
+            android:parentActivityName="com.Solver.Solver.Home" />
+        <activity
+            android:name="com.Solver.Solver.ClientShowDetails"
+            android:parentActivityName="com.Solver.Solver.Home" />
+        <activity
+            android:name="com.Solver.Solver.ShowUserDetails"
+            android:parentActivityName="com.Solver.Solver.Home" />
         <activity
             android:name="com.Solver.Solver.Home"
             android:theme="@style/AppTheme.NoActionBar" />

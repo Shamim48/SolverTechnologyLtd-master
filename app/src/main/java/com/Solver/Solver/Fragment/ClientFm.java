@@ -67,7 +67,7 @@ public class ClientFm extends Fragment {
         clientDatabaseRef=FirebaseDatabase.getInstance().getReference().child("Client");
         factoryRef=FirebaseDatabase.getInstance().getReference().child("factories");
       //  FirebaseDatabase.getInstance().setPersistenceEnabled(true);
-        factoryRef.keepSynced(true);
+      //  factoryRef.keepSynced(true);
 
         factoryRef.addValueEventListener(new ValueEventListener() {
             @Override

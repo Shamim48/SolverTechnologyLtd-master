@@ -59,7 +59,7 @@ public class EmployeeFm extends Fragment  {
         rootRef= FirebaseDatabase.getInstance().getReference();
         userRef=rootRef.child("User");
         // FirebaseDatabase.getInstance().setPersistenceEnabled(true);
-        userRef.keepSynced(true);
+      //  userRef.keepSynced(true);
         rootRef.child("User").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {

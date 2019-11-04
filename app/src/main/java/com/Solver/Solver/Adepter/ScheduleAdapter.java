@@ -30,6 +30,7 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
 
     Context context;
     List<Schedule> schedulesList;
+    int slNum=1;
 
     private FirebaseUser currentUser;
      DatabaseReference databaseReference;
@@ -55,18 +56,21 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
     public void onBindViewHolder(@NonNull ScheduleHolder holder, final int position) {
 
         final Schedule schedule=schedulesList.get(position);
-        holder.dateTv.setText("Dear Sir,\n"+schedule.getDate()+" Work Plan.");
+        holder.dateTv.setText(schedule.getDate()+" Work Plan.");
         holder.userNameTV.setText(schedule.getEmployeeName());
-        holder.companyNameTV.setText("Com. Name: "+schedule.getCompanyName());
+        holder.companyNameTV.setText(schedule.getCompanyName());
         /*for (int i=0;i<=schedule.getList().size();i++){
 
         holder.jobInfoTv.append(schedule.getList().get(i).getJobTitle()+"\nCategory:"+schedule.getList().get(i).getCategory()+"\nDes: "+schedule.getList().get(i).getJobDes()+"\n\n");
 
         }*/
         try {
+
             for (JobC jobC:schedule.getList()){
 
+
                 holder.jobInfoTv.append("Job Name: "+jobC.getJobTitle()+" .\nCategory:"+jobC.getCategory()+" .\nDes: "+jobC.getJobDes()+" .\n\n");
+
 
             }
         }catch (NullPointerException e){

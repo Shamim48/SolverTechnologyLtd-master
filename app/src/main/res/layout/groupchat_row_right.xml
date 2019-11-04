@@ -30,26 +30,49 @@
         android:id="@+id/linearLayoutRightId"
         android:layout_height="wrap_content">
         <!-- GMR=group message Id-->
-        <TextView
-            android:id="@+id/nameTv_GMRId"
-            android:textSize="18sp"
-            android:layout_marginRight="5dp"
-            android:text="Name"
-            android:textIsSelectable="true"
-            android:gravity="left"
-            android:textColor="#009688"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/nameTv_GMRId"
+                android:textSize="18sp"
+                android:layout_marginRight="5dp"
+                android:text="Name"
+                android:textIsSelectable="true"
+                android:gravity="left"
+                android:textColor="#009688"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/menuIconId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight=".4"
+                android:gravity="right"
+                android:paddingRight="5dp"
+                android:text="@string/menu_icon"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/clientTv_GMRId"
             android:textSize="15sp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="5dp"
             android:text="Client"
             android:textIsSelectable="true"
             android:gravity="left"
+            android:layout_marginTop="2dp"
             android:textStyle="bold"
             android:textColor="#3F51B5"
             android:layout_width="match_parent"
@@ -59,7 +82,7 @@
             android:id="@+id/subTv_GMRId"
             android:textSize="16sp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:text="Sub"
             android:textIsSelectable="true"
             android:gravity="left"
@@ -73,7 +96,6 @@
             android:id="@+id/msgTv_GMRId"
             android:textSize="16sp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="5dp"
             android:text="message"
             android:textIsSelectable="true"
             android:gravity="left"
@@ -85,7 +107,7 @@
             android:id="@+id/sparePartTv_GMRId"
             android:textSize="16sp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:text="SparePart"
             android:gravity="left"
             android:textIsSelectable="true"

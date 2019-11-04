@@ -1,6 +1,8 @@
 package com.Solver.Solver.Adepter;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -113,13 +115,11 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
                  holder.dateTv.setText(groupMsg.getDate());
                  holder.desTv.setText(groupMsg.getImageType());
 
-                 holder.linearLayoutImage.setOnLongClickListener(new View.OnLongClickListener() {
+                 holder.menuIconTv.setOnClickListener(new View.OnClickListener() {
                      @Override
-                     public boolean onLongClick(View view) {
+                     public void onClick(View view) {
+                         poUpMenuForReplyAndDelete(view,groupMsg,position);
 
-                         poUpMenu(view,groupMsg,position);
-
-                         return true;
                      }
                  });
 
@@ -142,36 +142,43 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
                  holder.dateTv.setText(groupMsg.getDate());
                  holder.desTv.setText(groupMsg.getImageType());
 
-                 holder.linearLayoutImage.setOnLongClickListener(new View.OnLongClickListener() {
+                 holder.menuIconTv.setOnClickListener(new View.OnClickListener() {
                      @Override
-                     public boolean onLongClick(View view) {
-
+                     public void onClick(View view) {
                          poUpMenu(view,groupMsg,position);
 
-                         return true;
                      }
                  });
-
                  break;
 
              case MSG_TYPE_RIGHT:
 
                  holder.nameTv.setText(groupMsg.getName());
-                 holder.subTv.setText(groupMsg.getSub());
+                 if(gmChat.get(position).getSub().equals("")){
+                     holder.subTv.setVisibility(View.GONE);
+                 }else {
+                     holder.subTv.setText(groupMsg.getSub());
+                 }
                  holder.msgTv.setText(groupMsg.getMessage());
                  holder.timeTv.setText(groupMsg.getTime());
                  holder.dateTv.setText(groupMsg.getDate());
-                 holder.tagClientTv.setText("Client: " + groupMsg.getTagClientName());
+                 if (gmChat.get(position).getTagClientName().equals("")){
+                     holder.tagClientTv.setVisibility(View.GONE);
+                 }else {
+                     holder.tagClientTv.setText("Factory: " + groupMsg.getTagClientName());
+                 }
+                 if(gmChat.get(position).getSparePart().equals("")){
+                     holder.sparePartTv.setVisibility(View.GONE);
+                 }else{
                  holder.sparePartTv.setText("Spare Parts: " + groupMsg.getSparePart());
+             }
 
-                 holder.linearLayoutRight.setOnLongClickListener(new View.OnLongClickListener() {
+
+                 holder.menuIconTv.setOnClickListener(new View.OnClickListener() {
                      @Override
-                     public boolean onLongClick(View view) {
+                     public void onClick(View view) {
+                         poUpMenuForReplyAndDelete(view,groupMsg,position);
 
-                         poUpMenu(view,groupMsg,position);
-
-
-                        return true;
                      }
                  });
                  break;
@@ -179,33 +186,53 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
 
                //  ((GroupMsgHolder)holder).showGroupChat(groupMsg);
                  holder.nameTv.setText(groupMsg.getName());
-                 holder.subTv.setText(groupMsg.getSub());
+                 if(gmChat.get(position).getSub().equals("")){
+                     holder.subTv.setVisibility(View.GONE);
+                 }else {
+                     holder.subTv.setText(groupMsg.getSub());
+                 }
                  holder.msgTv.setText(groupMsg.getMessage());
                  holder.timeTv.setText(groupMsg.getTime());
                  holder.dateTv.setText(groupMsg.getDate());
-                 holder.tagClientTv.setText("Client: " + groupMsg.getTagClientName());
-                 holder.sparePartTv.setText("Spare Parts: " + groupMsg.getSparePart());
+                 if (gmChat.get(position).getTagClientName().equals("")){
+                     holder.tagClientTv.setVisibility(View.GONE);
+                 }else {
+                     holder.tagClientTv.setText("Factory: " + groupMsg.getTagClientName());
+                 }                 if(gmChat.get(position).getSparePart().equals("")){
+                     holder.sparePartTv.setVisibility(View.GONE);
+                 }else{
+                     holder.sparePartTv.setText("Spare Parts: " + groupMsg.getSparePart());
+                 }
 
-                 holder.linearLayoutLeft.setOnLongClickListener(new View.OnLongClickListener() {
+
+                 holder.menuIconTv.setOnClickListener(new View.OnClickListener() {
                      @Override
-                     public boolean onLongClick(View view) {
-
+                     public void onClick(View view) {
                          poUpMenu(view,groupMsg,position);
 
-
-                         return true;
                      }
                  });
 
                 break;
              case MSG_TYPE_REPLY:
                  holder.nameTv.setText(groupMsg.getName());
-                 holder.subTv.setText(groupMsg.getSub());
+                 if(gmChat.get(position).getSub().equals("")){
+                     holder.subTv.setVisibility(View.GONE);
+                 }else {
+                     holder.subTv.setText(groupMsg.getSub());
+                 }
                  holder.msgTv.setText(groupMsg.getMessage());
                  holder.timeTv.setText(groupMsg.getTime());
                  holder.dateTv.setText(groupMsg.getDate());
-                 holder.tagClientTv.setText("Client: " + groupMsg.getTagClientName());
-                 holder.sparePartTv.setText("Spare Parts: " + groupMsg.getSparePart());
+                 if (gmChat.get(position).getTagClientName().equals("")){
+                     holder.tagClientTv.setVisibility(View.GONE);
+                 }else {
+                     holder.tagClientTv.setText("Factory: " + groupMsg.getTagClientName());
+                 }                 if(gmChat.get(position).getSparePart().equals("")){
+                     holder.sparePartTv.setVisibility(View.GONE);
+                 }else{
+                     holder.sparePartTv.setText("Spare Parts: " + groupMsg.getSparePart());
+                 }
                  holder.msgTv_Rpr.setText(groupMsg.getMsg_reply());
                  holder.nameTv_Rpr.setText(groupMsg.getName_reply());
                  holder.clientTv_Rpr.setText(groupMsg.getClient_reply());
@@ -214,27 +241,39 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
 
 
 
-                 holder.replyParentLot.setOnLongClickListener(new View.OnLongClickListener() {
-                     @Override
-                     public boolean onLongClick(View view) {
 
+
+                 holder.menuIconTv.setOnClickListener(new View.OnClickListener() {
+                     @Override
+                     public void onClick(View view) {
                          poUpMenu(view,groupMsg,position);
-                         return true;
+
                      }
                  });
                  break;
              case MSG_TYPE_REPLY_IMAGE:
                  holder.nameTv.setText(groupMsg.getName());
-                 holder.subTv.setText(groupMsg.getSub());
+                 if(gmChat.get(position).getSub().equals("")){
+                     holder.subTv.setVisibility(View.GONE);
+                 }else {
+                     holder.subTv.setText(groupMsg.getSub());
+                 }
                  holder.msgTv.setText(groupMsg.getMessage());
                  holder.timeTv.setText(groupMsg.getTime());
                  holder.dateTv.setText(groupMsg.getDate());
-                 holder.tagClientTv.setText("Client: " + groupMsg.getTagClientName());
-                 holder.sparePartTv.setText("Spare Parts: " + groupMsg.getSparePart());
-                 holder.nameTv_Rpr.setText(groupMsg.getName_reply());
+                 if (gmChat.get(position).getTagClientName().equals("")){
+                     holder.tagClientTv.setVisibility(View.GONE);
+                 }else {
+                     holder.tagClientTv.setText("Factory: " + groupMsg.getTagClientName());
+                 }                 if(gmChat.get(position).getSparePart().equals("")){
+                     holder.sparePartTv.setVisibility(View.GONE);
+                 }else{
+                     holder.sparePartTv.setText("Spare Parts: " + groupMsg.getSparePart());
+                 }                 holder.nameTv_Rpr.setText(groupMsg.getName_reply());
 
                  Glide.with(mContext).load(groupMsg.getImage_reply()).placeholder(R.drawable.ic_insert_photo_black_24dp).into(holder.chatImage);
-                 holder.replyImageParentLot.setOnClickListener(new View.OnClickListener() {
+
+                 holder.menuIconTv.setOnClickListener(new View.OnClickListener() {
                      @Override
                      public void onClick(View view) {
                          poUpMenu(view,groupMsg,position);
@@ -293,6 +332,7 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
         private TextView jobTv_Rpr;
         private TextView spearPartTv_Rpr;
         public TextView desTv;
+        private TextView menuIconTv;
 
         private ImageView chatImage;
         LinearLayout linearLayoutRight;
@@ -316,6 +356,7 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
            jobTv_Rpr=itemView.findViewById(R.id.subTv_RprId);
            spearPartTv_Rpr=itemView.findViewById(R.id.sparePartTv_RprId);
            desTv = itemView.findViewById(R.id.desTv_GMRId);
+           menuIconTv=itemView.findViewById(R.id.menuIconId);
 
 
            chatImage=itemView.findViewById(R.id.imageViewMsgRowId);
@@ -358,7 +399,52 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
           dateTv.setText(groupImage.getDate());
        }
    }*/
-public void poUpMenu(View view, final GroupMessage groupMessage, final int position){
+ public void poUpMenu(View view, final GroupMessage groupMessage, final int position){
+    PopupMenu popupMenu=new PopupMenu(mContext,view);
+    MenuInflater inflater=popupMenu.getMenuInflater();
+    inflater.inflate(R.menu.reply_menu,popupMenu.getMenu());
+    popupMenu.show();
+    popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+
+        @Override
+        public boolean onMenuItemClick(MenuItem menuItem) {
+          /*
+            int itemId=menuItem.getItemId();
+            if(itemId==R.id.replyMSGMIId){
+
+            }else if(itemId==R.id.editMenuItmId){
+
+            }else if(itemId==R.id.deleteMenuItmId){
+
+            }*/
+
+            switch (menuItem.getItemId()) {
+                case R.id.replyGmId:
+
+                    String action;
+                    Intent intent=new Intent(mContext, GroupChatAtv.class);
+                    intent.putExtra("userName",gmChat.get(position).getName());
+                    intent.putExtra("comName",gmChat.get(position).getTagClientName());
+                    intent.putExtra("jobName",gmChat.get(position).getSub());
+                    intent.putExtra("message",gmChat.get(position).getMessage());
+                    intent.putExtra("spearParts",gmChat.get(position).getSparePart());
+                    intent.putExtra("GroupName",gmChat.get(position).getGroupName());
+                    intent.putExtra("image",gmChat.get(position).getImageUri());
+                    intent.putExtra("msgTypeImage","ReplyImage");
+                    intent.putExtra("msgType","Reply");
+                    mContext.startActivity(intent);
+
+                    Toast.makeText(mContext,"Coming son",Toast.LENGTH_SHORT).show();
+
+                    break;
+
+            }
+            return false;
+        }
+    });
+
+}
+ public void poUpMenuForReplyAndDelete(View view, final GroupMessage groupMessage, final int position){
     PopupMenu popupMenu=new PopupMenu(mContext,view);
     MenuInflater inflater=popupMenu.getMenuInflater();
     inflater.inflate(R.menu.message_menu,popupMenu.getMenu());
@@ -376,6 +462,7 @@ public void poUpMenu(View view, final GroupMessage groupMessage, final int posit
             }else if(itemId==R.id.deleteMenuItmId){
 
             }*/
+
 
             switch (menuItem.getItemId()) {
                 case R.id.replyMSGMIId:
@@ -395,21 +482,39 @@ public void poUpMenu(View view, final GroupMessage groupMessage, final int posit
 
                     Toast.makeText(mContext,"Coming son",Toast.LENGTH_SHORT).show();
 
+                    break;
+
+                case R.id.deleteMsgId:
+                    // gmChat.remove(position);
+                    //gmChat.notify();
+                    // notifyItemRemoved(position);
+
+                    final AlertDialog.Builder builder=new AlertDialog.Builder(mContext);
+                    builder.setTitle("Are You sure..?");
+                    builder.setMessage("You Want to delete..?");
+
+                    builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            String key = gmChat.get(position).getMsgKey();
+                            DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Group").child(groupMessage.getGroupName());
+                            ref.child(key).removeValue();
+                            Toast.makeText(mContext,"Delete Success",Toast.LENGTH_SHORT).show();
+                            dialogInterface.cancel();
+                        }
+                    });
+                    builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            dialogInterface.dismiss();
+                        }
+                    });
+                    builder.show();
 
                     break;
-/*
-
-                    gmChat.remove(position);
-                  //gmChat.notify();
-                    notifyItemRemoved(position);
-                    String key = groupMessage.getMsgKey();
-                    DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Group").child(groupMessage.getGroupName());
-                    ref.child(key).removeValue();
-                    Toast.makeText(mContext,"Delete Success",Toast.LENGTH_SHORT).show();
-*/
-
 
             }
+
             return false;
         }
     });
@@ -447,4 +552,5 @@ public void poUpMenu(View view, final GroupMessage groupMessage, final int posit
         }
 
    return 0; }
+
 }

@@ -7,7 +7,6 @@ import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +15,6 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-
 import com.Solver.Solver.Adepter.TagUserArrayAdapter;
 import com.Solver.Solver.Adepter.UserAdapter;
 import com.Solver.Solver.MessageActivity;
@@ -33,17 +31,16 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.iid.FirebaseInstanceId;
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  */
+
 public class ChatFm extends Fragment {
 
     private RecyclerView recyclerView;
-
     private UserAdapter userAdapter;
     private List<SignUp> mUsers;
 
@@ -58,7 +55,6 @@ public class ChatFm extends Fragment {
     DatabaseReference userRef;
     TagUserArrayAdapter tagUserArrayAdapter;
 
-
     private List<Chatlist> usersList;
 
 
@@ -66,13 +62,11 @@ public class ChatFm extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_chat_fm, container, false);
-
 
         userSV=view.findViewById(R.id.employeeName_CtId);
         tagUserLV=view.findViewById(R.id.userTagLVCtId);
@@ -81,7 +75,6 @@ public class ChatFm extends Fragment {
         recyclerView = view.findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-
 
         fuser = FirebaseAuth.getInstance().getCurrentUser();
         userRef=FirebaseDatabase.getInstance().getReference().child("User");
@@ -128,13 +121,6 @@ public class ChatFm extends Fragment {
 
         updateToken(FirebaseInstanceId.getInstance().getToken());
 
-
-
-
-
-
-
-
        // mUsers = new ArrayList<>();
 
         /*readUsers();
@@ -157,7 +143,6 @@ public class ChatFm extends Fragment {
             }
         });
 */
-
 
         return view;
     }
@@ -251,6 +236,7 @@ public class ChatFm extends Fragment {
                         }
                     }
                 }
+                //Collections.reverse(mUsers);
                 userAdapter = new UserAdapter(getContext(), mUsers, true);
                 recyclerView.setAdapter(userAdapter);
             }
@@ -282,6 +268,7 @@ public class ChatFm extends Fragment {
                     }
                 }
 
+             //   Collections.reverse(mUsers);
                 userAdapter = new UserAdapter(getContext(), mUsers, false);
                 recyclerView.setAdapter(userAdapter);
             }
@@ -305,8 +292,6 @@ public class ChatFm extends Fragment {
                 if (search_users.getText().toString().equals("")) {
                     mUsers.clear();
                     try {
-
-
                     for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                         SignUp user = snapshot.getValue(SignUp.class);
 
@@ -316,6 +301,7 @@ public class ChatFm extends Fragment {
 
                     }
 
+                   // Collections.reverse(mUsers);
                     userAdapter = new UserAdapter(getContext(), mUsers, false);
                     LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
                     recyclerView.setLayoutManager(linearLayoutManager);

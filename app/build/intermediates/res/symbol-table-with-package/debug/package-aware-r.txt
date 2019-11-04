@@ -1389,6 +1389,7 @@ id decor_content_parent
 id default_activity_button
 id deleteMenuItmId
 id deleteMessageMenuItmId
+id deleteMsgId
 id deleteRowId
 id desTvId
 id desTvQDId
@@ -1428,6 +1429,7 @@ id expanded_menu
 id factoryATDRId
 id factoryAddressQsTvId
 id factoryCBDRId
+id factoryCbId
 id factoryNameQsTvId
 id fill
 id fill_horizontal
@@ -1479,6 +1481,7 @@ id jobDesId8
 id jobDesId9
 id jobSdId
 id jobSpId
+id jobSpLtId
 id labeled
 id largeLabel
 id left
@@ -1498,6 +1501,7 @@ id lltWsLVId
 id loginBtnId
 id masked
 id media_actions
+id menuIconId
 id message
 id message_GURId
 id middle
@@ -1572,6 +1576,7 @@ id recycler_view
 id recycler_view_layout
 id registerBtnId
 id relativeLayout
+id replyGmId
 id replyImageParentLotId
 id replyLotId
 id replyMSGMIId
@@ -1639,6 +1644,7 @@ id sparePartTv_GMRId
 id sparePartTv_RpId
 id sparePartTv_RprId
 id spareParts_group_message
+id spearPartsCbId
 id spinner1
 id spinner10
 id spinner11
@@ -1711,7 +1717,6 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
-id txt_seen
 id txt_seenRight
 id unchecked
 id uniform
@@ -1900,6 +1905,7 @@ menu home
 menu menu_scrolling
 menu message_menu
 menu notification
+menu reply_menu
 menu user_row_popup
 mipmap ic_launcher
 mipmap ic_launcher_round

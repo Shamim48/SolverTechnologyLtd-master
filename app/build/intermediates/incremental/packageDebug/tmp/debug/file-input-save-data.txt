@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Oct 28 18:51:15 BDT 2019
+#Mon Nov 04 18:08:13 BDT 2019
 1.base=C\:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
 0.baseType=DIRECTORY
 1.baseType=DIRECTORY

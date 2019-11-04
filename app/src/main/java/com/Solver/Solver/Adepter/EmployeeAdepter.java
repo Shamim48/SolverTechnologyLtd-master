@@ -49,7 +49,6 @@ public class EmployeeAdepter extends RecyclerView.Adapter<EmployeeAdepter.Employ
     String userEmail;
     private UserListener userListener;
 
-
     // Current User Information / user info variable
     private String userId;
     private String imageUrl;
@@ -63,7 +62,6 @@ public class EmployeeAdepter extends RecyclerView.Adapter<EmployeeAdepter.Employ
     private String userType;
      SignUp signUp;
 
-
     public EmployeeAdepter(Context context, List<SignUp> employeeList) {
         this.context = context;
         this.employeeList = employeeList;
@@ -75,7 +73,6 @@ public class EmployeeAdepter extends RecyclerView.Adapter<EmployeeAdepter.Employ
     public EmployeeHolder onCreateViewHolder(@NonNull final ViewGroup parent, int viewType) {
        View view=LayoutInflater.from(context).inflate(R.layout.usersample_layout,parent,false);
        final EmployeeHolder employeeHolder=new EmployeeHolder(view);
-
 
         return employeeHolder;
     }
@@ -104,7 +101,6 @@ public class EmployeeAdepter extends RecyclerView.Adapter<EmployeeAdepter.Employ
                 .into(holder.employeeImage);
 
 
-
         if(!(userEmail.equals("solver.apps.bd@gmail.com"))){
             holder.menuTv.setText(null);
         }else {
@@ -131,20 +127,19 @@ public class EmployeeAdepter extends RecyclerView.Adapter<EmployeeAdepter.Employ
                                 builder.setTitle("Are You sure..?");
                                 builder.setMessage("You Want to delete..?");
 
-                                builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
-                                        deleteUser();
+                                        deleteUser(position);
                                         dialogInterface.cancel();
                                     }
                                 });
-                                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
                                         dialogInterface.dismiss();
                                     }
                                 });
-
                                 builder.show();
                                 break;
                         }
@@ -164,6 +159,7 @@ public class EmployeeAdepter extends RecyclerView.Adapter<EmployeeAdepter.Employ
                 context.startActivity(callIntent);
             }
         });
+
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -195,10 +191,8 @@ public class EmployeeAdepter extends RecyclerView.Adapter<EmployeeAdepter.Employ
         context.startActivity(intent);
     }
 
-    public void deleteUser(){
+    public void deleteUser(int position){
       /*  try {*/
-
-
 
         getCurrentUser.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
@@ -213,7 +207,7 @@ public class EmployeeAdepter extends RecyclerView.Adapter<EmployeeAdepter.Employ
                 Toast.makeText(context,"Delete user in Exception: "+e,Toast.LENGTH_SHORT).show();
             }
         });
-        databaseReference.child(signUp.getUserId()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+        databaseReference.child(employeeList.get(position).getUserId()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 Toast.makeText(context,"Delete user information Successful: ",Toast.LENGTH_SHORT).show();
@@ -222,8 +216,8 @@ public class EmployeeAdepter extends RecyclerView.Adapter<EmployeeAdepter.Employ
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(context,"Delete user information in Exception: "+e,Toast.LENGTH_SHORT).show();
 
+                Toast.makeText(context,"Delete user information in Exception: "+e,Toast.LENGTH_SHORT).show();
             }
         });
         storageReference.child(imageUrl).delete().addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -235,14 +229,15 @@ public class EmployeeAdepter extends RecyclerView.Adapter<EmployeeAdepter.Employ
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(context,"Delete Fail in Exception: "+e,Toast.LENGTH_SHORT).show();
 
+                Toast.makeText(context,"Delete Fail in Exception: "+e,Toast.LENGTH_SHORT).show();
             }
         });
        /* }catch (Exception e){
             Toast.makeText(context,"Exception: "+e,Toast.LENGTH_LONG).show();
         }*/
     }
+
     @Override
     public int getItemCount() {
         return employeeList.size();

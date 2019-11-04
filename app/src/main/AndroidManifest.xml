@@ -19,19 +19,35 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:name=".ModelClass.Solver">
-        <activity android:name=".Quotation_Show"></activity>
+        <activity android:name=".Quotation_Show"
+            android:parentActivityName=".Home"
+            ></activity>
         <activity android:name=".ForgotPasswordAtv" />
         <activity android:name=".SendQuotation" />
-        <activity android:name=".Quotation_Request" />
+        <activity android:name=".Quotation_Request"
+            android:parentActivityName=".Home"
+            />
         <activity android:name=".AddData" />
         <activity android:name=".ViewImage" />
         <activity android:name=".Daily_Report" />
-        <activity android:name=".Schedule_Display" />
-        <activity android:name=".Write_Schedule" />
-        <activity android:name=".MessageActivity" />
-        <activity android:name=".GroupChatAtv" />
-        <activity android:name=".ClientShowDetails" />
-        <activity android:name=".ShowUserDetails" />
+        <activity android:name=".Schedule_Display"
+            android:parentActivityName=".Home"
+            />
+        <activity android:name=".Write_Schedule"
+            android:parentActivityName=".Home"
+            />
+        <activity android:name=".MessageActivity"
+            android:parentActivityName=".Home"
+            />
+        <activity android:name=".GroupChatAtv"
+         android:parentActivityName=".Home"
+            />
+        <activity android:name=".ClientShowDetails"
+            android:parentActivityName=".Home"
+            />
+        <activity android:name=".ShowUserDetails"
+            android:parentActivityName=".Home"
+            />
 
         <activity
             android:name=".Home"

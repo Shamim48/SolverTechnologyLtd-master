@@ -136,11 +136,11 @@ public class Home extends AppCompatActivity
         setSupportActionBar(toolbar);
         toolbar.setTitle("Home");
 
+        tabLayout.addTab(tabLayout.newTab().setText("Chat"));
+        tabLayout.addTab(tabLayout.newTab().setText("Groups"));
+        tabLayout.addTab(tabLayout.newTab().setText("Employee"));
+        tabLayout.addTab(tabLayout.newTab().setText("Client"));
 
- tabLayout.addTab(tabLayout.newTab().setText("Employee"));
-tabLayout.addTab(tabLayout.newTab().setText("Client"));
-tabLayout.addTab(tabLayout.newTab().setText("Chat"));
-tabLayout.addTab(tabLayout.newTab().setText("Groups"));
 
 
 //tabLayout.setBackgroundResource(R.color.white);
@@ -623,13 +623,13 @@ tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.white));
 
             switch ((position)){
                 case 0:
-                    return new EmployeeFm();
-                case 1:
-                    return new ClientFm();
-                case 2:
                     return new ChatFm();
-                case 3:
+                case 1:
                     return new GroupChatFm();
+                case 2:
+                    return new EmployeeFm();
+                case 3:
+                    return new ClientFm();
 
             }
             return null;
