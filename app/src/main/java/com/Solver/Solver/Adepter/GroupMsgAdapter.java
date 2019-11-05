@@ -106,7 +106,7 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
                      @Override
                      public void onClick(View view) {
                          Intent i=new Intent(mContext, ViewImage.class);
-                         i.putExtra("imageUri",groupMsg.getImageUri());
+                         i.putExtra("imageUri",gmChat.get(position).getImageUri());
                          mContext.startActivity(i);
 
                      }
@@ -133,7 +133,7 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
                      @Override
                      public void onClick(View view) {
                          Intent i=new Intent(mContext, ViewImage.class);
-                         i.putExtra("imageUri",groupMsg.getImageUri());
+                         i.putExtra("imageUri",gmChat.get(position).getImageUri());
                          mContext.startActivity(i);
 
                      }
@@ -177,6 +177,7 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
                  holder.menuIconTv.setOnClickListener(new View.OnClickListener() {
                      @Override
                      public void onClick(View view) {
+
                          poUpMenuForReplyAndDelete(view,groupMsg,position);
 
                      }
@@ -358,7 +359,6 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
            desTv = itemView.findViewById(R.id.desTv_GMRId);
            menuIconTv=itemView.findViewById(R.id.menuIconId);
 
-
            chatImage=itemView.findViewById(R.id.imageViewMsgRowId);
            linearLayoutRight=itemView.findViewById(R.id.linearLayoutRightId);
            linearLayoutLeft=itemView.findViewById(R.id.linearLayoutLeftId);
@@ -378,6 +378,7 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
 
        }
    }
+
 /*
    public class GroupImageHolder extends RecyclerView.ViewHolder{
        private TextView nameTv;
@@ -444,6 +445,7 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
     });
 
 }
+
  public void poUpMenuForReplyAndDelete(View view, final GroupMessage groupMessage, final int position){
     PopupMenu popupMenu=new PopupMenu(mContext,view);
     MenuInflater inflater=popupMenu.getMenuInflater();

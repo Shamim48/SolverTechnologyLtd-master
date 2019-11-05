@@ -29,7 +29,6 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-
 public class GroupChatFm extends Fragment {
 
     private ListView groupList;
@@ -40,8 +39,6 @@ public class GroupChatFm extends Fragment {
     public GroupChatFm() {
         // Required empty public constructor
     }
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -40,6 +40,7 @@ import com.Solver.Solver.ModelClass.Common_Resouces;
 import com.Solver.Solver.ModelClass.GroupMessage;
 import com.Solver.Solver.ModelClass.JobC;
 import com.Solver.Solver.ModelClass.Schedule;
+import com.Solver.Solver.Notifications.Data;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -49,6 +50,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.storage.FirebaseStorage;
@@ -88,23 +90,25 @@ public class GroupChatAtv extends AppCompatActivity {
     private EditText spare_PartEt;
     private AutoCompleteTextView subEt;
     private Spinner jobSp;
-    private EditText tagClientAt;
+    private LinearLayout tagClientAt;
+    private Spinner factorySp;
     private ScrollView mScrollView;
     private TextView displayTextMessages;
     private FirebaseAuth mAuth;
     private DatabaseReference UsersRef, GroupNameRef, GroupMessageKeyRef, clientRef, jobRef, scheduleREf, allScheduleREf;
-    private String currentGroupName, currentUserID, currentUserName, currentDate, currentTime;
+    private String currentGroupName, currentUserID, currentUserName, currentDate,currentSceDate, currentTime;
     private LinearLayout replyLot,imageLot;
     private ImageButton closeBtn,closeImgBtn;
     private String name_reply,comName_reply,job_reply,msg_reply,spearPart_reply,msg_type,imageUri_reply,msg_TypeImage;
     private TextView nameTv_Rp,clientTv_Rp,subTv_Rp,msgTv_Rp,spearPartTv_Rp;
 
     List<GroupMessage> groupMessagesList;
+    List<String> factoryList=new ArrayList<>();
     GroupMsgAdapter adapter;
     RecyclerView recyclerView;
     ArrayList<String> clientList;
     ArrayList<String> jobList = new ArrayList<>();
-    ArrayAdapter<String> clientAdapter;
+    ArrayAdapter<String> factoryAdapter;
     ArrayAdapter<String> jobAdapter;
     Common_Resouces common_resouces;
     String[] clientNameArray;
@@ -297,18 +301,33 @@ public class GroupChatAtv extends AppCompatActivity {
 
         GetUserInfo();
 
-        scheduleREf.child("ComName").child(currentUserID).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String comName = dataSnapshot.getValue(String.class);
-                tagClientAt.setText(comName);
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+       Query lastQuery= scheduleREf.child(currentUserID).child(currentSceDate);
 
-            }
-        });
+        lastQuery.addValueEventListener(new ValueEventListener() {
+           @Override
+           public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+              for (DataSnapshot data:dataSnapshot.getChildren()){
+                  Schedule schedule=data.getValue(Schedule.class);
+                  try {
+                      factoryList.add(schedule.getCompanyName());
+                  }catch (Exception e){
+
+                  }
+
+              }
+              factoryAdapter=new ArrayAdapter<String>(GroupChatAtv.this,R.layout.spennersamplelayout,R.id.showTestSpinnerId,factoryList);
+              factorySp.setAdapter(factoryAdapter);
+              factoryAdapter.notifyDataSetChanged();
+           }
+
+           @Override
+           public void onCancelled(@NonNull DatabaseError databaseError) {
+
+           }
+       });
+
+
 
         /* clientList.clear();
          *//*
@@ -509,7 +528,7 @@ public class GroupChatAtv extends AppCompatActivity {
           if(factoryCb.isChecked()){
             tagClientAt.setVisibility(View.VISIBLE);
             jobSpLt.setVisibility(View.VISIBLE);
-            tagClientName = tagClientAt.getText().toString();
+            tagClientName = factorySp.getSelectedItem().toString();
         }
 
         if (!factoryCb.isChecked()){
@@ -546,7 +565,7 @@ public class GroupChatAtv extends AppCompatActivity {
             GroupNameRef.child(messagekEY).setValue(groupMessageRep);
             //subEt.setText(null);
             userMessageInput.setText(null);
-            tagClientAt.setText(null);
+
             spare_PartEt.setText(null);
             msg_type=null;
             name_reply=null;
@@ -571,7 +590,7 @@ public class GroupChatAtv extends AppCompatActivity {
         if(factoryCb.isChecked()){
             tagClientAt.setVisibility(View.VISIBLE);
             jobSpLt.setVisibility(View.VISIBLE);
-            tagClientName = tagClientAt.getText().toString();
+            tagClientName = factorySp.getSelectedItem().toString();
         }
 
         if (!factoryCb.isChecked()){
@@ -608,7 +627,7 @@ public class GroupChatAtv extends AppCompatActivity {
                         GroupNameRef.child(messagekEY).setValue(groupMessageRep);
                 //subEt.setText(null);
                     userMessageInput.setText(null);
-                    tagClientAt.setText(null);
+                   // tagClientAt.setText(null);
                     spare_PartEt.setText(null);
                     msg_type=null;
                     name_reply=null;
@@ -721,7 +740,8 @@ public class GroupChatAtv extends AppCompatActivity {
         jobSp = findViewById(R.id.jobSpId);
         userMessageInput = (EditText) findViewById(R.id.input_group_message);
         spare_PartEt = (EditText) findViewById(R.id.spareParts_group_message);
-        tagClientAt = (EditText) findViewById(R.id.tagClientAtId);
+        tagClientAt = (LinearLayout) findViewById(R.id.tagClientAtId);
+        factorySp=findViewById(R.id.factorySpId);
         imageGC = findViewById(R.id.imageGCId);
         replyLot=findViewById(R.id.replyLotId);
         imageLot=findViewById(R.id.imageLotId);
@@ -746,6 +766,12 @@ public class GroupChatAtv extends AppCompatActivity {
     Calendar calForDate = Calendar.getInstance();
     SimpleDateFormat currentDateFormat = new SimpleDateFormat("MMM dd, yyyy");
     currentDate = currentDateFormat.format(calForDate.getTime());
+
+     Calendar calForSce = Calendar.getInstance();
+    SimpleDateFormat currentDateFormatSce = new SimpleDateFormat("dd-MM-yyy");
+    currentSceDate = currentDateFormatSce.format(calForSce.getTime());
+
+
 
     Calendar calForTime = Calendar.getInstance();
     SimpleDateFormat currentTimeFormat = new SimpleDateFormat("hh:mm a");
@@ -776,7 +802,7 @@ public class GroupChatAtv extends AppCompatActivity {
                if(factoryCb.isChecked()){
                    tagClientAt.setVisibility(View.VISIBLE);
                    jobSpLt.setVisibility(View.VISIBLE);
-                   tagClientName = tagClientAt.getText().toString();
+                   tagClientName = factorySp.getSelectedItem().toString();
                }
 
                if (!factoryCb.isChecked()){
@@ -809,7 +835,7 @@ public class GroupChatAtv extends AppCompatActivity {
             GroupNameRef.child(messagekEY).setValue(groupMessage);
             //subEt.setText(null);
             userMessageInput.setText(null);
-            tagClientAt.setText(null);
+           // tagClientAt.setText(null);
             tagClientName.equals("");
             spare_PartEt.setText(null);
 

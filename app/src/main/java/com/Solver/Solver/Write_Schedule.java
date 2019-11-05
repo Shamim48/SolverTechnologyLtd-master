@@ -405,7 +405,7 @@ public class Write_Schedule extends AppCompatActivity{
 */
 
                 Schedule schedule=new Schedule(tagUserId,name,date,comName,jList);
-                scheduleREf.child(tagUserId).setValue(schedule).addOnCompleteListener(new OnCompleteListener<Void>() {
+                scheduleREf.child(tagUserId).child(date).push().setValue(schedule).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
@@ -1136,7 +1136,7 @@ public class Write_Schedule extends AppCompatActivity{
         public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
 
             Calendar calendar=Calendar.getInstance();
-            SimpleDateFormat simpleDateFormat=new SimpleDateFormat("dd/MM/yyy");
+            SimpleDateFormat simpleDateFormat=new SimpleDateFormat("dd-MM-yyy");
 
             calendar.set(year,month,dayOfMonth);
 
