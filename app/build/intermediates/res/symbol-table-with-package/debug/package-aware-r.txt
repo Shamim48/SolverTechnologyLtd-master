@@ -1171,6 +1171,7 @@ drawable ic_mode_edit_black_24dp
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_playlist_add_black_24dp
 drawable ic_send_black_24dp
 drawable ic_touch_app_black_24dp
 drawable layoutbg
@@ -1268,6 +1269,9 @@ id activity_chooser_view_content
 id add
 id addBtnQDId
 id addDataMenuItmId
+id addFactoryAtId
+id addFactoryBtnId
+id addFactoryDlBtnId
 id addQuantityBtnId
 id addressCompanyId
 id adjust_height
@@ -1292,6 +1296,7 @@ id btn_send
 id buttonPanel
 id callBtnTbId
 id cancelBtnQDId
+id cancelFactoryDlBtnId
 id cancel_action
 id categorySpId
 id ccPersonQsTvId
@@ -1827,6 +1832,7 @@ layout activity_sign__up
 layout activity_view_image
 layout activity_view_image2
 layout activity_write__schedule
+layout addfactory_for_schedule
 layout app_bar_home
 layout chat_item_left
 layout chat_item_right

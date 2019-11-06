@@ -434,7 +434,9 @@ public class Write_Schedule extends AppCompatActivity{
                     }
                 });
 
-                jobRef.child(tagUserId).setValue(jList).addOnCompleteListener(new OnCompleteListener<Void>() {
+                for (JobC jobC:jList){
+
+                jobRef.child(tagUserId).child(date).push().setValue(jobC).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
 
@@ -447,7 +449,8 @@ public class Write_Schedule extends AppCompatActivity{
                         }
 
                     }
-                });
+                });}
+                jList.clear();
                 clearData();
 
                 progressDialog.dismiss();

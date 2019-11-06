@@ -29,6 +29,10 @@ public class Schedule  {
         this.list = list;
     }
 
+    public Schedule(String companyName) {
+        this.companyName = companyName;
+    }
+
     public List<JobC> getList() {
         return list;
     }

@@ -158,7 +158,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
                         Glide.with(mContext).load(imageurl).into(holder.profile_image);
                     }
 
-                    if (position == mChat.size()-1){
+                   /* if (position == mChat.size()-1){
                         if (chat.isIsseen()){
                             holder.text_seenRight.setText("Seen");
                         } else {
@@ -169,7 +169,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
                         holder.text_seenRight.setVisibility(View.GONE);
                     }
 
-
+*/
 
                     holder.menuText.setOnClickListener(new View.OnClickListener() {
                         @Override

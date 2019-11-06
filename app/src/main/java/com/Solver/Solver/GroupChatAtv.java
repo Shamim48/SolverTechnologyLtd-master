@@ -2,6 +2,7 @@ package com.Solver.Solver;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -23,6 +24,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -37,6 +39,7 @@ import android.widget.Toolbar;
 import com.Solver.Solver.Adepter.GroupMsgAdapter;
 import com.Solver.Solver.ModelClass.Client;
 import com.Solver.Solver.ModelClass.Common_Resouces;
+import com.Solver.Solver.ModelClass.Factories;
 import com.Solver.Solver.ModelClass.GroupMessage;
 import com.Solver.Solver.ModelClass.JobC;
 import com.Solver.Solver.ModelClass.Schedule;
@@ -101,6 +104,11 @@ public class GroupChatAtv extends AppCompatActivity {
     private ImageButton closeBtn,closeImgBtn;
     private String name_reply,comName_reply,job_reply,msg_reply,spearPart_reply,msg_type,imageUri_reply,msg_TypeImage;
     private TextView nameTv_Rp,clientTv_Rp,subTv_Rp,msgTv_Rp,spearPartTv_Rp;
+    private Button addFactoryBtn;
+    private View viewClientForm;
+    private AutoCompleteTextView factoryAt;
+    private Button cancelDlBtn;
+    private Button addDlBtn;
 
     List<GroupMessage> groupMessagesList;
     List<String> factoryList=new ArrayList<>();
@@ -109,6 +117,7 @@ public class GroupChatAtv extends AppCompatActivity {
     ArrayList<String> clientList;
     ArrayList<String> jobList = new ArrayList<>();
     ArrayAdapter<String> factoryAdapter;
+    ArrayAdapter<String> factoryAdapter_At;
     ArrayAdapter<String> jobAdapter;
     Common_Resouces common_resouces;
     String[] clientNameArray;
@@ -117,6 +126,7 @@ public class GroupChatAtv extends AppCompatActivity {
     ArrayAdapter<String> imageTypeApter;
     UploadTask imageUploadTask;
     StorageReference groupImageRef;
+    DatabaseReference factoryRef;
 
      String tagClientName="";
 
@@ -130,8 +140,6 @@ public class GroupChatAtv extends AppCompatActivity {
         setContentView(R.layout.activity_group_chat_atv);
         groupMessagesList = new ArrayList<>();
         recyclerView = findViewById(R.id.recycler_view);
-
-      //  Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         common_resouces = new Common_Resouces();
         clientList = new ArrayList<>();
@@ -163,15 +171,18 @@ public class GroupChatAtv extends AppCompatActivity {
         UsersRef = FirebaseDatabase.getInstance().getReference().child("User");
         GroupNameRef = FirebaseDatabase.getInstance().getReference().child("Group").child(currentGroupName);
         clientRef = FirebaseDatabase.getInstance().getReference().child("Client");
+        factoryRef= FirebaseDatabase.getInstance().getReference().child("factories");
 
         scheduleREf = FirebaseDatabase.getInstance().getReference().child("Schedule").child("ScheduleTbl");
         allScheduleREf = FirebaseDatabase.getInstance().getReference().child("Schedule").child("All_ScheduleTbl");
         jobRef = FirebaseDatabase.getInstance().getReference().child("Schedule").child("Job");
         groupImageRef = FirebaseStorage.getInstance().getReference().child("Group").child(currentGroupName);
 
+
         notification=new NotificationCompat.Builder(GroupChatAtv.this);
         InitializeFields();
         dateTime();
+        clientShow();
 
         imageLot.setVisibility(View.GONE);
         replyLot.setVisibility(View.GONE);
@@ -186,6 +197,7 @@ public class GroupChatAtv extends AppCompatActivity {
         imageTypeAL.add("screen shot");
         imageTypeAL.add("Others");
 */
+
         DatabaseReference imageTypeRef=FirebaseDatabase.getInstance().getReference("Others").child("ImageType");
 
         //imageTypeRef.setValue(imageTypeAL);
@@ -213,11 +225,13 @@ public class GroupChatAtv extends AppCompatActivity {
                 if(factoryCb.isChecked()){
                     tagClientAt.setVisibility(View.VISIBLE);
                     jobSpLt.setVisibility(View.VISIBLE);
+                    addFactoryBtn.setVisibility(View.VISIBLE);
                 }
 
                 if (!factoryCb.isChecked()){
                     tagClientAt.setVisibility(View.GONE);
                     jobSpLt.setVisibility(View.GONE);
+                    addFactoryBtn.setVisibility(View.GONE);
                 }
             }
         });
@@ -278,6 +292,9 @@ public class GroupChatAtv extends AppCompatActivity {
 
            // Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show();
         }
+
+
+
         DatabaseReference clientRef = FirebaseDatabase.getInstance().getReference().child("Client");
         clientList.clear();
         clientRef.addValueEventListener(new ValueEventListener() {
@@ -302,6 +319,7 @@ public class GroupChatAtv extends AppCompatActivity {
         GetUserInfo();
 
 
+        factoryList.clear();
        Query lastQuery= scheduleREf.child(currentUserID).child(currentSceDate);
 
         lastQuery.addValueEventListener(new ValueEventListener() {
@@ -361,6 +379,60 @@ public class GroupChatAtv extends AppCompatActivity {
             }
         });
 */
+
+        addFactoryBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                AlertDialog.Builder alert=new AlertDialog.Builder(GroupChatAtv.this);
+                viewClientForm=getLayoutInflater().inflate(R.layout.addfactory_for_schedule,null);
+                findIdByClientDialogViw();
+                alert.setView(viewClientForm);
+                final AlertDialog alertDialogByClient=alert.create();
+                alertDialogByClient.setCanceledOnTouchOutside(false);
+                alertDialogByClient.show();
+
+                factoryAdapter_At=new ArrayAdapter<String>(GroupChatAtv.this,R.layout.spennersamplelayout,R.id.showTestSpinnerId,clientList);
+                factoryAt.setAdapter(factoryAdapter_At);
+
+                addDlBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        factoryList.clear();
+                        String companyName = factoryAt.getText().toString().trim();
+                        //companyNameEt.setText(bloodGroups);
+
+                        if(companyName.isEmpty()){
+                            factoryAt.setError("Please Enter Factory Name..!");
+                            return;
+                        }
+
+                        Schedule schedule=new Schedule(companyName);
+                        scheduleREf.child(currentUserID).child(currentSceDate).push().setValue(schedule).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if(task.isSuccessful()){
+                                    Toast.makeText(getApplicationContext(),"Upload Successful",Toast.LENGTH_SHORT).show();
+                                }else {
+                                    Toast.makeText(getApplicationContext(),"Exception:"+task.getException().getMessage(),Toast.LENGTH_LONG).show();
+
+                                }
+                            }
+                        });
+
+                        alertDialogByClient.cancel();
+                    }
+                });
+                cancelDlBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        alertDialogByClient.dismiss();
+                    }
+                });
+            }
+        });
+
         scheduleREf.child(currentUserID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -439,7 +511,7 @@ public class GroupChatAtv extends AppCompatActivity {
         jobList.add("");
 
         try {
-            jobRef.child(currentUserID).addValueEventListener(new ValueEventListener() {
+            jobRef.child(currentUserID).child(currentSceDate).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     for (DataSnapshot data : dataSnapshot.getChildren()) {
@@ -521,6 +593,18 @@ public class GroupChatAtv extends AppCompatActivity {
         });
     }
 
+    private void toast(String msg) {
+
+        Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_SHORT).show();
+
+    }
+
+    private void findIdByClientDialogViw() {
+        factoryAt=viewClientForm.findViewById(R.id.addFactoryAtId);
+        cancelDlBtn=viewClientForm.findViewById(R.id.cancelFactoryDlBtnId);
+        addDlBtn=viewClientForm.findViewById(R.id.addFactoryDlBtnId);
+    }
+
     private void saveReplyWithImageData() {
         String message = userMessageInput.getText().toString();
         // String subMSG = subEt.getText().toString();
@@ -528,12 +612,14 @@ public class GroupChatAtv extends AppCompatActivity {
           if(factoryCb.isChecked()){
             tagClientAt.setVisibility(View.VISIBLE);
             jobSpLt.setVisibility(View.VISIBLE);
+              addFactoryBtn.setVisibility(View.VISIBLE);
             tagClientName = factorySp.getSelectedItem().toString();
         }
 
         if (!factoryCb.isChecked()){
             tagClientAt.setVisibility(View.GONE);
             jobSpLt.setVisibility(View.GONE);
+            addFactoryBtn.setVisibility(View.GONE);
         }
         String sparePart = spare_PartEt.getText().toString();
         String messagekEY = GroupNameRef.push().getKey();
@@ -590,12 +676,14 @@ public class GroupChatAtv extends AppCompatActivity {
         if(factoryCb.isChecked()){
             tagClientAt.setVisibility(View.VISIBLE);
             jobSpLt.setVisibility(View.VISIBLE);
+            addFactoryBtn.setVisibility(View.VISIBLE);
             tagClientName = factorySp.getSelectedItem().toString();
         }
 
         if (!factoryCb.isChecked()){
             tagClientAt.setVisibility(View.GONE);
             jobSpLt.setVisibility(View.GONE);
+            addFactoryBtn.setVisibility(View.GONE);
         }
         String sparePart = spare_PartEt.getText().toString();
         String messagekEY = GroupNameRef.push().getKey();
@@ -705,7 +793,9 @@ public class GroupChatAtv extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        GroupNameRef.addValueEventListener(new ValueEventListener() {
+       // .orderByChild("date").equalTo(currentDate)
+        GroupNameRef.limitToLast(50).addValueEventListener(new ValueEventListener() {
+
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 groupMessagesList.clear();
@@ -731,8 +821,9 @@ public class GroupChatAtv extends AppCompatActivity {
     }
 
     private void InitializeFields() {
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(currentGroupName);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         SendMessageButton = (ImageButton) findViewById(R.id.send_message_button);
         selectImageIBnt = (ImageButton) findViewById(R.id.selectImageIBtnId);
         selectLocationIBtn = (ImageButton) findViewById(R.id.selectLocationIBtnId);
@@ -753,6 +844,8 @@ public class GroupChatAtv extends AppCompatActivity {
         subTv_Rp=findViewById(R.id.subTv_RpId);
         msgTv_Rp=findViewById(R.id.msgTv_RpId);
         spearPartTv_Rp=findViewById(R.id.sparePartTv_RpId);
+
+        addFactoryBtn=findViewById(R.id.addFactoryBtnId);
         // displayTextMessages =findViewById(R.id.group_chat_textId);
         // mScrollView = (ScrollView) findViewById(R.id.my_scroll_view);
 
@@ -792,6 +885,27 @@ public class GroupChatAtv extends AppCompatActivity {
             }
         });
     }
+    private void clientShow() {
+        clientList.clear();
+        factoryRef.addValueEventListener(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                for (DataSnapshot data: dataSnapshot.getChildren()){
+                    Factories client=data.getValue(Factories.class);
+                    String clientNam=client.getCompany_name();
+                    clientList.add(clientNam);
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
 
     private void SaveMessageInfoToDatabase() {
 
@@ -802,12 +916,14 @@ public class GroupChatAtv extends AppCompatActivity {
                if(factoryCb.isChecked()){
                    tagClientAt.setVisibility(View.VISIBLE);
                    jobSpLt.setVisibility(View.VISIBLE);
+                   addFactoryBtn.setVisibility(View.VISIBLE);
                    tagClientName = factorySp.getSelectedItem().toString();
                }
 
                if (!factoryCb.isChecked()){
                    tagClientAt.setVisibility(View.GONE);
                    jobSpLt.setVisibility(View.GONE);
+                   addFactoryBtn.setVisibility(View.GONE);
                }
 
         String sparePart = spare_PartEt.getText().toString();
@@ -982,6 +1098,11 @@ public class GroupChatAtv extends AppCompatActivity {
                }
            });
         }
+if (item.getItemId()==android.R.id.home){
+    onBackPressed();
+
+}
+
         return true;
     }
 
