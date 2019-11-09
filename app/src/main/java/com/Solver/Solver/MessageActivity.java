@@ -16,6 +16,7 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -37,6 +38,7 @@ import com.Solver.Solver.Notifications.MyResponse;
 import com.Solver.Solver.Notifications.Sender;
 import com.Solver.Solver.Notifications.Token;
 import com.bumptech.glide.Glide;
+import com.developers.imagezipper.ImageZipper;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -53,6 +55,9 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -60,6 +65,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import id.zelory.compressor.Compressor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -222,7 +228,7 @@ public class MessageActivity extends AppCompatActivity {
                 }else {
                 if (!msg.equals("")){
                     sendMessage(fuser.getUid(), userid, msg);
-                    Toast.makeText(MessageActivity.this, "This is test Mode", Toast.LENGTH_SHORT).show();
+                  //  Toast.makeText(MessageActivity.this, "This is test Mode", Toast.LENGTH_SHORT).show();
 
                 } else {
                     Toast.makeText(MessageActivity.this, "You can't send empty message", Toast.LENGTH_SHORT).show();
@@ -361,7 +367,7 @@ public class MessageActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if(task.isSuccessful()){
-                        Toast.makeText(getApplicationContext(),"msg Reply successfully sended",Toast.LENGTH_LONG).show();
+                      //  Toast.makeText(getApplicationContext(),"msg Reply successfully sended",Toast.LENGTH_LONG).show();
                     }
                 }
             }).addOnFailureListener(new OnFailureListener() {
@@ -456,7 +462,7 @@ public class MessageActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if(task.isSuccessful()){
-                        Toast.makeText(getApplicationContext(),"msg Reply successfully sended",Toast.LENGTH_LONG).show();
+                       // Toast.makeText(getApplicationContext(),"msg Reply successfully sended",Toast.LENGTH_LONG).show();
                     }
                 }
             }).addOnFailureListener(new OnFailureListener() {
@@ -562,8 +568,10 @@ public class MessageActivity extends AppCompatActivity {
        // messageIMGkEY = GroupNameRef.push().getKey();
        // StorageReference imagePath = groupImageRef.child(imagePushId + ".jpg");
         StorageReference imagePath = FirebaseStorage.getInstance().getReference("chatImage").child(imagePushId + ".jpg");
-      //  UploadTask uploadTask=imagePath.putBytes(image_Final);
-        imagePath.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+        UploadTask uploadTask=imagePath.putBytes(image_Final);
+       // imagePath.putFile(imageUri)
+
+        uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
@@ -706,7 +714,7 @@ public class MessageActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(getApplicationContext(),"msg successfully sended",Toast.LENGTH_LONG).show();
+                   // Toast.makeText(getApplicationContext(),"msg successfully sended",Toast.LENGTH_LONG).show();
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {
@@ -859,35 +867,40 @@ public class MessageActivity extends AppCompatActivity {
         if (requestCode == REQUEST_CODE && data != null && data.getData() != null) {
 
             imageUri = data.getData();
-/*
 
             File actualImage=new File(imageUri.getPath());
            // compressedImageFile = new Compressor(this).compressToFile(actualImage);
             try {
-               */
-/*  compressedImage = new Compressor(this)
+  compressedImage = new Compressor(this)
                          .setMaxWidth(480)
                          .setMaxHeight(480)
-                         .setQuality(75)
+                         .setQuality(100)
                          .compressToBitmap(actualImage);
-*//*
+
+          /*      compressedImage = new Compressor(this)
+                        .setMaxWidth(640)
+                        .setMaxHeight(480)
+                        .setQuality(75)
+                        .compressToFile(actualImage);
+*/
+/*
 
                 File imageZipperFile=new ImageZipper(MessageActivity.this)
                         .setQuality(75)
                         .setMaxWidth(480)
                         .setMaxHeight(480)
                         .compressToFile(actualImage);
-
+*/
                 Bitmap b=new ImageZipper(MessageActivity.this).compressToBitmap(actualImage);
 
                 ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                b.compress(Bitmap.CompressFormat.JPEG, 75, baos);
+                b.compress(Bitmap.CompressFormat.JPEG, 100, baos);
                 image_Final = baos.toByteArray();
 
             } catch (IOException e) {
                 e.printStackTrace();
             }
-*/
+
 
             // Picasso.get().load(imageUri).rotate(270).into(profileIV);
             //this is file compress method
@@ -908,7 +921,7 @@ public class MessageActivity extends AppCompatActivity {
 
                 cropImageUri = result.getUri();*/
 
-            Glide.with(imageGC).load(imageUri)
+            Glide.with(imageGC).load(image_Final)
                     .placeholder(R.drawable.ic_touch_app_black_24dp)
                     .into(imageGC);
 

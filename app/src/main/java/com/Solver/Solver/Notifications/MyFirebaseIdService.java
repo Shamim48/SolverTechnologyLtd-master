@@ -9,11 +9,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdReceiver;
 
+import com.google.firebase.iid.FirebaseInstanceIdService;
 import com.google.firebase.iid.internal.FirebaseInstanceIdInternal;
 import com.google.firebase.messaging.FirebaseMessagingService;
 
 
-public class MyFirebaseIdService /*extends FirebaseInstanceIdService*/ {
+public class MyFirebaseIdService extends FirebaseInstanceIdService {
 
   /*  @Override
     public void onNewToken(@NonNull String s) {
@@ -26,7 +27,7 @@ public class MyFirebaseIdService /*extends FirebaseInstanceIdService*/ {
         }
     }*/
 
- /*   @Override
+    @Override
     public void onTokenRefresh() {
         //super.();
         super.onTokenRefresh();
@@ -49,5 +50,4 @@ public class MyFirebaseIdService /*extends FirebaseInstanceIdService*/ {
         Token token = new Token(refreshToken);
         reference.child(firebaseUser.getUid()).setValue(token);
     }
-*/
 }

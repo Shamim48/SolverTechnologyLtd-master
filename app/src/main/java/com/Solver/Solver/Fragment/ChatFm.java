@@ -323,12 +323,12 @@ public class ChatFm extends Fragment {
     public void onStart() {
         super.onStart();
         String tagUserName=userSV.getQuery().toString();
-        if(tagUserName.equals("")){
+       /* if(tagUserName.equals("")){
             lltCtLV.setVisibility(View.GONE);
             tagUserLV.setVisibility(View.GONE);
         }else {
             lltCtLV.setVisibility(View.VISIBLE);
             tagUserLV.setVisibility(View.VISIBLE);
-        }
+        }*/
     }
 }

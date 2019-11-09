@@ -75,8 +75,24 @@
             </intent-filter>
         </service>
 
+        <service android:name=".Notifications.MyFirebaseIdService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
 
-        <!--   <service
+       <!-- <service android:name=".Notifications.MyFirebaseMessaging"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+-->
+<!--
+           <service
                android:name=".Service.FirebaseNotificationService"
                android:permission="com.google.android.c2dm.permission.SEND">
                android:exported="false">

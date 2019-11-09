@@ -43,7 +43,7 @@ public class FirebaseNotificationService extends FirebaseMessagingService {
     Query lastQuery;
     String gName;
     String msg;
-/*
+
     @Override
     public void onStart(Intent intent, int startId) {
         super.onStart(intent, startId);
@@ -66,7 +66,7 @@ public class FirebaseNotificationService extends FirebaseMessagingService {
             PendingIntent pendingIntent = PendingIntent.getActivity(FirebaseNotificationService.this, 0, intent, 0);
 
             NotificationCompat.Builder builder = new NotificationCompat.Builder(FirebaseNotificationService.this,Channel_Id)
-                    .setSmallIcon(R.drawable.solver logo)
+                    .setSmallIcon(R.drawable.solverlogo)
                     .setContentTitle(gName)
                     .setContentText(msg)
                     .setPriority(NotificationCompat.PRIORITY_DEFAULT)
@@ -80,14 +80,12 @@ public class FirebaseNotificationService extends FirebaseMessagingService {
 
        // notificationManager.notify(notificationId, builder.build());
 
-
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
         });
- }*/
+ }
 
 
     @Override
@@ -95,7 +93,6 @@ public class FirebaseNotificationService extends FirebaseMessagingService {
         super.onMessageReceived(remoteMessage);
         //String sented = remoteMessage.getData().get("sented");
        // String user = remoteMessage.getData().get("user");
-
 
 /*
         groupMsgREf.addValueEventListener(new ValueEventListener() {
@@ -115,9 +112,10 @@ public class FirebaseNotificationService extends FirebaseMessagingService {
 
             }
         });
-
-
 */
+
+
+
 
         String sented = remoteMessage.getData().get("sented");
         String user = remoteMessage.getData().get("user");
@@ -132,11 +130,11 @@ public class FirebaseNotificationService extends FirebaseMessagingService {
         String sub = root.get("sub");
         String time = root.get("time");
         // Random random=new Random(100);
-     //   if (!groupName.equals("")) {
+        if (remoteMessage.getData().containsKey("groupName")) {
 
             Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
             Intent intent = new Intent(FirebaseNotificationService.this, GroupChatAtv.class);
-            intent.putExtra("GroupName",groupName);
+            intent.putExtra("GroupName", groupName);
             intent.setAction("showMessage");
             PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
             NotificationCompat.Builder builder = new NotificationCompat.Builder(this, Channel_Id);
@@ -157,7 +155,10 @@ public class FirebaseNotificationService extends FirebaseMessagingService {
                 channel.setDescription("Description");
                 notificationManager.createNotificationChannel(channel);
             }
-        notificationManager.notify(101, builder.build());
+
+                notificationManager.notify(101, builder.build());
+
+        }
 
            /* if (remoteMessage.getNotification() != null) {
                 Map<String, String> root = remoteMessage.getData();
@@ -224,6 +225,33 @@ public class FirebaseNotificationService extends FirebaseMessagingService {
                         }
                     }*//*
         }*/
+
+
+        else {
+
+
+
+
+                SharedPreferences preferences = getSharedPreferences("PREFS", MODE_PRIVATE);
+                String currentUser = preferences.getString("currentuser", "none");
+
+                FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+
+                if (firebaseUser != null && sented.equals(firebaseUser.getUid())) {
+                    if (!currentUser.equals(user)) {
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                            sendOreoNotification(remoteMessage);
+                        } else {
+                            sendNotification(remoteMessage);
+                        }
+                    }
+                }
+
+
+
+
+        }
+
     }
 
     private void sendOreoNotification(RemoteMessage remoteMessage){
