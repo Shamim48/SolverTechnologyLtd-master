@@ -15,6 +15,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -39,7 +40,8 @@ public class Schedule_Display extends AppCompatActivity {
        // getActionBar().setTitle("Schedule");
         allScheduleREf= FirebaseDatabase.getInstance().getReference().child("Schedule").child("All_ScheduleTbl");
       scheduleList.clear();
-        allScheduleREf.addValueEventListener(new ValueEventListener() {
+        Query allScheduleQuery=allScheduleREf.limitToLast(30);
+        allScheduleQuery.addValueEventListener(new ValueEventListener() {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

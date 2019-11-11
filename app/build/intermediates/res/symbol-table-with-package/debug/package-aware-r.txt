@@ -40,6 +40,10 @@ animator mtrl_fab_transformation_sheet_expand_spec
 array countryList
 array jobList
 array religionList
+attr DialogSpotColor
+attr DialogSpotCount
+attr DialogTitleAppearance
+attr DialogTitleText
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -775,6 +779,7 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color spots_dialog_color
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
@@ -1001,11 +1006,15 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen progress_margin
+dimen progress_width
+dimen spot_size
 dimen subtitle_corner_radius
 dimen subtitle_outline_width
 dimen subtitle_shadow_offset
 dimen subtitle_shadow_radius
 dimen text_margin
+dimen title_margin
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -1144,6 +1153,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable dmax_spots_spot
 drawable edittextbg
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
@@ -1172,6 +1182,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_playlist_add_black_24dp
+drawable ic_rotate_right_black_24dp
 drawable ic_send_black_24dp
 drawable ic_touch_app_black_24dp
 drawable layoutbg
@@ -1411,6 +1422,8 @@ id direct
 id disableHome
 id discountQsTvId
 id displayScheduleId
+id dmax_spots_progress
+id dmax_spots_title
 id downloadMenuId
 id drawer_layout
 id editAccountId
@@ -1592,6 +1605,7 @@ id resetPasswordBtnId
 id right
 id right_icon
 id right_side
+id rotateMenuId
 id row_menu
 id row_menuSdId
 id save_image_matrix
@@ -1857,6 +1871,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout dmax_spots_dialog
 layout fragment_chat_fm
 layout fragment_client_fm
 layout fragment_employee
@@ -2264,6 +2279,7 @@ style RtlOverlay_Widget_AppCompat_Search_DropDown_Text
 style RtlOverlay_Widget_AppCompat_SearchView_MagIcon
 style RtlUnderlay_Widget_AppCompat_ActionButton
 style RtlUnderlay_Widget_AppCompat_ActionButton_Overflow
+style SpotsDialogDefault
 style TextAppearance_AppCompat
 style TextAppearance_AppCompat_Body1
 style TextAppearance_AppCompat_Body2
@@ -2577,6 +2593,7 @@ styleable CoordinatorLayout keylines statusBarBackground
 styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_anchorGravity layout_behavior layout_dodgeInsetEdges layout_insetEdge layout_keyline
 styleable CropImageView cropAspectRatioX cropAspectRatioY cropAutoZoomEnabled cropBackgroundColor cropBorderCornerColor cropBorderCornerLength cropBorderCornerOffset cropBorderCornerThickness cropBorderLineColor cropBorderLineThickness cropFixAspectRatio cropFlipHorizontally cropFlipVertically cropGuidelines cropGuidelinesColor cropGuidelinesThickness cropInitialCropWindowPaddingRatio cropMaxCropResultHeightPX cropMaxCropResultWidthPX cropMaxZoom cropMinCropResultHeightPX cropMinCropResultWidthPX cropMinCropWindowHeight cropMinCropWindowWidth cropMultiTouchEnabled cropSaveBitmapToInstanceState cropScaleType cropShape cropShowCropOverlay cropShowProgressBar cropSnapRadius cropTouchRadius
 styleable DesignTheme bottomSheetDialogTheme bottomSheetStyle
+styleable Dialog DialogSpotColor DialogSpotCount DialogTitleAppearance DialogTitleText
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
 styleable FloatingActionButton backgroundTint backgroundTintMode borderWidth elevation fabCustomSize fabSize hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor showMotionSpec useCompatPadding
 styleable FloatingActionButton_Behavior_Layout behavior_autoHide

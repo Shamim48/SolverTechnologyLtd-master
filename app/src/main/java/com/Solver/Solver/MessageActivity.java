@@ -558,20 +558,20 @@ public class MessageActivity extends AppCompatActivity {
 
     private void uploadImage(final String sender, final String receiver, final String msg) {
         Context context;
-        final ProgressDialog progressDialog=new ProgressDialog(MessageActivity.this);
+       /* final ProgressDialog progressDialog=new ProgressDialog(MessageActivity.this);
         progressDialog.setTitle("Please Wait..");
         progressDialog.setMessage("Image Sending");
         progressDialog.show();
-
+*/
 
         final String imagePushId = imageKeyRef.push().getKey();
        // messageIMGkEY = GroupNameRef.push().getKey();
        // StorageReference imagePath = groupImageRef.child(imagePushId + ".jpg");
         StorageReference imagePath = FirebaseStorage.getInstance().getReference("chatImage").child(imagePushId + ".jpg");
-        UploadTask uploadTask=imagePath.putBytes(image_Final);
+       // UploadTask uploadTask=imagePath.putBytes(image_Final);
        // imagePath.putFile(imageUri)
 
-        uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+        imagePath.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
@@ -602,7 +602,7 @@ public class MessageActivity extends AppCompatActivity {
                 imageUri=null;
                 imageLot.setVisibility(View.GONE);
                 sendNotifiaction(fuser.getUid(),userid,username+": sent a new Photo.");
-                progressDialog.dismiss();
+               // progressDialog.dismiss();
             }
         });
 
@@ -626,7 +626,9 @@ public class MessageActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (!dataSnapshot.exists()){
+
                     chatRef.child("id").setValue(userid);
+
                 }
             }
 
@@ -921,7 +923,7 @@ public class MessageActivity extends AppCompatActivity {
 
                 cropImageUri = result.getUri();*/
 
-            Glide.with(imageGC).load(image_Final)
+            Glide.with(imageGC).load(imageUri)
                     .placeholder(R.drawable.ic_touch_app_black_24dp)
                     .into(imageGC);
 

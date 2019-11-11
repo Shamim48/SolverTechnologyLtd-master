@@ -64,19 +64,33 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
         holder.jobInfoTv.append(schedule.getList().get(i).getJobTitle()+"\nCategory:"+schedule.getList().get(i).getCategory()+"\nDes: "+schedule.getList().get(i).getJobDes()+"\n\n");
 
         }*/
+
         try {
 
-            for (JobC jobC:schedule.getList()){
+            StringBuffer job=new StringBuffer();
+            for (JobC jobC:schedulesList.get(position).getList()){
 
-
-                holder.jobInfoTv.append("Job Name: "+jobC.getJobTitle()+" .\nCategory:"+jobC.getCategory()+" .\nDes: "+jobC.getJobDes()+" .\n\n");
-
+                job.append("Job Name: "+jobC.getJobTitle()+" .\nCategory:"+jobC.getCategory()+" .\nDes: "+jobC.getJobDes()+" .\n\n");
 
             }
+
+            holder.jobInfoTv.setText(job);
+
         }catch (NullPointerException e){
 
         }
 
+       /* try {
+
+            for (int i=0;i<=schedulesList.get(position).getList().size();i++){
+
+                holder.jobInfoTv.append("Job Name: "+schedule.getList().get(i).getJobTitle()+" .\nCategory:"+schedule.getList().get(i).getCategory()+" .\nDes: "+schedule.getList().get(i).getJobDes()+" .\n\n");
+
+            }
+        }catch (Exception e){
+
+        }
+*/
         if(!(userEmail.equals("solver.apps.bd@gmail.com"))){
             holder.row_menuTv.setText(null);
         }else {

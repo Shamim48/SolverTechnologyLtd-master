@@ -4,6 +4,25 @@
             "outputFile": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\d96dd50921af81286de1ecc09411ce6b\\res\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "7",
+                        "endColumns": "12",
+                        "endOffsets": "411"
+                    },
+                    "to": {
+                        "startLines": "269",
+                        "startColumns": "4",
+                        "startOffsets": "19498",
+                        "endLines": "274",
+                        "endColumns": "12",
+                        "endOffsets": "19854"
+                    }
+                },
+                {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\cb01e1ad311dae53995b72c5aa6ee81c\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,5,8,11",
@@ -14,12 +33,12 @@
                         "endOffsets": "218,381,549,716"
                     },
                     "to": {
-                        "startLines": "271,274,278,282",
+                        "startLines": "277,280,284,288",
                         "startColumns": "4,4,4,4",
-                        "startOffsets": "19740,19908,20197,20493",
-                        "endLines": "273,276,280,284",
+                        "startOffsets": "20101,20269,20558,20854",
+                        "endLines": "279,282,286,290",
                         "endColumns": "12,12,12,12",
-                        "endOffsets": "19903,20066,20360,20655"
+                        "endOffsets": "20264,20427,20721,21016"
                     }
                 },
                 {
@@ -33,12 +52,12 @@
                         "endOffsets": "154,218,285,349,465,591,717,845,1017,1355"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,269,270,277,281,317,320",
+                        "startLines": "2,3,4,5,275,276,283,287,323,326",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,159,223,290,19498,19614,20071,20365,22373,22545",
-                        "endLines": "2,3,4,5,269,270,277,281,319,324",
+                        "startOffsets": "55,159,223,290,19859,19975,20432,20726,22734,22906",
+                        "endLines": "2,3,4,5,275,276,283,287,325,330",
                         "endColumns": "103,63,66,63,115,125,125,127,12,12",
-                        "endOffsets": "154,218,285,349,19609,19735,20192,20488,22540,22878"
+                        "endOffsets": "154,218,285,349,19970,20096,20553,20849,22901,23239"
                     }
                 },
                 {
@@ -52,12 +71,12 @@
                         "endOffsets": "479,905,1328,1763"
                     },
                     "to": {
-                        "startLines": "285,293,301,309",
+                        "startLines": "291,299,307,315",
                         "startColumns": "4,4,4,4",
-                        "startOffsets": "20660,21089,21515,21938",
-                        "endLines": "292,300,308,316",
+                        "startOffsets": "21021,21450,21876,22299",
+                        "endLines": "298,306,314,322",
                         "endColumns": "10,10,10,10",
-                        "endOffsets": "21084,21510,21933,22368"
+                        "endOffsets": "21445,21871,22294,22729"
                     }
                 },
                 {

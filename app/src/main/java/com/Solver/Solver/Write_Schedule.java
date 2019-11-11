@@ -403,9 +403,9 @@ public class Write_Schedule extends AppCompatActivity{
                         String job= TextUtils.join(", ",jList);
                         showTV.setText(job);
 */
-
-                Schedule schedule=new Schedule(tagUserId,name,date,comName,jList);
-                scheduleREf.child(tagUserId).child(date).push().setValue(schedule).addOnCompleteListener(new OnCompleteListener<Void>() {
+                String sdlKey=scheduleREf.push().getKey();
+                Schedule schedule=new Schedule(sdlKey,name,date,comName,jList);
+                scheduleREf.child(tagUserId).child(date).child(sdlKey).setValue(schedule).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
