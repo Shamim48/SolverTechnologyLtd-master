@@ -68,9 +68,15 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
         try {
 
             StringBuffer job=new StringBuffer();
+            String jobCategory="";
             for (JobC jobC:schedulesList.get(position).getList()){
+                if(jobC.getCategory().equals("Chose category")){
+                    jobCategory="";
+                }else {
+                    jobCategory=jobC.getCategory();
+                }
 
-                job.append("Job Name: "+jobC.getJobTitle()+" .\nCategory:"+jobC.getCategory()+" .\nDes: "+jobC.getJobDes()+" .\n\n");
+                job.append("Job Name: "+jobC.getJobTitle()+"("+jobCategory+").\nDes: "+jobC.getJobDes()+" .\n\n");
 
             }
 

@@ -47,10 +47,13 @@ import java.util.List;
 public class Write_Schedule extends AppCompatActivity{
 
     private Button uploadBtn;
+    private TextView tagEmployeeTv;
+    private Button addEmployeeBtn;
     private EditText dateWsEt;
     private SearchView userSV;
     private AutoCompleteTextView companyWsAt;
     private ListView tagUserLV;
+    private ListView scheduleEmployeeLv;
     private Spinner categorySp;
     private LinearLayout lltWsId;
     private ImageButton closeWsId;
@@ -67,6 +70,7 @@ public class Write_Schedule extends AppCompatActivity{
     ArrayList<String> clientList;
     DatabaseReference clientRef;
     ArrayList<String> tagUserL=new ArrayList<>();
+    ArrayList<String> scheduleEmployeeList=new ArrayList<>();
 
     // All Adapter here ,,...
     ArrayAdapter<String> clientAdapter;
@@ -80,6 +84,7 @@ public class Write_Schedule extends AppCompatActivity{
     ArrayAdapter<String> categorySpAdapter;
     ArrayAdapter<String> spinnerAdapter1,spinnerAdapter2,spinnerAdapter3,spinnerAdapter4,spinnerAdapter5,spinnerAdapter6,spinnerAdapter7,
                      spinnerAdapter8,spinnerAdapter9,spinnerAdapter10,spinnerAdapter11,spinnerAdapter12,spinnerAdapter13;
+    ArrayAdapter scheduleEmployeeAdapter;
     TagUserAdepter tagUserAdepter;
     TagUserBaseAdapter tagUserBaseAdapter;
     TagUserArrayAdapter tagUserArrayAdapter;
@@ -90,6 +95,7 @@ public class Write_Schedule extends AppCompatActivity{
     String tagUserName;
     String tagUserId;
     StringBuffer jobBuilder;
+    StringBuffer employee;
 
     String jobName1;
     String jobDes1;
@@ -108,6 +114,7 @@ public class Write_Schedule extends AppCompatActivity{
     String jobName8;
     String jobDes8;
     Schedule schedule;
+    String jobCategory_G;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -137,11 +144,11 @@ public class Write_Schedule extends AppCompatActivity{
         clientShow();
 
         categoryList=new ArrayList<>();
-        categoryList.add("Chose category.");
-        categoryList.add("Warranty.");
-        categoryList.add("Non Warranty.");
-        categoryList.add("On Request.");
-        categoryList.add("Installation.");
+        categoryList.add("Chose category");
+        categoryList.add("Warranty");
+        categoryList.add("Non Warranty");
+        categoryList.add("On Request");
+        categoryList.add("Installation");
         initializeSpinner();
 
        // getCheckBoxAndDesText();
@@ -168,6 +175,25 @@ public class Write_Schedule extends AppCompatActivity{
             }
         });
 
+        addEmployeeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                 employee=new StringBuffer();
+              String tagEmployee=userSV.getQuery().toString();
+              scheduleEmployeeList.add(tagEmployee);
+             // scheduleEmployeeAdapter=new ArrayAdapter(Write_Schedule.this,R.layout.spennersamplelayout,R.id.showTestSpinnerId,scheduleEmployeeList);
+              //scheduleEmployeeLv.setAdapter(scheduleEmployeeAdapter);
+             // scheduleEmployeeAdapter.notifyDataSetChanged();
+              userSV.setQuery("",true);
+              userSV.clearFocus();
+              Toast.makeText(getApplicationContext(),"selected Employee:"+scheduleEmployeeList.size(),Toast.LENGTH_SHORT).show();
+
+              for (String tagEp:scheduleEmployeeList){
+                  employee.append(tagEp+" , ");
+              }
+              tagEmployeeTv.setText(employee);
+            }
+        });
         uploadBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -187,9 +213,6 @@ public class Write_Schedule extends AppCompatActivity{
 
                         StringBuilder builder=new StringBuilder();
 
-
-
-
                         if (checkBox1.isChecked()){
                             jodDesEt1.setVisibility(View.VISIBLE);
                             String checkBosText=checkBox1.getText().toString();
@@ -200,12 +223,12 @@ public class Write_Schedule extends AppCompatActivity{
 
                             jList.add(new JobC(checkBosText,jobDesText,jobCategory));
 
-
                         }else if(!checkBox1.isChecked()){
                             jodDesEt1.setText(null);
                             jodDesEt1.setVisibility(View.GONE);
 
                         }
+
                         if (checkBox2.isChecked()){
                             jodDesEt2.setVisibility(View.VISIBLE);
                             String checkBosText=checkBox2.getText().toString();
@@ -218,9 +241,7 @@ public class Write_Schedule extends AppCompatActivity{
                         }else if(!checkBox2.isChecked()){
                             jodDesEt2.setText(null);
                             jodDesEt2.setVisibility(View.GONE);
-
                         }
-
 
                         if (checkBox3.isChecked()){
                             jodDesEt3.setVisibility(View.VISIBLE);
@@ -231,20 +252,18 @@ public class Write_Schedule extends AppCompatActivity{
 
                             jList.add(new JobC(checkBosText,jobDesText,jobCategory));
 
-
                         }else if(!checkBox3.isChecked()){
                             jodDesEt3.setText(null);
                             jodDesEt3.setVisibility(View.GONE);
 
                         }
+
                 if (checkBox4.isChecked()){
                             jodDesEt4.setVisibility(View.VISIBLE);
                             String checkBosText=checkBox4.getText().toString();
                             String jobDesText=jodDesEt4.getText().toString();
                             String jobCategory=spinner4.getSelectedItem().toString();
-
                             jList.add(new JobC(checkBosText,jobDesText,jobCategory));
-
 
                         }else if(!checkBox4.isChecked()){
                             jodDesEt4.setText(null);
@@ -259,7 +278,6 @@ public class Write_Schedule extends AppCompatActivity{
                      String jobCategory=spinner5.getSelectedItem().toString();
 
                      jList.add(new JobC(checkBosText,jobDesText,jobCategory));
-
 
                  }else if(!checkBox5.isChecked()) {
                      jodDesEt5.setText(null);
@@ -368,9 +386,7 @@ public class Write_Schedule extends AppCompatActivity{
                         }else if(!checkBox12.isChecked()){
                             jodDesEt12.setText(null);
                             jodDesEt12.setVisibility(View.GONE);
-
                         }
-
 
                         if (checkBox13.isChecked()){
                             jodDesEt13.setVisibility(View.VISIBLE);
@@ -380,8 +396,6 @@ public class Write_Schedule extends AppCompatActivity{
 
                             jList.add(new JobC(checkBosText,jobDesText,jobCategory));
 
-
-
                         }else if(!checkBox13.isChecked()){
                             jodDesEt13.setText(null);
                             jodDesEt13.setVisibility(View.GONE);
@@ -389,13 +403,12 @@ public class Write_Schedule extends AppCompatActivity{
                         }
 
 
+
              //   jobBuilder.append("Job Name: "+jobName1+".\nDes: "+jobDes1+".\n");
                // jobBuilder.append("Job Name: "+jobName1+".\nDes: "+jobDes1+".\n");
               ///  jobBuilder.append("Job Name: "+jobName1+".\nDes: "+jobDes1+".\n");
                // jobBuilder.append("Job Name: "+jobName1+".\nDes: "+jobDes1+".\n");
-
 /*
-
                         List<JobC> list=new ArrayList<>();
                         for (List<JobC> list: jList){
                             builder.append(data);
@@ -403,22 +416,48 @@ public class Write_Schedule extends AppCompatActivity{
                         String job= TextUtils.join(", ",jList);
                         showTV.setText(job);
 */
-                String sdlKey=scheduleREf.push().getKey();
-                Schedule schedule=new Schedule(sdlKey,name,date,comName,jList);
-                scheduleREf.child(tagUserId).child(date).child(sdlKey).setValue(schedule).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(getApplicationContext(),"Upload Successful",Toast.LENGTH_SHORT).show();
-                        }else {
-                            Toast.makeText(getApplicationContext(),"Exception:"+task.getException().getMessage(),Toast.LENGTH_LONG).show();
 
+
+                if(scheduleEmployeeList.size()==0){
+                    String sdlKey=scheduleREf.push().getKey();
+                    Schedule  schedule=new Schedule(sdlKey,name,date,comName,jList);
+                    scheduleREf.child(tagUserId).child(date).child(sdlKey).setValue(schedule).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if(task.isSuccessful()){
+                                Toast.makeText(getApplicationContext(),"Upload Successful",Toast.LENGTH_SHORT).show();
+                            }else {
+                                Toast.makeText(getApplicationContext(),"Exception:"+task.getException().getMessage(),Toast.LENGTH_LONG).show();
+
+                            }
                         }
-                    }
-                });
+                    });
+
+                }else {
+                    String tagEmp="";
+
+
+                       //
+
+                        String sdlKey=scheduleREf.push().getKey();
+                       Schedule schedule = new Schedule(sdlKey, name, date, comName, jList);
+                        scheduleREf.child(tagUserId).child(date).child(sdlKey).setValue(schedule).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(getApplicationContext(), "Upload Successful", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(getApplicationContext(), "Exception:" + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+
+                                }
+                            }
+                        });
+
+
+
+                }
 
                 scheduleREf.child("ComName").child(tagUserId).setValue(comName);
-
 
               String scheduleKey = allScheduleREf.push().getKey();
                 Schedule scheduleAll=new Schedule(scheduleKey,name,date,comName,jList);
@@ -1105,6 +1144,10 @@ public class Write_Schedule extends AppCompatActivity{
         tagUserLV=findViewById(R.id.userTagLVId);
         lltWsId=findViewById(R.id.lltWsLVId);
         closeWsId=findViewById(R.id.closeBtnWsId);
+        addEmployeeBtn=findViewById(R.id.addEmployeeBtnId);
+        scheduleEmployeeLv=findViewById(R.id.tagEmployeeListId);
+
+        tagEmployeeTv=findViewById(R.id.tagEmployeeTvId);
 
         spinner1=findViewById(R.id.spinner1);
          spinner2=findViewById(R.id.spinner2);

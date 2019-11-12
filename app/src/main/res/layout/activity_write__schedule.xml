@@ -14,24 +14,70 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
-
-            <androidx.appcompat.widget.SearchView
-                android:id="@+id/employeeName_WSId"
+            <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/layoutbg"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
-                android:textSize="18sp"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="36dp" />
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+                <ListView
+                    android:divider="#494949"
+                    android:dividerHeight="1dp"
+                    android:id="@+id/tagEmployeeListId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+               android:textColor="@color/black"
+                android:id="@+id/tagEmployeeTvId"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/employeeName_WSId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/layoutbg"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:textSize="18sp"
+                    android:layout_weight="8.5"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="36dp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/buttonbg"
+                    android:text="ADD"
+                    android:id="@+id/addEmployeeBtnId"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:id="@+id/lltWsLVId"
@@ -76,10 +122,10 @@
                 android:layout_below="@id/userTagLVId"
                 android:background="@drawable/layoutbg"
                 android:textSize="18sp"
+                android:layout_marginRight="20dp"
                 android:hint=" Select Schedule Date"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="36dp" />
-
 
               <AutoCompleteTextView
                 android:id="@+id/companyName_WSId"

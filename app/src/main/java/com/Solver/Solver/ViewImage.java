@@ -106,10 +106,8 @@ public class ViewImage extends AppCompatActivity  {
                 angle = angle + 90;
                 touchImageView.setRotation(angle);
 
-
                 break;
                 default:
-
 
         }
         return super.onOptionsItemSelected(item);

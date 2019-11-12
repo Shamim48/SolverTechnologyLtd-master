@@ -1280,6 +1280,7 @@ id activity_chooser_view_content
 id add
 id addBtnQDId
 id addDataMenuItmId
+id addEmployeeBtnId
 id addFactoryAtId
 id addFactoryBtnId
 id addFactoryDlBtnId
@@ -1699,6 +1700,8 @@ id subscribe_group_id
 id tabLayoutHmId
 id tabMode
 id tagClientAtId
+id tagEmployeeListId
+id tagEmployeeTvId
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
