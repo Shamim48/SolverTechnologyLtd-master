@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-112:12
-INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-112:12
-INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-112:12
-INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-112:12
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-114:12
+INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-114:12
+INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-114:12
+INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-114:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a4cb975f0b9fff57e8499f3ab62282db\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\bd57c4eae84c23596e87e6bc172ce46a\AndroidManifest.xml:17:1-24:12
 MERGED from [com.theartofdev.edmodo:android-image-cropper:2.4.7] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\9a4991f4bb09230a6610e4581989689a\AndroidManifest.xml:2:1-12:12
@@ -12,6 +12,7 @@ MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\USER\.gradle\caches\tr
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a80fbe24d0e3fede74e64a6712408192\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0-rc01] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\41b34d13dc6b2c5c97c5cf100653c20f\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-auth:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\b0e80b565978210460ae363288cab18d\AndroidManifest.xml:17:1-42:12
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\19ea93201401f595e4a1902d41d7a741\AndroidManifest.xml:17:1-38:12
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\06c4646971adc0002358453dcb1cb85e\AndroidManifest.xml:2:1-12:12
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\f9471355042d48979560994843a3a60d\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-messaging:17.3.3] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\3e4fb2ccc7ee9acf67f377f24bd84a23\AndroidManifest.xml:17:1-37:12
@@ -64,31 +65,37 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\USER\.gradle\
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\dff3dfc5d2a2a5559b7cdd07be53f36b\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\378829579b2be7a59589cea86197351b\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\ddb8cde81fff7848fd607806bcc8aa84\AndroidManifest.xml:2:1-7:12
-INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-112:12
-INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-112:12
-INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-112:12
+INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-114:12
+INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-114:12
+INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-114:12
 	package
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:4:5-32
-		INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:4:5-32
+		INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
+		INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-112:12
-		INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
+		INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-114:12
+		INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
 	xmlns:dist
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:3:5-61
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:3:5-61
 	android:versionCode
-		INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-112:12
-		INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
+		INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:1-114:12
+		INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:11:22-76
 dist:module
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:6:5-40
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:13:5-40
 	dist:instant
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:6:18-37
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:13:18-37
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:8:5-67
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:15:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\19ea93201401f595e4a1902d41d7a741\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\19ea93201401f595e4a1902d41d7a741\AndroidManifest.xml:24:5-67
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\f9471355042d48979560994843a3a60d\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\f9471355042d48979560994843a3a60d\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\e7e3cf3e98d9f973e23c8039ae8797ec\AndroidManifest.xml:27:5-67
@@ -96,9 +103,11 @@ MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\USER\.gradle\
 MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\4c03c654b3e9a926525fca975a52e8c4\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\4c03c654b3e9a926525fca975a52e8c4\AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:8:22-64
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:15:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:9:5-79
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:16:5-79
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\19ea93201401f595e4a1902d41d7a741\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\19ea93201401f595e4a1902d41d7a741\AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\f9471355042d48979560994843a3a60d\AndroidManifest.xml:25:5-79
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\f9471355042d48979560994843a3a60d\AndroidManifest.xml:25:5-79
 MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\e7e3cf3e98d9f973e23c8039ae8797ec\AndroidManifest.xml:26:5-79
@@ -106,31 +115,33 @@ MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\USER\.gradle\
 MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\4c03c654b3e9a926525fca975a52e8c4\AndroidManifest.xml:22:5-79
 MERGED from [com.google.firebase:firebase-iid:17.0.3] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\4c03c654b3e9a926525fca975a52e8c4\AndroidManifest.xml:22:5-79
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:9:22-76
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:16:22-76
 uses-permission#android.permission.READ_CONTACTS
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:10:5-72
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:17:5-72
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:10:22-69
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:17:22-69
 uses-permission#android.permission.WRITE_CONTACTS
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:11:5-73
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:18:5-73
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:11:22-70
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:18:22-70
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:12:5-80
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:19:5-81
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:12:22-78
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:19:22-78
 uses-permission#android.permission.CALL_PHONE
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:13:5-69
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:20:5-69
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:13:22-66
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:20:22-66
 application
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:15:5-110:19
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:22:5-112:19
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\bd57c4eae84c23596e87e6bc172ce46a\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\bd57c4eae84c23596e87e6bc172ce46a\AndroidManifest.xml:22:5-20
 MERGED from [com.github.amanjeetsingh150:ImageZipper:1.3] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\cd367a0e74bec5b7c2542e5334257e71\AndroidManifest.xml:11:5-15:19
 MERGED from [com.github.amanjeetsingh150:ImageZipper:1.3] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\cd367a0e74bec5b7c2542e5334257e71\AndroidManifest.xml:11:5-15:19
 MERGED from [com.google.firebase:firebase-auth:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\b0e80b565978210460ae363288cab18d\AndroidManifest.xml:23:5-40:19
 MERGED from [com.google.firebase:firebase-auth:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\b0e80b565978210460ae363288cab18d\AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\19ea93201401f595e4a1902d41d7a741\AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\19ea93201401f595e4a1902d41d7a741\AndroidManifest.xml:30:5-36:19
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\06c4646971adc0002358453dcb1cb85e\AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\06c4646971adc0002358453dcb1cb85e\AndroidManifest.xml:10:5-20
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\f9471355042d48979560994843a3a60d\AndroidManifest.xml:28:5-36:19
@@ -174,161 +185,173 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\US
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\dc06104fc24aa0b521963d361d65d865\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:20:9-35
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:28:9-35
 	android:label
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:18:9-41
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:26:9-41
 	android:roundIcon
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:19:9-47
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:27:9-47
 	android:icon
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:17:9-44
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:25:9-44
 	android:allowBackup
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:24:9-35
 	android:theme
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:21:9-40
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:29:9-40
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:22:9-42
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:23:9-42
+meta-data#com.google.android.geo.API_KEY
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:39:9-41:55
+	android:value
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:41:13-52
+	android:name
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:40:13-58
+activity#com.Solver.Solver.ShareLocationAct
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:43:9-45:78
+	android:label
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:45:13-66
+	android:name
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:44:13-45
 activity#com.Solver.Solver.Quotation_Show
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:23:9-26:25
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:46:9-49:50
 	android:parentActivityName
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:24:13-47
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:49:13-47
 	android:label
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:25:13-46
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:48:13-46
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:23:19-49
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:47:13-43
 activity#com.Solver.Solver.ForgotPasswordAtv
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:27:9-55
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:50:9-55
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:27:19-52
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:50:19-52
 activity#com.Solver.Solver.SendQuotation
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:28:9-51
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:51:9-51
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:28:19-48
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:51:19-48
 activity#com.Solver.Solver.Quotation_Request
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:29:9-32:15
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:52:9-55:50
 	android:parentActivityName
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:30:13-47
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:55:13-47
 	android:label
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:31:13-38
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:54:13-38
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:29:19-52
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:53:13-46
 activity#com.Solver.Solver.AddData
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:33:9-45
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:56:9-45
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:33:19-42
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:56:19-42
 activity#com.Solver.Solver.ViewImage
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:34:9-47
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:57:9-47
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:34:19-44
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:57:19-44
 activity#com.Solver.Solver.Daily_Report
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:35:9-50
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:58:9-50
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:35:19-47
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:58:19-47
 activity#com.Solver.Solver.Schedule_Display
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:36:9-39:15
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:59:9-62:50
 	android:parentActivityName
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:37:13-47
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:62:13-47
 	android:label
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:38:13-37
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:61:13-37
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:36:19-51
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:60:13-45
 activity#com.Solver.Solver.Write_Schedule
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:40:9-43:15
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:63:9-66:50
 	android:parentActivityName
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:41:13-47
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:66:13-47
 	android:label
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:42:13-43
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:65:13-43
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:40:19-49
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:64:13-43
 activity#com.Solver.Solver.MessageActivity
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:44:9-46:15
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:67:9-69:50
 	android:parentActivityName
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:45:13-47
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:69:13-47
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:44:19-50
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:68:13-44
 activity#com.Solver.Solver.GroupChatAtv
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:47:9-49:15
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:70:9-72:50
 	android:parentActivityName
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:48:10-44
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:72:13-47
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:47:19-47
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:71:13-41
 activity#com.Solver.Solver.ClientShowDetails
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:50:9-52:15
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:73:9-75:50
 	android:parentActivityName
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:51:13-47
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:75:13-47
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:50:19-52
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:74:13-46
 activity#com.Solver.Solver.ShowUserDetails
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:53:9-55:15
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:76:9-78:50
 	android:parentActivityName
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:54:13-47
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:78:13-47
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:53:19-50
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:77:13-44
 activity#com.Solver.Solver.Home
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:57:9-59:59
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:79:9-81:59
 	android:theme
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:59:13-56
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:81:13-56
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:58:13-33
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:80:13-33
 activity#com.Solver.Solver.Client_reg
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:60:9-62:56
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:82:9-84:56
 	android:label
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:62:13-53
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:84:13-53
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:61:13-39
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:83:13-39
 activity#com.Solver.Solver.Sign_Up
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:63:9-65:54
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:85:9-87:54
 	android:label
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:65:13-51
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:87:13-51
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:64:13-36
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:86:13-36
 activity#com.Solver.Solver.MainActivity
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:66:9-72:20
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:88:9-94:20
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:66:19-47
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:88:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:67:13-71:29
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:89:13-93:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:68:17-69
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:90:17-69
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:68:25-66
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:90:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:70:17-77
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:92:17-77
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:70:27-74
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:92:27-74
 activity#com.theartofdev.edmodo.cropper.CropImageActivity
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:73:9-85
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:95:9-85
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:73:19-82
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:95:19-82
 service#com.Solver.Solver.Service.FirebaseNotificationService
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:75:9-81:19
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:97:9-103:19
 	android:exported
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:77:13-37
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:99:13-37
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:76:13-64
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:98:13-64
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:78:13-80:29
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:100:13-102:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:79:17-78
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:101:17-78
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:79:25-75
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:101:25-75
 service#com.Solver.Solver.Notifications.MyFirebaseIdService
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:83:9-89:19
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:104:9-111:19
 	android:enabled
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:84:13-35
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:106:13-35
 	android:exported
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:85:13-36
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:107:13-36
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:83:18-67
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:105:13-62
 intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:86:13-88:29
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:108:13-110:29
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:87:17-79
+ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:109:17-80
 	android:name
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:87:25-77
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml:109:25-77
 uses-sdk
-INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
+INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
+INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a4cb975f0b9fff57e8499f3ab62282db\AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\a4cb975f0b9fff57e8499f3ab62282db\AndroidManifest.xml:20:5-43
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\bd57c4eae84c23596e87e6bc172ce46a\AndroidManifest.xml:20:5-44
@@ -345,6 +368,8 @@ MERGED from [androidx.recyclerview:recyclerview:1.1.0-rc01] C:\Users\USER\.gradl
 MERGED from [androidx.recyclerview:recyclerview:1.1.0-rc01] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\41b34d13dc6b2c5c97c5cf100653c20f\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-auth:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\b0e80b565978210460ae363288cab18d\AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-auth:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\b0e80b565978210460ae363288cab18d\AndroidManifest.xml:21:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\19ea93201401f595e4a1902d41d7a741\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\19ea93201401f595e4a1902d41d7a741\AndroidManifest.xml:20:5-44
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\06c4646971adc0002358453dcb1cb85e\AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\06c4646971adc0002358453dcb1cb85e\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\f9471355042d48979560994843a3a60d\AndroidManifest.xml:19:5-21:41
@@ -449,16 +474,16 @@ MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\USER\.gradle\caches
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\378829579b2be7a59589cea86197351b\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\ddb8cde81fff7848fd607806bcc8aa84\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\ddb8cde81fff7848fd607806bcc8aa84\AndroidManifest.xml:5:5-44
-INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
+INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
+INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
+		INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
+		INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
+		INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
+		ADDED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
+		INJECTED from G:\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\src\main\AndroidManifest.xml
 activity#com.google.firebase.auth.internal.FederatedSignInActivity
 ADDED from [com.google.firebase:firebase-auth:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\b0e80b565978210460ae363288cab18d\AndroidManifest.xml:24:9-31:50
 	android:excludeFromRecents
@@ -499,6 +524,18 @@ ADDED from [com.google.firebase:firebase-auth:19.1.0] C:\Users\USER\.gradle\cach
 		ADDED from [com.google.firebase:firebase-auth:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\b0e80b565978210460ae363288cab18d\AndroidManifest.xml:38:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:19.1.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\b0e80b565978210460ae363288cab18d\AndroidManifest.xml:37:17-109
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\19ea93201401f595e4a1902d41d7a741\AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\19ea93201401f595e4a1902d41d7a741\AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\19ea93201401f595e4a1902d41d7a741\AndroidManifest.xml:28:9-32
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\19ea93201401f595e4a1902d41d7a741\AndroidManifest.xml:33:9-35:40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\19ea93201401f595e4a1902d41d7a741\AndroidManifest.xml:35:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\19ea93201401f595e4a1902d41d7a741\AndroidManifest.xml:34:13-50
 meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
 ADDED from [com.google.firebase:firebase-database:19.2.0] C:\Users\USER\.gradle\caches\transforms-2\files-2.1\f9471355042d48979560994843a3a60d\AndroidManifest.xml:32:13-34:85
 	android:value

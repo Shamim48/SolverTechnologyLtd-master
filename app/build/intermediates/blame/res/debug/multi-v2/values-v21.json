@@ -1,8 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
+            "outputFile": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
+                {
+                    "source": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\src\\main\\res\\values-v21\\styles.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "17",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "240"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "354",
+                        "endLines": "10",
+                        "endColumns": "12",
+                        "endOffsets": "577"
+                    }
+                },
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\d96dd50921af81286de1ecc09411ce6b\\res\\values-v21\\values-v21.xml",
                     "from": {
@@ -77,25 +96,6 @@
                         "endLines": "298,306,314,322",
                         "endColumns": "10,10,10,10",
                         "endOffsets": "21445,21871,22294,22729"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\USER\\Downloads\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\src\\main\\res\\values-v21\\styles.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "17",
-                        "endLines": "6",
-                        "endColumns": "12",
-                        "endOffsets": "240"
-                    },
-                    "to": {
-                        "startLines": "6",
-                        "startColumns": "4",
-                        "startOffsets": "354",
-                        "endLines": "10",
-                        "endColumns": "12",
-                        "endOffsets": "577"
                     }
                 },
                 {

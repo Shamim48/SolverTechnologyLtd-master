@@ -27,7 +27,6 @@ public class SaveImageHelper implements Target {
         this.contentResolverWeakReference =new WeakReference<ContentResolver> (contentResolver);
         this.name = name;
 
-
     }
 
     @Override

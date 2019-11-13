@@ -1,4 +1,0 @@
-# Referenced at C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:22
--keep class androidx.core.app.CoreComponentFactory { <init>(); }
-# Referenced at C:\Users\USER\Downloads\SolverTechnologyLtd-master\SolverTechnologyLtd-master\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:22
--keep class com.Solver.Solver.ModelClass.Solver { <init>(); }

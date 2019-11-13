@@ -34,7 +34,6 @@ import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.Solver.Solver.Adepter.GroupMsgAdapter;
 import com.Solver.Solver.ModelClass.Client;
@@ -43,7 +42,6 @@ import com.Solver.Solver.ModelClass.Factories;
 import com.Solver.Solver.ModelClass.GroupMessage;
 import com.Solver.Solver.ModelClass.JobC;
 import com.Solver.Solver.ModelClass.Schedule;
-import com.Solver.Solver.Notifications.Data;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -67,7 +65,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 public class GroupChatAtv extends AppCompatActivity {
 
@@ -87,7 +84,7 @@ public class GroupChatAtv extends AppCompatActivity {
     private ImageButton SendMessageButton;
     private ImageButton selectImageIBnt;
     private ImageView imageGC;
-    private ImageButton selectLocationIBtn;
+    private ImageButton shareLocationIBtn;
     private Spinner imageTypeSp;
     private EditText userMessageInput;
     private EditText spare_PartEt;
@@ -216,6 +213,14 @@ public class GroupChatAtv extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
+            }
+        });
+
+        shareLocationIBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),ShareLocationAct.class);
+                startActivity(intent);
             }
         });
 
@@ -826,7 +831,7 @@ public class GroupChatAtv extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         SendMessageButton = (ImageButton) findViewById(R.id.send_message_button);
         selectImageIBnt = (ImageButton) findViewById(R.id.selectImageIBtnId);
-        selectLocationIBtn = (ImageButton) findViewById(R.id.selectLocationIBtnId);
+        shareLocationIBtn = (ImageButton) findViewById(R.id.selectLocationIBtnId);
         // subEt = (AutoCompleteTextView) findViewById(R.id.subEtId);
         jobSp = findViewById(R.id.jobSpId);
         userMessageInput = (EditText) findViewById(R.id.input_group_message);

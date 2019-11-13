@@ -437,27 +437,29 @@ public class Write_Schedule extends AppCompatActivity{
                     String tagEmp="";
 
 
-                       //
+                       for(String tagEpName:scheduleEmployeeList) {
 
-                        String sdlKey=scheduleREf.push().getKey();
-                       Schedule schedule = new Schedule(sdlKey, name, date, comName, jList);
-                        scheduleREf.child(tagUserId).child(date).child(sdlKey).setValue(schedule).addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                if (task.isSuccessful()) {
-                                    Toast.makeText(getApplicationContext(), "Upload Successful", Toast.LENGTH_SHORT).show();
-                                } else {
-                                    Toast.makeText(getApplicationContext(), "Exception:" + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                           String sdlKey = scheduleREf.push().getKey();
+                           Schedule schedule = new Schedule(sdlKey, tagEpName, date, comName, jList);
+                           scheduleREf.child(tagUserId).child(date).child(sdlKey).setValue(schedule).addOnCompleteListener(new OnCompleteListener<Void>() {
+                               @Override
+                               public void onComplete(@NonNull Task<Void> task) {
+                                   if (task.isSuccessful()) {
+                                       Toast.makeText(getApplicationContext(), "Upload Successful", Toast.LENGTH_SHORT).show();
+                                   } else {
+                                       Toast.makeText(getApplicationContext(), "Exception:" + task.getException().getMessage(), Toast.LENGTH_LONG).show();
 
-                                }
-                            }
-                        });
+                                   }
+                               }
+                           });
 
 
-
+                       }
                 }
 
                 scheduleREf.child("ComName").child(tagUserId).setValue(comName);
+
+                if(scheduleEmployeeList.size()==0){
 
               String scheduleKey = allScheduleREf.push().getKey();
                 Schedule scheduleAll=new Schedule(scheduleKey,name,date,comName,jList);
@@ -471,7 +473,23 @@ public class Write_Schedule extends AppCompatActivity{
 
                         }
                     }
-                });
+                });}else {
+                    for(String tagEpName:scheduleEmployeeList){
+                        String scheduleKey = allScheduleREf.push().getKey();
+                        Schedule scheduleAll=new Schedule(scheduleKey,tagEpName,date,comName,jList);
+                        allScheduleREf.child(scheduleKey).setValue(scheduleAll).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if(task.isSuccessful()){
+                                    Toast.makeText(getApplicationContext(),"Upload Successful",Toast.LENGTH_SHORT).show();
+                                }else {
+                                    Toast.makeText(getApplicationContext(),"Exception:"+task.getException().getMessage(),Toast.LENGTH_LONG).show();
+
+                                }
+                            }
+                        });
+                    }
+                }
 
                 for (JobC jobC:jList){
 
