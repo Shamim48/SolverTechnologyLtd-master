@@ -246,12 +246,10 @@ public class GroupChatAtv extends AppCompatActivity {
             public void onClick(View view) {
                 if (spearPartsCb.isChecked()){
                     spare_PartEt.setVisibility(View.VISIBLE);
-
                 }
 
                 if(!spearPartsCb.isChecked()){
                     spare_PartEt.setVisibility(View.GONE);
-
                 }
             }
         });

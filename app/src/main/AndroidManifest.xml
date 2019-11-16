@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.Solver.Solver">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -18,6 +17,8 @@
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:name=".ModelClass.Solver"
@@ -27,7 +28,7 @@
         android:roundIcon="@drawable/layoutbg"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".Location_Share"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -42,7 +43,7 @@
 
         <activity
             android:name=".ShareLocationAct"
-            android:label="@string/title_activity_share_location"></activity>
+            android:label="@string/title_activity_share_location" />
         <activity
             android:name=".Quotation_Show"
             android:label="Quotation Display"

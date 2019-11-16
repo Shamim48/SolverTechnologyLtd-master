@@ -5,6 +5,11 @@ apply plugin: 'com.google.gms.google-services'
 
 android {
 
+    dataBinding{
+
+        enabled true
+    }
+
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
     defaultConfig {
@@ -60,6 +65,8 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
     implementation 'id.zelory:compressor:2.1.0'
     implementation 'com.github.d-max:spots-dialog:0.7@aar'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
 
     // multiDexEnabled true
     //  implementation "androidx.core:core-ktx:1.1.0"
