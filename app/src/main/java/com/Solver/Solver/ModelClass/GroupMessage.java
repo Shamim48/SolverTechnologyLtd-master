@@ -25,12 +25,32 @@ public class GroupMessage {
     private String image_reply;
     private String imageType;
 
+    //Location
+   private double latitude;
+   private double longitude;
+   private String address;
+
+
 
     public GroupMessage() {
 
     }
 
-    public GroupMessage(String name,String msg, String sender, String time, String date, String imageUri, String msgType,String groupName) {
+    public GroupMessage(String name, String sender, String message, String time, String date, String msgType, String msgKey, String groupName, double latitude, double longitude, String address) {
+        this.name = name;
+        this.sender = sender;
+        this.message = message;
+        this.time = time;
+        this.date = date;
+        this.msgType = msgType;
+        this.msgKey = msgKey;
+        this.groupName = groupName;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.address = address;
+    }
+
+    public GroupMessage(String name, String msg, String sender, String time, String date, String imageUri, String msgType, String groupName) {
         this.name = name;
         this.sender = sender;
         this.time = time;
@@ -100,6 +120,30 @@ public class GroupMessage {
         this.groupName = groupName;
         this.name_reply = name_reply;
         this.image_reply=image_reply;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getImageType() {

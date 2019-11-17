@@ -6,10 +6,12 @@ import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -70,6 +72,11 @@ isLocationPermissionGranted=true;
 
                   latTv.setText(String.valueOf(latitude));
                    lonTv.setText(String.valueOf(longitude));
+
+                    Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse(String.format("geo:%s,%s",latitude,longitude)));
+                    if(intent.resolveActivity(getApplicationContext().getPackageManager())!=null){
+                        startActivity(intent);
+                    }
                 }
             });
         }

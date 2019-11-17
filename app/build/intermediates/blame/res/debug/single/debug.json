@@ -68,6 +68,10 @@
         "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f19b873fc2e44666dd8de6830fabeb88\\res\\drawable\\btn_radio_on_mtrl.xml"
     },
     {
+        "merged": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_location_sample_row_right.xml.flat",
+        "source": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\src\\main\\res\\layout\\location_sample_row_right.xml"
+    },
+    {
         "merged": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_group_chat_atv.xml.flat",
         "source": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\src\\main\\res\\layout\\activity_group_chat_atv.xml"
     },
@@ -1512,6 +1516,10 @@
         "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f19b873fc2e44666dd8de6830fabeb88\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
+        "merged": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_location_sample_row_left.xml.flat",
+        "source": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\src\\main\\res\\layout\\location_sample_row_left.xml"
+    },
+    {
         "merged": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\menu_download_menu.xml.flat",
         "source": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\src\\main\\res\\menu\\download_menu.xml"
     },
@@ -1678,6 +1686,10 @@
     {
         "merged": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
         "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f19b873fc2e44666dd8de6830fabeb88\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_mapimage.png.flat",
+        "source": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\src\\main\\res\\drawable-v24\\mapimage.png"
     },
     {
         "merged": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_dark_focused.xml.flat",

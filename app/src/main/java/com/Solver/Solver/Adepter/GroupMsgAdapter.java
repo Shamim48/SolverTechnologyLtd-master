@@ -4,6 +4,9 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.location.Location;
+import android.net.Uri;
+import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
@@ -26,6 +29,13 @@ import com.Solver.Solver.ModelClass.GroupMessage;
 import com.Solver.Solver.R;
 import com.Solver.Solver.ViewImage;
 import com.bumptech.glide.Glide;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -41,7 +51,10 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
     private static final int MSG_TYPE_REPLY=3;
     private static final int MSG_TYPE_REPLY_IMAGE=4;
     private static final int MSG_TYPE_IMAGE_LEFT=5;
+    private static final int MSG_TYPE_LOCATION_LEFT=6;
+    private static final int MSG_TYPE_LOCATION_RIGHT=7;
     GroupMessage groupMsg;
+    Bundle bundle=null;
 
     private Context mContext;
     private List<GroupMessage> gmChat;
@@ -77,7 +90,15 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
         }else if(viewType==MSG_TYPE_REPLY_IMAGE){
             View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.image_reply_row,parent,false);
             return new GroupMsgAdapter.GroupMsgHolder(view);
-        }else {
+        }else if(viewType==MSG_TYPE_LOCATION_LEFT){
+            View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.location_sample_row_left,parent,false);
+            return new GroupMsgAdapter.GroupMsgHolder(view);
+        }else if(viewType==MSG_TYPE_LOCATION_RIGHT){
+            View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.location_sample_row_right,parent,false);
+
+            return new GroupMsgAdapter.GroupMsgHolder(view);
+        }
+        else {
 
             View view=LayoutInflater.from(mContext).inflate(R.layout.groupchat_row,parent,false);
             return new GroupMsgAdapter.GroupMsgHolder(view);
@@ -87,6 +108,10 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
 
     @Override
     public void onBindViewHolder(@NonNull GroupMsgAdapter.GroupMsgHolder holder, final int position) {
+
+        GroupMsgHolder Indicator=(GroupMsgHolder) holder;
+
+
 
      try {
          int viewType=holder.getItemViewType();
@@ -282,6 +307,63 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
                  });
                  break;
 
+             case MSG_TYPE_LOCATION_RIGHT:
+
+                 holder.addressTv.setText(groupMsg.getAddress());
+                 holder.nameTv.setText(groupMsg.getName());
+                 holder.msgTv.setText(groupMsg.getMessage());
+                 holder.timeTv.setText(groupMsg.getTime());
+                 holder.dateTv.setText(groupMsg.getDate());
+
+                 holder.mapImage.setOnClickListener(new View.OnClickListener() {
+                     @Override
+                     public void onClick(View view) {
+                         Intent intent=new Intent(Intent.ACTION_VIEW,Uri.parse(String.format("geo:%s,%s",gmChat.get(position).getLatitude(),gmChat.get(position).getLongitude())));
+                         if(intent.resolveActivity(mContext.getPackageManager()) !=null){
+                             mContext.startActivity(intent);
+                         }
+                     }
+                 });
+
+                 holder.addressTv.setOnClickListener(new View.OnClickListener() {
+                     @Override
+                     public void onClick(View view) {
+                         Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse(String.format("geo:%s,%s",gmChat.get(position).getLatitude(),gmChat.get(position).getLongitude())));
+                         if(intent.resolveActivity(mContext.getPackageManager())!=null){
+                             mContext.startActivity(intent);
+                         }
+                     }
+                 });
+                 break;
+    case MSG_TYPE_LOCATION_LEFT:
+
+                 holder.addressTv.setText(groupMsg.getAddress());
+                 holder.nameTv.setText(groupMsg.getName());
+                 holder.msgTv.setText(groupMsg.getMessage());
+                 holder.timeTv.setText(groupMsg.getTime());
+                 holder.dateTv.setText(groupMsg.getDate());
+
+                 holder.mapImage.setOnClickListener(new View.OnClickListener() {
+                     @Override
+                     public void onClick(View view) {
+                         Intent intent=new Intent(Intent.ACTION_VIEW,Uri.parse(String.format("geo:%s,%s",gmChat.get(position).getLatitude(),gmChat.get(position).getLongitude())));
+                         if(intent.resolveActivity(mContext.getPackageManager()) !=null){
+                             mContext.startActivity(intent);
+                         }
+                     }
+                 });
+
+                 holder.addressTv.setOnClickListener(new View.OnClickListener() {
+                     @Override
+                     public void onClick(View view) {
+                         Intent intent=new Intent(Intent.ACTION_VIEW,Uri.parse(String.format("geo:%s,%s",gmChat.get(position).getLatitude(),gmChat.get(position).getLongitude())));
+                         if(intent.resolveActivity(mContext.getPackageManager()) !=null){
+                             mContext.startActivity(intent);
+                         }
+                     }
+                 });
+                 break;
+
          }
      }catch (Exception e){
        //  Toast.makeText(mContext,"Exception: "+e.getMessage().trim(),Toast.LENGTH_LONG).show();
@@ -318,7 +400,7 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
         return gmChat.size();
     }
 
-    public class GroupMsgHolder extends RecyclerView.ViewHolder{
+    public class GroupMsgHolder extends RecyclerView.ViewHolder implements OnMapReadyCallback {
 
         private TextView nameTv;
         private TextView subTv;
@@ -334,6 +416,11 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
         private TextView spearPartTv_Rpr;
         public TextView desTv;
         private TextView menuIconTv;
+        private TextView addressTv;
+        private ImageView mapImage;
+
+        private MapView mapView;
+        GoogleMap googleMap;
 
         private ImageView chatImage;
         LinearLayout linearLayoutRight;
@@ -341,6 +428,8 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
         LinearLayout linearLayoutImage;
         LinearLayout replyParentLot;
         LinearLayout replyImageParentLot;
+
+
 
        public GroupMsgHolder(@NonNull View itemView) {
            super(itemView);
@@ -358,6 +447,8 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
            spearPartTv_Rpr=itemView.findViewById(R.id.sparePartTv_RprId);
            desTv = itemView.findViewById(R.id.desTv_GMRId);
            menuIconTv=itemView.findViewById(R.id.menuIconId);
+           addressTv=itemView.findViewById(R.id.addressTv_GMRId);
+           mapImage=itemView.findViewById(R.id.mapImageId);
 
            chatImage=itemView.findViewById(R.id.imageViewMsgRowId);
            linearLayoutRight=itemView.findViewById(R.id.linearLayoutRightId);
@@ -366,7 +457,17 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
            replyParentLot=itemView.findViewById(R.id.replyParentLotId);
            replyImageParentLot=itemView.findViewById(R.id.replyImageParentLotId);
 
+          /* SupportMapFragment mapFragment = (SupportMapFragment) itemView.getSupportFragmentManager()
+                   .findFragmentById(R.id.map);
+           mapFragment.getMapAsync(this);*/
+
+           mapView = itemView.findViewById(R.id.mapViewId);
+         //  mapView.onCreate(bundle);
+          // mapView.getMapAsync(this);
+
+
        }
+
        public void showGroupChat(GroupMessage groupMessage){
           nameTv.setText(groupMessage.getName());
            subTv.setText(groupMessage.getSub());
@@ -377,7 +478,21 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
            sparePartTv.setText("Spare Parts: " + groupMessage.getSparePart());
 
        }
-   }
+
+        @Override
+        public void onMapReady(GoogleMap googleMap) {
+
+            this.googleMap = googleMap;
+           // Location location = locations.get();
+            LatLng latLng=new LatLng(groupMsg.getLatitude(),groupMsg.getLongitude());
+
+            this.googleMap.addMarker(new MarkerOptions().position(latLng).title(groupMsg.getAddress()));
+            this.googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+            this.googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 20f));
+
+
+        }
+    }
 
 /*
    public class GroupImageHolder extends RecyclerView.ViewHolder{
@@ -536,7 +651,14 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
                 }
             } else if (gmChat.get(position).getMsgType().equals("Reply")) {
                 return MSG_TYPE_REPLY;
-            } else if(gmChat.get(position).getMsgType().equals("ReplyImage")){
+            }else if(gmChat.get(position).getMsgType().equals("Location")){
+                if (gmChat.get(position).getSender().equals(fuser.getUid())) {
+                    return MSG_TYPE_LOCATION_RIGHT;
+                } else {
+                    return MSG_TYPE_LOCATION_LEFT;
+                }
+            }
+            else if(gmChat.get(position).getMsgType().equals("ReplyImage")){
                 return MSG_TYPE_REPLY_IMAGE;
             }
             else if(gmChat.get(position).getSender().equals(fuser.getUid())) {

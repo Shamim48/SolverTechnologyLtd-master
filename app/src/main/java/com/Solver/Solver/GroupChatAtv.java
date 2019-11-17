@@ -79,7 +79,6 @@ public class GroupChatAtv extends AppCompatActivity {
     CheckBox spearPartsCb;
     LinearLayout jobSpLt;
 
-
     public static final int REQUEST_CODE = 1;
     private ImageButton SendMessageButton;
     private ImageButton selectImageIBnt;
@@ -220,6 +219,7 @@ public class GroupChatAtv extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(getApplicationContext(),ShareLocationAct.class);
+                intent.putExtra("groupName",currentGroupName);
                 startActivity(intent);
             }
         });
@@ -270,6 +270,7 @@ public class GroupChatAtv extends AppCompatActivity {
                 imageLot.setVisibility(View.GONE);
             }
         });
+
         try {
             if(!(imageUri_reply.equals(""))){
                 imageLot.setVisibility(View.VISIBLE);
@@ -294,9 +295,8 @@ public class GroupChatAtv extends AppCompatActivity {
         }catch (Exception e){
 
            // Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show();
+
         }
-
-
 
         DatabaseReference clientRef = FirebaseDatabase.getInstance().getReference().child("Client");
         clientList.clear();
