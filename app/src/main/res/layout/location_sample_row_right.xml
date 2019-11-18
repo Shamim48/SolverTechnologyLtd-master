@@ -83,8 +83,8 @@
            <ImageView
                android:id="@+id/mapImageId"
                android:layout_width="match_parent"
-               android:background="@drawable/mapimage"
-               android:layout_height="220dp" />
+               android:background="@drawable/mapimg"
+               android:layout_height="180dp" />
 
             <TextView
                 android:id="@+id/addressTv_GMRId"

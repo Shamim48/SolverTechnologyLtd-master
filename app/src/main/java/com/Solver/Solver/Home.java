@@ -12,6 +12,7 @@ import com.Solver.Solver.Fragment.ClientFm;
 import com.Solver.Solver.Fragment.EmployeeFm;
 import com.Solver.Solver.Fragment.GroupChatFm;
 import com.Solver.Solver.ModelClass.Client;
+import com.Solver.Solver.ModelClass.Common_Resouces;
 import com.Solver.Solver.ModelClass.SignUp;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -147,16 +148,14 @@ public class Home extends AppCompatActivity
 tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.white));
 //tabLayout.setTabTextColors(getResources().getColor(R.color.white_gray,Color.WHITE));
         tabLayout.setTabTextColors(R.color.white_gray,R.color.white);
-        tabLayout.setTabTextColors(R.color.white_gray,R.color.white);
+        //tabLayout.setTabTextColors(R.color.white_gray,R.color.white);
         rootRef= FirebaseDatabase.getInstance().getReference();
         currentUser= FirebaseAuth.getInstance().getCurrentUser();
         clientDatabaseRef=FirebaseDatabase.getInstance().getReference().child("Client");
         auth=FirebaseAuth.getInstance();
         currentUerId=auth.getCurrentUser().getUid();
         currentUserRef=FirebaseDatabase.getInstance().getReference().child("User").child(currentUerId);
-
          email=currentUser.getEmail();
-
          FragmentAdepter adepter=new FragmentAdepter(getSupportFragmentManager());
          viewPager.setAdapter(adepter);
          viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
@@ -167,7 +166,6 @@ tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.white));
                  viewPager.setCurrentItem(tab.getPosition());
 
              }
-
              @Override
              public void onTabUnselected(TabLayout.Tab tab) {
 
@@ -382,8 +380,9 @@ tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.white));
             editUserInfo();
         } else if (id == R.id.displayScheduleId) {
 
-            Intent intent=new Intent(getApplicationContext(),Schedule_Display.class);
+             Intent intent=new Intent(getApplicationContext(),Schedule_Display.class);
             startActivity(intent);
+             Common_Resouces.intent(Home.this,Schedule_Display.class);
 
         }else if(id==R.id.dailyReportId){
              String action;
@@ -395,10 +394,12 @@ tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.white));
 
             Intent intent=new Intent(Home.this,Write_Schedule.class);
             startActivity(intent);
+
         }else if (id == R.id.requestQuotationId) {
 
             Intent intent=new Intent(Home.this,Quotation_Request.class);
             startActivity(intent);
+
         } else if (id == R.id.trackLocationMenuItmId) {
 
              Intent intent=new Intent(getApplicationContext(),ViewImage.class);

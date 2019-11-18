@@ -1209,7 +1209,7 @@ int drawable ic_rotate_right_black_24dp 0x7f0800a6
 int drawable ic_send_black_24dp 0x7f0800a7
 int drawable ic_touch_app_black_24dp 0x7f0800a8
 int drawable layoutbg 0x7f0800a9
-int drawable mapimage 0x7f0800aa
+int drawable mapimg 0x7f0800aa
 int drawable msgbg 0x7f0800ab
 int drawable msgbg2 0x7f0800ac
 int drawable mtrl_snackbar_background 0x7f0800ad

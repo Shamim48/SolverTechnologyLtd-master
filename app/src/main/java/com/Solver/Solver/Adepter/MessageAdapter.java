@@ -1,6 +1,8 @@
 package com.Solver.Solver.Adepter;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
@@ -20,11 +22,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.Solver.Solver.GroupChatAtv;
 import com.Solver.Solver.MessageActivity;
 import com.Solver.Solver.ModelClass.Chat;
+import com.Solver.Solver.ModelClass.GroupMessage;
 import com.Solver.Solver.R;
 import com.Solver.Solver.ViewImage;
 import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
@@ -89,7 +94,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
         final Chat chat = mChat.get(position);
         int viewType=holder.getItemViewType();
         switch (viewType){
-            case 2:
+            case MSG_TYPE_IMAGE:
                 holder.desTv.setText(chat.getMessage());
                 holder.nameTv.setText(chat.getSenderName());
                 holder.timeTv.setText(chat.getTime());
@@ -102,6 +107,27 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
                         Intent i=new Intent(mContext, ViewImage.class);
                         i.putExtra("imageUri",chat.getImageUri());
                         mContext.startActivity(i);
+                    }
+                });
+
+                try {
+
+                    holder.image.setOnLongClickListener(new View.OnLongClickListener() {
+                        @Override
+                        public boolean onLongClick(View view) {
+                            poUpMenu(view,chat,position);
+                            return false;
+                        }
+                    });
+                }catch (Exception e){
+
+                }
+
+
+                holder.menuText.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        poUpMenu(view,chat,position);
                     }
                 });
               /*  if (imageurl.equals("")){
@@ -120,7 +146,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
                     holder.txt_seen.setVisibility(View.GONE);
                 }*/
                 break;
-            case 3:
+            case MSG_TYPE_IMAGE_LEFT:
                 holder.desTv.setText(chat.getMessage());
                 holder.nameTv.setText(chat.getSenderName());
                 holder.timeTv.setText(chat.getTime());
@@ -139,6 +165,12 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
 
                 }
 
+                holder.menuText.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        poUpMenuForReply(view,chat,position);
+                    }
+                });
                 Glide.with(mContext).load(chat.getImageUri()).placeholder(R.drawable.ic_image_black_24dp).into(holder.image);
                 holder.image.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -150,7 +182,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
                 });
 
                 break;
-            case 0:
+            case MSG_TYPE_LEFT:
                     holder.show_message.setText(chat.getMessage());
                     if (imageurl.equals("")){
                         holder.profile_image.setImageResource(R.mipmap.ic_launcher);
@@ -174,13 +206,13 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
                     holder.menuText.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            poUpMenu(view,chat,position);
+                            poUpMenuForReply(view,chat,position);
 
                         }
                     });
 
                     break;
-            case 1:
+            case MSG_TYPE_RIGHT:
                 holder.shw_messageRight.setText(chat.getMessage());
 
                 if (position == mChat.size()-1){
@@ -192,18 +224,36 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
                 } else {
                     holder.text_seenRight.setVisibility(View.GONE);
                 }
+               /* holder.menuText.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        poUpMenu(view,chat,position);
+                    }
+                });*/
                break;
-            case 6:
+            case MSG_REPLY_LEFT:
                 holder.replyTextTv.setText(chat.getReplyText());
                 holder.replyMsgtv.setText(chat.getMessage());
                 holder.timeTv.setText(chat.getTime());
                 holder.dateTv.setText(chat.getDate());
+                holder.menuText.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        poUpMenuForReply(view,chat,position);
+                    }
+                });
                 break;
-              case 7:
+              case MSG_REPLY_RIGHT:
                 holder.replyTextTv.setText(chat.getReplyText());
                 holder.replyMsgtv.setText(chat.getMessage());
                   holder.timeTv.setText(chat.getTime());
                   holder.dateTv.setText(chat.getDate());
+                  holder.menuText.setOnClickListener(new View.OnClickListener() {
+                      @Override
+                      public void onClick(View view) {
+                          poUpMenu(view,chat,position);
+                      }
+                  });
                 break;
             case MSG_REPLY_IMAGE_LEFT:
 
@@ -217,6 +267,12 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
                         Intent i=new Intent(mContext, ViewImage.class);
                         i.putExtra("imageUri",chat.getImageUri());
                         mContext.startActivity(i);
+                    }
+                });
+                holder.menuText.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        poUpMenuForReply(view,chat,position);
                     }
                 });
                 break;
@@ -234,6 +290,14 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
                         mContext.startActivity(i);
                     }
                 });
+
+                holder.menuText.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        poUpMenu(view,chat,position);
+                    }
+                });
+
                 break;
 
 
@@ -341,6 +405,49 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
 
     return 0;}
 
+    public void poUpMenuForReply(View view, final Chat chat, final int position){
+        PopupMenu popupMenu=new PopupMenu(mContext,view);
+        MenuInflater inflater=popupMenu.getMenuInflater();
+        inflater.inflate(R.menu.reply_menu,popupMenu.getMenu());
+        popupMenu.show();
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+          /*
+            int itemId=menuItem.getItemId();
+            if(itemId==R.id.replyMSGMIId){
+
+            }else if(itemId==R.id.editMenuItmId){
+
+            }else if(itemId==R.id.deleteMenuItmId){
+
+            }*/
+
+
+                switch (menuItem.getItemId()) {
+
+                    case R.id.replyGmId:
+
+                        Intent intent=new Intent(mContext, MessageActivity.class);
+                        intent.putExtra("message",mChat.get(position).getMessage());
+                        intent.putExtra("image",mChat.get(position).getImageUri());
+                        intent.putExtra("msgTypeImage","imageReply");
+                        intent.putExtra("msgType","msgReply");
+                        intent.putExtra("userid",chat.getSender());
+                        intent.putExtra("senderName",chat.getSenderName());
+                        mContext.startActivity(intent);
+
+                        break;
+
+                }
+
+                return false;
+            }
+        });
+
+    }
+
     public void poUpMenu(View view, final Chat chat, final int position){
         PopupMenu popupMenu=new PopupMenu(mContext,view);
         MenuInflater inflater=popupMenu.getMenuInflater();
@@ -373,8 +480,36 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
                         intent.putExtra("senderName",chat.getSenderName());
                         mContext.startActivity(intent);
 
-                        Toast.makeText(mContext,"Coming son",Toast.LENGTH_SHORT).show();
+                        break;
 
+                    case R.id.deleteMsgId:
+
+                        final AlertDialog.Builder builder=new AlertDialog.Builder(mContext);
+                        builder.setTitle("Are You sure..?");
+                        builder.setMessage("You Want to delete..?");
+
+                        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                String key = mChat.get(position).getMsgId();
+                                FirebaseAuth auth=FirebaseAuth.getInstance();
+                                String userId=auth.getCurrentUser().getUid();
+
+                                DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Chats");
+                                DatabaseReference refChatList = FirebaseDatabase.getInstance().getReference().child("Chatlist").child(userId);
+                                ref.child(key).removeValue();
+                                refChatList.child(key).removeValue();
+                                Toast.makeText(mContext,"Delete Success",Toast.LENGTH_SHORT).show();
+                                dialogInterface.cancel();
+                            }
+                        });
+                        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                            }
+                        });
+                        builder.show();
 
                         break;
 /*

@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    app:cardElevation="3dp"
-    android:layout_margin="10dp"
-    android:padding="2dp"
-    android:layout_marginRight="20dp"
-    app:cardCornerRadius="10dp"
-    android:elevation="3dp"
+    android:layout_marginRight="80dp"
+    android:layout_marginEnd="80dp"
     android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardElevation="3dp"
+        android:layout_margin="10dp"
+        android:padding="2dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="10dp"
+        android:elevation="3dp"
+        android:layout_height="wrap_content">
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -81,9 +89,10 @@
         <ImageView
             android:layout_marginTop="5dp"
             android:id="@+id/imageViewMsgRowId"
-            android:layout_width="match_parent"
-            android:padding="3dp"
-            android:layout_height="330dp" />
+            android:layout_width="fill_parent"
+            android:padding="5dp"
+            android:adjustViewBounds="true"
+            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -120,6 +129,6 @@
 
         </LinearLayout>
     </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-
-</androidx.cardview.widget.CardView>
+</LinearLayout>

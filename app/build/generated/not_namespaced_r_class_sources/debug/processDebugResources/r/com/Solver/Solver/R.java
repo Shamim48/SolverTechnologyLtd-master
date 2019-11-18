@@ -5342,7 +5342,7 @@ public final class R {
     public static final int ic_send_black_24dp=0x7f0800a7;
     public static final int ic_touch_app_black_24dp=0x7f0800a8;
     public static final int layoutbg=0x7f0800a9;
-    public static final int mapimage=0x7f0800aa;
+    public static final int mapimg=0x7f0800aa;
     public static final int msgbg=0x7f0800ab;
     public static final int msgbg2=0x7f0800ac;
     public static final int mtrl_snackbar_background=0x7f0800ad;

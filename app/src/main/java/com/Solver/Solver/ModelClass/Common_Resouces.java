@@ -1,6 +1,8 @@
 package com.Solver.Solver.ModelClass;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -20,6 +22,11 @@ public class Common_Resouces {
 
     public void setCommon_clientList(List<Factories> common_clientList) {
         this.common_clientList = common_clientList;
+    }
+
+    public static void intent(Context context, Class activity){
+        Intent intent=new Intent(context,activity);
+        context.startActivity(intent);
     }
 
     public List<String> getCommon_jobList() {

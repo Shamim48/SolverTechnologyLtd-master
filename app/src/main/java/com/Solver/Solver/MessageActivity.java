@@ -272,6 +272,7 @@ public class MessageActivity extends AppCompatActivity {
 
         try {
             if(msg_type_Reply.equals("msgReply")){
+                imageLot.setVisibility(View.GONE);
                 replyLot.setVisibility(View.VISIBLE);
                 msgTv_Rp.setText(msg_reply);
 

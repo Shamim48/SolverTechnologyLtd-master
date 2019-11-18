@@ -334,6 +334,12 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
                          }
                      }
                  });
+                 holder.menuIconTv.setOnClickListener(new View.OnClickListener() {
+                     @Override
+                     public void onClick(View view) {
+                         poUpMenuForReplyAndDelete(view,groupMsg,position);
+                     }
+                 });
                  break;
     case MSG_TYPE_LOCATION_LEFT:
 
@@ -362,6 +368,13 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
                          }
                      }
                  });
+
+        holder.menuIconTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                poUpMenu(view,groupMsg,position);
+            }
+        });
                  break;
 
          }
