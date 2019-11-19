@@ -1,25 +1,35 @@
 package com.Solver.Solver.Adepter;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.text.Html;
 import android.view.LayoutInflater;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.Solver.Solver.ModelClass.Brands;
+import com.Solver.Solver.ModelClass.Chat;
 import com.Solver.Solver.ModelClass.Common_Resouces;
 import com.Solver.Solver.ModelClass.Factories;
 import com.Solver.Solver.ModelClass.Product;
 import com.Solver.Solver.ModelClass.Quotation_masters;
 import com.Solver.Solver.ModelClass.Sub_categories;
+import com.Solver.Solver.Quotation_Request;
 import com.Solver.Solver.R;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -64,9 +74,9 @@ public class QuotationAdapter extends RecyclerView.Adapter<QuotationAdapter.Quot
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
-    public void onBindViewHolder(@NonNull QuotationHolder holder, int position) {
+    public void onBindViewHolder(@NonNull QuotationHolder holder, final int position) {
 
-        Quotation_masters quotation_masters=quotation_mastersList.get(position);
+        final Quotation_masters quotation_masters=quotation_mastersList.get(position);
         double totalPrice=0.00;
 
         int subCategoryId;
@@ -110,6 +120,13 @@ public class QuotationAdapter extends RecyclerView.Adapter<QuotationAdapter.Quot
            holder.statusTv.setText(quotation_masters.getRequest_status());
        }
 
+       holder.menuTv.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+
+               poUpMenu(view,quotation_masters,position);
+           }
+       });
 
         holder.date.setText(quotation_masters.getCreated_at());
         holder.qty.setText("QTY NO:"+quotation_masters.getQut_no());
@@ -121,12 +138,12 @@ public class QuotationAdapter extends RecyclerView.Adapter<QuotationAdapter.Quot
         holder.quotation.setText(Html.fromHtml("<u>QUOTATION</u>",Html.FROM_HTML_MODE_LEGACY));
 try {
 
-
+String nameType;
+StringBuffer productLt=new StringBuffer();
         for (Product product:quotation_masters.getProductList()){
 
             subCategoryId=product.getSub_category_id();
             brandId=product.getBrand_id();
-
 
             Query sub_category=subCategoryRef.orderByChild("category_id").equalTo(subCategoryId);
 
@@ -167,10 +184,17 @@ try {
             });
 
             try {
-                holder.productList.append(subCategoryName+"\nBrand : "+brandName+"\n"+product.getName_type()+" : "+product.getProduct_name()+"\nQuantity : "+product.getQuantity()+"\nDescription : "+Html.fromHtml(product.getDescription(),Html.FROM_HTML_MODE_LEGACY)+"\n\n");
+                nameType=product.getName_type()+" :";
+                if (nameType.equals("name :")){
+                    nameType="";
+                }
+                productLt.append(subCategoryName+"\nBrand : "+brandName+"\n"+nameType+product.getProduct_name()+"\nQuantity : "+product.getQuantity()+"\nDescription : "+Html.fromHtml(product.getDescription(),Html.FROM_HTML_MODE_LEGACY)+"\n\n");
             }catch (Exception e){
+
             }
         }
+
+        holder.productList.setText(productLt);
 }catch (NullPointerException e){
 
 }
@@ -206,6 +230,7 @@ try {
         private TextView vat;
         private TextView grandAmount;
         private TextView statusTv;
+        private TextView menuTv;
 
         public QuotationHolder(@NonNull View itemView) {
             super(itemView);
@@ -223,7 +248,84 @@ try {
             vat=itemView.findViewById(R.id.vatQsTvId);
             grandAmount=itemView.findViewById(R.id.grandAmountQsTvId);
             statusTv=itemView.findViewById(R.id.statusTvId);
+            menuTv=itemView.findViewById(R.id.menuIconId);
 
         }
     }
+    public void poUpMenu(View view, final Quotation_masters quotation_masters, final int position){
+        PopupMenu popupMenu=new PopupMenu(context,view);
+        final MenuInflater inflater=popupMenu.getMenuInflater();
+        inflater.inflate(R.menu.user_row_popup,popupMenu.getMenu());
+        popupMenu.show();
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+
+          /*
+            int itemId=menuItem.getItemId();
+            if(itemId==R.id.replyMSGMIId){
+
+            }else if(itemId==R.id.editMenuItmId){
+
+            }else if(itemId==R.id.deleteMenuItmId){
+
+            }*/
+
+                switch (menuItem.getItemId()) {
+
+                    case R.id.editMenuItmId:
+
+                        Intent intent=new Intent(context, Quotation_Request.class);
+                        intent.putExtra("Quot_edit","Quot_edit");
+                        intent.putExtra("Quot_key",quotation_mastersList.get(position).getQut_key());
+                        context.startActivity(intent);
+
+                        break;
+
+                    case R.id.deleteMenuItmId:
+
+                        final AlertDialog.Builder builder=new AlertDialog.Builder(context);
+                        builder.setTitle("Are you sure..?");
+                        builder.setMessage("You want to delete..?");
+
+                        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                String key = quotation_mastersList.get(position).getQut_key();
+                                FirebaseAuth auth=FirebaseAuth.getInstance();
+                                String userId=auth.getCurrentUser().getUid();
+
+                                DatabaseReference  quotationRef= FirebaseDatabase.getInstance().getReference().child("quotation_req_masters");
+                                quotationRef.child(key).removeValue();
+
+                                Toast.makeText(context,"Delete Success",Toast.LENGTH_SHORT).show();
+                                dialogInterface.cancel();
+                            }
+                        });
+                        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                            }
+                        });
+                        builder.show();
+
+                        break;
+/*
+                    gmChat.remove(position);
+                  //gmChat.notify();
+                    notifyItemRemoved(position);
+                    String key = groupMessage.getMsgKey();
+                    DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Group").child(groupMessage.getGroupName());
+                    ref.child(key).removeValue();
+                    Toast.makeText(mContext,"Delete Success",Toast.LENGTH_SHORT).show();
+*/
+                }
+                return false;
+            }
+        });
+
+    }
+
 }

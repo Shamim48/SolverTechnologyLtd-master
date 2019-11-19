@@ -112,11 +112,14 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
     DatabaseReference clientRef;
     ArrayList<Factories> clientArrayList=new ArrayList<>();
     ClientArrayAdapter clientArrayAdapter;
-//Customer Data
+
+   //Customer Data
     int customerId;
     String attn_person;
     String cc_person;
     String currentDateTime;
+
+    String quot_key,edit_key;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -147,6 +150,8 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
         Intent intent=getIntent();
         productKey=intent.getStringExtra("productKey");
         productId=intent.getStringExtra("productId");
+        quot_key=intent.getStringExtra("");
+        edit_key=intent.getStringExtra("");
 
         closeBtn.setOnClickListener(new View.OnClickListener() {
             @Override

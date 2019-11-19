@@ -218,18 +218,20 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
                 if (position == mChat.size()-1){
                     if (chat.isIsseen()){
                         holder.text_seenRight.setText("Seen");
+                        holder.text_seenRight.getResources().getColor(R.color.colorPrimaryDark);
                     } else {
+                        holder.text_seenRight.getResources().getColor(R.color.black_gray);
                         holder.text_seenRight.setText("Delivered");
                     }
                 } else {
                     holder.text_seenRight.setVisibility(View.GONE);
                 }
-               /* holder.menuText.setOnClickListener(new View.OnClickListener() {
+                holder.menuText.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         poUpMenu(view,chat,position);
                     }
-                });*/
+                });
                break;
             case MSG_REPLY_LEFT:
                 holder.replyTextTv.setText(chat.getReplyText());
@@ -254,6 +256,17 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
                           poUpMenu(view,chat,position);
                       }
                   });
+                  if (position == mChat.size()-1){
+                      if (chat.isIsseen()){
+                          holder.text_seenRight.setText("Seen");
+                          holder.text_seenRight.getResources().getColor(R.color.colorPrimaryDark);
+                      } else {
+                          holder.text_seenRight.getResources().getColor(R.color.black_gray);
+                          holder.text_seenRight.setText("Delivered");
+                      }
+                  } else {
+                      holder.text_seenRight.setVisibility(View.GONE);
+                  }
                 break;
             case MSG_REPLY_IMAGE_LEFT:
 
@@ -262,8 +275,10 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
                 holder.timeTv.setText(chat.getTime());
                 holder.dateTv.setText(chat.getDate());
                 holder.image.setOnClickListener(new View.OnClickListener() {
+
                     @Override
                     public void onClick(View view) {
+
                         Intent i=new Intent(mContext, ViewImage.class);
                         i.putExtra("imageUri",chat.getImageUri());
                         mContext.startActivity(i);
@@ -272,6 +287,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
                 holder.menuText.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+
                         poUpMenuForReply(view,chat,position);
                     }
                 });
@@ -299,7 +315,6 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
                 });
 
                 break;
-
 
         }
     }
@@ -359,8 +374,6 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
            // replyImageParentLot=itemView.findViewById(R.id.replyImageParentLotId);
         }
     }
-
-
 
     @Override
     public int getItemViewType(int position) {
@@ -423,12 +436,9 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
             }else if(itemId==R.id.deleteMenuItmId){
 
             }*/
-
-
                 switch (menuItem.getItemId()) {
 
                     case R.id.replyGmId:
-
                         Intent intent=new Intent(mContext, MessageActivity.class);
                         intent.putExtra("message",mChat.get(position).getMessage());
                         intent.putExtra("image",mChat.get(position).getImageUri());
@@ -451,12 +461,13 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
     public void poUpMenu(View view, final Chat chat, final int position){
         PopupMenu popupMenu=new PopupMenu(mContext,view);
         MenuInflater inflater=popupMenu.getMenuInflater();
-        inflater.inflate(R.menu.message_menu,popupMenu.getMenu());
+        inflater.inflate(R.menu.delete_row,popupMenu.getMenu());
         popupMenu.show();
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
 
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
+
           /*
             int itemId=menuItem.getItemId();
             if(itemId==R.id.replyMSGMIId){
@@ -468,9 +479,9 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
             }*/
 
                 switch (menuItem.getItemId()) {
-                    case R.id.replyMSGMIId:
 
-                        String action;
+                   /* case R.id.replyMSGMIId:
+
                         Intent intent=new Intent(mContext, MessageActivity.class);
                         intent.putExtra("message",mChat.get(position).getMessage());
                         intent.putExtra("image",mChat.get(position).getImageUri());
@@ -480,9 +491,9 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
                         intent.putExtra("senderName",chat.getSenderName());
                         mContext.startActivity(intent);
 
-                        break;
+                        break;*/
 
-                    case R.id.deleteMsgId:
+                    case R.id.deleteRowId:
 
                         final AlertDialog.Builder builder=new AlertDialog.Builder(mContext);
                         builder.setTitle("Are You sure..?");
@@ -513,7 +524,6 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
 
                         break;
 /*
-
                     gmChat.remove(position);
                   //gmChat.notify();
                     notifyItemRemoved(position);
@@ -522,8 +532,6 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
                     ref.child(key).removeValue();
                     Toast.makeText(mContext,"Delete Success",Toast.LENGTH_SHORT).show();
 */
-
-
                 }
                 return false;
             }

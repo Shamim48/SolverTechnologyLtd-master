@@ -61,6 +61,8 @@ public class QuotationArrayAdapter extends ArrayAdapter<Quotation_masters> {
          TextView grandAmount;
 
 
+
+
         int subCategoryId;
         int brandId;
         DatabaseReference subCategoryRef= FirebaseDatabase.getInstance().getReference().child("sub_categories");
@@ -96,6 +98,8 @@ public class QuotationArrayAdapter extends ArrayAdapter<Quotation_masters> {
         ccPerson.setText("CC :"+quotation_masters.getCc_person());
 
           quotation.setText(Html.fromHtml("<u>QUOTATION</u>",Html.FROM_HTML_MODE_LEGACY));
+
+        StringBuffer productLt=new StringBuffer();
 
           for (Product product:quotation_masters.getProductList()){
 
@@ -141,16 +145,19 @@ public class QuotationArrayAdapter extends ArrayAdapter<Quotation_masters> {
                   }
               });
 
-              productList.append(subCategoryName+"\nProduct Name :"+product.getProduct_name()+"\nBrand :"+brandName+"\nDescription :"+Html.fromHtml(product.getDescription(),Html.FROM_HTML_MODE_LEGACY)+"\nQuantity :2"+"\n\n");
+            //  productLt.append(subCategoryName+"\nProduct Name :"+product.getProduct_name()+"\nBrand :"+brandName+"\nDescription :"+Html.fromHtml(product.getDescription(),Html.FROM_HTML_MODE_LEGACY)+"\nQuantity :2"+"\n\n");
+
+              productLt.append(subCategoryName+"\nProduct Name :"+product.getProduct_name()+"\nBrand :"+brandName+"\nDescription :"+Html.fromHtml(product.getDescription(),Html.FROM_HTML_MODE_LEGACY)+"\nQuantity :2"+"\n\n");
 
           }
+
+          productList.setText(productLt);
 
         // totalPrice=String.format("%f",quotation_masters.getTotal_amount());
         totalPrice.setText("Total Price :");
         discount.setText("Discount :");
         vat.setText("Vat0% :");
         grandAmount.setText("Grand Amount :");
-
 
         return convertView;
     }

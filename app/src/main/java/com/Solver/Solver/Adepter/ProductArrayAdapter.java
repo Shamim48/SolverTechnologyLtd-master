@@ -47,6 +47,7 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> implements Filte
      Product product;
      public static String productDes;
     private boolean checked = false;
+    String productNameType;
 
     public ProductArrayAdapter(Context context,  List<Product> productList) {
         super(context, 0, productList);
@@ -172,7 +173,11 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> implements Filte
 
 
 try {
-    textViewName.setText(product.getProduct_name());
+    productNameType=product.getName_type()+": ";
+    if(productNameType.equals("name: ")){
+        productNameType="";
+    }
+    textViewName.setText(productNameType+product.getProduct_name());
     productDes=product.getDescription();
     desTv.setText(Html.fromHtml(product.getDescription(),Html.FROM_HTML_MODE_LEGACY));
 
