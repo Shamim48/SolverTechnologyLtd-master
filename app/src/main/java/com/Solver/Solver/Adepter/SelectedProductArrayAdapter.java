@@ -1,12 +1,14 @@
 package com.Solver.Solver.Adepter;
 
 import android.content.Context;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -24,12 +26,11 @@ public class SelectedProductArrayAdapter extends ArrayAdapter<Product> {
     private SelectedProductArrayAdapter.RemoveProductListener removeProductListener;
 
     public SelectedProductArrayAdapter(Context context,  List<Product> productList) {
+
         super(context, 0, productList);
-
         this.productList = productList;
+
     }
-
-
 
     @NonNull
     @Override
@@ -37,6 +38,8 @@ public class SelectedProductArrayAdapter extends ArrayAdapter<Product> {
         final Product product = productList.get(position);
         TextView productNameTv;
         TextView quantity;
+        String productNameType;
+        LinearLayout selectedPdtLlt;
 
         ImageButton closeBtn;
 
@@ -47,15 +50,30 @@ public class SelectedProductArrayAdapter extends ArrayAdapter<Product> {
             productNameTv=convertView.findViewById(R.id.productNameSRId);
             quantity=convertView.findViewById(R.id.productQuantitySRId);
             closeBtn=convertView.findViewById(R.id.closeBtnSrId);
+            selectedPdtLlt=convertView.findViewById(R.id.selectedProductLltId);
 
             try {
-                productNameTv.setText(product.getProduct_name());
-                quantity.setText(product.getQuantity());
-
+                productNameType=product.getName_type()+": ";
+                if(productNameType.equals("name: ")){
+                    productNameType="";
+                }
+                productNameTv.setText(productNameType+product.getProduct_name());
             }catch (Exception e){
 
+            }
+
+            try {
+                quantity.setText(product.getQuantity());
+            }catch (Exception e){
 
             }
+
+            convertView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    removeProductListener.editProductSelectedPdt(position);
+                }
+            });
 
             closeBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -68,12 +86,10 @@ public class SelectedProductArrayAdapter extends ArrayAdapter<Product> {
         return convertView;
     }
 
-
-
     public interface RemoveProductListener{
 
-
         void removeGridProduct(int position);
+        void editProductSelectedPdt(int position);
     }
 
     public void setRemoveProduct(SelectedProductArrayAdapter.RemoveProductListener removeProductListener) {

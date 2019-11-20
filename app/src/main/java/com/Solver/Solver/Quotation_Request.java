@@ -110,6 +110,7 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
     DatabaseReference quotationMasterRef;
     DatabaseReference quotationDetailsRef;
     DatabaseReference clientRef;
+
     ArrayList<Factories> clientArrayList=new ArrayList<>();
     ClientArrayAdapter clientArrayAdapter;
 
@@ -120,6 +121,7 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
     String currentDateTime;
 
     String quot_key,edit_key;
+    Quotation_masters quotation_masters;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,8 +136,8 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
         productRef= FirebaseDatabase.getInstance().getReference().child("product");
         subCategoryRef=FirebaseDatabase.getInstance().getReference().child("sub_categories");
         brandRef=FirebaseDatabase.getInstance().getReference().child("brands");
+       // quotationMasterRef=FirebaseDatabase.getInstance().getReference().child("quotation_req_masters");
         productList=new ArrayList<>();
-
 
         auth=FirebaseAuth.getInstance();
         user=auth.getCurrentUser();
@@ -146,13 +148,41 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
 
         lnlt.setVisibility(View.GONE);
         currentUserName=user.getDisplayName();
+        quotation_masters=new Quotation_masters();
 
         Intent intent=getIntent();
         productKey=intent.getStringExtra("productKey");
         productId=intent.getStringExtra("productId");
-        quot_key=intent.getStringExtra("");
-        edit_key=intent.getStringExtra("");
+        quot_key=intent.getStringExtra("Quot_key");
+        edit_key=intent.getStringExtra("Quot_edit");
+        try {
 
+
+        if(!(quot_key.equals(""))){
+
+        quotationMasterRef.child(quot_key).addValueEventListener(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                quotation_masters=dataSnapshot.getValue(Quotation_masters.class);
+
+                for (Product product:quotation_masters.getProductList()){
+
+                    selectedProduct.add(product);
+
+                }
+                selectedProductArrayAdapter=new SelectedProductArrayAdapter(Quotation_Request.this,selectedProduct);
+                selectedProductGridView.setAdapter(selectedProductArrayAdapter);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });}
+        }catch (Exception e){
+
+        }
         closeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -219,8 +249,11 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
             public void onClick(View view) {
 
                 if(selectedProduct.isEmpty()){
+
                     toast("Please Select Product..");
+
                     return;
+
                 }
 
                 clientName=clientSv.getQuery().toString();
@@ -402,6 +435,7 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
                     Product_types product_types=data.getValue(Product_types.class);
                     product_typesList.add(product_types);
                 }
+
                 productTypeAdapter=new ProductTypeAdapter(Quotation_Request.this,product_typesList);
                 productTypeSp.setAdapter(productTypeAdapter);
             }
@@ -473,8 +507,6 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
 
             }
         });
-
-
     }
 
     private void findId() {
@@ -487,6 +519,7 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
         subCategorySp=findViewById(R.id.subCategorySpId);
         brandSp=findViewById(R.id.brandSpId);
         productLv=findViewById(R.id.productLvId);
+
      //   testList=findViewById(R.id.testListId);
        // productLv.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
@@ -501,11 +534,9 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
         sub_categoriesList=new ArrayList<>();
         brandsArrayList=new ArrayList<>();
         showProductTv=findViewById(R.id.showProductTvId);
-
         selectedProductGridView=findViewById(R.id.selectedProductGridViewId);
 
     }
-
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -548,7 +579,6 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
               Toast.makeText(getApplicationContext(),"You Chose "+productList.get(position).getProduct_name(),Toast.LENGTH_SHORT).show();
               Toast.makeText(getApplicationContext(),"Selected Product "+selectedProduct.size(),Toast.LENGTH_SHORT).show();
 
-
                   selectedProductArrayAdapter=new SelectedProductArrayAdapter(Quotation_Request.this,selectedProduct);
                   selectedProductGridView.setAdapter(selectedProductArrayAdapter);
                   selectedProductArrayAdapter.setRemoveProduct(Quotation_Request.this);
@@ -569,7 +599,6 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
                 alertDialogByQuantity.dismiss();
             }
         });
-
         //  addSelectedProduct(position);
      // selectedProduct.add(productList.get(position));
       //  Toast.makeText(getApplicationContext(),"You Chose "+productList.get(position).getProduct_name(),Toast.LENGTH_SHORT).show();
@@ -595,7 +624,16 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
          selectedProductArrayAdapter.notifyDataSetChanged();
     }
 
-    public void addSelectedProduct(final int i){
+    @Override
+    public void editProductSelectedPdt(int position) {
+
+       // editSelectedProduct(position);
+
+        toast("Coming soon");
+
+    }
+
+    public void editSelectedProduct(final int i){
 
         AlertDialog.Builder alert=new AlertDialog.Builder(Quotation_Request.this);
         View viewClientForm = getLayoutInflater().inflate(R.layout.quantity_lot, null);
@@ -608,6 +646,7 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
 
             @Override
             public void onClick(View view) {
+               // quantityEdQD.setText(productList.get(i).getQuantity());
                 String quantity = quantityEdQD.getText().toString().trim();
                 //companyNameEt.setText(bloodGroups);
                 int qut=Integer.parseInt(quantity);
@@ -622,10 +661,9 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
                Toast.makeText(getApplicationContext(),"You Chose "+productList.get(i).getProduct_name(),Toast.LENGTH_SHORT).show();
                 Toast.makeText(getApplicationContext(),"Selected Product "+selectedProduct.size(),Toast.LENGTH_SHORT).show();
 
-
-
             }
         });
+
         cancelBtnQD.setOnClickListener(new View.OnClickListener() {
 
             @Override

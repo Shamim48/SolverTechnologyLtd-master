@@ -1679,6 +1679,7 @@ id selectUserTypeId
 id select_dialog_listview
 id selected
 id selectedProductGridViewId
+id selectedProductLltId
 id sendMsgBtnId
 id sendQuotationBtnId
 id sendQuotationId
