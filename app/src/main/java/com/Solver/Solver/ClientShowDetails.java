@@ -35,13 +35,21 @@ public class ClientShowDetails extends AppCompatActivity {
 
         Intent intent=getIntent();
         String comName=intent.getStringExtra("comName");
-        String comAddress=intent.getStringExtra("comAddress");
+        final String comAddress=intent.getStringExtra("comAddress");
         String comConsultant=intent.getStringExtra("consultant");
         final String comEmail=intent.getStringExtra("comEmail");
         final String comPhone=intent.getStringExtra("comPhone");
 
         comNameTv.setText(comName);
         comAddressTv.setText(comAddress);
+        comAddressTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    Intent locationIntent=new Intent(Intent.ACTION_VIEW);
+                    locationIntent.setData(Uri.parse("geo:0,0?q="+comAddress));
+                    startActivity(locationIntent);
+            }
+        });
         consultantTv.setText(comConsultant);
         emailTv.setText(comEmail);
         Phone.setText(comPhone);

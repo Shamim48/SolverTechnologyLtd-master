@@ -14,8 +14,6 @@
         android:layout_margin="10dp"
         android:layout_height="wrap_content">
 
-
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -86,7 +84,6 @@
                         />
                 </LinearLayout>
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
@@ -101,12 +98,14 @@
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
                         />
+
                     <TextView
                         android:id="@+id/companyAddressId"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
-                        android:textColor="@color/black"
+                        android:textIsSelectable="true"
+                        android:textColor="#03A9F4"
                         android:textSize="18sp"
                         />
 
@@ -137,8 +136,6 @@
                         />
                 </LinearLayout>
 
-
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
@@ -166,7 +163,6 @@
                         />
 
                 </LinearLayout>
-
 
             </LinearLayout>
 
@@ -210,7 +206,6 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     />
-
 
             </LinearLayout>
         </LinearLayout>

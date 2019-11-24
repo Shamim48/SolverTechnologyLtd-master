@@ -141,6 +141,7 @@ public class Write_Schedule extends AppCompatActivity{
         jobRef=FirebaseDatabase.getInstance().getReference().child("Schedule").child("Job");
 
         userRef=FirebaseDatabase.getInstance().getReference().child("User");
+
         clientShow();
 
         categoryList=new ArrayList<>();
@@ -204,6 +205,7 @@ public class Write_Schedule extends AppCompatActivity{
                 progressDialog.setMessage("Uploading Data..");
                 progressDialog.show();
                 jList.clear();
+
                         String name= userSV.getQuery().toString();
                         String date=dateWsEt.getText().toString();
                         String comName=companyWsAt.getText().toString();
@@ -293,29 +295,24 @@ public class Write_Schedule extends AppCompatActivity{
 
                             jList.add(new JobC(checkBosText,jobDesText,jobCategory));
 
-
                         }else if(!checkBox6.isChecked()){
                             jodDesEt6.setText(null);
                             jodDesEt6.setVisibility(View.GONE);
 
                         }
 
-
                         if (checkBox7.isChecked()){
                             jodDesEt7.setVisibility(View.VISIBLE);
                             String checkBosText=checkBox7.getText().toString();
                             String jobDesText=jodDesEt7.getText().toString();
                             String jobCategory=spinner7.getSelectedItem().toString();
-
                             jList.add(new JobC(checkBosText,jobDesText,jobCategory));
-
 
                         }else if(!checkBox7.isChecked()){
                             jodDesEt7.setText(null);
                             jodDesEt7.setVisibility(View.GONE);
 
                         }
-
 
                         if (checkBox8.isChecked()){
                             jodDesEt8.setVisibility(View.VISIBLE);
@@ -324,7 +321,6 @@ public class Write_Schedule extends AppCompatActivity{
                             String jobCategory=spinner8.getSelectedItem().toString();
 
                             jList.add(new JobC(checkBosText,jobDesText,jobCategory));
-
 
                         }else if(!checkBox8.isChecked()){
                             jodDesEt8.setText(null);
@@ -357,7 +353,6 @@ public class Write_Schedule extends AppCompatActivity{
 
                             jList.add(new JobC(checkBosText,jobDesText,jobCategory));
 
-
                         }else if(!checkBox10.isChecked()){
                             jodDesEt10.setText(null);
                             jodDesEt10.setVisibility(View.GONE);
@@ -370,7 +365,6 @@ public class Write_Schedule extends AppCompatActivity{
                             String jobDesText=jodDesEt11.getText().toString();
                             String jobCategory=spinner11.getSelectedItem().toString();
                             jList.add(new JobC(checkBosText,jobDesText,jobCategory));
-
 
                         }else if(!checkBox11.isChecked()){
                             jodDesEt11.setText(null);
@@ -416,7 +410,6 @@ public class Write_Schedule extends AppCompatActivity{
                         String job= TextUtils.join(", ",jList);
                         showTV.setText(job);
 */
-
 
                 if(scheduleEmployeeList.size()==0){
                     String sdlKey=scheduleREf.push().getKey();

@@ -734,8 +734,6 @@ public class GroupChatAtv extends AppCompatActivity {
 
             }
         finish();
-
-
     }
 
     private void uploadImage() {
@@ -797,7 +795,7 @@ public class GroupChatAtv extends AppCompatActivity {
         super.onStart();
 
        // .orderByChild("date").equalTo(currentDate)
-        GroupNameRef.limitToLast(50).addValueEventListener(new ValueEventListener() {
+        GroupNameRef.limitToLast(30).addValueEventListener(new ValueEventListener() {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -867,12 +865,11 @@ public class GroupChatAtv extends AppCompatActivity {
     SimpleDateFormat currentDateFormatSce = new SimpleDateFormat("dd-MM-yyy");
     currentSceDate = currentDateFormatSce.format(calForSce.getTime());
 
-
-
     Calendar calForTime = Calendar.getInstance();
     SimpleDateFormat currentTimeFormat = new SimpleDateFormat("hh:mm a");
     currentTime = currentTimeFormat.format(calForTime.getTime());
 }
+
     private void GetUserInfo() {
         UsersRef.child(currentUserID).addValueEventListener(new ValueEventListener() {
             @Override
@@ -880,6 +877,7 @@ public class GroupChatAtv extends AppCompatActivity {
                 if (dataSnapshot.exists()) {
                     currentUserName = dataSnapshot.child("name").getValue().toString();
                 }
+
             }
 
             @Override
@@ -888,6 +886,7 @@ public class GroupChatAtv extends AppCompatActivity {
             }
         });
     }
+
     private void clientShow() {
         clientList.clear();
         factoryRef.addValueEventListener(new ValueEventListener() {

@@ -2,6 +2,7 @@ package com.Solver.Solver.Adepter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,7 +42,7 @@ public class ClientAdepter  extends RecyclerView.Adapter<ClientAdepter.ClientHol
 
         final Factories client=clientList.get(position);
         holder.cpName.setText(clientList.get(position).getCompany_name());
-        holder.cpAddress.setText(clientList.get(position).getAddress());
+        holder.cpAddress.setText(clientList.get(position).getLocation());
         holder.cpCallBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,7 +59,7 @@ public class ClientAdepter  extends RecyclerView.Adapter<ClientAdepter.ClientHol
             public void onClick(View view) {
                 Intent clientIntent=new Intent(context, ClientShowDetails.class);
                 clientIntent.putExtra("comName",clientList.get(position).getCompany_name());
-                clientIntent.putExtra("comAddress",clientList.get(position).getAddress());
+                clientIntent.putExtra("comAddress",clientList.get(position).getLocation());
                 clientIntent.putExtra("consultant",clientList.get(position).getCc_name());
                 clientIntent.putExtra("comEmail",clientList.get(position).getCc_email());
                 clientIntent.putExtra("comPhone",clientList.get(position).getCc_phone());
@@ -82,7 +83,6 @@ public class ClientAdepter  extends RecyclerView.Adapter<ClientAdepter.ClientHol
 
        public ClientHolder(@NonNull View itemView) {
            super(itemView);
-
            cpName=itemView.findViewById(R.id.companyNameTvId);
            cpAddress=itemView.findViewById(R.id.companyAddressTvId);
            cpCallBtn=itemView.findViewById(R.id.cpCallBtnTbId);
