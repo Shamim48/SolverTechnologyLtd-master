@@ -20,7 +20,11 @@ public class Product {
     private String updated_at;
     private String name_type;
    private boolean checked=false;
-   private int quantity;
+   private double quantity;
+   private double unitPrice;
+   private double totalPrice;
+   private String warranty;
+
 
     public Product(String product_id, int company_id, int barcode, String product_unit, int sell_percentage, int brand_id, int sub_category_id, int user_id, String product_name, String description, int reorder, int status, String created_at, String updated_at, String name_type) {
         this.product_id = product_id;
@@ -59,17 +63,54 @@ public Product(String product_id, int company_id, int barcode, String product_un
     }
 
 
+    public Product(String product_key, String product_id, double quantity, double unitPrice, double totalPrice, String warranty) {
+        this.product_key = product_key;
+        this.product_id = product_id;
+        this.quantity = quantity;
+        this.unitPrice = unitPrice;
+        this.totalPrice = totalPrice;
+        this.warranty = warranty;
+    }
+
     public Product() {
     }
 
 
-    public int getQuantity() {
+    public double getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(double quantity) {
         this.quantity = quantity;
     }
+
+    public double getUnitPrice() {
+        return unitPrice;
+    }
+
+    public void setUnitPrice(double unitPrice) {
+        this.unitPrice = unitPrice;
+    }
+
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public String getWarranty() {
+        return warranty;
+    }
+
+    public void setWarranty(String warranty) {
+        this.warranty = warranty;
+    }
+
+
+
+
 
     public boolean isChecked() {
         return checked;

@@ -342,17 +342,13 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 productList.clear();
                 for(DataSnapshot data:dataSnapshot.getChildren()){
-                    Product product=data.getValue(Product.class);
-                    productList.add(product);
+                        Product product=data.getValue(Product.class);
+                        productList.add(product);
+
                 }
 
                 Collections.reverse(productList);
                 productArrayAdapter=new ProductArrayAdapter(Quotation_Request.this,productList);
-               // LinearLayoutManager linearLayoutManager=new LinearLayoutManager(Quotation_Request.this);
-               // productRv.setLayoutManager(linearLayoutManager);
-               // productRv.setAdapter(productArrayAdapter);
-               /* Common_Resouces common_resouces=new Common_Resouces();
-                common_resouces.setCommon_clientList(productList);*/
 
                productLv.setAdapter(productArrayAdapter);
                productArrayAdapter.setCheckedListener((ProductArrayAdapter.CheckedListener) Quotation_Request.this);
@@ -566,16 +562,18 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
           public void onClick(View view) {
               try {
               String quantity = quantityEdQD.getText().toString().trim();
-              int qut=Integer.parseInt(quantity);
-              //companyNameEt.setText(bloodGroups);
+                  Double qut=Double.parseDouble(quantity);
+                  String productKey=productList.get(position).getProduct_key();
+                  String productId=productList.get(position).getProduct_id();
+
 
               if (quantity.isEmpty()) {
                   quantityEdQD.setError("Please Enter Client/Company Name..!");
                   return;
               }
 
-              productList.get(position).setQuantity(qut);
-              selectedProduct.add(productList.get(position));
+             // productList.get(position).setQuantity(qut);
+                  selectedProduct.add(new Product(productKey,productId,qut,0.0,0.0,""));
               Toast.makeText(getApplicationContext(),"You Chose "+productList.get(position).getProduct_name(),Toast.LENGTH_SHORT).show();
               Toast.makeText(getApplicationContext(),"Selected Product "+selectedProduct.size(),Toast.LENGTH_SHORT).show();
 
@@ -649,15 +647,18 @@ public class Quotation_Request extends AppCompatActivity implements ProductArray
                // quantityEdQD.setText(productList.get(i).getQuantity());
                 String quantity = quantityEdQD.getText().toString().trim();
                 //companyNameEt.setText(bloodGroups);
-                int qut=Integer.parseInt(quantity);
+                Double qut=Double.parseDouble(quantity);
+                String productKey=productList.get(i).getProduct_key();
+                String productId=productList.get(i).getProduct_id();
+
 
                 if (quantity.isEmpty()) {
                     quantityEdQD.setError("Please Enter Client/Company Name..!");
                     return;
                 }
 
-                productList.get(i).setQuantity(qut);
-                selectedProduct.add(productList.get(i));
+              //  productList.get(i).setQuantity(qut);
+                selectedProduct.add(new Product(productKey,productId,qut,0.0,0.0,""));
                Toast.makeText(getApplicationContext(),"You Chose "+productList.get(i).getProduct_name(),Toast.LENGTH_SHORT).show();
                 Toast.makeText(getApplicationContext(),"Selected Product "+selectedProduct.size(),Toast.LENGTH_SHORT).show();
 
