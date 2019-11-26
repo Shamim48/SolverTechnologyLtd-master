@@ -14,14 +14,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.Solver.Solver.ModelClass.JobC;
 import com.Solver.Solver.ModelClass.Schedule;
+import com.Solver.Solver.ModelClass.SignUp;
+import com.Solver.Solver.ModelClass.User;
 import com.Solver.Solver.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
@@ -53,11 +59,47 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ScheduleHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final ScheduleHolder holder, final int position) {
 
         final Schedule schedule=schedulesList.get(position);
         holder.dateTv.setText(schedule.getDate()+" Work Plan.");
-        holder.userNameTV.setText(schedule.getEmployeeName());
+        try {
+
+            if(!(schedulesList.get(position).getEmployeeName().equals(""))){
+                holder.userNameTV.setText(schedule.getEmployeeName());
+            }
+        }catch (Exception e){
+
+        }
+//schedulesList.get(position).getEmp_id()
+
+        try {
+
+            if(!(schedulesList.get(position).getEmp_id().equals(""))){
+                DatabaseReference empName=FirebaseDatabase.getInstance().getReference("User");
+                Query userInfoRef=empName.orderByChild("userId").equalTo(schedulesList.get(position).getEmp_id());
+                userInfoRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot data:dataSnapshot.getChildren()){
+                            SignUp user=data.getValue(SignUp.class);
+                            String userName=user.getName();
+                            holder.userNameTV.setText(userName);
+                        }
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
+        }catch (Exception e){
+
+
+        }
+
         holder.companyNameTV.setText(schedule.getCompanyName());
         /*for (int i=0;i<=schedule.getList().size();i++){
 
@@ -125,8 +167,6 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
                 }
             });
         }
-
-
     }
 
     @Override

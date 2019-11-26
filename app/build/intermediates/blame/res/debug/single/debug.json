@@ -3160,6 +3160,10 @@
         "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f19b873fc2e44666dd8de6830fabeb88\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
+        "merged": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_usercardsample_row.xml.flat",
+        "source": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\src\\main\\res\\layout\\usercardsample_row.xml"
+    },
+    {
         "merged": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_dmax_spots_spot.xml.flat",
         "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\d96dd50921af81286de1ecc09411ce6b\\res\\drawable-v21\\dmax_spots_spot.xml"
     },

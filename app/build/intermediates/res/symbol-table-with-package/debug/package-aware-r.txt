@@ -1680,6 +1680,7 @@ id select_dialog_listview
 id selected
 id selectedProductGridViewId
 id selectedProductLltId
+id selectedUserGridViewId
 id sendMsgBtnId
 id sendQuotationBtnId
 id sendQuotationId
@@ -1791,6 +1792,7 @@ id up
 id updateBtnId
 id uploadBtnWsId
 id useLogo
+id userNameCVSRId
 id userNameNHId
 id userName_GURId
 id userRltImageId
@@ -1968,6 +1970,7 @@ layout spennersamplelayout
 layout support_simple_spinner_dropdown_item
 layout tagclientsample_row
 layout user_item
+layout usercardsample_row
 layout usersample_layout
 menu activity_home_drawer
 menu crop_image_menu

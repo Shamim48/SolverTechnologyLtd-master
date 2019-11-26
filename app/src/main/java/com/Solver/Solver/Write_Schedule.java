@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -22,15 +23,19 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.Solver.Solver.Adepter.ClientArrayAdapter;
 import com.Solver.Solver.Adepter.TagUserAdepter;
 import com.Solver.Solver.Adepter.TagUserArrayAdapter;
 import com.Solver.Solver.Adepter.TagUserBaseAdapter;
+import com.Solver.Solver.Adepter.UserGridViewAdapter;
 import com.Solver.Solver.ModelClass.Client;
 
+import com.Solver.Solver.ModelClass.Common_Resouces;
 import com.Solver.Solver.ModelClass.Factories;
 import com.Solver.Solver.ModelClass.JobC;
 import com.Solver.Solver.ModelClass.Schedule;
 import com.Solver.Solver.ModelClass.SignUp;
+import com.Solver.Solver.ModelClass.User;
 import com.Solver.Solver.ModelClass.UserNameAndID;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -38,13 +43,14 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class Write_Schedule extends AppCompatActivity{
+public class Write_Schedule extends AppCompatActivity implements UserGridViewAdapter.UserListener {
 
     private Button uploadBtn;
     private TextView tagEmployeeTv;
@@ -57,6 +63,7 @@ public class Write_Schedule extends AppCompatActivity{
     private Spinner categorySp;
     private LinearLayout lltWsId;
     private ImageButton closeWsId;
+    private GridView selectedUserGridView;
     private CheckBox checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7,checkBox8,checkBox9,
             checkBox10,checkBox11,checkBox12,checkBox13;
     private EditText jodDesEt1,jodDesEt2,jodDesEt3,jodDesEt4,jodDesEt5,jodDesEt6,jodDesEt7,jodDesEt8,jodDesEt9,
@@ -67,7 +74,7 @@ public class Write_Schedule extends AppCompatActivity{
     List<String> jobList;
     List<JobC> jList;
     List<SignUp> tagUserList;
-    ArrayList<String> clientList;
+    ArrayList<Factories> clientList;
     DatabaseReference clientRef;
     ArrayList<String> tagUserL=new ArrayList<>();
     ArrayList<String> scheduleEmployeeList=new ArrayList<>();
@@ -88,6 +95,7 @@ public class Write_Schedule extends AppCompatActivity{
     TagUserAdepter tagUserAdepter;
     TagUserBaseAdapter tagUserBaseAdapter;
     TagUserArrayAdapter tagUserArrayAdapter;
+    UserGridViewAdapter userGridViewAdapter;
 
     UserNameAndID userNameAndID;
 
@@ -115,9 +123,11 @@ public class Write_Schedule extends AppCompatActivity{
     String jobDes8;
     Schedule schedule;
     String jobCategory_G;
+     String userName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
+
     {
 
         super.onCreate(savedInstanceState);
@@ -161,6 +171,7 @@ public class Write_Schedule extends AppCompatActivity{
                 date();
             }
         });
+
         userSV.setOnSearchClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -169,6 +180,7 @@ public class Write_Schedule extends AppCompatActivity{
                 tagUser();
             }
         });
+
         closeWsId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -181,7 +193,8 @@ public class Write_Schedule extends AppCompatActivity{
             public void onClick(View view) {
                  employee=new StringBuffer();
               String tagEmployee=userSV.getQuery().toString();
-              scheduleEmployeeList.add(tagEmployee);
+
+              scheduleEmployeeList.add(tagUserId);
              // scheduleEmployeeAdapter=new ArrayAdapter(Write_Schedule.this,R.layout.spennersamplelayout,R.id.showTestSpinnerId,scheduleEmployeeList);
               //scheduleEmployeeLv.setAdapter(scheduleEmployeeAdapter);
              // scheduleEmployeeAdapter.notifyDataSetChanged();
@@ -189,10 +202,35 @@ public class Write_Schedule extends AppCompatActivity{
               userSV.clearFocus();
               Toast.makeText(getApplicationContext(),"selected Employee:"+scheduleEmployeeList.size(),Toast.LENGTH_SHORT).show();
 
-              for (String tagEp:scheduleEmployeeList){
-                  employee.append(tagEp+" , ");
+              userGridViewAdapter=new UserGridViewAdapter(Write_Schedule.this,scheduleEmployeeList);
+                selectedUserGridView.setAdapter(userGridViewAdapter);
+                userGridViewAdapter.setRemoveUser(Write_Schedule.this);
+                userGridViewAdapter.notifyDataSetChanged();
+
+              /*for (String tagEp:scheduleEmployeeList){
+
+                  final DatabaseReference userdata=FirebaseDatabase.getInstance().getReference("User");
+                  Query empNameRef=userdata.orderByChild("userId").equalTo(tagEp);
+                  empNameRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                      @Override
+                      public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                          for(DataSnapshot data:dataSnapshot.getChildren()){
+                              SignUp user=data.getValue(SignUp.class);
+                              employee.append(user.getName()+" , ");
+                              Common_Resouces.toastS(Write_Schedule.this,"Employee added");
+                          }
+                      }
+
+                      @Override
+                      public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                      }
+                  });
+
+
               }
-              tagEmployeeTv.setText(employee);
+              tagEmployeeTv.setText(employee.toString());
+*/
             }
         });
         uploadBtn.setOnClickListener(new View.OnClickListener() {
@@ -413,7 +451,7 @@ public class Write_Schedule extends AppCompatActivity{
 
                 if(scheduleEmployeeList.size()==0){
                     String sdlKey=scheduleREf.push().getKey();
-                    Schedule  schedule=new Schedule(sdlKey,name,date,comName,jList);
+                    Schedule  schedule=new Schedule(sdlKey,tagUserId,date,comName,jList);
                     scheduleREf.child(tagUserId).child(date).child(sdlKey).setValue(schedule).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
@@ -429,11 +467,10 @@ public class Write_Schedule extends AppCompatActivity{
                 }else {
                     String tagEmp="";
 
-
-                       for(String tagEpName:scheduleEmployeeList) {
+                       for(String tagEmp_id:scheduleEmployeeList) {
 
                            String sdlKey = scheduleREf.push().getKey();
-                           Schedule schedule = new Schedule(sdlKey, tagEpName, date, comName, jList);
+                           Schedule schedule = new Schedule(sdlKey, tagEmp_id, date, comName, jList);
                            scheduleREf.child(tagUserId).child(date).child(sdlKey).setValue(schedule).addOnCompleteListener(new OnCompleteListener<Void>() {
                                @Override
                                public void onComplete(@NonNull Task<Void> task) {
@@ -1105,11 +1142,12 @@ public class Write_Schedule extends AppCompatActivity{
 
                 for (DataSnapshot data: dataSnapshot.getChildren()){
                     Factories client=data.getValue(Factories.class);
-                    String clientNam=client.getCompany_name();
-                    clientList.add(clientNam);
+                  //  String clientNam=client.getCompany_name();
+                    clientList.add(client);
                 }
-                clientAdapter=new ArrayAdapter<String>(Write_Schedule.this,R.layout.spennersamplelayout,R.id.showTestSpinnerId,clientList);
+                ClientArrayAdapter clientArrayAdapter =new ClientArrayAdapter(Write_Schedule.this,clientList);
                 companyWsAt.setAdapter(clientAdapter);
+
             }
 
             @Override
@@ -1159,6 +1197,9 @@ public class Write_Schedule extends AppCompatActivity{
         scheduleEmployeeLv=findViewById(R.id.tagEmployeeListId);
 
         tagEmployeeTv=findViewById(R.id.tagEmployeeTvId);
+
+
+        selectedUserGridView=findViewById(R.id.selectedUserGridViewId);
 
         spinner1=findViewById(R.id.spinner1);
          spinner2=findViewById(R.id.spinner2);
@@ -1233,4 +1274,11 @@ public class Write_Schedule extends AppCompatActivity{
     // userSV.setText(tagUserName);
   //  showTV.setText(tagUserName+"\n ID:"+tagUserId);
 }
+
+    @Override
+    public void removeGridUser(int position) {
+        scheduleEmployeeList.remove(position);
+        Common_Resouces.toastS(Write_Schedule.this,"Delete selected Employee");
+        userGridViewAdapter.notifyDataSetChanged();
+    }
 }

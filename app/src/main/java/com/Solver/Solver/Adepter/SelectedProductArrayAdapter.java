@@ -20,6 +20,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.List;
@@ -29,6 +30,9 @@ public class SelectedProductArrayAdapter extends ArrayAdapter<Product> {
     private List<Product> productList;
     Context context;
      String productName;
+     String productId;
+    String productNameType;
+    TextView productNameTv;
     private SelectedProductArrayAdapter.RemoveProductListener removeProductListener;
 
     public SelectedProductArrayAdapter(Context context,  List<Product> productList) {
@@ -42,9 +46,9 @@ public class SelectedProductArrayAdapter extends ArrayAdapter<Product> {
     @Override
     public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         final Product product = productList.get(position);
-        TextView productNameTv;
+
         TextView quantity;
-        String productNameType;
+
 
         final LinearLayout selectedPdtLlt;
 
@@ -58,15 +62,33 @@ public class SelectedProductArrayAdapter extends ArrayAdapter<Product> {
             quantity=convertView.findViewById(R.id.productQuantitySRId);
             closeBtn=convertView.findViewById(R.id.closeBtnSrId);
             selectedPdtLlt=convertView.findViewById(R.id.selectedProductLltId);
-
+            productId=productList.get(position).getProduct_id();
+            //productNameTv.setText(productId);
 
             DatabaseReference productNameRef= FirebaseDatabase.getInstance().getReference("product");
-            productNameRef.child(productList.get(position).getProduct_id()).addValueEventListener(new ValueEventListener() {
+            Query productIdRef=productNameRef.orderByChild("product_id").equalTo(productId);
+            productIdRef.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                    Product selectedProduct=dataSnapshot.getValue(Product.class);
-                    productName=selectedProduct.getProduct_name();
+                    for (DataSnapshot data:dataSnapshot.getChildren()){
+
+                        Product selectedProduct=data.getValue(Product.class);
+                        productName=selectedProduct.getProduct_name();
+                       productNameType=selectedProduct.getName_type()+": ";
+                    }
+                    try {
+
+                        if(productNameType.equals("name: ")){
+                            productNameType="";
+                        }
+                        productNameTv.setText(productNameType+productName);
+                    }catch (Exception e){
+
+                    }
+
+
+
                 }
 
                 @Override
@@ -75,28 +97,10 @@ public class SelectedProductArrayAdapter extends ArrayAdapter<Product> {
                 }
             });
 
-            try {
-                productNameType=product.getName_type()+": ";
-                if(productNameType.equals("name: ")){
-                    productNameType="";
-                }
-                productNameTv.setText(productNameType+productName);
-            }catch (Exception e){
 
-            }
 
-            try {
-                quantity.setText(String.format("%f",product.getQuantity()));
-            }catch (Exception e){
 
-            }
 
-            convertView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    removeProductListener.editProductSelectedPdt(position);
-                }
-            });
 
             closeBtn.setOnClickListener(new View.OnClickListener() {
                 @Override

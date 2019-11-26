@@ -152,6 +152,7 @@ public class ClientArrayAdapter extends ArrayAdapter<Factories> implements Filte
                     }
                 }
             }
+
             FilterResults results=new FilterResults();
             results.values=filteredList;
 

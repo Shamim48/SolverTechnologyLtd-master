@@ -8,6 +8,7 @@ public class Schedule  {
     String date;
     String companyName;
     String category;
+    String emp_id;
     List<JobC> list;
     JobC jobc;
 
@@ -20,13 +21,21 @@ public class Schedule  {
         this.category = category;
     }
 
-    public Schedule(String scheduleId, String employeeName, String date, String companyName, List<JobC> list) {
+    public Schedule(String scheduleId, String emp_id, String date, String companyName, List<JobC> list) {
         this.scheduleId = scheduleId;
-        this.employeeName = employeeName;
+        this.emp_id = emp_id;
         this.date = date;
         this.companyName = companyName;
         this.category = category;
         this.list = list;
+    }
+
+    public String getEmp_id() {
+        return emp_id;
+    }
+
+    public void setEmp_id(String emp_id) {
+        this.emp_id = emp_id;
     }
 
     public Schedule(String companyName) {
