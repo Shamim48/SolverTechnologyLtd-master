@@ -13,20 +13,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.Solver.Solver.ModelClass.Client;
 import com.Solver.Solver.ModelClass.Factories;
 import com.Solver.Solver.R;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class ClientArrayAdapter extends ArrayAdapter<Factories> implements Filterable {
-    private List<Factories> clientList;
-
-    public ClientArrayAdapter(@NonNull Context context, @NonNull List<Factories> clientList) {
+    private List<Factories> clientList,tempItems ,suggestions;
+//int resource ,int tvId,
+    public ClientArrayAdapter( Context context, List<Factories> clientList) {
         super(context, 0, clientList);
         this.clientList = clientList;
+        tempItems = new ArrayList<Factories>(clientList); // this makes the difference.
+        suggestions = new ArrayList<Factories>();
     }
 
     @NonNull
@@ -87,50 +87,60 @@ public class ClientArrayAdapter extends ArrayAdapter<Factories> implements Filte
 */
         return convertView;
     }
-/*
-    @NonNull
+
     @Override
-    public Filter getFilter() {
-        return getEmployeeFilter;
+    public int getCount() {
+        return clientList.size();
     }
 
-    private Filter getEmployeeFilter = new Filter() {
+
+    @Override
+    public Filter getFilter() {
+        return nameFilter;
+    }
+
+    /**
+     * Custom Filter implementation for custom suggestions we provide.
+     */
+    Filter nameFilter = new Filter() {
+        @Override
+        public CharSequence convertResultToString(Object resultValue) {
+            String str = ((Factories) resultValue).getCompany_name();
+            return str;
+        }
+
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
-            FilterResults results = new FilterResults();
-            List<SignUp> suggestions = new ArrayList<>();
-
-            if (constraint == null || constraint.length() == 0) {
-                suggestions.addAll(clientList);
-            } else {
-                String filterPattern = constraint.toString().toLowerCase().trim();
-
-                for (SignUp item : clientList) {
-                    if (item.getName().toLowerCase().contains(filterPattern)) {
-                        suggestions.add(item);
+            if (constraint != null) {
+                suggestions.clear();
+                for (Factories factories : tempItems) {
+                    if (factories.getCompany_name().toLowerCase().contains(constraint.toString().toLowerCase())) {
+                        suggestions.add(factories);
                     }
                 }
+                FilterResults filterResults = new FilterResults();
+                filterResults.values = suggestions;
+                filterResults.count = suggestions.size();
+                return filterResults;
+            } else {
+                return new FilterResults();
             }
-
-            results.values = suggestions;
-            results.count = suggestions.size();
-
-            return results;
         }
 
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
-            clientList.clear();
-            clientList.addAll((Collection<? extends SignUp>) results.values);
-            notifyDataSetChanged();
+            List<Factories> filterList = (ArrayList<Factories>) results.values;
+            if (results != null && results.count > 0) {
+                clear();
+                for (Factories people : filterList) {
+                    add(people);
+                    notifyDataSetChanged();
+                }
+            }
         }
+    };
 
-       *//* @Override
-        public CharSequence convertResultToString(Object resultValue) {
-            return ((SignUp) resultValue).getName();
-        }*//*
-    };*/
-
+/*
 
     @Override
     public Filter getFilter() {
@@ -155,19 +165,17 @@ public class ClientArrayAdapter extends ArrayAdapter<Factories> implements Filte
 
             FilterResults results=new FilterResults();
             results.values=filteredList;
-
             return results;
         }
 
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
 
-
             clientList.clear();
             clientList.addAll((Collection<? extends Factories>) results.values);
             notifyDataSetChanged();
 
         }
-    };
+    };*/
 }
 

@@ -24,18 +24,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.Solver.Solver.Adepter.ClientArrayAdapter;
+import com.Solver.Solver.Adepter.FactoryAdapter;
 import com.Solver.Solver.Adepter.TagUserAdepter;
 import com.Solver.Solver.Adepter.TagUserArrayAdapter;
 import com.Solver.Solver.Adepter.TagUserBaseAdapter;
 import com.Solver.Solver.Adepter.UserGridViewAdapter;
-import com.Solver.Solver.ModelClass.Client;
 
 import com.Solver.Solver.ModelClass.Common_Resouces;
 import com.Solver.Solver.ModelClass.Factories;
 import com.Solver.Solver.ModelClass.JobC;
 import com.Solver.Solver.ModelClass.Schedule;
 import com.Solver.Solver.ModelClass.SignUp;
-import com.Solver.Solver.ModelClass.User;
 import com.Solver.Solver.ModelClass.UserNameAndID;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -43,7 +42,6 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -96,9 +94,9 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
     TagUserBaseAdapter tagUserBaseAdapter;
     TagUserArrayAdapter tagUserArrayAdapter;
     UserGridViewAdapter userGridViewAdapter;
+    ClientArrayAdapter clientArrayAdapter;
 
     UserNameAndID userNameAndID;
-
     String date;
     String tagUserName;
     String tagUserId;
@@ -152,7 +150,39 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
 
         userRef=FirebaseDatabase.getInstance().getReference().child("User");
 
-        clientShow();
+       // clientShow();
+        clientList.clear();
+        factoryRef.addValueEventListener(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                for (DataSnapshot data: dataSnapshot.getChildren()){
+                    Factories client=data.getValue(Factories.class);
+                    //  String clientNam=client.getCompany_name();
+                    clientList.add(client);
+                }
+                //R.layout.factory_sample_row,R.id.companyNameTSRTvId,
+                FactoryAdapter factoryAdapter =new FactoryAdapter(Write_Schedule.this,clientList);
+                companyWsAt.setAdapter(factoryAdapter);
+                factoryAdapter.notifyDataSetChanged();
+
+            }
+
+
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        companyWsAt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Common_Resouces.toastS(Write_Schedule.this,"size: "+clientList.size());
+            }
+        });
 
         categoryList=new ArrayList<>();
         categoryList.add("Chose category");
@@ -220,13 +250,11 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
                               Common_Resouces.toastS(Write_Schedule.this,"Employee added");
                           }
                       }
-
                       @Override
                       public void onCancelled(@NonNull DatabaseError databaseError) {
 
                       }
                   });
-
 
               }
               tagEmployeeTv.setText(employee.toString());
@@ -1134,27 +1162,7 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
     }
 
     private void clientShow() {
-        clientList.clear();
-        factoryRef.addValueEventListener(new ValueEventListener() {
 
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                for (DataSnapshot data: dataSnapshot.getChildren()){
-                    Factories client=data.getValue(Factories.class);
-                  //  String clientNam=client.getCompany_name();
-                    clientList.add(client);
-                }
-                ClientArrayAdapter clientArrayAdapter =new ClientArrayAdapter(Write_Schedule.this,clientList);
-                companyWsAt.setAdapter(clientAdapter);
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
     }
 
     private void findId() {

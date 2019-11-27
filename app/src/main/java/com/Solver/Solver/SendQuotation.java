@@ -103,7 +103,7 @@ public class SendQuotation extends AppCompatActivity {
                 clientArrayAdapter=new ClientArrayAdapter(SendQuotation.this,clientArrayList);
 
                 clientListView.setAdapter(clientArrayAdapter);
-                clientArrayAdapter.notifyDataSetChanged();
+               clientArrayAdapter.notifyDataSetChanged();
 
             }
 
