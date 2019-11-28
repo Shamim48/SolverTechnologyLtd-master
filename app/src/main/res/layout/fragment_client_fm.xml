@@ -12,4 +12,5 @@
        android:id="@+id/clientRvId"
        android:layout_height="wrap_content">
    </androidx.recyclerview.widget.RecyclerView>
+
 </FrameLayout>

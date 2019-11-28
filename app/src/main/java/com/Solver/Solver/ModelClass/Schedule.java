@@ -11,22 +11,22 @@ public class Schedule  {
     String emp_id;
     List<JobC> list;
     JobC jobc;
+    int factoryId;
 
 
-    public Schedule(String scheduleId, String employeeName, String date, String companyName, String category) {
+    public Schedule(String scheduleId, String employeeName, String date, int factoryId, String category) {
         this.scheduleId = scheduleId;
         this.employeeName = employeeName;
         this.date = date;
-        this.companyName = companyName;
+        this.factoryId = factoryId;
         this.category = category;
     }
 
-    public Schedule(String scheduleId, String emp_id, String date, String companyName, List<JobC> list) {
+    public Schedule(String scheduleId, String emp_id, String date, int factoryId, List<JobC> list) {
         this.scheduleId = scheduleId;
         this.emp_id = emp_id;
         this.date = date;
-        this.companyName = companyName;
-        this.category = category;
+        this.factoryId = factoryId;
         this.list = list;
     }
 

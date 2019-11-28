@@ -44,6 +44,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.Solver.Solver.Utility_Setub" />
         <activity android:name="com.Solver.Solver.Location_Share" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

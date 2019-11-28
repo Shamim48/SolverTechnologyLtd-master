@@ -308,9 +308,9 @@ registerBtn.setOnClickListener(new View.OnClickListener() {
         if(userType.equals("Client")){
 
             AlertDialog.Builder alert=new AlertDialog.Builder(Sign_Up.this);
-             viewClientForm=getLayoutInflater().inflate(R.layout.client_dialog_form,null);
+             view=getLayoutInflater().inflate(R.layout.client_dialog_form,null);
             findIdByClientDialogViw();
-            alert.setView(viewClientForm);
+            alert.setView(view);
             final AlertDialog alertDialogByClient=alert.create();
             alertDialogByClient.setCanceledOnTouchOutside(false);
             clientRegistrationBtn.setOnClickListener(new View.OnClickListener() {

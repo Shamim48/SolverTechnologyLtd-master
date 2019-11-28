@@ -147,11 +147,9 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> implements Filte
                         }
                     }
 
-
                 }
 
             });*/
-
 
         }else {
 
@@ -160,18 +158,10 @@ public class  ProductArrayAdapter extends ArrayAdapter<Product> implements Filte
             productCb = viewHolder.getCheckBox();
             textViewName = viewHolder.getProductNameTv();
             desTv = viewHolder.getDesTv();
-
-
         }
-
         productCb.setTag(product);
-
        // CircleImageView imageViewFlag = convertView.findViewById(R.id.profile_imageUiId);
      //   RelativeLayout parentLayout=convertView.findViewById(R.id.user_ItmRowId);
-
-
-
-
 try {
     productNameType=product.getName_type()+": ";
     if(productNameType.equals("name: ")){
@@ -180,18 +170,14 @@ try {
     textViewName.setText(productNameType+product.getProduct_name());
     productDes=product.getDescription();
     desTv.setText(Html.fromHtml(product.getDescription(),Html.FROM_HTML_MODE_LEGACY));
-
 }catch (Exception e){
 
 }
-
            // productCb.setChecked(product.isChecked());
           //  productCb.setTag(product);
 
             // Display planet data
             productCb.setChecked(product.isChecked());
-
-
 
            /* if( productCb.isChecked()){
                 productList.get(position).setIsCheck(true);
@@ -200,14 +186,8 @@ try {
 
            // Glide.with(imageViewFlag).load(userinfo.getImageUrl()).placeholder(R.drawable.ic_insert_photo_black_24dp).into(imageViewFlag);
 
-
             // userNameAndID.setUserID(productList.get(position).getUserId());
             //  userNameAndID.setUserName(productList.get(position).getName());
-
-
-
-
-
 
        /* textViewName.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -219,7 +199,6 @@ try {
                 getContext().startActivity(intent);*//*
             }
         });*/
-
       /*
         UserNameAndID userNameAndID=new UserNameAndID(productList.get(position).getName().toString(),productList.get(position).getUserId().toString());
         List<UserNameAndID> userNameAndIDList=new ArrayList<>();
@@ -231,7 +210,6 @@ try {
                     Toast.makeText(getContext(),"Successful",Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(getContext(),"Exception : "+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
-
                 }
             }
         });
@@ -244,8 +222,6 @@ try {
               checkedListener.getCheckListener(position);
           }
       });
-
-
 
         return convertView;
     }
@@ -293,7 +269,6 @@ try {
         }*//*
     };*/
 
-
     @Override
     public Filter getFilter() {
         return exampleFilter;
@@ -323,16 +298,12 @@ try {
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
 
-
             productList.clear();
             productList.addAll((Collection<? extends Product>) results.values);
           //  notifyDataSetChanged();
 
         }
     };
-
-
-
 
     public interface CheckedListener{
 

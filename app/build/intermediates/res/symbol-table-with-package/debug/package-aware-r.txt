@@ -1309,6 +1309,9 @@ id addEmployeeBtnId
 id addFactoryAtId
 id addFactoryBtnId
 id addFactoryDlBtnId
+id addJobBtnId
+id addJobCategoryCvId
+id addNewJodCvId
 id addQuantityBtnId
 id addressCompanyId
 id addressId
@@ -1335,6 +1338,7 @@ id btnId
 id btn_send
 id buttonPanel
 id callBtnTbId
+id cancelBtnDlId
 id cancelBtnQDId
 id cancelFactoryDlBtnId
 id cancel_action
@@ -1516,7 +1520,9 @@ id input_group_message
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id jobCBId
 id jobCategorySpId
+id jobDesEtId
 id jobDesId1
 id jobDesId10
 id jobDesId11
@@ -1530,6 +1536,9 @@ id jobDesId6
 id jobDesId7
 id jobDesId8
 id jobDesId9
+id jobDesLLtId
+id jobLVId
+id jobNameTvId
 id jobSdId
 id jobSpId
 id jobSpLtId
@@ -1589,6 +1598,7 @@ id notification_background
 id notification_main_column
 id notification_main_column_container
 id off
+id okBtnDlId
 id on
 id onAttachStateChangeListener
 id onDateChanged
@@ -1771,6 +1781,7 @@ id time
 id timeTvId
 id title
 id titleDividerNoCustom
+id titleNameDlEtId
 id title_template
 id toQsId
 id tool_bar
@@ -1812,6 +1823,7 @@ id useremailBtnId
 id username
 id usernameUiId
 id usersmsBtnId
+id utilitySetupId
 id vatQsTvId
 id viewId
 id viewPagerHmId
@@ -1894,9 +1906,11 @@ layout activity_send_quotation
 layout activity_share_location
 layout activity_show_user_details
 layout activity_sign__up
+layout activity_utility__setub
 layout activity_view_image
 layout activity_view_image2
 layout activity_write__schedule
+layout add_job_dialog
 layout addfactory_for_schedule
 layout app_bar_home
 layout chat_item_left
@@ -1935,6 +1949,7 @@ layout groupname_row
 layout image_reply_row
 layout image_row
 layout image_row_left
+layout job_category_dl
 layout job_sample_row
 layout location_sample_row_left
 layout location_sample_row_right

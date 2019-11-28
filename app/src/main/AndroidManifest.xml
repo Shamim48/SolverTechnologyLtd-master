@@ -28,7 +28,8 @@
         android:roundIcon="@drawable/layoutbg"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Location_Share"></activity>
+        <activity android:name=".Utility_Setub"></activity>
+        <activity android:name=".Location_Share" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

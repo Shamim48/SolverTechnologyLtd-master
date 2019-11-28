@@ -29,6 +29,11 @@
                 android:id="@+id/showQuotationId"
                 android:title="Show Quotation"/>
 
+                <item
+                android:id="@+id/utilitySetupId"
+                android:title=" Utility Setup"/>
+
+
             <item
                 android:id="@+id/createUserId"
                 android:title="@string/create_user"/>

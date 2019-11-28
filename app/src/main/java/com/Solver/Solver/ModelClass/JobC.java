@@ -12,7 +12,12 @@ public class JobC {
     public JobC() {
     }
 
-    public JobC(String jobId,String jobTitle, String jobDes, String category) {
+    public JobC(String jobId, String jobTitle) {
+        this.jobId = jobId;
+        this.jobTitle = jobTitle;
+    }
+
+    public JobC(String jobId, String jobTitle, String jobDes, String category) {
         this.jobTitle = jobTitle;
         this.jobDes = jobDes;
         this.category=category;
