@@ -9,19 +9,14 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import com.Solver.Solver.ModelClass.SignUp;
 import com.Solver.Solver.R;
 import com.bumptech.glide.Glide;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import de.hdodenhof.circleimageview.CircleImageView;
-
 public class EmployeeArrayAdapter extends ArrayAdapter<SignUp>  implements Filterable {
 
    List<SignUp> usertagList;
@@ -29,7 +24,6 @@ public class EmployeeArrayAdapter extends ArrayAdapter<SignUp>  implements Filte
         super(context, 0, userList);
         this.usertagList = new ArrayList<>(userList);
     }
-
     @NonNull
     @Override
     public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -44,7 +38,6 @@ public class EmployeeArrayAdapter extends ArrayAdapter<SignUp>  implements Filte
         RelativeLayout parentLayout=convertView.findViewById(R.id.user_ItmRowId);
 
         final SignUp userinfo = usertagList.get(position);
-
 
         if (userinfo != null) {
             textViewName.setText(userinfo.getName());
