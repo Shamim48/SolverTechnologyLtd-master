@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "F:\\SolverBD\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f19b873fc2e44666dd8de6830fabeb88\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\Shamim\\.gradle\\caches\\transforms-2\\files-2.1\\6b1f733b3d84efc17fe01608a9d7004c\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

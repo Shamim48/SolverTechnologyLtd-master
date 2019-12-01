@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uk\\values-uk.xml",
+            "outputFile": "F:\\SolverBD\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uk\\values-uk.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\3e4fb2ccc7ee9acf67f377f24bd84a23\\res\\values-uk\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "205",
-                        "endColumns": "98",
-                        "endOffsets": "303"
-                    },
-                    "to": {
-                        "startLines": "47",
-                        "startColumns": "4",
-                        "startOffsets": "5544",
-                        "endColumns": "102",
-                        "endOffsets": "5642"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f4a70c60580cf920c94c3b49b0fc5ce2\\res\\values-uk\\values.xml",
+                    "source": "C:\\Users\\Shamim\\.gradle\\caches\\transforms-2\\files-2.1\\f3d04ced3673702be910868979c2a51f\\res\\values-uk\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\950aa3c00a435ca361159ca5921dafce\\res\\values-uk\\values.xml",
+                    "source": "C:\\Users\\Shamim\\.gradle\\caches\\transforms-2\\files-2.1\\aef40e90f3e5e1ea295b596c4f277a14\\res\\values-uk\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -55,7 +38,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f19b873fc2e44666dd8de6830fabeb88\\res\\values-uk\\values-uk.xml",
+                    "source": "C:\\Users\\Shamim\\.gradle\\caches\\transforms-2\\files-2.1\\7a93b5dc1c1686a330e86830ecdf3921\\res\\values-uk\\values-uk.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "49",
+                        "startColumns": "4",
+                        "startOffsets": "5728",
+                        "endColumns": "100",
+                        "endOffsets": "5824"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Shamim\\.gradle\\caches\\transforms-2\\files-2.1\\6b1f733b3d84efc17fe01608a9d7004c\\res\\values-uk\\values-uk.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -72,20 +72,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\dc06104fc24aa0b521963d361d65d865\\res\\values-uk\\values-uk.xml",
+                    "source": "C:\\Users\\Shamim\\.gradle\\caches\\transforms-2\\files-2.1\\67c98e9d0365f38d65430c3a08d539f5\\res\\values-uk\\values.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "205",
+                        "endColumns": "98",
+                        "endOffsets": "303"
                     },
                     "to": {
-                        "startLines": "49",
+                        "startLines": "47",
                         "startColumns": "4",
-                        "startOffsets": "5728",
-                        "endColumns": "100",
-                        "endOffsets": "5824"
+                        "startOffsets": "5544",
+                        "endColumns": "102",
+                        "endOffsets": "5642"
                     }
                 }
             ]

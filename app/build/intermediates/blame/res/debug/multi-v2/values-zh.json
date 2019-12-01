@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
+            "outputFile": "F:\\SolverBD\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\9a4991f4bb09230a6610e4581989689a\\res\\values-zh\\values-zh.xml",
+                    "source": "C:\\Users\\Shamim\\.gradle\\caches\\transforms-2\\files-2.1\\a12d4b5469ad931062b56f4abd8eb084\\res\\values-zh\\values-zh.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

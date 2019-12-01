@@ -14,9 +14,12 @@ import android.app.ProgressDialog;
 import android.app.TaskStackBuilder;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.util.Base64;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -58,6 +61,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -105,6 +110,7 @@ public class GroupChatAtv extends AppCompatActivity {
     private AutoCompleteTextView factoryAt;
     private Button cancelDlBtn;
     private Button addDlBtn;
+    Bitmap bitmap ;
 
     List<GroupMessage> groupMessagesList;
     List<String> factoryList=new ArrayList<>();
@@ -740,7 +746,12 @@ public class GroupChatAtv extends AppCompatActivity {
         msg = userMessageInput.getText().toString();
          messageIMGkEY = GroupNameRef.push().getKey();
         StorageReference imagePath = groupImageRef.child(imagePushId + ".jpg");
-        imagePath.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+        Bitmap bmp = getResizedBitmap(bitmap,1000);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bmp.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+        byte[] data = baos.toByteArray();
+        UploadTask uploadTask=imagePath.putBytes(data);
+        uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
@@ -749,13 +760,20 @@ public class GroupChatAtv extends AppCompatActivity {
                 downloadUri = uriTask.getResult();
 
                 GroupMessage groupImage=new GroupMessage(currentUserName,msg,currentUserID,currentTime,currentDate,downloadUri.toString(),imageType,currentGroupName,imageSub);
-                GroupNameRef.child(messageIMGkEY).setValue(groupImage);
+                GroupNameRef.child(messageIMGkEY).setValue(groupImage).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()){
+                            imageUri=null;
+                            userMessageInput.setText("");
+                            imageLot.setVisibility(View.GONE);
+                            sendNotification(currentGroupName,msg);
+                            progressDialog.dismiss();
+                        }
+                    }
+                });
 
-                imageUri=null;
-                userMessageInput.setText("");
-                imageLot.setVisibility(View.GONE);
-                sendNotification(currentGroupName,msg);
-                progressDialog.dismiss();
+
             }
         });
 
@@ -781,7 +799,15 @@ public class GroupChatAtv extends AppCompatActivity {
 
 
     }
+    public void getImageData(Bitmap bmp) {
 
+        ByteArrayOutputStream bao = new ByteArrayOutputStream();
+        bmp.compress(Bitmap.CompressFormat.PNG, 100, bao); // bmp is bitmap from user image file
+        bmp.recycle();
+        byte[] byteArray = bao.toByteArray();
+        String imageB64 = Base64.encodeToString(byteArray, Base64.DEFAULT);
+        //  store & retrieve this string to firebase
+    }
     @Override
     protected void onStart() {
         super.onStart();
@@ -974,6 +1000,14 @@ public class GroupChatAtv extends AppCompatActivity {
         if (requestCode == REQUEST_CODE && data != null && data.getData() != null) {
             imageUri = data.getData();
 
+            try {
+                bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            getResizedBitmap(bitmap,1280);
+
             // Picasso.get().load(imageUri).rotate(270).into(profileIV);
             //this is file compress method
             // setPic();
@@ -991,7 +1025,7 @@ public class GroupChatAtv extends AppCompatActivity {
 
                 cropImageUri = result.getUri();*/
 
-            Glide.with(imageGC).load(imageUri)
+            Glide.with(imageGC).load(getResizedBitmap(bitmap,360))
                     .placeholder(R.drawable.ic_touch_app_black_24dp)
                     .into(imageGC);
 
@@ -1127,6 +1161,22 @@ if (item.getItemId()==android.R.id.home){
 
                     }
                 });
+    }
+
+
+    public Bitmap getResizedBitmap(Bitmap image, int maxSize) {
+        int width = image.getWidth();
+        int height = image.getHeight();
+
+        float bitmapRatio = (float)width / (float) height;
+        if (bitmapRatio > 1) {
+            width = maxSize;
+            height = (int) (width / bitmapRatio);
+        } else {
+            height = maxSize;
+            width = (int) (height * bitmapRatio);
+        }
+        return Bitmap.createScaledBitmap(image, width, height, true);
     }
 
 }

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "F:\\SolverBD\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\cb01e1ad311dae53995b72c5aa6ee81c\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Shamim\\.gradle\\caches\\transforms-2\\files-2.1\\bbd60b7af3f6472511cad99499344033\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\USER\\.gradle\\caches\\transforms-2\\files-2.1\\f19b873fc2e44666dd8de6830fabeb88\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Shamim\\.gradle\\caches\\transforms-2\\files-2.1\\6b1f733b3d84efc17fe01608a9d7004c\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

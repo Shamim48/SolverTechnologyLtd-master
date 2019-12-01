@@ -627,7 +627,7 @@ public class GroupMsgAdapter extends RecyclerView.Adapter<GroupMsgAdapter.GroupM
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             String key = gmChat.get(position).getMsgKey();
-                            DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Group").child(groupMessage.getGroupName());
+                            DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Group").child(gmChat.get(position).getGroupName());
                             ref.child(key).removeValue();
                             Toast.makeText(mContext,"Delete Success",Toast.LENGTH_SHORT).show();
                             dialogInterface.cancel();

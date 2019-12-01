@@ -6600,11 +6600,10 @@ public final class R {
     public static final int delete_row=0x7f0d0002;
     public static final int download_menu=0x7f0d0003;
     public static final int home=0x7f0d0004;
-    public static final int menu_scrolling=0x7f0d0005;
-    public static final int message_menu=0x7f0d0006;
-    public static final int notification=0x7f0d0007;
-    public static final int reply_menu=0x7f0d0008;
-    public static final int user_row_popup=0x7f0d0009;
+    public static final int message_menu=0x7f0d0005;
+    public static final int notification=0x7f0d0006;
+    public static final int reply_menu=0x7f0d0007;
+    public static final int user_row_popup=0x7f0d0008;
   }
   public static final class mipmap {
     public static final int ic_launcher=0x7f0e0000;

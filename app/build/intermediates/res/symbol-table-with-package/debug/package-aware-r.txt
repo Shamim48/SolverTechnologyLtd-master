@@ -1996,7 +1996,6 @@ menu crop_image_menu
 menu delete_row
 menu download_menu
 menu home
-menu menu_scrolling
 menu message_menu
 menu notification
 menu reply_menu
