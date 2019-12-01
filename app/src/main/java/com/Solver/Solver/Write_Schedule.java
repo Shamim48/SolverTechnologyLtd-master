@@ -24,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.Solver.Solver.Adepter.ClientArrayAdapter;
+import com.Solver.Solver.Adepter.EmployeeArrayAdapter;
 import com.Solver.Solver.Adepter.FactoryAdapter;
 import com.Solver.Solver.Adepter.JobAdapter;
 import com.Solver.Solver.Adepter.TagUserAdepter;
@@ -57,7 +58,7 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
     private Button addEmployeeBtn;
     private EditText dateWsEt;
     private SearchView userSV;
-    private AutoCompleteTextView companyWsAt;
+    private AutoCompleteTextView companyWsAt,employeeAt;
     private ListView tagUserLV;
     private ListView scheduleEmployeeLv;
     private Spinner categorySp;
@@ -100,6 +101,7 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
     TagUserArrayAdapter tagUserArrayAdapter;
     UserGridViewAdapter userGridViewAdapter;
     ClientArrayAdapter clientArrayAdapter;
+    EmployeeArrayAdapter employeeArrayAdapter;
 
     UserNameAndID userNameAndID;
     String date;
@@ -148,14 +150,15 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
         jobList=new ArrayList<>();
         jList=new ArrayList<>();
         schedule=new Schedule();
+
         clientRef= FirebaseDatabase.getInstance().getReference().child("Client");
         factoryRef= FirebaseDatabase.getInstance().getReference().child("factories");
         scheduleREf=FirebaseDatabase.getInstance().getReference().child("Schedule").child("ScheduleTbl");
         allScheduleREf=FirebaseDatabase.getInstance().getReference().child("Schedule").child("All_ScheduleTbl");
         jobRef=FirebaseDatabase.getInstance().getReference().child("Schedule").child("Job");
-
         userRef=FirebaseDatabase.getInstance().getReference().child("User");
         jobListRef=FirebaseDatabase.getInstance().getReference("Utility").child("Job");
+
         jobCList.clear();
         jobListRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -175,7 +178,7 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
 
             }
         });
-
+        tagUser();
        // clientShow();
         clientList.clear();
         factoryRef.addValueEventListener(new ValueEventListener() {
@@ -194,9 +197,6 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
                 factoryAdapter.notifyDataSetChanged();
 
             }
-
-
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
@@ -425,31 +425,23 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
                             jodDesEt9.setVisibility(View.VISIBLE);
                             String checkBosText=checkBox9.getText().toString();
                             String jobDesText=jodDesEt9.getText().toString();
-
                             String jobCategory=spinner9.getSelectedItem().toString();
-
                             jList.add(new JobC(checkBosText,jobDesText,jobCategory));
-
 
                         }else if(!checkBox9.isChecked()){
                             jodDesEt9.setText(null);
                             jodDesEt9.setVisibility(View.GONE);
-
                         }
-
-
                         if (checkBox10.isChecked()){
                             jodDesEt10.setVisibility(View.VISIBLE);
                             String checkBosText=checkBox10.getText().toString();
                             String jobDesText=jodDesEt10.getText().toString();
                             String jobCategory=spinner10.getSelectedItem().toString();
-
                             jList.add(new JobC(checkBosText,jobDesText,jobCategory));
 
                         }else if(!checkBox10.isChecked()){
                             jodDesEt10.setText(null);
                             jodDesEt10.setVisibility(View.GONE);
-
                         }
 
                         if (checkBox11.isChecked()){
@@ -744,17 +736,20 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
                     SignUp signUp=data.getValue(SignUp.class);
                     tagUserList.add(signUp);
                 }
+
                // tagUserAdepter=new TagUserAdepter(Write_Schedule.this,tagUserList);
 
                // tagUserBaseAdapter=new TagUserBaseAdapter(Write_Schedule.this,tagUserList);
               //  userSV.setAdapter(tagUserBaseAdapter);
-                tagUserArrayAdapter=new TagUserArrayAdapter(Write_Schedule.this,tagUserList);
-                tagUserLV.setAdapter(tagUserArrayAdapter);
-                tagUserArrayAdapter.notifyDataSetChanged();
+               // tagUserArrayAdapter=new TagUserArrayAdapter(Write_Schedule.this,tagUserList);
+               // tagUserLV.setAdapter(tagUserArrayAdapter);
+              //  tagUserArrayAdapter.notifyDataSetChanged();
                // userSV.setAdapter(tagUserArrayAdapter);
 
+                employeeArrayAdapter=new EmployeeArrayAdapter(Write_Schedule.this,tagUserList);
+                employeeAt.setAdapter(employeeArrayAdapter);
+                employeeArrayAdapter.notifyDataSetChanged();
                 getId();
-
             }
 
             @Override
@@ -762,9 +757,6 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
 
             }
         });
-
-
-
 
         userSV.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -1194,6 +1186,8 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
         dateWsEt=findViewById(R.id.date_WSId);
         userSV =(SearchView)findViewById(R.id.employeeName_WSId);
         companyWsAt=findViewById(R.id.companyName_WSId);
+        employeeAt=findViewById(R.id.employeeAtId);
+
         checkBox1=findViewById(R.id.checkbox1Id);
         checkBox2=findViewById(R.id.checkbox2Id);
         checkBox3=findViewById(R.id.checkbox3Id);

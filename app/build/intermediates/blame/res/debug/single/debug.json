@@ -212,6 +212,10 @@
         "source": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_playlist_add_black_24dp.png"
     },
     {
+        "merged": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_job_category_dl.xml.flat",
+        "source": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\src\\main\\res\\layout\\job_category_dl.xml"
+    },
+    {
         "merged": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_ic_menu_share.xml.flat",
         "source": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\src\\main\\res\\drawable-v21\\ic_menu_share.xml"
     },
@@ -222,10 +226,6 @@
     {
         "merged": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
-        "merged": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_job_category_dl.xml.flat",
-        "source": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\src\\main\\res\\layout\\job_category_dl.xml"
     },
     {
         "merged": "G:\\SolverTechnologyLtd-master\\SolverTechnologyLtd-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",

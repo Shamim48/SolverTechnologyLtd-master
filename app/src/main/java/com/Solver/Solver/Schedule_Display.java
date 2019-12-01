@@ -7,10 +7,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.LinearLayout;
 
 import com.Solver.Solver.Adepter.ScheduleAdapter;
+import com.Solver.Solver.ModelClass.Common_Resouces;
+import com.Solver.Solver.ModelClass.Factories;
 import com.Solver.Solver.ModelClass.Schedule;
+import com.Solver.Solver.ModelClass.SignUp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -29,6 +33,11 @@ public class Schedule_Display extends AppCompatActivity {
     List<Schedule> scheduleList;
     ScheduleAdapter scheduleAdapter;
     DatabaseReference allScheduleREf;
+    int factoryId ;
+    String emp_Id;
+    String companyName;
+    String empName;
+    String scheduleId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +45,14 @@ public class Schedule_Display extends AppCompatActivity {
         setContentView(R.layout.activity_schedule__display);
         schedule_Recycler=findViewById(R.id.schedule_RecyclerId);
         scheduleList=new ArrayList<>();
+
       //  getActionBar().setDisplayHomeAsUpEnabled(true);
-       // getActionBar().setTitle("Schedule");
+      // getActionBar().setTitle("Schedule");
+
         allScheduleREf= FirebaseDatabase.getInstance().getReference().child("Schedule").child("All_ScheduleTbl");
       scheduleList.clear();
-        Query allScheduleQuery=allScheduleREf.limitToLast(30);
+
+        Query allScheduleQuery=allScheduleREf.limitToLast(15);
         allScheduleQuery.addValueEventListener(new ValueEventListener() {
 
             @Override
@@ -48,10 +60,9 @@ public class Schedule_Display extends AppCompatActivity {
                 for (DataSnapshot data:dataSnapshot.getChildren()){
                     Schedule schedule=data.getValue(Schedule.class);
                     scheduleList.add(schedule);
-
                 }
 
-                Collections.reverse(scheduleList);
+               Collections.reverse(scheduleList);
                 scheduleAdapter=new ScheduleAdapter(Schedule_Display.this,scheduleList);
                 LinearLayoutManager llm=new LinearLayoutManager(Schedule_Display.this);
                // llm.setOrientation(RecyclerView.VERTICAL);
@@ -62,6 +73,57 @@ public class Schedule_Display extends AppCompatActivity {
                 schedule_Recycler.setAdapter(scheduleAdapter);
                 scheduleAdapter.notifyDataSetChanged();
 
+/*
+                for (Schedule schedule:scheduleList) {
+
+                    String companyName = schedule.getCompanyName();
+
+                    String empName = schedule.getEmployeeName();
+                    String scheduleId = schedule.getScheduleId();
+
+                    DatabaseReference factoryRef = FirebaseDatabase.getInstance().getReference("factories");
+                    final DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("User");
+
+                    Query fact = factoryRef.orderByChild("company_name").equalTo(companyName);
+                    fact.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            for (DataSnapshot data : dataSnapshot.getChildren()) {
+                                Factories factories = data.getValue(Factories.class);
+                                factoryId = factories.getCustomer_id();
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+                    Query employeeRef = userRef.orderByChild("name").equalTo(empName);
+                    employeeRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                            for (DataSnapshot data : dataSnapshot.getChildren()) {
+                                SignUp user = data.getValue(SignUp.class);
+                                emp_Id = user.getUserId();
+                            }
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+
+                    // String scheduleId, String emp_id, String date, int factoryId, List<JobC> list
+                    Schedule schedule2 = new Schedule(scheduleId, emp_Id, schedule.getDate(), factoryId, schedule.getList());
+                    allScheduleREf.child(scheduleId).setValue(schedule2);
+
+                    Log.d("data",schedule2.toString());
+
+                }
+*/
+
             }
 
             @Override
@@ -69,6 +131,56 @@ public class Schedule_Display extends AppCompatActivity {
 
             }
         });
+
+/*
+
+    for (int i=0;i<=scheduleList.size();i++) {
+    String companyName = scheduleList.get(i).getCompanyName();
+    String empName = scheduleList.get(i).getEmployeeName();
+    String scheduleId = scheduleList.get(i).getScheduleId();
+
+    DatabaseReference factoryRef=FirebaseDatabase.getInstance().getReference("factories");
+    final DatabaseReference userRef=FirebaseDatabase.getInstance().getReference("User");
+
+    Query fact=factoryRef.orderByChild("company_name").equalTo(companyName);
+    fact.addListenerForSingleValueEvent(new ValueEventListener() {
+    @Override
+    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+        for (DataSnapshot data:dataSnapshot.getChildren()){
+            Factories factories=data.getValue(Factories.class);
+            factoryId =factories.getCustomer_id();
+        }
+    }
+
+    @Override
+    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+    }
+    });
+
+    Query employeeRef=userRef.orderByChild("name").equalTo(empName);
+    employeeRef.addListenerForSingleValueEvent(new ValueEventListener() {
+    @Override
+    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+        for (DataSnapshot data:dataSnapshot.getChildren()){
+            SignUp user=data.getValue(SignUp.class);
+            emp_Id=user.getUserId();
+        }
+    }
+
+    @Override
+    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+    }
+    });
+
+   // String scheduleId, String emp_id, String date, int factoryId, List<JobC> list
+Schedule schedule=new Schedule(scheduleId,emp_Id,scheduleList.get(i).getDate(),factoryId,scheduleList.get(i).getList());
+    allScheduleREf.child(scheduleId).setValue(schedule);
+
+}
+*/
 
 
     }

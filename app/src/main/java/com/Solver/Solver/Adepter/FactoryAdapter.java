@@ -47,6 +47,7 @@ List<Factories> factoriesList;
         return convertView;
 
     }
+
     @Override
     public Filter getFilter() {
         return factoriesFilter;
@@ -60,6 +61,7 @@ List<Factories> factoriesList;
             if (constraint == null || constraint.length() == 0) {
                 suggestions.addAll(factoriesList);
             } else {
+
                 String filterPattern = constraint.toString().toLowerCase().trim();
 
                 for (Factories item : factoriesList) {

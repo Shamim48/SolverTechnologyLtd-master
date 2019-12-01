@@ -100,7 +100,8 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
 
         }
 
-        holder.companyNameTV.setText(schedule.getCompanyName());
+        String comId=String.valueOf(schedulesList.get(position).getFactoryId());
+        holder.companyNameTV.setText("Company Id For Test:" +comId);
         /*for (int i=0;i<=schedule.getList().size();i++){
 
         holder.jobInfoTv.append(schedule.getList().get(i).getJobTitle()+"\nCategory:"+schedule.getList().get(i).getCategory()+"\nDes: "+schedule.getList().get(i).getJobDes()+"\n\n");

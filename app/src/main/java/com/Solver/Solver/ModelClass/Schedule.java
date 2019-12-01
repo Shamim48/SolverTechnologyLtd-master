@@ -22,12 +22,27 @@ public class Schedule  {
         this.category = category;
     }
 
+    public Schedule(String scheduleId, String date,  int factoryId,List<JobC> list) {
+        this.scheduleId = scheduleId;
+        this.date = date;
+        this.list = list;
+        this.factoryId = factoryId;
+    }
+
     public Schedule(String scheduleId, String emp_id, String date, int factoryId, List<JobC> list) {
         this.scheduleId = scheduleId;
         this.emp_id = emp_id;
         this.date = date;
         this.factoryId = factoryId;
         this.list = list;
+    }
+
+    public int getFactoryId() {
+        return factoryId;
+    }
+
+    public void setFactoryId(int factoryId) {
+        this.factoryId = factoryId;
     }
 
     public String getEmp_id() {

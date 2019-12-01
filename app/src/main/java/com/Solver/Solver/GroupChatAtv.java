@@ -471,7 +471,6 @@ public class GroupChatAtv extends AppCompatActivity {
 
                 }*/
 /*
-
                     GenericTypeIndicator<Schedule> t = new GenericTypeIndicator<Schedule>(){
                     };
                   //  List<Schedule> client=data.getValue(t);
@@ -510,7 +509,6 @@ public class GroupChatAtv extends AppCompatActivity {
             }
         });
 
-        // jobList=getResources().getStringArray(R.array.jobList);
         jobList.add("");
 
         try {
@@ -539,10 +537,7 @@ public class GroupChatAtv extends AppCompatActivity {
         } catch (Exception e) {
 
            // Toast.makeText(getApplicationContext(), "Exception: " + e.getMessage().trim(), Toast.LENGTH_LONG).show();
-
         }
-
-
         selectImageIBnt.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -557,7 +552,6 @@ public class GroupChatAtv extends AppCompatActivity {
                 // uploadImage();
             }
         });
-
         SendMessageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -581,12 +575,9 @@ public class GroupChatAtv extends AppCompatActivity {
                 if((imageUri!=null)){
                     uploadImage();
                 }
-
               else{
                         SaveMessageInfoToDatabase();
-
                 }
-
                 //  userMessageInput.setText("");
                 // mScrollView.fullScroll(ScrollView.FOCUS_DOWN);
 
@@ -624,6 +615,7 @@ public class GroupChatAtv extends AppCompatActivity {
             jobSpLt.setVisibility(View.GONE);
             addFactoryBtn.setVisibility(View.GONE);
         }
+
         String sparePart = spare_PartEt.getText().toString();
         String messagekEY = GroupNameRef.push().getKey();
         String currentUserId = mAuth.getCurrentUser().getUid();
@@ -637,7 +629,7 @@ public class GroupChatAtv extends AppCompatActivity {
             GroupNameRef.updateChildren(groupMessageKey);
 
             GroupMessageKeyRef = GroupNameRef.child(messagekEY);
-1
+
             HashMap<String, Object> messageInfoMap = new HashMap<>();
             messageInfoMap.put("userId", currentUserId);
             messageInfoMap.put("name", currentUserName);
@@ -795,7 +787,7 @@ public class GroupChatAtv extends AppCompatActivity {
         super.onStart();
 
        // .orderByChild("date").equalTo(currentDate)
-        GroupNameRef.limitToLast(30).addValueEventListener(new ValueEventListener() {
+        GroupNameRef.limitToLast(150).addValueEventListener(new ValueEventListener() {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
