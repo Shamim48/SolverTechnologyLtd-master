@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.Solver.Solver.ModelClass.Factories;
 import com.Solver.Solver.ModelClass.JobC;
 import com.Solver.Solver.ModelClass.Schedule;
 import com.Solver.Solver.ModelClass.SignUp;
@@ -43,6 +44,9 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
     FirebaseUser getCurrentUser;
     StorageReference storageReference;
     String userEmail;
+    String factoryName;
+    String userName;
+
 
     public ScheduleAdapter(Context context, List<Schedule> schedulesList) {
         this.context = context;
@@ -62,16 +66,19 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
     public void onBindViewHolder(@NonNull final ScheduleHolder holder, final int position) {
 
         final Schedule schedule=schedulesList.get(position);
+
         holder.dateTv.setText(schedule.getDate()+" Work Plan.");
         try {
 
             if(!(schedulesList.get(position).getEmployeeName().equals(""))){
                 holder.userNameTV.setText(schedule.getEmployeeName());
             }
+
         }catch (Exception e){
 
         }
-//schedulesList.get(position).getEmp_id()
+
+        //schedulesList.get(position).getEmp_id()
 
         try {
 
@@ -83,10 +90,11 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         for (DataSnapshot data:dataSnapshot.getChildren()){
                             SignUp user=data.getValue(SignUp.class);
-                            String userName=user.getName();
-                            holder.userNameTV.setText(userName);
+                            userName=user.getName();
+
                         }
 
+                        holder.userNameTV.setText(userName);
                     }
 
                     @Override
@@ -97,11 +105,40 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
             }
         }catch (Exception e){
 
-
         }
 
         String comId=String.valueOf(schedulesList.get(position).getFactoryId());
-        holder.companyNameTV.setText("Company Id For Test:" +comId);
+        DatabaseReference companyREf=FirebaseDatabase.getInstance().getReference("factories");
+
+        companyREf.child(comId).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot data:dataSnapshot.getChildren()){
+                    Factories factories=data.getValue(Factories.class);
+                    factoryName=factories.getCompany_name();
+
+                }
+                try {
+                    if(!(schedulesList.get(position).getCompanyName().equals(""))){
+
+                        holder.companyNameTV.setText(schedulesList.get(position).getCompanyName());
+
+                    }else {
+                        holder.companyNameTV.setText(factoryName);
+                    }
+                }catch (Exception e){
+
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
         /*for (int i=0;i<=schedule.getList().size();i++){
 
         holder.jobInfoTv.append(schedule.getList().get(i).getJobTitle()+"\nCategory:"+schedule.getList().get(i).getCategory()+"\nDes: "+schedule.getList().get(i).getJobDes()+"\n\n");
