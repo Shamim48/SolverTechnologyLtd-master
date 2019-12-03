@@ -3,6 +3,7 @@ package com.Solver.Solver.ModelClass;
 import java.util.List;
 
 public class Schedule  {
+
     String scheduleId;
     String employeeName;
     String date;
@@ -13,7 +14,6 @@ public class Schedule  {
     JobC jobc;
     int factoryId;
 
-
     public Schedule(String scheduleId, String employeeName, String date, int factoryId, String category) {
         this.scheduleId = scheduleId;
         this.employeeName = employeeName;
@@ -22,7 +22,17 @@ public class Schedule  {
         this.category = category;
     }
 
-    public Schedule(String scheduleId, String date,  int factoryId,List<JobC> list) {
+    public Schedule(String scheduleId, String employeeName, String date, String companyName, String emp_id, List<JobC> list, int factoryId) {
+        this.scheduleId = scheduleId;
+        this.employeeName = employeeName;
+        this.date = date;
+        this.companyName = companyName;
+        this.emp_id = emp_id;
+        this.list = list;
+        this.factoryId = factoryId;
+    }
+
+    public Schedule(String scheduleId, String date, int factoryId, List<JobC> list) {
         this.scheduleId = scheduleId;
         this.date = date;
         this.list = list;

@@ -47,7 +47,6 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
     String factoryName;
     String userName;
 
-
     public ScheduleAdapter(Context context, List<Schedule> schedulesList) {
         this.context = context;
         this.schedulesList = schedulesList;
@@ -68,7 +67,7 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
         final Schedule schedule=schedulesList.get(position);
 
         holder.dateTv.setText(schedule.getDate()+" Work Plan.");
-        try {
+       /* try {
 
             if(!(schedulesList.get(position).getEmployeeName().equals(""))){
                 holder.userNameTV.setText(schedule.getEmployeeName());
@@ -76,7 +75,7 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
 
         }catch (Exception e){
 
-        }
+        }*/
 
         //schedulesList.get(position).getEmp_id()
 
@@ -106,11 +105,12 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
         }catch (Exception e){
 
         }
-
+       // if(!(schedulesList.get(position).getCompanyName().equals(""))){
         String comId=String.valueOf(schedulesList.get(position).getFactoryId());
         DatabaseReference companyREf=FirebaseDatabase.getInstance().getReference("factories");
 
-        companyREf.child(comId).addValueEventListener(new ValueEventListener() {
+        Query facQuery=companyREf.orderByChild("customer_id").equalTo(schedulesList.get(position).getFactoryId());
+        facQuery.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot data:dataSnapshot.getChildren()){
@@ -118,17 +118,8 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
                     factoryName=factories.getCompany_name();
 
                 }
-                try {
-                    if(!(schedulesList.get(position).getCompanyName().equals(""))){
 
-                        holder.companyNameTV.setText(schedulesList.get(position).getCompanyName());
-
-                    }else {
                         holder.companyNameTV.setText(factoryName);
-                    }
-                }catch (Exception e){
-
-                }
 
             }
 
@@ -137,6 +128,11 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
 
             }
         });
+
+       /* }else {
+            holder.companyNameTV.setText(factoryName);
+        }
+*/
 
 
         /*for (int i=0;i<=schedule.getList().size();i++){
