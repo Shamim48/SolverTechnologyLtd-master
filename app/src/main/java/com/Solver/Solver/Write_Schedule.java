@@ -326,15 +326,28 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
                     jobDesEt.setError("");
                 }*/
 
-                if(jobId.equals("-LvGMH6RusoC7SAbsjj9")){
-                    Common_Resouces.toastS(Write_Schedule.this,"Please Select Job.");
-                    return;
-                }
+             try {
+                 if (jobId.equals("")) {
+                     Common_Resouces.toastS(Write_Schedule.this, "Please Select Job.");
+                     return;
+                 }
+                 if (jobId.equals("-LvGMH6RusoC7SAbsjj9")) {
+                     Common_Resouces.toastS(Write_Schedule.this, "Please Select Job.");
+                     return;
+                 }
 
-                if (jobCategoryId.equals("-Lul1Oi-MmTV3R48Q815")){
-                    Common_Resouces.toastS(Write_Schedule.this,"Please Select Job Category.");
-                    return;
-                }
+                 if (jobCategoryId.equals("")) {
+                     Common_Resouces.toastS(Write_Schedule.this, "Please Select Job Category.");
+                     return;
+                 }
+                 if (jobCategoryId.equals("-Lul1Oi-MmTV3R48Q815")) {
+                     Common_Resouces.toastS(Write_Schedule.this, "Please Select Job Category.");
+                     return;
+                 }
+
+             }catch (NullPointerException e){
+                 e.printStackTrace();
+             }
                 selectedJobList.add(new JobC(jobId,jobDes,jobCategoryId));
 
                 jobGridViewAdapter=new JobGridViewAdapter(Write_Schedule.this,selectedJobList);
@@ -604,6 +617,7 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
                         String job= TextUtils.join(", ",jList);
                         showTV.setText(job);
 */
+/*
                 if(scheduleEmployeeList.size()==0){
                     if(tagUserId.equals("")){
                         Common_Resouces.toastS(Write_Schedule.this,"Please Select Employee.");
@@ -636,6 +650,7 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
                                Common_Resouces.toastS(Write_Schedule.this,"Please Select Factory.");
                                return;
                            }
+
                            String sdlKey = scheduleREf.push().getKey();
                            Schedule schedule = new Schedule(sdlKey, tagEmp_id, date,companyId, jobCList);
                            scheduleREf.child(tagUserId).child(date).child(sdlKey).setValue(schedule).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -653,11 +668,29 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
                 }
 
                 scheduleREf.child("ComName").child(tagUserId).setValue(comName);
-//some
-                if(scheduleEmployeeList.size()==0){
+//some*/
+             if(tagUserId.equals("")){
+                 employeeAt.setError("Please select Employee");
+                 return;
+             }
+             if(companyId==0){
+                 employeeAt.setError("Please select Factory");
+                 return;
+             }
+             if(date.equals("")){
+                 employeeAt.setError("Please select date");
+                 return;
+             }
 
+
+
+                if(scheduleEmployeeList.size()==0){
+                    if(selectedJobList.size()==0){
+                        Common_Resouces.toastS(Write_Schedule.this,"Please select job");
+                        return;
+                    }
               String scheduleKey = allScheduleREf.push().getKey();
-                Schedule scheduleAll=new Schedule(scheduleKey,name,date,companyId,jList);
+                Schedule scheduleAll=new Schedule(scheduleKey,tagUserId,date,companyId,jobCList);
                 allScheduleREf.child(scheduleKey).setValue(scheduleAll).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
@@ -670,9 +703,13 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
                         }
                     }
                 });}else {
+                    if(selectedJobList.size()==0){
+                        Common_Resouces.toastS(Write_Schedule.this,"Please select job");
+                        return;
+                    }
                     for(String tagEpName:scheduleEmployeeList){
                         String scheduleKey = allScheduleREf.push().getKey();
-                        Schedule scheduleAll=new Schedule(scheduleKey,tagEpName,date,companyId,jList);
+                        Schedule scheduleAll=new Schedule(scheduleKey,tagEpName,date,companyId,jobCList);
                         allScheduleREf.child(scheduleKey).setValue(scheduleAll).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
@@ -719,7 +756,7 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
         companyWsAt.setText(null);
         userSV.clearFocus();
         dateWsEt.setText(null);
-        userSV.setQuery("",false);
+//        userSV.setQuery("",false);
         checkBox1.setChecked(false);
         checkBox2.setChecked(false);
         checkBox3.setChecked(false);
@@ -899,7 +936,7 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
 
 
 
-                tagUserArrayAdapter.getFilter().filter(newText);
+              //  tagUserArrayAdapter.getFilter().filter(newText);
 
                 return false;
             }
