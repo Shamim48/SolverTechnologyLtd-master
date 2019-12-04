@@ -653,7 +653,7 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
                 }
 
                 scheduleREf.child("ComName").child(tagUserId).setValue(comName);
-
+//some
                 if(scheduleEmployeeList.size()==0){
 
               String scheduleKey = allScheduleREf.push().getKey();
