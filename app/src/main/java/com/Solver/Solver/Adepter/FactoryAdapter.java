@@ -12,10 +12,13 @@ import android.widget.TextView;
 import com.Solver.Solver.ModelClass.Factories;
 import com.Solver.Solver.R;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class FactoryAdapter extends ArrayAdapter<Factories> implements Filterable {
+
 List<Factories> factoriesList;
 
     public FactoryAdapter(Context context, List<Factories> factoriesList) {
@@ -48,6 +51,7 @@ List<Factories> factoriesList;
 
     }
 
+    @NotNull
     @Override
     public Filter getFilter() {
         return factoriesFilter;

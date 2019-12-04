@@ -9,6 +9,10 @@ public class JobCategory {
         this.jobCategoryName = jobCategoryName;
     }
 
+    public JobCategory() {
+
+    }
+
     public String getJobCategoryId() {
         return jobCategoryId;
     }

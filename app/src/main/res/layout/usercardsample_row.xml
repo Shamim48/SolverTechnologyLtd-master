@@ -17,7 +17,7 @@
         android:padding="5dp"
         android:id="@+id/selectedProductLltId"
         android:weightSum="10"
-        android:background="#EBEBEB"
+        android:background="#FFFFFF"
         android:layout_height="wrap_content">
 
         <LinearLayout
@@ -35,7 +35,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-
         </LinearLayout>
 
         <ImageButton
@@ -47,7 +46,5 @@
             android:layout_height="30dp" />
 
     </LinearLayout>
-
-
 
 </androidx.cardview.widget.CardView>

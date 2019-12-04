@@ -33,6 +33,7 @@ public class Schedule_Display extends AppCompatActivity {
     List<Schedule> scheduleList;
     ScheduleAdapter scheduleAdapter;
     DatabaseReference allScheduleREf;
+    DatabaseReference allScheduleREf_2;
     int factoryId ;
     String emp_Id;
     String companyName;
@@ -50,9 +51,10 @@ public class Schedule_Display extends AppCompatActivity {
       // getActionBar().setTitle("Schedule");
 
         allScheduleREf= FirebaseDatabase.getInstance().getReference().child("Schedule").child("All_ScheduleTbl");
+        allScheduleREf_2= FirebaseDatabase.getInstance().getReference().child("All_ScheduleTbl");
       scheduleList.clear();
 
-        Query allScheduleQuery=allScheduleREf.limitToLast(15);
+        Query allScheduleQuery=allScheduleREf_2.limitToLast(100);
         allScheduleQuery.addValueEventListener(new ValueEventListener() {
 
             @Override
@@ -60,6 +62,7 @@ public class Schedule_Display extends AppCompatActivity {
                 for (DataSnapshot data:dataSnapshot.getChildren()){
                     Schedule schedule=data.getValue(Schedule.class);
                     scheduleList.add(schedule);
+
                 }
 
                Collections.reverse(scheduleList);
@@ -73,13 +76,23 @@ public class Schedule_Display extends AppCompatActivity {
                 schedule_Recycler.setAdapter(scheduleAdapter);
                 scheduleAdapter.notifyDataSetChanged();
 
+
 /*
-                for (Schedule schedule:scheduleList) {
+                for(Schedule schedule:scheduleList){
+                  //  Schedule schedule2 = new Schedule(scheduleId, emp_Id, scheduleList.get(i).getDate(), factoryId, scheduleList.get(i).getList());
+                    allScheduleREf_2.child(schedule.getScheduleId()).setValue(schedule);
 
-                    String companyName = schedule.getCompanyName();
+                }*/
 
-                    String empName = schedule.getEmployeeName();
-                    String scheduleId = schedule.getScheduleId();
+
+/*
+                for (int i=0; i<=scheduleList.size(); i++) {
+                    try{
+
+                    String companyName = scheduleList.get(i).getCompanyName();
+
+                    String empName = scheduleList.get(i).getEmployeeName();
+                    String scheduleId = scheduleList.get(i).getScheduleId();
 
                     DatabaseReference factoryRef = FirebaseDatabase.getInstance().getReference("factories");
                     final DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("User");
@@ -116,11 +129,13 @@ public class Schedule_Display extends AppCompatActivity {
                     });
 
                     // String scheduleId, String emp_id, String date, int factoryId, List<JobC> list
-                    Schedule schedule2 = new Schedule(scheduleId, emp_Id, schedule.getDate(), factoryId, schedule.getList());
-                    allScheduleREf.child(scheduleId).setValue(schedule2);
+                    Schedule schedule2 = new Schedule(scheduleId, emp_Id, scheduleList.get(i).getDate(), factoryId, scheduleList.get(i).getList());
+                    allScheduleREf_2.child(scheduleId).setValue(schedule2);
 
-                    Log.d("data",schedule2.toString());
-
+                   // Log.d("data",schedule2.toString());
+                    }catch (IndexOutOfBoundsException e){
+                        e.printStackTrace();
+                    }
                 }
 */
 

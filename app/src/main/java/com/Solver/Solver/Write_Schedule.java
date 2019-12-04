@@ -27,6 +27,9 @@ import com.Solver.Solver.Adepter.ClientArrayAdapter;
 import com.Solver.Solver.Adepter.EmployeeArrayAdapter;
 import com.Solver.Solver.Adepter.FactoryAdapter;
 import com.Solver.Solver.Adepter.JobAdapter;
+import com.Solver.Solver.Adepter.JobCategorySpinnerAdapter;
+import com.Solver.Solver.Adepter.JobGridViewAdapter;
+import com.Solver.Solver.Adepter.JobSpinnerAdapter;
 import com.Solver.Solver.Adepter.TagUserAdepter;
 import com.Solver.Solver.Adepter.TagUserArrayAdapter;
 import com.Solver.Solver.Adepter.TagUserBaseAdapter;
@@ -35,6 +38,7 @@ import com.Solver.Solver.Adepter.UserGridViewAdapter;
 import com.Solver.Solver.ModelClass.Common_Resouces;
 import com.Solver.Solver.ModelClass.Factories;
 import com.Solver.Solver.ModelClass.JobC;
+import com.Solver.Solver.ModelClass.JobCategory;
 import com.Solver.Solver.ModelClass.Schedule;
 import com.Solver.Solver.ModelClass.SignUp;
 import com.Solver.Solver.ModelClass.UserNameAndID;
@@ -50,21 +54,22 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class Write_Schedule extends AppCompatActivity implements UserGridViewAdapter.UserListener {
+public class Write_Schedule extends AppCompatActivity implements UserGridViewAdapter.UserListener,JobGridViewAdapter.JobListener {
 
     private Button uploadBtn;
     private TextView tagEmployeeTv;
     private ListView jobLv;
-    private Button addEmployeeBtn;
-    private EditText dateWsEt;
+    private Button addEmployeeBtn,addJobBtn;
+    private EditText dateWsEt,jobDesEt;
+    private TextView text;
     private SearchView userSV;
     private AutoCompleteTextView companyWsAt,employeeAt;
     private ListView tagUserLV;
     private ListView scheduleEmployeeLv;
-    private Spinner categorySp;
+    private Spinner jobCategorySp,jobTitleSp;
     private LinearLayout lltWsId;
     private ImageButton closeWsId;
-    private GridView selectedUserGridView;
+    private GridView selectedUserGridView,selectedJobGridView;
     private CheckBox checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7,checkBox8,checkBox9,
             checkBox10,checkBox11,checkBox12,checkBox13;
     private EditText jodDesEt1,jodDesEt2,jodDesEt3,jodDesEt4,jodDesEt5,jodDesEt6,jodDesEt7,jodDesEt8,jodDesEt9,
@@ -74,12 +79,15 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
     private TextView showTV;
     List<String> jobList;
     List<JobC> jList;
-    List<SignUp> tagUserList;
+    ArrayList<SignUp> tagUserList;
     ArrayList<Factories> clientList;
     DatabaseReference clientRef;
     ArrayList<String> tagUserL=new ArrayList<>();
     ArrayList<String> scheduleEmployeeList=new ArrayList<>();
-    List<JobC> jobCList=new ArrayList<>();
+    ArrayList<JobC> jobCList=new ArrayList<>();
+    ArrayList<JobCategory> jobCategoryList=new ArrayList<>();
+    ArrayList<JobC> selectedJobList=new ArrayList<>();
+    JobCategorySpinnerAdapter jobCategorySpinnerAdapter;
     JobAdapter jobAdapter;
 
     // All Adapter here ,,...
@@ -90,6 +98,7 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
     DatabaseReference userRef;
     DatabaseReference factoryRef;
     DatabaseReference jobListRef;
+    DatabaseReference jobCategoryListRef;
 
     ArrayList<String> categoryList;
     ArrayAdapter<String> categorySpAdapter;
@@ -101,7 +110,8 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
     TagUserArrayAdapter tagUserArrayAdapter;
     UserGridViewAdapter userGridViewAdapter;
     ClientArrayAdapter clientArrayAdapter;
-    EmployeeArrayAdapter employeeArrayAdapter;
+
+    JobGridViewAdapter jobGridViewAdapter;
 
     UserNameAndID userNameAndID;
     String date;
@@ -131,6 +141,10 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
     String jobCategory_G;
      String userName;
 
+    String jobId,jobCategoryId;
+
+    LinearLayout jobLLt,userLLt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
 
@@ -141,6 +155,8 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
         findId();
         lltWsId.setVisibility(View.GONE);
         tagUserLV.setVisibility(View.GONE);
+        jobLLt.setVisibility(View.GONE);
+        userLLt.setVisibility(View.GONE);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Write Schedule");
@@ -158,6 +174,7 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
         jobRef=FirebaseDatabase.getInstance().getReference().child("Schedule").child("Job");
         userRef=FirebaseDatabase.getInstance().getReference().child("User");
         jobListRef=FirebaseDatabase.getInstance().getReference("Utility").child("Job");
+        jobCategoryListRef=FirebaseDatabase.getInstance().getReference("Utility").child("Job_Category");
 
         jobCList.clear();
         jobListRef.addValueEventListener(new ValueEventListener() {
@@ -168,9 +185,14 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
                    jobCList.add(jobC);
                 }
 
-                jobAdapter=new JobAdapter(Write_Schedule.this,jobCList);
-                jobLv.setAdapter(jobAdapter);
-                jobAdapter.notifyDataSetChanged();
+                JobSpinnerAdapter jobSpinnerAdapter=new JobSpinnerAdapter(Write_Schedule.this,jobCList);
+                jobTitleSp.setAdapter(jobSpinnerAdapter);
+                jobSpinnerAdapter.notifyDataSetChanged();
+
+
+              //  jobAdapter=new JobAdapter(Write_Schedule.this,jobCList);
+              //  jobLv.setAdapter(jobAdapter);
+               // jobAdapter.notifyDataSetChanged();
             }
 
             @Override
@@ -178,7 +200,56 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
 
             }
         });
+
         tagUser();
+
+        jobCategoryListRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot data:dataSnapshot.getChildren()){
+                    JobCategory jobCategory=data.getValue(JobCategory.class);
+                    jobCategoryList.add(jobCategory);
+                }
+
+                jobCategorySpinnerAdapter=new JobCategorySpinnerAdapter(Write_Schedule.this,jobCategoryList);
+                jobCategorySp.setAdapter(jobCategorySpinnerAdapter);
+                jobCategorySpinnerAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        jobTitleSp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                 jobId=jobCList.get(i).getJobId();
+
+                 text.setText(jobId+ "  ,  "+jobCategoryId);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        jobCategorySp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                 jobCategoryId=jobCategoryList.get(i).getJobCategoryId();
+
+                text.setText(jobId+ "  ,  "+jobCategoryId);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
        // clientShow();
         clientList.clear();
         factoryRef.addValueEventListener(new ValueEventListener() {
@@ -196,12 +267,14 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
                 companyWsAt.setAdapter(factoryAdapter);
                 factoryAdapter.notifyDataSetChanged();
 
+
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
         });
+
 
         companyWsAt.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -245,6 +318,37 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
             }
         });
 
+        addJobBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String jobDes=jobDesEt.getText().toString();
+                /*if (jobDes.isEmpty()){
+                    jobDesEt.setError("");
+                }*/
+
+                if(jobId.equals("-LvGMH6RusoC7SAbsjj9")){
+                    Common_Resouces.toastS(Write_Schedule.this,"Please Select Job.");
+                    return;
+                }
+
+                if (jobCategoryId.equals("-Lul1Oi-MmTV3R48Q815")){
+                    Common_Resouces.toastS(Write_Schedule.this,"Please Select Job Category.");
+                    return;
+                }
+                selectedJobList.add(new JobC(jobId,jobDes,jobCategoryId));
+
+                jobGridViewAdapter=new JobGridViewAdapter(Write_Schedule.this,selectedJobList);
+                selectedJobGridView.setAdapter(jobGridViewAdapter);
+                jobGridViewAdapter.setRemoveJob(Write_Schedule.this);
+                jobGridViewAdapter.notifyDataSetChanged();
+
+                Common_Resouces.toastS(Write_Schedule.this,"Selected Job: "+selectedJobList.size());
+                jobLLt.setVisibility(View.VISIBLE);
+           jobId=null;
+           jobCategoryId=null;
+            }
+        });
+
         addEmployeeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -255,14 +359,19 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
              // scheduleEmployeeAdapter=new ArrayAdapter(Write_Schedule.this,R.layout.spennersamplelayout,R.id.showTestSpinnerId,scheduleEmployeeList);
               //scheduleEmployeeLv.setAdapter(scheduleEmployeeAdapter);
              // scheduleEmployeeAdapter.notifyDataSetChanged();
-              userSV.setQuery("",true);
-              userSV.clearFocus();
+//              userSV.setQuery("",true);
+             // userSV.clearFocus();
               Toast.makeText(getApplicationContext(),"selected Employee:"+scheduleEmployeeList.size(),Toast.LENGTH_SHORT).show();
 
               userGridViewAdapter=new UserGridViewAdapter(Write_Schedule.this,scheduleEmployeeList);
                 selectedUserGridView.setAdapter(userGridViewAdapter);
                 userGridViewAdapter.setRemoveUser(Write_Schedule.this);
+
                 userGridViewAdapter.notifyDataSetChanged();
+
+                userLLt.setVisibility(View.VISIBLE);
+                employeeAt.setText(null);
+                tagUserId=null;
 
               /*for (String tagEp:scheduleEmployeeList){
 
@@ -496,8 +605,15 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
                         showTV.setText(job);
 */
                 if(scheduleEmployeeList.size()==0){
+                    if(tagUserId.equals("")){
+                        Common_Resouces.toastS(Write_Schedule.this,"Please Select Employee.");
+                        return;
+                    }if(companyId==0){
+                        Common_Resouces.toastS(Write_Schedule.this,"Please Select Factory.");
+                        return;
+                    }
                     String sdlKey=scheduleREf.push().getKey();
-                    Schedule  schedule=new Schedule(sdlKey,tagUserId,date,companyId,jList);
+                    Schedule  schedule=new Schedule(sdlKey,tagUserId,date,companyId,jobCList);
                     scheduleREf.child(tagUserId).child(date).child(sdlKey).setValue(schedule).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
@@ -513,8 +629,15 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
 
                        for(String tagEmp_id:scheduleEmployeeList) {
 
+                           if(tagEmp_id.equals("")){
+                               Common_Resouces.toastS(Write_Schedule.this,"Please Select Employee.");
+                               return;
+                           }if(companyId==0){
+                               Common_Resouces.toastS(Write_Schedule.this,"Please Select Factory.");
+                               return;
+                           }
                            String sdlKey = scheduleREf.push().getKey();
-                           Schedule schedule = new Schedule(sdlKey, tagEmp_id, date,companyId, jList);
+                           Schedule schedule = new Schedule(sdlKey, tagEmp_id, date,companyId, jobCList);
                            scheduleREf.child(tagUserId).child(date).child(sdlKey).setValue(schedule).addOnCompleteListener(new OnCompleteListener<Void>() {
                                @Override
                                public void onComplete(@NonNull Task<Void> task) {
@@ -530,7 +653,7 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
                 }
 
                 scheduleREf.child("ComName").child(tagUserId).setValue(comName);
-
+//some
                 if(scheduleEmployeeList.size()==0){
 
               String scheduleKey = allScheduleREf.push().getKey();
@@ -746,7 +869,7 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
               //  tagUserArrayAdapter.notifyDataSetChanged();
                // userSV.setAdapter(tagUserArrayAdapter);
 
-                employeeArrayAdapter=new EmployeeArrayAdapter(Write_Schedule.this,tagUserList);
+                EmployeeArrayAdapter  employeeArrayAdapter=new EmployeeArrayAdapter(Write_Schedule.this,tagUserList);
                 employeeAt.setAdapter(employeeArrayAdapter);
                 employeeArrayAdapter.notifyDataSetChanged();
                 getId();
@@ -758,6 +881,12 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
             }
         });
 
+        employeeAt.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                tagUserId=tagUserList.get(i).getUserId();
+            }
+        });
         userSV.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -1184,9 +1313,13 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
     private void findId() {
         uploadBtn=findViewById(R.id.uploadBtnWsId);
         dateWsEt=findViewById(R.id.date_WSId);
+        jobDesEt=findViewById(R.id.jobDesEtId);
+        addJobBtn=findViewById(R.id.addJobBtnId);
         userSV =(SearchView)findViewById(R.id.employeeName_WSId);
         companyWsAt=findViewById(R.id.companyName_WSId);
         employeeAt=findViewById(R.id.employeeAtId);
+
+        text=findViewById(R.id.textId);
 
         checkBox1=findViewById(R.id.checkbox1Id);
         checkBox2=findViewById(R.id.checkbox2Id);
@@ -1228,6 +1361,11 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
 
 
         selectedUserGridView=findViewById(R.id.selectedUserGridViewId);
+        selectedJobGridView=findViewById(R.id.selectedJobGridViewId);
+
+        // Spinner Id
+        jobCategorySp=findViewById(R.id.jobCategorySpId);
+        jobTitleSp=findViewById(R.id.jobTitleSp);
 
         spinner1=findViewById(R.id.spinner1);
          spinner2=findViewById(R.id.spinner2);
@@ -1243,6 +1381,10 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
          spinner11=findViewById(R.id.spinner11);
          spinner12=findViewById(R.id.spinner12);
          spinner13=findViewById(R.id.spinner13);
+
+         // Layout Id
+        jobLLt=findViewById(R.id.jobtetLit);
+        userLLt=findViewById(R.id.tetLit);
 
      //   userSV.setThreshold(1);
     }
@@ -1308,5 +1450,12 @@ public class Write_Schedule extends AppCompatActivity implements UserGridViewAda
         scheduleEmployeeList.remove(position);
         Common_Resouces.toastS(Write_Schedule.this,"Delete selected Employee");
         userGridViewAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void removeGridJob(int position) {
+        selectedJobList.remove(position);
+        Common_Resouces.toastS(Write_Schedule.this,"Delete selected job.\nnow selected "+selectedJobList.size()+" Job . ");
+        jobGridViewAdapter.notifyDataSetChanged();
     }
 }
