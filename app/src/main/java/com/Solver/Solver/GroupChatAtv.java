@@ -746,12 +746,13 @@ public class GroupChatAtv extends AppCompatActivity {
         msg = userMessageInput.getText().toString();
          messageIMGkEY = GroupNameRef.push().getKey();
         StorageReference imagePath = groupImageRef.child(imagePushId + ".jpg");
-        Bitmap bmp = getResizedBitmap(bitmap,1000);
+        Bitmap bmp = getResizedBitmap(bitmap,1400);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         bmp.compress(Bitmap.CompressFormat.JPEG, 100, baos);
         byte[] data = baos.toByteArray();
         UploadTask uploadTask=imagePath.putBytes(data);
         uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
@@ -772,7 +773,6 @@ public class GroupChatAtv extends AppCompatActivity {
                         }
                     }
                 });
-
 
             }
         });

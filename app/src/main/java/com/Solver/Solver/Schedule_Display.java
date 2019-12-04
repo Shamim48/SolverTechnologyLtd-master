@@ -76,6 +76,7 @@ public class Schedule_Display extends AppCompatActivity {
                 schedule_Recycler.setAdapter(scheduleAdapter);
                 scheduleAdapter.notifyDataSetChanged();
 
+
 /*
                 for(Schedule schedule:scheduleList){
                   //  Schedule schedule2 = new Schedule(scheduleId, emp_Id, scheduleList.get(i).getDate(), factoryId, scheduleList.get(i).getList());
@@ -85,11 +86,8 @@ public class Schedule_Display extends AppCompatActivity {
 
 
 /*
-
                 for (int i=0; i<=scheduleList.size(); i++) {
                     try{
-
-
 
                     String companyName = scheduleList.get(i).getCompanyName();
 

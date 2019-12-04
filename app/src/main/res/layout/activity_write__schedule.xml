@@ -4,16 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EEEEEE"
+    android:background="#E9E8E8"
     tools:context=".Write_Schedule">
-
 
     <ScrollView
         android:id="@+id/scrollView"
-
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,9 +25,10 @@
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 android:layout_marginTop="5dp"
+                android:visibility="gone"
                 android:layout_height="wrap_content">
                 <ListView
-                    android:divider="#494949"
+                    android:divider="#FFFFFF"
                     android:dividerHeight="1dp"
                     android:id="@+id/tagEmployeeListId"
                     android:layout_width="match_parent"
@@ -38,20 +36,21 @@
 
             </LinearLayout>
 
-
             </HorizontalScrollView>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_below="@+id/clientSearchLLtId"
                 android:id="@+id/tetLit"
-                android:layout_height="wrap_content">
+                android:layout_height="120dp">
 
                 <GridView xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/selectedUserGridViewId"
                     android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
+                    android:layout_height="match_parent"
                     android:columnWidth="90dp"
+                    android:layout_marginTop="10dp"
                     android:numColumns="2"
+                    android:nestedScrollingEnabled="true"
                     android:verticalSpacing="10dp"
                     android:horizontalSpacing="10dp"
                     android:stretchMode="columnWidth"
@@ -111,6 +110,7 @@
                     android:background="@drawable/buttonbg"
                     android:text="ADD"
                     android:id="@+id/addEmployeeBtnId"
+                    android:textColor="@color/white"
                     android:layout_marginRight="10dp"
                     android:layout_height="wrap_content" />
                 </LinearLayout>
@@ -198,12 +198,123 @@
                 android:textColor="#673AB7"
                 android:layout_below="@id/companyName_WSId"
                 android:textSize="20sp"
+                android:visibility="gone"
                 android:id="@+id/textId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/clientSearchLLtId"
+            android:id="@+id/jobtetLit"
+            android:layout_height="120dp">
+
+            <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/selectedJobGridViewId"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:columnWidth="90dp"
+                android:numColumns="1"
+                android:layout_marginTop="10dp"
+                android:nestedScrollingEnabled="true"
+               android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="10dp"
+                android:stretchMode="columnWidth"
+                android:gravity="center"
+                />
+       </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/jobDesLLtId"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/edittextbg">
+
+                        <Spinner
+                            android:id="@+id/jobTitleSp"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:paddingLeft="5dp"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/edittextbg">
+
+                        <Spinner
+                            android:id="@+id/jobCategorySpId"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:paddingLeft="5dp"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="10"
+                        android:id="@+id/quantityLLtId"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:padding="8dp"
+                            android:layout_weight="8.8"
+                            android:layout_marginTop="5dp"
+                            android:hint=" JobDescription"
+                            android:inputType="text"
+                            android:id="@+id/jobDesEtId"
+                            android:background="@drawable/edittextbg"
+                            android:layout_height="wrap_content" />
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="36dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1.2"
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/addJobBtnId"
+                            android:textColor="@color/white"
+                            android:background="@drawable/buttonbg"
+                            android:paddingBottom="5dp"
+                            android:text=" Add " />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
 
             <ListView
                 android:id="@+id/jobLVId"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="300dp">
 
@@ -607,11 +718,12 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:padding="10dp"
+                android:textColor="@color/white"
                 android:text="Upload"
                 android:layout_below="@id/jobDesId13"
                 android:background="@drawable/buttonbg"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 

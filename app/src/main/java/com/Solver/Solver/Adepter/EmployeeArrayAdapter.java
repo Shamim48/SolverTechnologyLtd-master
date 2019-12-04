@@ -11,58 +11,69 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.Solver.Solver.ModelClass.Factories;
 import com.Solver.Solver.ModelClass.SignUp;
 import com.Solver.Solver.R;
 import com.bumptech.glide.Glide;
+
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
 import de.hdodenhof.circleimageview.CircleImageView;
 public class EmployeeArrayAdapter extends ArrayAdapter<SignUp>  implements Filterable {
 
-   List<SignUp> usertagList;
-    public EmployeeArrayAdapter( Context context,  List<SignUp> userList) {
-        super(context, 0, userList);
-        this.usertagList = new ArrayList<>(userList);
+    List<SignUp> factoriesList;
+
+    public EmployeeArrayAdapter(Context context, List<SignUp> factoriesList) {
+        super(context, 0,factoriesList);
+        this.factoriesList=new ArrayList<>(factoriesList);
     }
-    @NonNull
+
+
+
+
     @Override
-    public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.user_item, parent, false
+                    R.layout.factory_sample_row, parent, false
             );
         }
 
-        TextView textViewName = convertView.findViewById(R.id.usernameUiId);
-        CircleImageView imageViewFlag = convertView.findViewById(R.id.profile_imageUiId);
-        RelativeLayout parentLayout=convertView.findViewById(R.id.user_ItmRowId);
+        TextView textViewName = convertView.findViewById(R.id.companyNameTSRTvId);
 
-        final SignUp userinfo = usertagList.get(position);
 
-        if (userinfo != null) {
-            textViewName.setText(userinfo.getName());
-            Glide.with(imageViewFlag).load(userinfo.getImageUrl()).placeholder(R.drawable.ic_insert_photo_black_24dp).into(imageViewFlag);
+        SignUp factories = getItem(position);
+
+        if (factories != null) {
+            textViewName.setText(factories.getName());
 
         }
+
         return convertView;
+
     }
 
+    @NotNull
     @Override
     public Filter getFilter() {
-        return employeeFilter;
+        return factoriesFilter;
     }
-    private Filter employeeFilter = new Filter() {
+    private Filter factoriesFilter = new Filter() {
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
             FilterResults results = new FilterResults();
             List<SignUp> suggestions = new ArrayList<>();
 
             if (constraint == null || constraint.length() == 0) {
-                suggestions.addAll(usertagList);
+                suggestions.addAll(factoriesList);
             } else {
+
                 String filterPattern = constraint.toString().toLowerCase().trim();
 
-                for (SignUp item : usertagList) {
+                for (SignUp item : factoriesList) {
                     if (item.getName().toLowerCase().contains(filterPattern)) {
                         suggestions.add(item);
                     }
@@ -88,3 +99,4 @@ public class EmployeeArrayAdapter extends ArrayAdapter<SignUp>  implements Filte
         }
     };
 }
+
