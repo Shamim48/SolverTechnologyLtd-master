@@ -13,13 +13,13 @@ public class JobC {
     private String jobDes;
     private String category;
     private String categoryId;
-    private boolean checked=false;
-    LinearLayout jobDesLLt;
+   /* LinearLayout jobDesLLt;
     CheckBox checkBox;
     TextView jobTitleTv;
-
+*/
     public JobC() {
     }
+
 
     public JobC(String jobId, String jobTitle) {
         this.jobId = jobId;
@@ -39,19 +39,12 @@ public class JobC {
         this.categoryId = categoryId;
     }
 
-    public JobC(LinearLayout jobDesLLt, CheckBox checkBox, TextView jobTitleTv) {
+ /*   public JobC(LinearLayout jobDesLLt, CheckBox checkBox, TextView jobTitleTv) {
         this.jobDesLLt = jobDesLLt;
         this.checkBox = checkBox;
         this.jobTitleTv = jobTitleTv;
-    }
+    }*/
 
-    public TextView getJobTitleTv() {
-        return jobTitleTv;
-    }
-
-    public void setJobTitleTv(TextView jobTitleTv) {
-        this.jobTitleTv = jobTitleTv;
-    }
 
     public String getCategoryId() {
         return categoryId;
@@ -61,30 +54,9 @@ public class JobC {
         this.categoryId = categoryId;
     }
 
-    public boolean isChecked() {
-        return checked;
-    }
 
-    public void setChecked(boolean checked) {
-        this.checked = checked;
-    }
 
-    public LinearLayout getJobDesLLt() {
 
-        return jobDesLLt;
-    }
-
-    public void setJobDesLLt(LinearLayout jobDesLLt) {
-        this.jobDesLLt = jobDesLLt;
-    }
-
-    public CheckBox getCheckBox() {
-        return checkBox;
-    }
-
-    public void setCheckBox(CheckBox checkBox) {
-        this.checkBox = checkBox;
-    }
 
     public String getCategory() {
         return category;
@@ -118,13 +90,5 @@ public class JobC {
         this.jobDes = jobDes;
     }
 
-    @Override
-    public String toString() {
-        return "JobC{" +
-                "jobId='" + jobId + '\'' +
-                ", jobTitle='" + jobTitle + '\'' +
-                ", jobDes='" + jobDes + '\'' +
-                ", category='" + category + '\'' +
-                '}';
-    }
+
 }

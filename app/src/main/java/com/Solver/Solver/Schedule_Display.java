@@ -34,6 +34,7 @@ public class Schedule_Display extends AppCompatActivity {
     ScheduleAdapter scheduleAdapter;
     DatabaseReference allScheduleREf;
     DatabaseReference allScheduleREf_2;
+    DatabaseReference allScheduleREf_3;
     int factoryId ;
     String emp_Id;
     String companyName;
@@ -52,16 +53,20 @@ public class Schedule_Display extends AppCompatActivity {
 
         allScheduleREf= FirebaseDatabase.getInstance().getReference().child("Schedule").child("All_ScheduleTbl");
         allScheduleREf_2= FirebaseDatabase.getInstance().getReference().child("All_ScheduleTbl");
+        allScheduleREf_3= FirebaseDatabase.getInstance().getReference().child("All_ScheduleTb_2");
       scheduleList.clear();
 
-        Query allScheduleQuery=allScheduleREf_2.limitToLast(100);
-        allScheduleQuery.addValueEventListener(new ValueEventListener() {
+        Query allScheduleQuery=allScheduleREf.limitToLast(100);
+
+        allScheduleREf.addValueEventListener(new ValueEventListener() {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot data:dataSnapshot.getChildren()){
                     Schedule schedule=data.getValue(Schedule.class);
                     scheduleList.add(schedule);
+                    String scheduleId=schedule.getScheduleId();
+
 
                 }
 

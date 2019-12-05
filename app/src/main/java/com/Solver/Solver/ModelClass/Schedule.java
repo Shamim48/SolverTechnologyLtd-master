@@ -13,6 +13,15 @@ public class Schedule  {
     List<JobC> list;
     JobC jobc;
     int factoryId;
+    String userId;
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 
     public Schedule(String scheduleId, String employeeName, String date, int factoryId, String category) {
         this.scheduleId = scheduleId;
@@ -39,12 +48,13 @@ public class Schedule  {
         this.factoryId = factoryId;
     }
 
-    public Schedule(String scheduleId, String emp_id, String date, int factoryId, List<JobC> list) {
+    public Schedule(String scheduleId,String userId, String emp_id, String date, int factoryId, List<JobC> list) {
         this.scheduleId = scheduleId;
         this.emp_id = emp_id;
         this.date = date;
         this.factoryId = factoryId;
         this.list = list;
+        this.userId=userId;
     }
 
     public int getFactoryId() {

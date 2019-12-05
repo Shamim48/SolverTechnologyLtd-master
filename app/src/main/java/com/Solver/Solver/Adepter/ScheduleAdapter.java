@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.Solver.Solver.ModelClass.Factories;
 import com.Solver.Solver.ModelClass.JobC;
+import com.Solver.Solver.ModelClass.JobCategory;
 import com.Solver.Solver.ModelClass.Schedule;
 import com.Solver.Solver.ModelClass.SignUp;
 import com.Solver.Solver.ModelClass.User;
@@ -46,6 +47,13 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
     String userEmail;
     String factoryName;
     String userName;
+    String jobTitle;
+    String category;
+    StringBuffer jobBuffer=new StringBuffer();
+    String jobCategory="";
+    String jobTitleId;
+    String jobCategoryId;
+    JobC jobOb;
 
     public ScheduleAdapter(Context context, List<Schedule> schedulesList) {
         this.context = context;
@@ -65,6 +73,9 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
     public void onBindViewHolder(@NonNull final ScheduleHolder holder, final int position) {
 
         final Schedule schedule=schedulesList.get(position);
+
+        DatabaseReference jobRef=FirebaseDatabase.getInstance().getReference("Utility").child("Job");
+        DatabaseReference jobCategoryRef=FirebaseDatabase.getInstance().getReference("Utility").child("Job_Category");
 
         holder.dateTv.setText(schedule.getDate()+" Work Plan.");
        /* try {
@@ -141,24 +152,140 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
 
         }*/
 
+/*
         try {
 
-            StringBuffer job=new StringBuffer();
-            String jobCategory="";
-            for (JobC jobC:schedulesList.get(position).getList()){
-                if(jobC.getCategory().equals("Chose category")){
-                    jobCategory="";
+
+            for (int i=0;i<=schedulesList.get(position).getList().size();i++){
+
+               // jobOb=jobC;
+
+                      jobTitleId=schedulesList.get(position).getList().get(i).getJobId();
+                     jobCategoryId=schedulesList.get(position).getList().get(i).getCategoryId();
+                    Query jobQuery=jobRef.orderByChild("jobId").equalTo(jobTitleId);
+                 if(!(schedulesList.get(position).getUserId().equals(""))){
+                    jobQuery.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            for(DataSnapshot data:dataSnapshot.getChildren()){
+                                JobC jobttlt=data.getValue(JobC.class);
+                                jobTitle=jobttlt.getJobTitle();
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+
+
+                    Query categoryQuery=jobCategoryRef.orderByChild("jobCategoryId").equalTo(jobCategoryId);
+                    categoryQuery.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            for (DataSnapshot data:dataSnapshot.getChildren()){
+                                JobCategory jobCategory1=data.getValue(JobCategory.class);
+                                category=jobCategory1.getJobCategoryName();
+                            }
+
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+
+                   // job.append("Job Name: ").append(jobTitle).append("(").append(category).append(").\nDes: ").append(jobC.getJobDes()).append(" .\n\n");
+            jobBuffer.append("Job Name: "+jobTitle+"("+category+").\nDes: "+schedulesList.get(position).getList().get(i).getJobDes()+" .\n\n");
+
                 }else {
-                    jobCategory=jobC.getCategory();
+                    if(schedulesList.get(position).getList().get(i).getCategory().equals("Chose category")){
+                        jobCategory="";
+                    }else {
+                        jobCategory=schedulesList.get(position).getList().get(i).getCategory();
+                    }
+                   // job.append("Job Name: ").append(jobC.getJobTitle()).append("(").append(jobCategory).append(").\nDes: ").append(jobC.getJobDes()).append(" .\n\n");
+            jobBuffer.append("Job Name: "+schedulesList.get(position).getList().get(i).getJobTitle()+"("+jobCategory+").\nDes: "+schedulesList.get(position).getList().get(i).getJobDes()+" .\n\n");
                 }
 
-                job.append("Job Name: "+jobC.getJobTitle()+"("+jobCategory+").\nDes: "+jobC.getJobDes()+" .\n\n");
-
             }
-
-            holder.jobInfoTv.setText(job);
+            holder.jobInfoTv.setText(jobBuffer);
 
         }catch (NullPointerException e){
+
+
+        }
+*/
+
+          try {
+
+
+            for (JobC jobC:schedule.getList()){
+
+                jobOb=jobC;
+
+                      jobTitleId=jobC.getJobId();
+                     jobCategoryId=jobC.getCategoryId();
+                    Query jobQuery=jobRef.orderByChild("jobId").equalTo(jobTitleId);
+       /* if(!(schedulesList.get(position).getUserId().equals(""))){
+                    jobQuery.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            for(DataSnapshot data:dataSnapshot.getChildren()){
+                                JobC jobttlt=data.getValue(JobC.class);
+                                jobTitle=jobttlt.getJobTitle();
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+
+
+                    Query categoryQuery=jobCategoryRef.orderByChild("jobCategoryId").equalTo(jobCategoryId);
+                    categoryQuery.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            for (DataSnapshot data:dataSnapshot.getChildren()){
+
+
+
+
+                                
+                                JobCategory jobCategory1=data.getValue(JobCategory.class);
+                                category=jobCategory1.getJobCategoryName();
+                            }
+
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+
+                   // job.append("Job Name: ").append(jobTitle).append("(").append(category).append(").\nDes: ").append(jobC.getJobDes()).append(" .\n\n");
+                 jobBuffer.append("Job Name: "+jobTitle+"("+category+").\nDes: "+jobC.getJobDes()+" .\n\n");
+
+                }else {*/
+                    if(jobC.getCategory().equals("Chose category")){
+                        jobCategory="";
+                    }else {
+                        jobCategory=jobC.getCategory();
+                    }
+                   // job.append("Job Name: ").append(jobC.getJobTitle()).append("(").append(jobCategory).append(").\nDes: ").append(jobC.getJobDes()).append(" .\n\n");
+                 jobBuffer.append("Job Name: "+jobC.getJobTitle()+"("+jobCategory+").\nDes: "+jobC.getJobDes()+" .\n\n");
+             //   }
+
+            }
+            holder.jobInfoTv.setText(jobBuffer);
+
+        }catch (NullPointerException e){
+
 
         }
 

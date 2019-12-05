@@ -53,14 +53,14 @@ public JobAdapter(Context context,List<JobC> jobCList) {
 
             jobDesLLt.setVisibility(View.GONE);
 
-            convertView.setTag(new JobC(jobDesLLt,jobCB,jobTtlTv));
+           // convertView.setTag(new JobC(jobDesLLt,jobCB,jobTtlTv));
 
             jobCB.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     CheckBox cb= (CheckBox) view;
                     JobC job=(JobC) cb.getTag();
-                    job.setChecked(cb.isChecked());
+                   // job.setChecked(cb.isChecked());
 
                     if(cb.isChecked()) {
                          jobDesLLt.setVisibility(View.VISIBLE);
@@ -122,9 +122,9 @@ public JobAdapter(Context context,List<JobC> jobCList) {
 
             JobC viewHolder = (JobC) convertView
                     .getTag();
-            jobCB = viewHolder.getCheckBox();
-            jobTtlTv = viewHolder.getJobTitleTv();
-            jobDesLLt = viewHolder.getJobDesLLt();
+           // jobCB = viewHolder.getCheckBox();
+           // jobTtlTv = viewHolder.getJobTitleTv();
+            //jobDesLLt = viewHolder.getJobDesLLt();
         }
         jobCB.setTag(job);
 
